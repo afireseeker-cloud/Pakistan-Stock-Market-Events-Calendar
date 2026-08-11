@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PSX calendar timeline</title>
+<style>
+  :root {
+    --brand-accent: #3d4db7;
+    --surface-2: #ffffff; --surface-1: #f7f6f3; --surface-0: #efeee8;
+    --text-primary: #1a1a18; --text-secondary: #6b6a63; --text-muted: #9b9a92;
+    --border: #e4e2da; --border-strong: #cfcdc2;
+    --bg-danger: #FCEBEB; --text-danger: #791F1F;
+    --bg-warning: #FAEEDA; --text-warning: #633806;
+    --bg-success: #EAF3DE; --text-success: #27500A;
+    --radius: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-2: #26251f; --surface-1: #1e1d19; --surface-0: #171613;
+      --text-primary: #ece9e0; --text-secondary: #b3b0a4; --text-muted: #8a877c;
+      --border: #3a382f; --border-strong: #4d4a3e;
+      --bg-danger: #501313; --text-danger: #F09595;
+      --bg-warning: #412402; --text-warning: #FAC775;
+      --bg-success: #173404; --text-success: #97C459;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0; background: var(--surface-0); color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px; line-height: 1.5;
+  }
+  .header {
+    padding: 1.25rem 1.5rem 1rem; background: var(--surface-2);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .header h1 { font-size: 17px; font-weight: 500; margin: 0 0 2px; }
+  .header .sub { font-size: 12px; color: var(--text-muted); }
+  .controls { padding: 1rem 1.5rem 0; }
+  .row1 { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+  .row2 { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+  .chip {
+    padding: 6px 14px; border-radius: 20px; font-size: 13px;
+    border: 0.5px solid var(--border-strong); background: var(--surface-2);
+    color: var(--text-primary); cursor: pointer; white-space: nowrap;
+  }
+  .chip.active { background: var(--text-primary); color: var(--surface-2); border-color: var(--text-primary); }
+  .view-toggle { margin-left: auto; display: flex; border: 0.5px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; }
+  .view-toggle button {
+    padding: 6px 12px; font-size: 13px; border: none; background: var(--surface-2);
+    color: var(--text-secondary); cursor: pointer;
+  }
+  .view-toggle button.active { background: var(--brand-accent); color: #fff; }
+  input[type=text], input[type=date], input[type=file] {
+    padding: 6px 10px; border-radius: var(--radius); border: 0.5px solid var(--border-strong);
+    background: var(--surface-2); color: var(--text-primary); font-size: 13px;
+  }
+  .search { min-width: 180px; }
+  label.field { font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+  #main { padding: 0 1.5rem 1.5rem; max-width: 900px; margin: 0 auto; }
+  .stats { font-size: 12px; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+  .day-label { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin: 1.5rem 0 8px 2px; }
+  .day-label:first-child { margin-top: 0.5rem; }
+  .rowcard {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+    border: 0.5px solid var(--border); border-left: 3px solid var(--accent, var(--border-strong));
+    border-radius: var(--radius); margin-bottom: 6px; background: var(--surface-2);
+  }
+  .rowcard.cancelled { opacity: 0.5; }
+  .time { font-size: 12px; color: var(--text-muted); min-width: 42px; }
+  .symtag { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--radius); white-space: nowrap; }
+  .content { flex: 1; min-width: 0; }
+  .title { font-size: 14px; margin: 0; color: var(--text-primary); text-decoration: none; }
+  .title.strike { text-decoration: line-through; }
+  .subtitle { font-size: 13px; color: var(--text-secondary); margin: 3px 0 0; }
+  .linkicon {
+    width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius); color: var(--brand-accent); text-decoration: none;
+    border: 0.5px solid var(--border-strong); flex-shrink: 0; font-size: 13px;
+  }
+  .linkicon:hover { background: var(--surface-1); }
+  .status { font-size: 11px; padding: 2px 8px; border-radius: var(--radius); white-space: nowrap; flex-shrink: 0; }
+  .empty { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); }
+  .empty .big { font-size: 15px; color: var(--text-primary); margin-bottom: 6px; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 12px; border-top: 0.5px solid var(--border); font-size: 12px; color: var(--text-secondary); }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .dot { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
+
+  .calgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .calhead { text-align: center; font-size: 11px; color: var(--text-muted); padding-bottom: 4px; }
+  .calcell {
+    min-height: 68px; border: 0.5px solid var(--border); border-radius: var(--radius);
+    background: var(--surface-2); padding: 6px; cursor: pointer; position: relative;
+  }
+  .calcell:hover { border-color: var(--border-strong); }
+  .calcell.empty-cell { background: transparent; border: none; cursor: default; }
+  .calcell.selected { border: 2px solid var(--brand-accent); }
+  .calcell .num { font-size: 12px; color: var(--text-secondary); }
+  .calcell.today .num { color: var(--brand-accent); font-weight: 500; }
+  .caldots { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 6px; }
+  .calmonth-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .calmonth-nav button { padding: 4px 10px; font-size: 13px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); background: var(--surface-2); color: var(--text-primary); cursor: pointer; }
+  .calmonth-nav .label { font-size: 14px; font-weight: 500; }
+  #calDayList { margin-top: 1.25rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PSX calendar timeline</h1>
+  <div class="sub">Merged view across SBP, PBS, and PSX company events</div>
+</div>
+
+<div class="controls">
+  <div class="row1">
+    <button class="chip active" data-filter="all">All events</button>
+    <button class="chip" data-filter="macro">Macro</button>
+    <button class="chip" data-filter="corporate">Corporate</button>
+    <button class="chip" data-filter="pending">Pending / TBD</button>
+    <div class="view-toggle">
+      <button id="viewList" class="active">List</button>
+      <button id="viewCal">Calendar</button>
+    </div>
+  </div>
+  <div class="row2">
+    <input type="text" class="search" id="search" placeholder="Filter by symbol, e.g. LUCK">
+    <label class="field">From <input type="date" id="dateFrom"></label>
+    <label class="field">To <input type="date" id="dateTo"></label>
+    <button class="chip" id="clearDates">Clear dates</button>
+    <input type="file" id="fileInput" accept=".json">
+  </div>
+  <div class="row2">
+    <button class="chip" id="holdingsToggle">My holdings only</button>
+    <input type="text" class="search" id="holdingsInput" placeholder="Your symbols, comma separated: LUCK, UBL, HUBC" style="flex:1;min-width:280px">
+  </div>
+</div>
+
+<div id="main">
+  <div class="stats" id="stats"></div>
+  <div id="listView"></div>
+  <div id="calView" style="display:none">
+    <div class="calmonth-nav">
+      <button id="calPrev">&larr; Prev</button>
+      <span class="label" id="calLabel"></span>
+      <button id="calNext">Next &rarr;</button>
+    </div>
+    <div class="calgrid" id="calGrid"></div>
+    <div id="calDayList"></div>
+  </div>
+  <div class="legend">
+    <span><span class="dot" style="background:#0891B2"></span>Macro (SBP / PBS)</span>
+    <span><span class="dot" style="background:#BE185D"></span>Automobile sales (PAMA)</span>
+    <span><span class="dot" style="background:#57534E"></span>Market holiday</span>
+    <span><span class="dot" style="background:#0F6E56"></span>Results / board / general meeting</span>
+    <span><span class="dot" style="background:#B45309"></span>Book closure / dividend</span>
+    <span><span class="dot" style="background:#78716C"></span>Disclosure / other</span>
+  </div>
+</div>
+
+<script>
+const CATEGORY_ACCENT = {
+  mpc: '#0891B2', mpc_briefing: '#0891B2', mpc_presser: '#0891B2',
+  mpc_minutes: '#0891B2', mpc_report: '#0891B2',
+  spi_weekly: '#0891B2', cpi_monthly: '#0891B2', wpi_monthly: '#0891B2',
+  auto_sales_monthly: '#BE185D',
+  market_holiday: '#57534E',
+  board_meeting: '#0F6E56', agm: '#0F6E56', corporate_briefing: '#0F6E56', results: '#0F6E56',
+  book_closure: '#B45309', dividend_announced: '#B45309',
+  director_disclosure: '#78716C', governance_change: '#78716C', other_announcement: '#78716C',
+};
+const TYPE_LABELS = {
+  mpc: 'Monetary policy statement',
+  mpc_briefing: 'Monetary policy analyst briefing',
+  mpc_presser: 'Monetary policy press conference',
+  mpc_minutes: 'Monetary policy meeting minutes',
+  mpc_report: 'Monetary Policy Report',
+  spi_weekly: 'Sensitive Price Indicator, weekly',
+  cpi_monthly: 'Consumer Price Index, monthly',
+  wpi_monthly: 'Wholesale Price Index, monthly',
+  auto_sales_monthly: 'Automobile sales data, monthly',
+  market_holiday: 'Market holiday',
+  board_meeting: 'Board meeting',
+  agm: 'General meeting',
+  corporate_briefing: 'Corporate briefing session',
+  results: 'Financial results',
+  book_closure: 'Book closure',
+  dividend_announced: 'Dividend announced',
+  director_disclosure: 'Director / executive disclosure',
+  governance_change: 'Governance change',
+  other_announcement: 'Other announcement',
+};
+function typeLabel(type) {
+  return TYPE_LABELS[type] || (type || '').replace(/_/g, ' ');
+}
+const MACRO_TYPES = new Set(['mpc','mpc_briefing','mpc_presser','mpc_minutes','mpc_report','spi_weekly','cpi_monthly','wpi_monthly','auto_sales_monthly','market_holiday']);
+const PENDING_TYPES = new Set(['dividend_announced']);
+
+let allEvents = [];
+let activeFilter = 'all';
+let searchTerm = '';
+let dateFrom = '';
+let dateTo = '';
+let currentView = 'list';
+let calMonth = new Date();
+let calSelectedDay = null;
+let holdingsOnly = false;
+let holdingsSet = new Set();
+
+function loadSample() {
+  allEvents = [
+    {id:'s1', type:'mpc', status:'confirmed', date:'2026-08-14', time:null, symbol:null, title:'MPC monetary policy statement', source:'sbp_mpc', source_url:null},
+    {id:'s2', type:'spi_weekly', status:'estimated', date:'2026-08-14', time:null, symbol:null, title:'Weekly SPI release', source:'pbs_calendar', source_url:null},
+    {id:'s3', type:'board_meeting', status:'confirmed', date:'2026-08-15', time:'15:27', symbol:'UBL', title:'Board meeting', source:'psx_announcements', source_url:'https://dps.psx.com.pk/download/document/280989.pdf'},
+    {id:'s4', type:'book_closure', status:'confirmed', date:'2026-08-17', time:null, symbol:'LUCK', title:'Lucky Cement Limited \u2014 250% final cash dividend', source:'psx_payouts', source_url:'https://dps.psx.com.pk/company/LUCK'},
+    {id:'s5', type:'board_meeting', status:'cancelled', date:'2026-08-11', time:'12:56', symbol:'PICT', title:'Board meeting', source:'psx_announcements', source_url:null},
+    {id:'s6', type:'dividend_announced', status:'pending_book_closure', date:'2026-08-01', time:'13:00', symbol:'SGPL', title:'S.G. Power Limited \u2014 dividend announced: 300% right (book closure TBD)', source:'psx_payouts', source_url:'https://dps.psx.com.pk/company/SGPL'},
+    {id:'s7', type:'auto_sales_monthly', status:'estimated', date:'2026-09-05', time:null, symbol:null, title:'Monthly automobile production and sales data (PAMA)', source:'pama_auto_sales', source_url:'https://pama.org.pk/monthly-production-sales-of-vehicles/'},
+    {id:'s8', type:'market_holiday', status:'confirmed', date:'2026-08-14', time:null, symbol:null, title:'PSX closed \u2014 Independence Day', source:'psx_holidays', source_url:'https://dps.psx.com.pk/download/attachment/268947-1.pdf'},
+  ];
+  render();
+}
+
+document.getElementById('fileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (evt) => {
+    try {
+      const parsed = JSON.parse(evt.target.result);
+      allEvents = Array.isArray(parsed) ? parsed : [];
+      render();
+    } catch (err) {
+      document.getElementById('stats').textContent = 'Could not parse that file as JSON: ' + err.message;
+    }
+  };
+  reader.readAsText(file);
+});
+
+document.querySelectorAll('.chip[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+document.getElementById('search').addEventListener('input', (e) => {
+  searchTerm = e.target.value.trim().toUpperCase();
+  render();
+});
+document.getElementById('dateFrom').addEventListener('change', (e) => { dateFrom = e.target.value; render(); });
+document.getElementById('dateTo').addEventListener('change', (e) => { dateTo = e.target.value; render(); });
+document.getElementById('clearDates').addEventListener('click', () => {
+  dateFrom = ''; dateTo = '';
+  document.getElementById('dateFrom').value = '';
+  document.getElementById('dateTo').value = '';
+  render();
+});
+
+document.getElementById('holdingsToggle').addEventListener('click', function() {
+  holdingsOnly = !holdingsOnly;
+  this.classList.toggle('active', holdingsOnly);
+  render();
+});
+document.getElementById('holdingsInput').addEventListener('input', (e) => {
+  holdingsSet = new Set(e.target.value.split(',').map(s => s.trim().toUpperCase()).filter(Boolean));
+  render();
+});
+
+document.getElementById('viewList').addEventListener('click', () => setView('list'));
+document.getElementById('viewCal').addEventListener('click', () => setView('calendar'));
+function setView(v) {
+  currentView = v;
+  document.getElementById('viewList').classList.toggle('active', v === 'list');
+  document.getElementById('viewCal').classList.toggle('active', v === 'calendar');
+  document.getElementById('listView').style.display = v === 'list' ? '' : 'none';
+  document.getElementById('calView').style.display = v === 'calendar' ? '' : 'none';
+  render();
+}
+
+document.getElementById('calPrev').addEventListener('click', () => { calMonth.setMonth(calMonth.getMonth() - 1); calSelectedDay = null; render(); });
+document.getElementById('calNext').addEventListener('click', () => { calMonth.setMonth(calMonth.getMonth() + 1); calSelectedDay = null; render(); });
+
+function matchesFilter(e) {
+  if (activeFilter === 'macro') return MACRO_TYPES.has(e.type);
+  if (activeFilter === 'corporate') return !MACRO_TYPES.has(e.type);
+  if (activeFilter === 'pending') return PENDING_TYPES.has(e.type) || e.status === 'pending_book_closure';
+  return true;
+}
+function matchesSearch(e) {
+  if (!searchTerm) return true;
+  return (e.symbol || '').toUpperCase().includes(searchTerm) || (e.company_name || '').toUpperCase().includes(searchTerm);
+}
+function matchesDateRange(e) {
+  if (dateFrom && e.date < dateFrom) return false;
+  if (dateTo && e.date > dateTo) return false;
+  return true;
+}
+function matchesHoldings(e) {
+  if (!holdingsOnly) return true;
+  // Macro/sector-wide events (no symbol -- SBP, PBS, PAMA) are never
+  // filtered by holdings, only company-specific rows are. A holdings
+  // filter that hid monetary policy or inflation data because it isn't
+  // "your stock" would defeat the point of a macro calendar.
+  if (!e.symbol) return true;
+  if (holdingsSet.size === 0) return true; // no symbols entered yet, don't hide everything
+  return holdingsSet.has(e.symbol.toUpperCase());
+}
+function getFiltered() {
+  return allEvents.filter(e => matchesFilter(e) && matchesSearch(e) && matchesDateRange(e) && matchesHoldings(e));
+}
+
+function formatDayLabel(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' });
+}
+function statusBadge(status) {
+  const map = {
+    confirmed: ['var(--bg-success)', 'var(--text-success)', 'Confirmed'],
+    cancelled: ['var(--bg-danger)', 'var(--text-danger)', 'Cancelled'],
+    estimated: ['var(--bg-warning)', 'var(--text-warning)', 'Estimated'],
+    pending_book_closure: ['var(--bg-warning)', 'var(--text-warning)', 'Book closure TBD'],
+  };
+  const [bg, fg, label] = map[status] || ['var(--surface-1)', 'var(--text-secondary)', status || 'Unknown'];
+  return `<span class="status" style="background:${bg};color:${fg}">${label}</span>`;
+}
+function eventRow(e) {
+  const accent = CATEGORY_ACCENT[e.type] || '#78716C';
+  const cancelled = e.status === 'cancelled';
+  const linkBtn = e.source_url
+    ? `<a class="linkicon" href="${e.source_url}" target="_blank" rel="noopener" aria-label="Open source">&#8599;</a>`
+    : '';
+  return `
+    <div class="rowcard ${cancelled ? 'cancelled' : ''}" style="--accent:${accent}">
+      <span class="time">${e.time || '\u2014'}</span>
+      ${e.symbol ? `<span class="symtag" style="background:${accent}22;color:${accent}">${e.symbol}</span>` : ''}
+      <div class="content">
+        <p class="title ${cancelled ? 'strike' : ''}">${e.title}</p>
+        <p class="subtitle">${typeLabel(e.type)}</p>
+      </div>
+      ${statusBadge(e.status)}
+      ${linkBtn}
+    </div>`;
+}
+
+function renderList(filtered) {
+  const list = document.getElementById('listView');
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="empty"><div class="big">No matching events</div>Try a different filter, date range, or search.</div>`;
+    return;
+  }
+  const byDay = {};
+  for (const e of filtered) (byDay[e.date] = byDay[e.date] || []).push(e);
+  const days = Object.keys(byDay).sort();
+  let html = '';
+  for (const day of days) {
+    html += `<div class="day-label">${formatDayLabel(day)}</div>`;
+    for (const e of byDay[day].sort((a, b) => (a.time || '').localeCompare(b.time || ''))) {
+      html += eventRow(e);
+    }
+  }
+  list.innerHTML = html;
+}
+
+function renderCalendar(filtered) {
+  const year = calMonth.getFullYear(), month = calMonth.getMonth();
+  document.getElementById('calLabel').textContent = calMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+  const byDay = {};
+  for (const e of filtered) (byDay[e.date] = byDay[e.date] || []).push(e);
+
+  const firstDow = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const todayStr = new Date().toISOString().slice(0, 10);
+
+  let html = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="calhead">${d}</div>`).join('');
+  for (let i = 0; i < firstDow; i++) html += `<div class="calcell empty-cell"></div>`;
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const dayEvents = byDay[dateStr] || [];
+    const isToday = dateStr === todayStr;
+    const isSelected = dateStr === calSelectedDay;
+    const dots = dayEvents.slice(0, 6).map(e => `<span class="dot" style="background:${CATEGORY_ACCENT[e.type] || '#78716C'}"></span>`).join('');
+    html += `<div class="calcell ${isToday ? 'today' : ''} ${isSelected ? 'selected' : ''}" data-date="${dateStr}">
+      <div class="num">${d}</div>
+      <div class="caldots">${dots}</div>
+    </div>`;
+  }
+  document.getElementById('calGrid').innerHTML = html;
+
+  document.querySelectorAll('.calcell[data-date]').forEach(cell => {
+    cell.addEventListener('click', () => {
+      calSelectedDay = cell.dataset.date === calSelectedDay ? null : cell.dataset.date;
+      render();
+    });
+  });
+
+  const dayList = document.getElementById('calDayList');
+  if (calSelectedDay) {
+    const events = (byDay[calSelectedDay] || []).sort((a,b) => (a.time||'').localeCompare(b.time||''));
+    dayList.innerHTML = `<div class="day-label">${formatDayLabel(calSelectedDay)}</div>` +
+      (events.length ? events.map(eventRow).join('') : `<div class="empty">No events this day.</div>`);
+  } else {
+    dayList.innerHTML = '';
+  }
+}
+
+function render() {
+  const filtered = getFiltered();
+  document.getElementById('stats').textContent =
+    `${filtered.length} of ${allEvents.length} events` + (allEvents.length === 0 ? ' \u2014 load events_merged.json above' : '');
+
+  if (currentView === 'list') renderList(filtered);
+  else renderCalendar(filtered);
+}
+
+loadSample();
+</script>
+</body>
+</html>
