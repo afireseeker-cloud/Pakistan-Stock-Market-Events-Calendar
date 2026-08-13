@@ -44,8 +44,14 @@ import time
 
 import requests
 
-GEMINI_MODEL = "gemini-3.1-flash-lite"  # same model confirmed working in extract_meeting_dates.py;
-                                          # if it stops working, check https://aistudio.google.com
+GEMINI_MODEL_CHAIN = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
+# each model has its own separate daily quota (RPD) -- confirmed in
+# production that a single model's ~500/day cap got hit and started
+# failing every call. Automatically switches to the next model in the
+# chain on the first quota-exhaustion signal, rather than failing silently
+# for the rest of the day. See extract_meeting_dates.py for the same
+# pattern, more detail in its comments.
+_active_model_index = 0
 CACHE_FILE = "sentiment_cache.json"
 BATCH_SIZE = 15
 RATE_LIMIT_SECONDS = 4.5  # stays comfortably under Gemini free tier's ~15 RPM
@@ -110,7 +116,25 @@ def save_cache(cache: dict):
         json.dump(cache, f, indent=2)
 
 
-def classify_batch(events: list[dict], api_key: str, model: str) -> dict:
+def current_model() -> str:
+    return GEMINI_MODEL_CHAIN[_active_model_index]
+
+
+def advance_to_next_model() -> bool:
+    global _active_model_index
+    if _active_model_index + 1 < len(GEMINI_MODEL_CHAIN):
+        _active_model_index += 1
+        print(f"WARNING: {GEMINI_MODEL_CHAIN[_active_model_index - 1]} appears rate-limited "
+              f"(likely daily quota) -- switching to {current_model()} for the rest of this run",
+              file=sys.stderr)
+        return True
+    print(f"WARNING: all models in the fallback chain ({', '.join(GEMINI_MODEL_CHAIN)}) "
+          f"appear exhausted -- remaining events will stay unclassified until quotas reset "
+          f"(daily, per Gemini's free tier) or you extend GEMINI_MODEL_CHAIN", file=sys.stderr)
+    return False
+
+
+def classify_batch(events: list[dict], api_key: str) -> dict:
     """Sends one batch to Gemini, returns {id: sentiment}."""
     items = [{"id": e["id"], "title": e["title"]} for e in events]
     user_message = f"{SYSTEM_PROMPT}\n\nClassify these:\n{json.dumps(items, indent=2)}"
@@ -122,12 +146,22 @@ def classify_batch(events: list[dict], api_key: str, model: str) -> dict:
             "responseSchema": GEMINI_RESPONSE_SCHEMA,
         },
     }
-    api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
     last_error = None
     for attempt in range(MAX_RETRIES):
+        model = current_model()
+        api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         try:
             resp = requests.post(f"{api_url}?key={api_key}", json=body, timeout=60)
+
+            if resp.status_code == 429:
+                # our own rate limiting already respects the per-minute cap,
+                # so a 429 here almost always means the daily cap -- switch
+                # models immediately rather than retrying the exhausted one
+                if not advance_to_next_model():
+                    return {}
+                continue
+
             resp.raise_for_status()
             data = resp.json()
             text = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -164,8 +198,6 @@ def main():
     ap.add_argument("input", help="merged events JSON file")
     ap.add_argument("--out", default=None,
                      help="output path, defaults to overwriting the input file")
-    ap.add_argument("--model", default=GEMINI_MODEL,
-                     help=f"Gemini model to use, default {GEMINI_MODEL}")
     ap.add_argument("--batch-size", type=int, default=BATCH_SIZE)
     args = ap.parse_args()
 
@@ -213,7 +245,7 @@ def main():
         batch_num = i // args.batch_size + 1
         print(f"INFO: classifying batch {batch_num}/{total_batches} "
               f"({len(batch)} events)...", file=sys.stderr)
-        results = classify_batch(batch, api_key, args.model)
+        results = classify_batch(batch, api_key)
         for e in batch:
             if e["id"] in results:
                 e["sentiment"] = results[e["id"]]

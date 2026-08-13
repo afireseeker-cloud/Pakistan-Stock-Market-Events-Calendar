@@ -54,6 +54,71 @@ def load_jsonl(path: str, source: str) -> list[dict]:
     return events
 
 
+def carry_forward_enrichment(new_events: list[dict], previous_output_path: str) -> int:
+    """Re-running merge_events.py rebuilds the whole event list from the raw
+    per-source files every time -- which means it previously had no memory
+    of anything attach_logos.py, attach_eps.py, attach_shariah.py,
+    classify_sentiment.py, or extract_meeting_dates.py had already written.
+    Every re-merge silently discarded all of that enrichment. Confirmed
+    this actually happened in production, not just a theoretical risk: a
+    real merged file had 1916 events with Shariah data attached, then a
+    later re-merge (to pick up fresh announcements) wiped it back to zero
+    without anyone re-running attach_shariah.py to notice.
+
+    This carries forward every enrichment field from the previous output
+    file (if one exists) onto matching event ids in the freshly-rebuilt
+    list, keyed by id. Critically, this includes overwriting the freshly-
+    rebuilt event's date/time with the corrected values from
+    extract_meeting_dates.py when present -- otherwise a re-merge would
+    silently revert a real scheduled-meeting date back to the raw filing
+    date, since the raw source always has the filing date, never the
+    corrected one.
+
+    Returns the number of events enrichment was carried forward onto."""
+    try:
+        with open(previous_output_path) as f:
+            previous_events = json.load(f)
+    except FileNotFoundError:
+        return 0  # first-ever merge, nothing to carry forward
+
+    previous_by_id = {e["id"]: e for e in previous_events}
+    carried = 0
+
+    for e in new_events:
+        prev = previous_by_id.get(e["id"])
+        if prev is None:
+            continue
+
+        touched = False
+        for field in ("logo_url", "sentiment", "shariah_compliant"):
+            if field in prev:
+                e[field] = prev[field]
+                touched = True
+
+        prev_payload = prev.get("payload", {})
+        if prev_payload.get("date_source"):
+            # a real scheduled date was previously found -- restore it,
+            # otherwise this re-merge would silently revert to the raw
+            # filing date pulled fresh from the source file
+            e["date"] = prev["date"]
+            e["time"] = prev["time"]
+            e.setdefault("payload", {})["date_source"] = prev_payload["date_source"]
+            e["payload"]["filed_date"] = prev_payload.get("filed_date")
+            e["payload"]["filed_time"] = prev_payload.get("filed_time")
+            touched = True
+
+        if prev_payload.get("eps_actual") is not None:
+            e.setdefault("payload", {})["eps_actual"] = prev_payload["eps_actual"]
+            e["payload"]["eps_prior"] = prev_payload.get("eps_prior")
+            e["payload"]["eps_period"] = prev_payload.get("eps_period")
+            touched = True
+
+        if touched:
+            carried += 1
+
+    return carried
+
+
 def merge(sources: dict[str, tuple[str, str]], date_from: str | None = None,
           date_to: str | None = None) -> list[dict]:
     """sources: {label: (path, format)} where format is 'json' or 'jsonl'.
@@ -153,6 +218,11 @@ def main():
     }
 
     merged = merge(sources, date_from=date_from, date_to=date_to)
+
+    carried = carry_forward_enrichment(merged, args.out)
+    if carried:
+        print(f"INFO: carried forward enrichment (logos/sentiment/EPS/Shariah/corrected "
+              f"dates) onto {carried} events from the previous {args.out}", file=sys.stderr)
 
     with open(args.out, "w") as f:
         json.dump(merged, f, indent=2)

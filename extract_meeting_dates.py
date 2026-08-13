@@ -63,11 +63,18 @@ MAX_RETRIES = 3
 TARGET_TYPES = {"board_meeting", "agm", "corporate_briefing"}
 MIN_TEXT_LENGTH = 50  # below this, treat as "no real text layer", try vision instead
 
-GEMINI_MODEL = "gemini-3.1-flash-lite"  # current-generation cheap/fast tier, confirmed free-tier eligible;
-                                          # gemini-2.5-flash-lite still works today but Google has already
-                                          # announced its retirement (Oct 2026) -- if 3.1 ever stops working
-                                          # too, check https://aistudio.google.com for whatever's current,
-                                          # since this naming landscape moves faster than any doc can track
+GEMINI_MODEL_CHAIN = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
+# current-generation cheap/fast tier, confirmed free-tier eligible. Each
+# model has its OWN separate daily quota (RPD) -- confirmed in production
+# that gemini-2.5-flash-lite hit its ~500/day cap and started failing every
+# call. Rather than just erroring out for the rest of the day, this script
+# automatically switches to the next model in the chain the first time it
+# hits a quota-exhaustion signal, effectively doubling the usable daily
+# budget without needing anyone to notice the failure and intervene by hand.
+# If BOTH models in the chain are exhausted, or the naming has moved on
+# again by the time you're reading this, check https://aistudio.google.com
+# for what's current and extend the chain.
+_active_model_index = 0  # mutated in place as models get exhausted during a run
 
 EXTRACT_PATTERN = re.compile(r"held\s+on\s+(.+?\d{1,2}[:.]\d{2}\s*[AaPp]\.?\s*[Mm]\.?)", re.I)
 
@@ -149,7 +156,27 @@ def render_first_page_png(pdf_bytes: bytes) -> bytes | None:
         return None
 
 
-def extract_meeting_datetime_via_vision(pdf_bytes: bytes, filed_date_str: str, api_key: str, model: str):
+def current_model() -> str:
+    return GEMINI_MODEL_CHAIN[_active_model_index]
+
+
+def advance_to_next_model() -> bool:
+    """Switches to the next model in the chain. Returns False if there's
+    nothing left to fall back to (every model in the chain exhausted)."""
+    global _active_model_index
+    if _active_model_index + 1 < len(GEMINI_MODEL_CHAIN):
+        _active_model_index += 1
+        print(f"WARNING: {GEMINI_MODEL_CHAIN[_active_model_index - 1]} appears rate-limited "
+              f"(likely daily quota) -- switching to {current_model()} for the rest of this run",
+              file=sys.stderr)
+        return True
+    print(f"WARNING: all models in the fallback chain ({', '.join(GEMINI_MODEL_CHAIN)}) "
+          f"appear exhausted -- remaining events will stay unresolved until quotas reset "
+          f"(daily, per Gemini's free tier) or you extend GEMINI_MODEL_CHAIN", file=sys.stderr)
+    return False
+
+
+def extract_meeting_datetime_via_vision(pdf_bytes: bytes, filed_date_str: str, api_key: str):
     image_bytes = render_first_page_png(pdf_bytes)
     if image_bytes is None:
         return None
@@ -169,9 +196,21 @@ def extract_meeting_datetime_via_vision(pdf_bytes: bytes, filed_date_str: str, a
     }
 
     for attempt in range(MAX_RETRIES):
+        model = current_model()
         try:
             api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
             resp = requests.post(f"{api_url}?key={api_key}", json=body, timeout=60)
+
+            if resp.status_code == 429:
+                # our own rate limiting already keeps calls under the
+                # per-minute cap, so a 429 in practice almost always means
+                # the daily cap, not a transient burst -- switching models
+                # immediately is more useful here than retrying the same
+                # exhausted one and hoping
+                if not advance_to_next_model():
+                    return None
+                continue  # retry this same event against the new model, no wasted backoff sleep
+
             resp.raise_for_status()
             data = resp.json()
             text = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -202,10 +241,6 @@ def main():
                      help="only process the first N eligible events -- use to sanity check before a full run")
     ap.add_argument("--no-vision", action="store_true",
                      help="text extraction only, skip the vision-OCR fallback (no API needed at all)")
-    ap.add_argument("--model", default=GEMINI_MODEL,
-                     help=f"Gemini model to use, default {GEMINI_MODEL} -- override if this one "
-                          f"stops working (model availability shifts fast), check "
-                          f"https://aistudio.google.com for current options")
     args = ap.parse_args()
 
     use_vision = not args.no_vision
@@ -259,9 +294,9 @@ def main():
                     resolved_text += 1
 
             if result_entry["scheduled_date"] is None and use_vision:
-                vision_result = extract_meeting_datetime_via_vision(pdf_bytes, e["date"], api_key, args.model)
+                vision_result = extract_meeting_datetime_via_vision(pdf_bytes, e["date"], api_key)
                 if vision_result:
-                    result_entry = {**vision_result, "method": "vision"}
+                    result_entry = {**vision_result, "method": "vision", "model": current_model()}
                     resolved_vision += 1
                 time.sleep(VISION_RATE_LIMIT_SECONDS)  # only wait the long delay if Gemini was actually called
 
