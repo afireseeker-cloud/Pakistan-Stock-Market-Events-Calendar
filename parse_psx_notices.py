@@ -104,7 +104,9 @@ def parse_row(tr) -> dict | None:
         "type": event_type,
         "status": "confirmed",
         "date": date_iso,
-        "time": time_24h,
+        # same reasoning as parse_announcements.py -- this is filing time,
+        # not scheduled event time. See that file's comment for detail.
+        "time": None,
         "scope": "market",
         "symbol": None,
         "sector": None,
@@ -114,6 +116,7 @@ def parse_row(tr) -> dict | None:
         "payload": {
             "pdf_url": attachments["pdf_url"],
             "image_url": attachments["image_url"],
+            "filed_time": time_24h,
         },
         "revision_of": None,
     }

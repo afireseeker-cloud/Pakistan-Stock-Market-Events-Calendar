@@ -39,13 +39,27 @@ IMAGE_BASE_URL = "https://dps.psx.com.pk/download/image/"
 
 CLASSIFICATION_RULES = [
     ("book_closure", re.compile(r"closure of share transfer books|book closure", re.I)),
-    ("board_meeting", re.compile(r"board meeting", re.I)),
+    # explicit exclusion, must come before the results rule below -- PSX
+    # titles like "Board Meeting Other Than Financial Results" (real
+    # example, PSO's own filings) contain "financial results" as a
+    # substring while explicitly saying the meeting ISN'T about results.
+    # Without this, the results rule below would misclassify it.
+    ("board_meeting", re.compile(r"board meeting.*other than.*results|other than.*financial results", re.I)),
     ("agm", re.compile(r"\b(agm|annual general meeting|eogm|extraordinary general meeting)\b", re.I)),
     ("dividend", re.compile(r"dividend", re.I)),
+    # checked BEFORE the generic board_meeting rule below -- real PSX
+    # titles very commonly combine both ("Board Meeting for the
+    # Announcement of Financial Results for..."), and the actual content
+    # (results) matters more than the mechanism (a board meeting produced
+    # it) for routing to the right calendar tab. Without this ordering,
+    # every such title silently lands as a generic board_meeting and never
+    # reaches the Earnings tab at all -- confirmed against real captured
+    # data (ENGROH's own filing uses exactly this phrasing).
     ("results", re.compile(
         r"financial results|quarterly results|annual results|"
         r"financial statements|quarterly financial|"
         r"quarterly report|half.?yearly report|annual report", re.I)),
+    ("board_meeting", re.compile(r"board meeting", re.I)),
     ("corporate_briefing", re.compile(r"corporate briefing session", re.I)),
     ("director_disclosure", re.compile(r"disclosure of interest", re.I)),
     ("governance_change", re.compile(
@@ -147,7 +161,14 @@ def parse_row(tr) -> dict:
         "type": event_type,
         "status": status,
         "date": date_iso,
-        "time": time_24h,
+        # NOT the scheduled event time -- this is when PSX filed the notice,
+        # which is a different thing from when a board meeting/results
+        # announcement is actually scheduled. Showing it as the event's
+        # "time" was misleading (a notice filed at 3:29pm about a meeting
+        # happening next week isn't a 3:29pm event). filed_time in payload
+        # preserves it for anyone who wants it; the top-level time field
+        # stays honestly blank since we don't have the real scheduled time.
+        "time": None,
         "scope": "company" if symbol else "market",
         "symbol": symbol,
         "sector": None,
@@ -157,6 +178,7 @@ def parse_row(tr) -> dict:
         "payload": {
             "pdf_url": attachments["pdf_url"],
             "image_url": attachments["image_url"],
+            "filed_time": time_24h,
             "agenda_in_title": has_agenda_in_title,
             "agenda_extracted": False,  # true once a v2 PDF/OCR stage runs
             "announcement_revoked": is_revoked,  # true even when status stays "confirmed"
