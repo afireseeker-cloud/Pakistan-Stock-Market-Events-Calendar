@@ -136,8 +136,16 @@
   .avatar { width: 28px; border-radius: 50%; object-fit: cover; }
   .avatarFallback { width: 28px; border-radius: 50%; justify-content: center; font-size: 11px; font-weight: 500; }
   .sourceBadge { padding: 0 9px; border-radius: var(--radius); font-size: 11px; font-weight: 500; white-space: nowrap; }
-  .rowtitle { font-size: 14px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .subtitle { font-size: 13px; color: var(--text-secondary); margin: 3px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rowtitle {
+    font-size: 14px; margin: 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .subtitle {
+    font-size: 13px; color: var(--text-secondary); margin: 3px 0 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   .upcomingLine { margin-top: 4px; }
   .rowtitle.strike { text-decoration: line-through; }
   .linkicon {
