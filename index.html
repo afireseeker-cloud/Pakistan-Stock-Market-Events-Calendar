@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PSX calendar</title>
+<style>
+  :root {
+    --brand-accent: #3d4db7; --brand-accent-hover: #34409c;
+    --surface-2: #ffffff; --surface-1: #f6f6f8; --surface-0: #ffffff;
+    --text-primary: #16161a; --text-secondary: #68686f; --text-muted: #97979e;
+    --border: #e6e6ea; --border-strong: #d3d3d9;
+    --bg-danger: #FCEBEB; --text-danger: #791F1F;
+    --bg-warning: #FAEEDA; --text-warning: #633806;
+    --bg-success: #EAF3DE; --text-success: #27500A;
+    --radius: 8px; --radius-lg: 12px;
+  }
+  [data-mode="dark"] {
+    --surface-2: #1c1c22; --surface-1: #232329; --surface-0: #121216;
+    --text-primary: #f0f0f2; --text-secondary: #a8a8b0; --text-muted: #77777f;
+    --border: #2e2e36; --border-strong: #3d3d47;
+    --bg-danger: #501313; --text-danger: #F09595;
+    --bg-warning: #412402; --text-warning: #FAC775;
+    --bg-success: #173404; --text-success: #97C459;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0; background: var(--surface-0); color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px; line-height: 1.5;
+  }
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 1.5rem 1rem; background: var(--surface-2); border-bottom: 0.5px solid var(--border);
+  }
+  .header h1 { font-size: 17px; font-weight: 500; margin: 0; }
+  .themeSwitch {
+    width: 52px; height: 28px; border-radius: 14px; border: 0.5px solid var(--border-strong);
+    background: var(--surface-1); cursor: pointer; padding: 0; position: relative; flex-shrink: 0;
+  }
+  .themeSwitch .thumb {
+    position: absolute; top: 2px; left: 2px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--brand-accent); display: flex; align-items: center; justify-content: center;
+    transition: left 0.15s; color: #fff;
+  }
+  [data-mode="dark"] .themeSwitch .thumb { left: 26px; }
+  .themeSwitch svg { width: 14px; height: 14px; }
+  #main { padding: 0 1.5rem 1.5rem; max-width: 1000px; margin: 0 auto; }
+
+  .weekNav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0 0.75rem; }
+  .weekNav .label { font-size: 15px; font-weight: 500; }
+  .weekNav button { padding: 5px 12px; font-size: 13px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); background: var(--surface-2); color: var(--text-primary); cursor: pointer; }
+  #weekToday { background: var(--brand-accent); color: #fff; border-color: var(--brand-accent); font-weight: 500; }
+  #weekToday:hover { background: var(--brand-accent-hover); }
+  .weekStrip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 1.25rem; }
+  .dayCard {
+    background: var(--surface-2); border: 0.5px solid var(--border); border-radius: var(--radius-lg);
+    padding: 10px; cursor: pointer; min-height: 100px;
+  }
+  .dayCard.today { border-color: var(--brand-accent); }
+  .dayCard.selected { border: 2px solid var(--brand-accent); }
+  .dayCard .dayLabel {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; font-weight: 600; margin: -10px -10px 8px; padding: 8px 10px;
+    background: var(--surface-1); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .dayCard .dayLabel .total { font-size: 11px; font-weight: 500; color: var(--text-muted); }
+  .dayCard .catRow { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary); margin-bottom: 2px; }
+  .dayCard .catRow .n { color: var(--text-primary); font-weight: 500; }
+
+  .tabBar { display: flex; gap: 8px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .tabBtn {
+    padding: 7px 16px; font-size: 13px; border: 1.5px solid var(--pill-color, var(--border-strong));
+    border-radius: 20px; background: var(--surface-2); color: var(--pill-color, var(--text-secondary));
+    cursor: pointer; font-weight: 500; transition: background 0.15s ease, color 0.15s ease;
+  }
+  .tabBtn:hover { background: color-mix(in srgb, var(--pill-color, var(--border-strong)) 10%, var(--surface-2)); }
+  .tabBtn.active { background: var(--pill-color, var(--brand-accent)); color: #fff; border-color: var(--pill-color, var(--brand-accent)); }
+
+  .layout { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .sidebar { width: 200px; flex-shrink: 0; background: var(--surface-2); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1rem; }
+  .sidebar h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); margin: 0 0 10px; }
+  .sidebarChip {
+    display: flex; justify-content: space-between; padding: 7px 10px; border-radius: var(--radius);
+    font-size: 13px; cursor: pointer; margin-bottom: 2px; color: var(--text-primary);
+  }
+  .sidebarChip:hover { background: var(--surface-1); }
+  .sidebarChip.active { background: var(--brand-accent); color: #fff; }
+  .sidebarChip .n { color: inherit; opacity: 0.65; }
+
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+  .chip {
+    padding: 6px 14px; border-radius: 20px; font-size: 13px;
+    border: 0.5px solid var(--border-strong); background: var(--surface-2);
+    color: var(--text-primary); cursor: pointer; white-space: nowrap;
+  }
+  .chip.active { background: var(--text-primary); color: var(--surface-2); border-color: var(--text-primary); }
+  input[type=text], input[type=file] {
+    padding: 6px 10px; border-radius: var(--radius); border: 0.5px solid var(--border-strong);
+    background: var(--surface-2); color: var(--text-primary); font-size: 13px;
+  }
+  .toggle {
+    width: 36px; height: 20px; border-radius: 10px; border: none; position: relative;
+    background: var(--border-strong); cursor: pointer; padding: 0; flex-shrink: 0;
+  }
+  .toggle::after {
+    content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+    border-radius: 50%; background: var(--surface-2); transition: left 0.15s;
+  }
+  .toggle[aria-checked="true"] { background: var(--brand-accent); }
+  .toggle[aria-checked="true"]::after { left: 18px; }
+  .toggle:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .content { flex: 1; min-width: 0; }
+  .stats { font-size: 12px; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .dayLabel2 { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin: 1.25rem 0 8px 2px; }
+  .dayLabel2:first-child { margin-top: 0; }
+
+  .rowcard {
+    display: grid;
+    grid-template-columns: 42px 62px minmax(0,1fr) var(--datacol-width, 280px) 92px 92px 26px;
+    align-items: center; gap: 12px; padding: 12px 14px;
+    border: 0.5px solid var(--border); border-left: 3px solid var(--accent, var(--border-strong));
+    border-radius: var(--radius); margin-bottom: 6px;
+    background: color-mix(in srgb, var(--accent, var(--border-strong)) 6%, var(--surface-2));
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 1px 1px rgba(0,0,0,0.03);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .rowcard:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.08); transform: translateY(-1px); }
+  [data-mode="dark"] .rowcard { box-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+  [data-mode="dark"] .rowcard:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.4); }
+  .rowcard.cancelled { opacity: 0.5; }
+  .rowcard.cancelled:hover { transform: none; }
+  .time { font-size: 12px; color: var(--text-muted); min-width: 42px; }
+  .avatarSlot { width: 62px; flex-shrink: 0; display: flex; align-items: center; }
+  .avatar, .avatarFallback, .sourceBadge { height: 28px; box-sizing: border-box; display: inline-flex; align-items: center; }
+  .avatar { width: 28px; border-radius: 50%; object-fit: cover; }
+  .avatarFallback { width: 28px; border-radius: 50%; justify-content: center; font-size: 11px; font-weight: 500; }
+  .sourceBadge { padding: 0 9px; border-radius: var(--radius); font-size: 11px; font-weight: 500; white-space: nowrap; }
+  .rowtitle {
+    font-size: 14px; margin: 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .subtitle {
+    font-size: 13px; color: var(--text-secondary); margin: 3px 0 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .upcomingLine { margin-top: 4px; }
+  .rowtitle.strike { text-decoration: line-through; }
+  .linkicon {
+    width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius); color: var(--brand-accent); text-decoration: none;
+    border: 0.5px solid var(--border-strong); flex-shrink: 0; font-size: 13px;
+    transition: background 0.15s ease;
+  }
+  .linkicon:hover { background: var(--surface-1); }
+  .sentiment, .status { font-size: 11px; padding: 2px 8px; border-radius: var(--radius); white-space: nowrap; flex-shrink: 0; }
+  .dataPart { text-align: right; }
+  .dataPart p { margin: 0; white-space: nowrap; }
+  .empty { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); animation: fadeIn 0.2s ease; }
+  .empty .big { font-size: 15px; color: var(--text-primary); margin-bottom: 6px; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  #list { animation: fadeIn 0.15s ease; }
+
+  .colHeader {
+    display: grid;
+    grid-template-columns: 42px 62px minmax(0,1fr) var(--datacol-width, 280px) 92px 92px 26px;
+    align-items: center; gap: 12px; padding: 0 14px 8px; margin-top: 0.25rem;
+    font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .colHeader .colDataGroup { display: flex; gap: 16px; justify-self: end; }
+  .colHeader .colDataGroup > span { width: 76px; text-align: right; }
+
+  .pulseDot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--pulse-color, #DC2626); display: inline-block;
+    animation: pulseAnim 1.6s ease-in-out infinite; flex-shrink: 0;
+  }
+  @keyframes pulseAnim {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse-color, #DC2626) 45%, transparent); }
+    50% { box-shadow: 0 0 0 5px transparent; }
+  }
+  .upcomingBadge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; flex-shrink: 0; justify-self: end; }
+  .countdown { font-size: 11px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; text-align: right; justify-self: end; }
+
+  @media (max-width: 760px) {
+    #main { padding: 0 0.75rem 1.5rem; }
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .weekStrip { grid-template-columns: repeat(4, 1fr); }
+    .weekStrip .dayCard:nth-child(n+5) { display: none; }
+    .rowcard { flex-wrap: wrap; }
+    .colHeader { display: none; }
+    .controls { flex-direction: column; align-items: stretch; }
+    .controls input[type=text] { width: 100%; }
+    .header { flex-wrap: wrap; gap: 10px; }
+  }
+  @media (max-width: 480px) {
+    .weekStrip { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PSX calendar</h1>
+  <div style="display:flex;align-items:center;gap:16px">
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="toggle" id="holdingsToggle" role="switch" aria-checked="false" aria-label="My holdings only"></button>
+      <span style="font-size:13px;color:var(--text-secondary)">My holdings only</span>
+      <input type="text" id="holdingsInput" placeholder="LUCK, UBL, HUBC" style="width:220px">
+    </div>
+    <button class="themeSwitch" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+      <span class="thumb">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+      </span>
+    </button>
+  </div>
+</div>
+
+<div id="main">
+  <div class="weekNav">
+    <button id="weekToday">Today</button>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button id="weekPrev">&larr;</button>
+      <span class="label" id="weekLabel"></span>
+      <button id="weekNext">&rarr;</button>
+    </div>
+    <input type="file" id="fileInput" accept=".json">
+    <span id="dataSourceNote" style="font-size:11px;color:var(--text-muted);margin-left:8px"></span>
+  </div>
+
+  <div class="weekStrip" id="weekStrip"></div>
+
+  <div class="tabBar" id="tabBar"></div>
+
+  <div class="layout">
+    <div class="sidebar" id="sidebar" style="display:none">
+      <h3>Category</h3>
+      <div id="sidebarChips"></div>
+      <h3 style="margin-top:16px">Shariah</h3>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button id="shariahToggle" class="toggle" role="switch" aria-checked="false"></button>
+        <span style="font-size:12px;color:var(--text-secondary)">Compliant only</span>
+      </div>
+      <p id="shariahNote" style="font-size:11px;color:var(--text-muted);margin:6px 0 0"></p>
+    </div>
+
+    <div class="content">
+      <div class="controls" id="controlsRow">
+        <input type="text" id="search" placeholder="Search symbol or company">
+      </div>
+      <div class="stats" id="stats"></div>
+      <div id="list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const TABS = [
+  { id: 'all', label: 'All events' },
+  { id: 'macro', label: 'Macro' },
+  { id: 'earnings', label: 'Earnings' },
+  { id: 'dividends', label: 'Dividends' },
+  { id: 'ipo', label: 'IPO' },
+  { id: 'announcements', label: 'Announcements' },
+];
+const TAB_ACCENT = { macro: '#0891B2', earnings: '#0F6E56', dividends: '#B45309', ipo: '#993556', announcements: '#78716C' };
+
+const MACRO_TYPES_SET = new Set(['mpc','mpc_briefing','mpc_presser','mpc_minutes','mpc_report','spi_weekly','cpi_monthly','wpi_monthly','auto_sales_monthly','market_holiday']);
+const IPO_TYPES_SET = new Set(['ipo_subscription','ipo_book_building','ipo_prospectus','ipo_listing']);
+const DIVIDEND_TYPES_SET = new Set(['book_closure']);
+
+function tabOf(type) {
+  if (MACRO_TYPES_SET.has(type)) return 'macro';
+  if (type === 'results') return 'earnings';
+  if (DIVIDEND_TYPES_SET.has(type)) return 'dividends';
+  if (IPO_TYPES_SET.has(type)) return 'ipo';
+  return 'announcements';
+}
+
+// Announcements-tab sidebar categories -- Material vs Other split by title
+// pattern (Investify treats these as two distinct buckets, not one
+// catch-all), everything else by type. dividend_announced lives here now
+// (not the Dividends tab) since it's the raw declaration, not yet an
+// actionable date -- book_closure (which has real ex-date/last-buy data)
+// is the derived, dated item that belongs in the dedicated Dividends tab.
+function announcementCategory(e) {
+  const t = e.type;
+  if (t === 'board_meeting' || t === 'agm') return 'meetings';
+  if (t === 'corporate_briefing') return 'briefings';
+  if (t === 'director_disclosure') return 'insiders';
+  if (t === 'dividend_announced') return 'dividends';
+  if (['governance_change','delisting','fund_listing','debt_instrument_listing','trading_halt','risk_warning'].includes(t)) return 'actions';
+  if (/material information/i.test(e.title || '')) return 'material';
+  return 'other';
+}
+const SIDEBAR_CATEGORIES = [
+  { id: 'all', label: 'All' },
+  { id: 'meetings', label: 'Meetings' },
+  { id: 'briefings', label: 'Briefings' },
+  { id: 'insiders', label: 'Insiders' },
+  { id: 'dividends', label: 'Dividends' },
+  { id: 'actions', label: 'Actions' },
+  { id: 'material', label: 'Material' },
+  { id: 'other', label: 'Other' },
+];
+
+const CATEGORY_ACCENT = {
+  mpc: '#0891B2', mpc_briefing: '#0891B2', mpc_presser: '#0891B2', mpc_minutes: '#0891B2', mpc_report: '#0891B2',
+  spi_weekly: '#0891B2', cpi_monthly: '#0891B2', wpi_monthly: '#0891B2', auto_sales_monthly: '#BE185D',
+  market_holiday: '#57534E', board_meeting: '#0F6E56', agm: '#0F6E56', corporate_briefing: '#0F6E56',
+  results: '#0F6E56', book_closure: '#B45309', dividend_announced: '#B45309',
+  director_disclosure: '#78716C', governance_change: '#78716C', other_announcement: '#78716C', other_psx_notice: '#78716C',
+  delisting: '#A32D2D', fund_listing: '#7F77DD', debt_instrument_listing: '#7F77DD',
+  ipo_subscription: '#993556', ipo_book_building: '#993556', ipo_prospectus: '#993556', ipo_listing: '#993556',
+  trading_halt: '#A32D2D', risk_warning: '#A32D2D',
+};
+const TYPE_LABELS = {
+  mpc: 'Monetary policy statement', mpc_briefing: 'Monetary policy analyst briefing',
+  mpc_presser: 'Monetary policy press conference', mpc_minutes: 'Monetary policy meeting minutes',
+  mpc_report: 'Monetary Policy Report', spi_weekly: 'Sensitive Price Indicator, weekly',
+  cpi_monthly: 'Consumer Price Index, monthly', wpi_monthly: 'Wholesale Price Index, monthly',
+  auto_sales_monthly: 'Automobile sales data, monthly', market_holiday: 'Market holiday',
+  board_meeting: 'Board meeting', agm: 'General meeting', corporate_briefing: 'Corporate briefing session',
+  results: 'Financial results', book_closure: 'Book closure', dividend_announced: 'Dividend announced',
+  director_disclosure: 'Director / executive disclosure', governance_change: 'Governance change',
+  other_announcement: 'Other announcement', other_psx_notice: 'PSX notice', delisting: 'Delisting',
+  fund_listing: 'Fund listing', debt_instrument_listing: 'Debt instrument listing',
+  ipo_subscription: 'IPO subscription', ipo_book_building: 'IPO book building', ipo_prospectus: 'IPO prospectus',
+  ipo_listing: 'New listing', trading_halt: 'Trading halt', risk_warning: 'Risk warning',
+};
+function typeLabel(type) { return TYPE_LABELS[type] || (type || '').replace(/_/g, ' '); }
+
+// entity badges for macro sources -- distinct from company avatars, no
+// company website/domain concept applies to these
+// small SVG glyphs (not just text) for the 4 known institution sources --
+// hand-drawn inline, no external icon font dependency for a standalone file
+const INSTITUTION_ICONS = {
+  bank: '<path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M6 10v7M10 10v7M14 10v7M18 10v7"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  car: '<path d="M5 17h14M5 17a2 2 0 1 0 0-4h14a2 2 0 1 0 0 4M5 13l1.5-5h11L19 13M8 13V9h8v4"/>',
+  bell: '<path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/>',
+};
+const SOURCE_BADGE = {
+  sbp_mpc: { label: 'SBP', bg: '#E6F1FB', fg: '#042C53', icon: 'bank' },
+  pbs_calendar: { label: 'PBS', bg: '#E6F1FB', fg: '#042C53', icon: 'chart' },
+  pama_auto_sales: { label: 'PAMA', bg: '#FBEAF0', fg: '#4B1528', icon: 'car' },
+  psx_holidays: { label: 'PSX', bg: '#F1EFE8', fg: '#2C2C2A', icon: 'bell' },
+  // psx_notices events (IPOs, delistings, trading halts...) never carry a
+  // symbol -- parse_psx_notices.py confirmed the source table has no
+  // symbol column at all -- so without this entry every one of those
+  // rows fell through avatarFor() with nothing rendered at all.
+  psx_notices: { label: 'PSX', bg: '#F1EFE8', fg: '#2C2C2A', icon: 'bell' },
+};
+
+let allEvents = [];
+let activeTab = 'all';
+let activeSidebarCat = 'all';
+let searchTerm = '';
+let holdingsOnly = false;
+// static for now -- replace with a dynamic portfolio source later
+const STATIC_HOLDINGS = ['DCR','EFERT','FFC','BWCL','ATLH','FATIMA','MARI','MEBL',
+  'MIIETF','MZNPETF','NATF','OGDC','SYS','FABL','HUBC','ILP','LUCK','MTL','PSO',
+  'SAZEW','DOL','ENGROH','NML'];
+let holdingsSet = new Set(STATIC_HOLDINGS);
+let shariahOnly = false;
+let weekStart = mondayOf(new Date());
+let selectedDate = null;
+
+function mondayOf(d) {
+  const date = new Date(d);
+  const day = date.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  date.setDate(date.getDate() + diff);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+function isoDate(d) {
+  // NEVER use toISOString() here -- it's always UTC, but every Date object
+  // in this file is built with local-time methods (weekDates/mondayOf).
+  // For any timezone ahead of UTC (Pakistan is UTC+5), that mismatch
+  // silently shifts every date-comparison key back by one day versus what
+  // the card visually displays, even though the display itself is correct.
+  // Build the string from local components instead so display and
+  // comparison always agree.
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+function weekDates(start) {
+  const out = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start);
+    d.setDate(d.getDate() + i);
+    out.push(d);
+  }
+  return out;
+}
+
+// ---------- theme ----------
+const SUN_ICON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>';
+const MOON_ICON = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+function applyTheme(mode) {
+  document.documentElement.setAttribute('data-mode', mode);
+  const toggle = document.getElementById('themeToggle');
+  toggle.setAttribute('aria-checked', mode === 'dark');
+  document.getElementById('themeIcon').innerHTML = mode === 'dark' ? MOON_ICON : SUN_ICON;
+  try { localStorage.setItem('psx_calendar_theme', mode); } catch (e) {}
+}
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-mode') || 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+(function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem('psx_calendar_theme'); } catch (e) {}
+  applyTheme(saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+})();
+
+// ---------- sample data ----------
+function loadSample() {
+  allEvents = [
+    { id:'s1', type:'mpc', status:'confirmed', date: isoDate(weekDates(weekStart)[0]), time:null, symbol:null, title:'Monetary policy statement', source:'sbp_mpc', source_url:null },
+    { id:'s2', type:'cpi_monthly', status:'confirmed', date: isoDate(weekDates(weekStart)[1]), time:null, symbol:null, title:'Monthly Consumer Price Index (CPI) release', source:'pbs_calendar', source_url:null, payload:{actual_value:'4.2%', prior_value:'3.9%'} },
+    { id:'s3', type:'board_meeting', status:'confirmed', date: isoDate(weekDates(weekStart)[2]), time:'15:27', symbol:'UBL', company_name:'United Bank Limited', title:'Board meeting', source:'psx_announcements', source_url:null },
+    { id:'s4', type:'book_closure', status:'confirmed', date: isoDate(weekDates(weekStart)[2]), time:null, symbol:'LUCK', company_name:'Lucky Cement Limited', title:'Lucky Cement Limited \u2014 250% final cash dividend', source:'psx_payouts', source_url:'https://dps.psx.com.pk/company/LUCK', logo_url:'https://img.logo.dev/this-domain-does-not-exist-deliberately.invalid?token=fake', payload:{dividend:{percent:250, status:'final', kind:'cash dividend', display:'250% final cash dividend'}, estimated_ex_date:'2026-08-17', estimated_last_buy_date:'2026-08-14'} },
+    { id:'s5', type:'board_meeting', status:'cancelled', date: isoDate(weekDates(weekStart)[3]), time:'12:56', symbol:'PICT', company_name:'Pakistan International Container Terminal', title:'Board meeting', source:'psx_announcements', source_url:null },
+    { id:'s6', type:'dividend_announced', status:'pending_book_closure', date: isoDate(weekDates(weekStart)[3]), time:'13:00', symbol:'SGPL', company_name:'S.G. Power Limited', title:'S.G. Power Limited \u2014 dividend announced: 300% right', source:'psx_payouts', source_url:null, payload:{dividend:{display:'300% right'}} },
+    { id:'s7', type:'auto_sales_monthly', status:'estimated', date: isoDate(weekDates(weekStart)[4]), time:null, symbol:null, title:'Monthly automobile production and sales data (PAMA)', source:'pama_auto_sales', source_url:null },
+    { id:'s8', type:'market_holiday', status:'confirmed', date: isoDate(weekDates(weekStart)[4]), time:null, symbol:null, title:'PSX closed \u2014 Independence Day', source:'psx_holidays', source_url:null },
+    { id:'s9', type:'results', status:'confirmed', date: isoDate(weekDates(weekStart)[1]), time:'14:25', symbol:'FCCL', company_name:'Fauji Cement Company Ltd', title:'Financial results, FY26', source:'psx_announcements', source_url:null, sentiment:'mixed' },
+    { id:'s10', type:'delisting', status:'confirmed', date: isoDate(weekDates(weekStart)[0]), time:'11:00', symbol:'RCSM', company_name:'Reliance Cotton Spinning Mills', title:'Delisting of Reliance Cotton Spinning Mills Limited', source:'psx_notices', source_url:null, sentiment:'negative' },
+    { id:'s11', type:'ipo_subscription', status:'confirmed', date: isoDate(weekDates(weekStart)[4]), time:null, symbol:null, company_name:'Tasdeeq Information Services', title:'Public subscription open', source:'psx_notices', source_url:null },
+    { id:'s12', type:'other_announcement', status:'confirmed', date: isoDate(weekDates(weekStart)[0]), time:'16:10', symbol:'KTML', company_name:'Kohinoor Textile Mills', title:'Material Information', source:'psx_announcements', source_url:null },
+    { id:'s13', type:'director_disclosure', status:'confirmed', date: isoDate(weekDates(weekStart)[1]), time:'09:30', symbol:'JVDC', company_name:'Javedan Corporation', title:'Disclosure of Interest by Director', source:'psx_announcements', source_url:null, sentiment:'positive' },
+    { id:'s14', type:'agm', status:'confirmed', date: isoDate(new Date()), time:null, symbol:'HUBC', company_name:'The Hub Power Company', title:'Annual General Meeting', source:'psx_announcements', source_url:null },
+  ];
+  render();
+}
+
+document.getElementById('fileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (evt) => {
+    try {
+      const parsed = JSON.parse(evt.target.result);
+      allEvents = Array.isArray(parsed) ? parsed : [];
+
+      // Always land on today's week when new data loads, regardless of
+      // where that data actually falls -- predictable and consistent
+      // beats guessing where the "interesting" week is. Navigate manually
+      // (Prev/Next/Today) to find data outside the current week.
+      weekStart = mondayOf(new Date());
+      selectedDate = null;
+
+      render();
+    } catch (err) {
+      document.getElementById('stats').textContent = 'Could not parse that file as JSON: ' + err.message;
+    }
+  };
+  reader.readAsText(file);
+});
+
+// ---------- week nav ----------
+document.getElementById('weekPrev').addEventListener('click', () => { weekStart.setDate(weekStart.getDate() - 7); render(); });
+document.getElementById('weekNext').addEventListener('click', () => { weekStart.setDate(weekStart.getDate() + 7); render(); });
+document.getElementById('weekToday').addEventListener('click', () => { weekStart = mondayOf(new Date()); selectedDate = isoDate(new Date()); render(); });
+
+function renderWeekNav() {
+  const dates = weekDates(weekStart);
+  const first = dates[0], last = dates[6];
+  const fmt = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  document.getElementById('weekLabel').textContent = `${fmt(first)} \u2014 ${fmt(last)}, ${last.getFullYear()}`;
+}
+
+function renderWeekStrip() {
+  const dates = weekDates(weekStart);
+  const todayStr = isoDate(new Date());
+  const strip = document.getElementById('weekStrip');
+  strip.innerHTML = dates.map(d => {
+    const dStr = isoDate(d);
+    const dayEvents = allEvents.filter(e => e.date === dStr);
+    const counts = { macro: 0, earnings: 0, dividends: 0, ipo: 0, announcements: 0 };
+    for (const e of dayEvents) counts[tabOf(e.type)]++;
+    const rows = TABS.filter(t => counts[t.id] > 0)
+      .map(t => `<div class="catRow"><span style="color:${TAB_ACCENT[t.id]};font-weight:500">${t.label}</span><span class="n" style="color:${TAB_ACCENT[t.id]}">${counts[t.id]}</span></div>`)
+      .join('');
+    return `<div class="dayCard ${dStr === todayStr ? 'today' : ''} ${dStr === selectedDate ? 'selected' : ''}" data-date="${dStr}">
+      <div class="dayLabel"><span>${d.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric' })}</span><span class="total">${dayEvents.length}</span></div>
+      ${rows || '<div class="catRow" style="color:var(--text-muted)">No events</div>'}
+    </div>`;
+  }).join('');
+  strip.querySelectorAll('.dayCard').forEach(card => {
+    card.addEventListener('click', () => {
+      const d = card.dataset.date;
+      selectedDate = selectedDate === d ? null : d;
+      render();
+    });
+  });
+}
+
+// ---------- tabs ----------
+function renderTabBar() {
+  document.getElementById('tabBar').innerHTML = TABS.map(t =>
+    `<button class="tabBtn ${activeTab === t.id ? 'active' : ''}" data-tab="${t.id}" style="--pill-color:${TAB_ACCENT[t.id] || 'var(--brand-accent)'}">${t.label}</button>`
+  ).join('');
+  document.querySelectorAll('.tabBtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      activeSidebarCat = 'all';
+      render();
+    });
+  });
+}
+
+// ---------- sidebar (Announcements tab only) ----------
+function renderSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (activeTab !== 'announcements') { sidebar.style.display = 'none'; return; }
+  sidebar.style.display = 'block';
+
+  const tabEvents = allEvents.filter(e => tabOf(e.type) === 'announcements');
+  const counts = { all: tabEvents.length };
+  for (const e of tabEvents) {
+    const c = announcementCategory(e);
+    counts[c] = (counts[c] || 0) + 1;
+  }
+  document.getElementById('sidebarChips').innerHTML = SIDEBAR_CATEGORIES.map(c =>
+    `<div class="sidebarChip ${activeSidebarCat === c.id ? 'active' : ''}" data-cat="${c.id}">
+      <span>${c.label}</span><span class="n">${counts[c.id] || 0}</span>
+    </div>`
+  ).join('');
+  document.querySelectorAll('.sidebarChip').forEach(chip => {
+    chip.addEventListener('click', () => { activeSidebarCat = chip.dataset.cat; render(); });
+  });
+
+  updateShariahAvailability();
+}
+document.getElementById('shariahToggle').addEventListener('click', function() {
+  if (this.disabled) return;
+  shariahOnly = !shariahOnly;
+  this.setAttribute('aria-checked', shariahOnly);
+  render();
+});
+function updateShariahAvailability() {
+  const hasData = allEvents.some(e => e.shariah_compliant !== undefined && e.shariah_compliant !== null);
+  const toggle = document.getElementById('shariahToggle');
+  toggle.disabled = !hasData;
+  if (!hasData) {
+    shariahOnly = false;
+    toggle.setAttribute('aria-checked', 'false');
+    document.getElementById('shariahNote').textContent = 'Not available yet \u2014 no Shariah data source connected';
+  } else {
+    document.getElementById('shariahNote').textContent = '';
+  }
+}
+
+// ---------- filters ----------
+document.getElementById('search').addEventListener('input', (e) => { searchTerm = e.target.value.trim().toUpperCase(); render(); });
+document.getElementById('holdingsToggle').addEventListener('click', function() {
+  holdingsOnly = !holdingsOnly;
+  this.setAttribute('aria-checked', holdingsOnly);
+  render();
+});
+document.getElementById('holdingsInput').value = STATIC_HOLDINGS.join(', ');
+document.getElementById('holdingsInput').addEventListener('input', (e) => {
+  holdingsSet = new Set(e.target.value.split(',').map(s => s.trim().toUpperCase()).filter(Boolean));
+  render();
+});
+
+function getFiltered() {
+  return allEvents.filter(e => {
+    if (activeTab !== 'all' && tabOf(e.type) !== activeTab) return false;
+    if (activeTab === 'announcements' && activeSidebarCat !== 'all' && announcementCategory(e) !== activeSidebarCat) return false;
+    if (selectedDate && e.date !== selectedDate) return false;
+    if (!selectedDate) {
+      const dates = weekDates(weekStart).map(isoDate);
+      if (!dates.includes(e.date)) return false;
+    }
+    if (searchTerm && !((e.symbol || '').toUpperCase().includes(searchTerm) || (e.company_name || '').toUpperCase().includes(searchTerm))) return false;
+    if (holdingsOnly && e.symbol && holdingsSet.size > 0 && !holdingsSet.has(e.symbol.toUpperCase())) return false;
+    if (shariahOnly && e.shariah_compliant !== true) return false;
+    return true;
+  });
+}
+
+// ---------- row rendering ----------
+function formatShortDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
+}
+const TAB_COLUMNS = {
+  dividends: ['amount', 'type', 'installment', 'exdate', 'lastbuy'],
+  earnings: ['epsActual', 'epsPrior'],
+  macro: ['actual', 'prior'],
+  ipo: ['dates', 'price'],
+};
+const COLUMN_LABELS = {
+  amount: 'Amount', type: 'Type', installment: 'Installment', exdate: 'Ex-date', lastbuy: 'Last buy',
+  epsActual: 'EPS actual', epsPrior: 'EPS prior', actual: 'Actual', prior: 'Prior', dates: 'Dates', price: 'Price',
+};
+function getColumnValue(e, colKey) {
+  const p = e.payload || {};
+  const div = p.dividend;
+  switch (colKey) {
+    case 'amount': return (div && div.percent != null) ? div.percent + '%' : (div && div.display) || null;
+    case 'type': return (div && div.kind) || null;
+    case 'installment': return (div && div.status) || null;
+    case 'exdate': return p.estimated_ex_date ? formatShortDate(p.estimated_ex_date) : null;
+    case 'lastbuy': return p.estimated_last_buy_date ? formatShortDate(p.estimated_last_buy_date) : null;
+    case 'epsActual': return p.eps_actual !== undefined ? p.eps_actual : null;
+    case 'epsPrior': return p.eps_prior !== undefined ? p.eps_prior : null;
+    case 'actual': return p.actual_value !== undefined ? p.actual_value : null;
+    case 'prior': return p.prior_value !== undefined ? p.prior_value : null;
+    case 'dates': return p.subscription_dates || null;
+    case 'price': return p.price || null;
+    default: return null;
+  }
+}
+function renderColHeader() {
+  const cols = TAB_COLUMNS[activeTab];
+  if (!cols) return '';
+  const labels = cols.map(c => `<span>${COLUMN_LABELS[c]}</span>`).join('');
+  return `<div class="colHeader"><span></span><span></span><span></span><div class="colDataGroup">${labels}</div><span></span><span></span><span></span></div>`;
+}
+function dataPart(label, value) {
+  return `<div class="dataPart"><p style="font-size:10px;color:var(--text-muted);margin-bottom:2px">${label}</p><p style="font-size:13px;font-weight:500">${value}</p></div>`;
+}
+function dividendParts(div) {
+  // real structured fields (percent/kind/status) already exist in the
+  // payload from parse_payouts.py -- previously only .display (the
+  // concatenated string) was used, which duplicated the same text in
+  // both the title and the Amount column. Split into three distinct
+  // fields; fall back to the raw display string only for the free-text
+  // cases (e.g. right-issue premium pricing) that don't fit the
+  // percent/kind/status shorthand pattern at all.
+  if (!div) return [];
+  if (div.percent !== null && div.percent !== undefined) {
+    const parts = [dataPart('Amount', div.percent + '%')];
+    if (div.kind) parts.push(dataPart('Type', div.kind));
+    if (div.status) parts.push(dataPart('Installment', div.status));
+    return parts;
+  }
+  return div.display ? [dataPart('Amount', div.display)] : [];
+}
+function dataColumns(e) {
+  const fixedCols = TAB_COLUMNS[activeTab];
+  if (fixedCols) {
+    // single-shape tab (Macro/Earnings/Dividends/IPO) -- values line up
+    // under the shared header row above, so no per-row label needed
+    const parts = fixedCols.map(col => {
+      const val = getColumnValue(e, col);
+      return `<div class="dataPart" style="width:76px"><p style="font-size:13px;font-weight:500">${val !== null ? val : '\u2014'}</p></div>`;
+    });
+    return `<div style="display:flex;gap:16px;flex-shrink:0">${parts.join('')}</div>`;
+  }
+
+  // mixed-shape tab (All events / Announcements) -- row shapes vary, so a
+  // shared header wouldn't mean anything consistent; keep the old
+  // per-row inline label instead
+  const p = e.payload || {};
+  let parts = [];
+  if (e.type === 'book_closure') {
+    parts = parts.concat(dividendParts(p.dividend));
+    if (p.estimated_ex_date) parts.push(dataPart('Ex-date', formatShortDate(p.estimated_ex_date)));
+    if (p.estimated_last_buy_date) parts.push(dataPart('Last buy', formatShortDate(p.estimated_last_buy_date)));
+  } else if (e.type === 'dividend_announced') {
+    parts = dividendParts(p.dividend);
+  } else if (e.type === 'results') {
+    if (p.eps_actual !== undefined) parts.push(dataPart('EPS actual', p.eps_actual));
+    if (p.eps_prior !== undefined) parts.push(dataPart('EPS prior', p.eps_prior));
+  } else if (IPO_TYPES_SET.has(e.type)) {
+    if (p.subscription_dates) parts.push(dataPart('Dates', p.subscription_dates));
+    if (p.price) parts.push(dataPart('Price', p.price));
+  } else if (MACRO_TYPES_SET.has(e.type)) {
+    if (p.actual_value !== undefined) parts.push(dataPart('Actual', p.actual_value));
+    if (p.prior_value !== undefined) parts.push(dataPart('Prior', p.prior_value));
+  }
+  if (!parts.length) return '';
+  return `<div style="display:flex;gap:16px;flex-shrink:0">${parts.join('')}</div>`;
+}
+const SENTIMENT_ICONS = {
+  positive: '<path d="M7 17L17 7M17 7H9M17 7V15"/>',      // up arrow
+  negative: '<path d="M7 7L17 17M17 17H9M17 17V9"/>',      // down arrow
+  // two genuinely separate arrows (up on the left, down on the right)
+  // instead of one connected zigzag -- the earlier version's single
+  // horizontal line ran through both arrowheads, making them read as one
+  // overlapping shape rather than two distinct directions
+  mixed: '<path d="M8 17V7M8 7L5 10M8 7L11 10M16 7V17M16 17L13 14M16 17L19 14"/>',
+  neutral: '<path d="M5 12H19"/>',                          // dash
+};
+function sentimentBadge(sentiment) {
+  if (!sentiment) return '';
+  const map = {
+    positive: ['var(--bg-success)', 'var(--text-success)', 'Positive'],
+    negative: ['var(--bg-danger)', 'var(--text-danger)', 'Negative'],
+    neutral: ['var(--surface-1)', 'var(--text-secondary)', 'Neutral'],
+    mixed: ['var(--bg-warning)', 'var(--text-warning)', 'Mixed'],
+  };
+  const [bg, fg, label] = map[sentiment] || [null, null, null];
+  if (!bg) return '';
+  const icon = SENTIMENT_ICONS[sentiment] || '';
+  return `<span class="sentiment" style="background:${bg};color:${fg}">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;vertical-align:-1px;margin-right:3px">${icon}</svg>${label}
+  </span>`;
+}
+function statusBadge(status) {
+  // 'confirmed' is the overwhelming majority case -- showing it on nearly
+  // every row added noise without signal. Only the exceptions (something
+  // is cancelled, estimated, or pending) are worth calling out.
+  if (status === 'confirmed') return '';
+  const map = {
+    cancelled: ['var(--bg-danger)', 'var(--text-danger)', 'Cancelled'],
+    estimated: ['var(--bg-warning)', 'var(--text-warning)', 'Estimated'],
+    pending_book_closure: ['var(--bg-warning)', 'var(--text-warning)', 'Book closure TBD'],
+  };
+  const [bg, fg, label] = map[status] || ['var(--surface-1)', 'var(--text-secondary)', status || ''];
+  return label ? `<span class="status" style="background:${bg};color:${fg}">${label}</span>` : '';
+}
+function handleLogoError(img) {
+  // called from the onerror attribute below -- rebuilding the fallback
+  // via the DOM API here (not string concatenation) sidesteps the whole
+  // class of quote-nesting bugs that broke every logo row previously:
+  // embedding an HTML string with its own double-quoted attributes inside
+  // another double-quoted HTML attribute corrupts the outer tag the
+  // moment the browser hits the first unescaped double quote.
+  const span = document.createElement('span');
+  span.className = 'avatarFallback';
+  span.style.background = img.dataset.accent + '22';
+  span.style.color = img.dataset.accent;
+  span.textContent = img.dataset.initials;
+  img.replaceWith(span);
+}
+function avatarFor(e, accent) {
+  if (!e.symbol) {
+    // macro/entity source -- distinct badge, not a company avatar
+    const badge = SOURCE_BADGE[e.source];
+    if (badge) {
+      return `<span class="sourceBadge" style="background:${badge.bg};color:${badge.fg}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:4px">${INSTITUTION_ICONS[badge.icon] || ''}</svg>${badge.label}
+      </span>`;
+    }
+    return '';
+  }
+  const initials = e.symbol.slice(0, 2);
+  if (e.logo_url) {
+    return `<img class="avatar" src="${e.logo_url}" alt="${e.symbol}" data-initials="${initials}" data-accent="${accent}" onerror="handleLogoError(this)">`;
+  }
+  return `<span class="avatarFallback" style="background:${accent}22;color:${accent}">${initials}</span>`;
+}
+function getCountdownInfo(e) {
+  if (!e.date || e.status === 'cancelled') return null;
+  const now = new Date();
+  // date-only events (no scheduled time -- the common case after the
+  // filed-time-vs-scheduled-time fix) are treated as due at end of day,
+  // so "today" stays "upcoming" all day rather than flipping to "past"
+  // the moment the clock ticks past midnight-plus-a-few-hours
+  const target = e.time ? new Date(`${e.date}T${e.time}:00`) : new Date(`${e.date}T23:59:59`);
+  const diffMs = target - now;
+  if (diffMs < 0) return null;
+  const hoursLeft = diffMs / 3600000;
+  const days = Math.floor(diffMs / 86400000);
+  const hours = Math.floor((diffMs % 86400000) / 3600000);
+  const mins = Math.floor((diffMs % 3600000) / 60000);
+  let label;
+  if (days > 0) label = `in ${days}d ${hours}h`;
+  else if (hours > 0) label = `in ${hours}h ${mins}m`;
+  else label = `in ${mins}m`;
+  return { upcoming: hoursLeft <= 24, hoursLeft, label };
+}
+function urgencyColors(hoursLeft) {
+  // within the 24h "upcoming" window: red when imminent, amber in the
+  // middle, green when just barely inside the window -- gives an actual
+  // gradient of urgency instead of one flat color regardless of how close
+  if (hoursLeft <= 3) return { bg: 'var(--bg-danger)', fg: 'var(--text-danger)', dot: '#DC2626' };
+  if (hoursLeft <= 10) return { bg: 'var(--bg-warning)', fg: 'var(--text-warning)', dot: '#D97706' };
+  return { bg: 'var(--bg-success)', fg: 'var(--text-success)', dot: '#16A34A' };
+}
+function displayTitle(e) {
+  // company name is always the prominent title when known -- this used to
+  // only apply to dividends (book_closure/dividend_announced), leaving
+  // every other type with the raw announcement text as the bold title and
+  // company name buried in the subtitle. Same information, backwards
+  // presentation -- unifying so the pattern is consistent everywhere.
+  return e.company_name || e.title;
+}
+function displaySubtitle(e) {
+  if (e.status === 'cancelled') {
+    return `${e.symbol || 'This filing'} revoked this notice. The original source is still available below.`;
+  }
+  if (e.type === 'book_closure' || e.type === 'dividend_announced') {
+    return typeLabel(e.type); // amount/type/installment already in the data columns, no need to repeat
+  }
+  if (e.company_name && e.title && e.title !== e.company_name) {
+    return e.title; // the specific announcement text carries real detail typeLabel alone would lose
+  }
+  return e.company_name ? typeLabel(e.type) : ''; // no company name (macro) -- title already is the detail
+}
+function eventRow(e) {
+  const accent = CATEGORY_ACCENT[e.type] || '#78716C';
+  const cancelled = e.status === 'cancelled';
+  const linkBtn = e.source_url
+    ? `<a class="linkicon" href="${e.source_url}" target="_blank" rel="noopener" aria-label="Open source">&#8599;</a>`
+    : '<span></span>';
+  const countdown = getCountdownInfo(e);
+  let countdownLine = '';
+  if (countdown) {
+    if (countdown.upcoming) {
+      const u = urgencyColors(countdown.hoursLeft);
+      countdownLine = `<p class="upcomingLine"><span class="upcomingBadge" style="--pulse-color:${u.dot};color:${u.fg}"><span class="pulseDot"></span>Upcoming \u00b7 ${countdown.label}</span></p>`;
+    } else {
+      countdownLine = `<p class="upcomingLine"><span class="countdown">${countdown.label}</span></p>`;
+    }
+  }
+  // every trailing slot always renders something (even an empty span) so
+  // the grid's fixed columns never collapse or shift based on which
+  // optional content a given row happens to have. Countdown/Upcoming used
+  // to be one of these trailing columns -- moved into the content block
+  // as a third line instead, both to stop it visually colliding with the
+  // data-columns slot on rows with a lot of dividend detail, and because
+  // that reclaims a whole grid column for the data columns that actually
+  // needed the room.
+  const dataColsHtml = dataColumns(e) || '<div></div>';
+  const sentimentHtml = sentimentBadge(e.sentiment) || '<span></span>';
+  const statusHtml = statusBadge(e.status) || '<span></span>';
+  return `
+    <div class="rowcard ${cancelled ? 'cancelled' : ''}" style="--accent:${accent}">
+      <span class="time">${e.time || '\u2014'}</span>
+      <div class="avatarSlot">${avatarFor(e, accent)}</div>
+      <div style="min-width:0">
+        <p class="rowtitle ${cancelled ? 'strike' : ''}">${displayTitle(e)}</p>
+        <p class="subtitle">${displaySubtitle(e)}</p>
+        ${countdownLine}
+      </div>
+      ${dataColsHtml}
+      ${sentimentHtml}
+      ${statusHtml}
+      ${linkBtn}
+    </div>`;
+}
+
+// ---------- main render ----------
+function render() {
+  renderWeekNav();
+  renderWeekStrip();
+  renderTabBar();
+  renderSidebar();
+  document.getElementById('controlsRow').style.display = activeTab === 'macro' ? 'none' : 'flex';
+
+  // fixed grid column width for the data-columns slot, sized to whatever
+  // shape the active tab's rows actually have -- keeps every row's
+  // trailing columns (countdown, sentiment, status, link) at a consistent
+  // position within a given tab view, since grid guarantees this in a way
+  // flexbox can't when row content varies row to row
+  const fixedCols = TAB_COLUMNS[activeTab];
+  const datacolWidth = fixedCols ? fixedCols.length * 92 : 280;
+  document.getElementById('list').style.setProperty('--datacol-width', datacolWidth + 'px');
+
+  const filtered = getFiltered();
+  document.getElementById('stats').textContent =
+    `${filtered.length} events` + (allEvents.length === 0 ? ' \u2014 load events_merged.json above' : '') +
+    (selectedDate ? ` \u00b7 ${formatShortDate(selectedDate)}` : ' \u00b7 this week');
+
+  const list = document.getElementById('list');
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="empty"><div class="big">No events</div>Try a different tab, day, or filter.</div>`;
+    return;
+  }
+  const byDay = {};
+  for (const e of filtered) (byDay[e.date] = byDay[e.date] || []).push(e);
+  const days = Object.keys(byDay).sort();
+  let html = renderColHeader();
+  for (const day of days) {
+    html += `<div class="dayLabel2">${new Date(day + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' })}</div>`;
+    for (const e of byDay[day].sort((a, b) => (a.time || '').localeCompare(b.time || ''))) html += eventRow(e);
+  }
+  list.innerHTML = html;
+}
+
+// keep countdowns fresh without requiring the person to manually refresh
+setInterval(render, 60000);
+
+async function autoLoadOrSample() {
+  // GitHub Pages serves index.html and events_merged.json from the same
+  // directory, so a relative fetch works there without any manual action --
+  // that's the whole point of this change. Opened as a plain local file
+  // (file://) or inside Claude's own preview sandbox, this fetch fails
+  // (no server, or blocked by the sandbox's CSP) and falls back to sample
+  // data automatically -- the file picker below still works as a manual
+  // override in either case.
+  try {
+    const resp = await fetch('events_merged.json', { cache: 'no-store' });
+    if (resp.ok) {
+      const parsed = await resp.json();
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        allEvents = parsed;
+        document.getElementById('dataSourceNote').textContent = 'Live data auto-loaded';
+        render();
+        return;
+      }
+    }
+  } catch (e) {
+    // no server, no file, or blocked -- expected in some contexts, fall through
+  }
+  document.getElementById('dataSourceNote').textContent = 'Sample data \u2014 use Choose File to load real data';
+  loadSample();
+}
+autoLoadOrSample();
+</script>
+</body>
+</html>
