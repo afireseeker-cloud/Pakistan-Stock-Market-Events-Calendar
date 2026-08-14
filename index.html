@@ -189,7 +189,18 @@
     .sidebar { width: 100%; }
     .weekStrip { grid-template-columns: repeat(4, 1fr); }
     .weekStrip .dayCard:nth-child(n+5) { display: none; }
-    .rowcard { flex-wrap: wrap; }
+    /* Abandon the rigid grid entirely on mobile -- the fixed-width
+       trailing columns (534px+ combined) simply don't fit a phone
+       viewport, which was squeezing the flexible content column down to
+       almost nothing (the "single character per line" bug). Flexbox with
+       wrap lets content reflow naturally instead: time+avatar+title stay
+       together on the first line, everything else wraps below as needed,
+       trading column alignment (meaningless on a screen this narrow
+       anyway) for actual readability. */
+    .rowcard { display: flex; flex-wrap: wrap; align-items: center; }
+    .rowContent { flex: 1 1 100%; order: 1; min-width: 0; }
+    .time, .avatarSlot { order: 0; }
+    .rowtitle, .subtitle { -webkit-line-clamp: unset; }
     .colHeader { display: none; }
     .controls { flex-direction: column; align-items: stretch; }
     .controls input[type=text] { width: 100%; }
@@ -483,7 +494,7 @@ function renderWeekStrip() {
   const strip = document.getElementById('weekStrip');
   strip.innerHTML = dates.map(d => {
     const dStr = isoDate(d);
-    const dayEvents = allEvents.filter(e => e.date === dStr);
+    const dayEvents = allEvents.filter(e => e.date === dStr && matchesPersistentFilters(e));
     const counts = { macro: 0, earnings: 0, dividends: 0, ipo: 0, announcements: 0 };
     for (const e of dayEvents) counts[tabOf(e.type)]++;
     const rows = TABS.filter(t => counts[t.id] > 0)
@@ -572,6 +583,19 @@ document.getElementById('holdingsInput').addEventListener('input', (e) => {
   render();
 });
 
+// Shared by both getFiltered() (the main list) and renderWeekStrip() (the
+// day-pill counts) -- holdings/Shariah are persistent content filters that
+// should shrink what's counted everywhere, unlike tab/day-selection/search
+// which are navigation and deliberately don't change the day-pill counts
+// (per earlier explicit design: counts stay constant regardless of which
+// day or tab you're currently looking at, so you can compare days at a
+// glance -- holdings and Shariah are a different kind of filter, they
+// change what you actually care about seeing, everywhere, all the time).
+function matchesPersistentFilters(e) {
+  if (holdingsOnly && e.symbol && holdingsSet.size > 0 && !holdingsSet.has(e.symbol.toUpperCase())) return false;
+  if (shariahOnly && e.shariah_compliant !== true) return false;
+  return true;
+}
 function getFiltered() {
   return allEvents.filter(e => {
     if (activeTab !== 'all' && tabOf(e.type) !== activeTab) return false;
@@ -582,8 +606,7 @@ function getFiltered() {
       if (!dates.includes(e.date)) return false;
     }
     if (searchTerm && !((e.symbol || '').toUpperCase().includes(searchTerm) || (e.company_name || '').toUpperCase().includes(searchTerm))) return false;
-    if (holdingsOnly && e.symbol && holdingsSet.size > 0 && !holdingsSet.has(e.symbol.toUpperCase())) return false;
-    if (shariahOnly && e.shariah_compliant !== true) return false;
+    if (!matchesPersistentFilters(e)) return false;
     return true;
   });
 }
@@ -831,7 +854,7 @@ function eventRow(e) {
     <div class="rowcard ${cancelled ? 'cancelled' : ''}" style="--accent:${accent}">
       <span class="time">${e.time || '\u2014'}</span>
       <div class="avatarSlot">${avatarFor(e, accent)}</div>
-      <div style="min-width:0">
+      <div class="rowContent" style="min-width:0">
         <p class="rowtitle ${cancelled ? 'strike' : ''}">${displayTitle(e)}</p>
         <p class="subtitle">${displaySubtitle(e)}</p>
         ${countdownLine}
