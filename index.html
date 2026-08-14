@@ -671,6 +671,17 @@ function dividendParts(div) {
   return div.display ? [dataPart('Amount', div.display)] : [];
 }
 function dataColumns(e) {
+  // Announcements tab deliberately shows NO type-specific data columns --
+  // every detail that would go here (dividend amount, EPS, etc.) already
+  // has its own dedicated tab with proper aligned columns for it. Trying
+  // to also cram that varying-width detail into the general Announcements
+  // feed was the root cause of the mobile squeeze bug (a mixed-shape tab
+  // has no consistent column count to reserve width for) -- simpler to
+  // just not show it here at all than to keep patching the width math.
+  // "All events" keeps showing it, since that view is explicitly meant to
+  // be a full mixed scan across every type at once.
+  if (activeTab === 'announcements') return '';
+
   const fixedCols = TAB_COLUMNS[activeTab];
   if (fixedCols) {
     // single-shape tab (Macro/Earnings/Dividends/IPO) -- values line up
@@ -880,7 +891,7 @@ function render() {
   // position within a given tab view, since grid guarantees this in a way
   // flexbox can't when row content varies row to row
   const fixedCols = TAB_COLUMNS[activeTab];
-  const datacolWidth = fixedCols ? fixedCols.length * 92 : 280;
+  const datacolWidth = fixedCols ? fixedCols.length * 92 : (activeTab === 'announcements' ? 0 : 280);
   document.getElementById('list').style.setProperty('--datacol-width', datacolWidth + 'px');
 
   const filtered = getFiltered();
