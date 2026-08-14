@@ -44,13 +44,20 @@ import time
 
 import requests
 
-GEMINI_MODEL_CHAIN = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
-# each model has its own separate daily quota (RPD) -- confirmed in
-# production that a single model's ~500/day cap got hit and started
-# failing every call. Automatically switches to the next model in the
-# chain on the first quota-exhaustion signal, rather than failing silently
-# for the rest of the day. See extract_meeting_dates.py for the same
-# pattern, more detail in its comments.
+GEMINI_MODEL_CHAIN = [
+    "gemini-3.1-flash-lite",   # 500 RPD -- confirmed exhausted today (617/500 used)
+    "gemini-3.5-flash-lite",   # 500 RPD -- confirmed real headroom today (65/500 used)
+    "gemini-3.6-flash",        # ~20 RPD -- small reserve pool, newest generation
+    "gemini-3.5-flash",        # ~20 RPD -- small reserve pool
+    "gemini-3-flash",          # ~20 RPD -- small reserve pool
+    "gemini-2.5-flash-lite",   # ~20 RPD -- small reserve pool, Google retiring 16-Oct-2026
+    "gemini-2.5-flash",        # ~20 RPD -- small reserve pool, oldest generation still available
+]
+# each model draws from its own separate daily quota (RPD) -- confirmed
+# directly from a real AI Studio account snapshot, not assumed. Ordered by
+# real daily capacity, largest first. Automatically switches to the next
+# model in the chain on the first quota-exhaustion signal. See
+# extract_meeting_dates.py for the same pattern, more detail in its comments.
 _active_model_index = 0
 CACHE_FILE = "sentiment_cache.json"
 BATCH_SIZE = 15
@@ -152,7 +159,10 @@ def classify_batch(events: list[dict], api_key: str) -> dict:
         model = current_model()
         api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         try:
-            resp = requests.post(f"{api_url}?key={api_key}", json=body, timeout=60)
+            # key sent as a header, not a URL query param -- see
+            # extract_meeting_dates.py for why this matters
+            resp = requests.post(api_url, headers={"x-goog-api-key": api_key},
+                                  json=body, timeout=60)
 
             if resp.status_code == 429:
                 # our own rate limiting already respects the per-minute cap,

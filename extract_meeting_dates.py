@@ -63,17 +63,28 @@ MAX_RETRIES = 3
 TARGET_TYPES = {"board_meeting", "agm", "corporate_briefing"}
 MIN_TEXT_LENGTH = 50  # below this, treat as "no real text layer", try vision instead
 
-GEMINI_MODEL_CHAIN = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
-# current-generation cheap/fast tier, confirmed free-tier eligible. Each
-# model has its OWN separate daily quota (RPD) -- confirmed in production
-# that gemini-2.5-flash-lite hit its ~500/day cap and started failing every
-# call. Rather than just erroring out for the rest of the day, this script
-# automatically switches to the next model in the chain the first time it
-# hits a quota-exhaustion signal, effectively doubling the usable daily
-# budget without needing anyone to notice the failure and intervene by hand.
-# If BOTH models in the chain are exhausted, or the naming has moved on
-# again by the time you're reading this, check https://aistudio.google.com
-# for what's current and extend the chain.
+GEMINI_MODEL_CHAIN = [
+    "gemini-3.1-flash-lite",   # 500 RPD -- confirmed exhausted today (617/500 used)
+    "gemini-3.5-flash-lite",   # 500 RPD -- confirmed real headroom today (65/500 used)
+    "gemini-3.6-flash",        # ~20 RPD -- small reserve pool, newest generation
+    "gemini-3.5-flash",        # ~20 RPD -- small reserve pool
+    "gemini-3-flash",          # ~20 RPD -- small reserve pool
+    "gemini-2.5-flash-lite",   # ~20 RPD -- small reserve pool, Google retiring 16-Oct-2026
+    "gemini-2.5-flash",        # ~20 RPD -- small reserve pool, oldest generation still available
+]
+# each model draws from its own separate daily quota (RPD) -- confirmed
+# directly from a real AI Studio account snapshot, not assumed: the two
+# Flash-Lite models each get roughly 500 RPD, while every other Flash-
+# family model on the free tier gets a much smaller ~20 RPD. Ordered by
+# real daily capacity, largest first, so the big pools get used before
+# falling back to the small reserve pools -- even 20/day each across five
+# extra models adds up to real additional headroom on a day where the
+# main two are already exhausted. Automatically switches to the next
+# model in the chain on the first quota-exhaustion signal, rather than
+# failing silently for the rest of the day.
+# NOTE: these are per-project numbers from one real account on one date --
+# your own limits may differ and will drift over time. Check your current
+# ones at https://aistudio.google.com if this chain needs rebalancing.
 _active_model_index = 0  # mutated in place as models get exhausted during a run
 
 EXTRACT_PATTERN = re.compile(r"held\s+on\s+(.+?\d{1,2}[:.]\d{2}\s*[AaPp]\.?\s*[Mm]\.?)", re.I)
@@ -199,7 +210,12 @@ def extract_meeting_datetime_via_vision(pdf_bytes: bytes, filed_date_str: str, a
         model = current_model()
         try:
             api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-            resp = requests.post(f"{api_url}?key={api_key}", json=body, timeout=60)
+            # key sent as a header, not a URL query param -- Google's current
+            # docs lead with this method specifically because a failed
+            # request's exception message often includes the full URL, which
+            # would embed the key in plain text in any printed log line
+            resp = requests.post(api_url, headers={"x-goog-api-key": api_key},
+                                  json=body, timeout=60)
 
             if resp.status_code == 429:
                 # our own rate limiting already keeps calls under the
