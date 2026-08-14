@@ -2273,5 +2273,105 @@
     "website": "http://www.zumaresources.ltd",
     "domain": "zumaresources.ltd",
     "resolved": true
+  },
+  "ALIFE": {
+    "website": "http://www.adamjeelife.com",
+    "domain": "adamjeelife.com",
+    "resolved": true
+  },
+  "ASIC": {
+    "website": "http://www.asiainsurance.com.pk",
+    "domain": "asiainsurance.com.pk",
+    "resolved": true
+  },
+  "BTL": {
+    "website": "http://www.umergroup.com",
+    "domain": "umergroup.com",
+    "resolved": true
+  },
+  "BWHL": {
+    "website": "http://www.bwheels.com",
+    "domain": "bwheels.com",
+    "resolved": true
+  },
+  "FASM": {
+    "website": "http://www.umergroup.com",
+    "domain": "umergroup.com",
+    "resolved": true
+  },
+  "GEMPAPL": {
+    "website": "http://http://www.pakagro.com/",
+    "domain": "http:",
+    "resolved": true
+  },
+  "GRR": {
+    "website": "http://www.arifhabibdolmenreit.com",
+    "domain": "arifhabibdolmenreit.com",
+    "resolved": true
+  },
+  "HASCOL": {
+    "website": "http://www.hascol.com",
+    "domain": "hascol.com",
+    "resolved": true
+  },
+  "HICL": {
+    "website": "http://www.habibinsurance.net",
+    "domain": "habibinsurance.net",
+    "resolved": true
+  },
+  "HUMNL": {
+    "website": "http://www.humnetwork.tv",
+    "domain": "humnetwork.tv",
+    "resolved": true
+  },
+  "ICCI": {
+    "website": "http://www.icctextiles.com",
+    "domain": "icctextiles.com",
+    "resolved": true
+  },
+  "JUBS": {
+    "website": "http://www.jsw.com.pk",
+    "domain": "jsw.com.pk",
+    "resolved": true
+  },
+  "MMBLTFC": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "NRSL": {
+    "website": "http://www.nimir.com.pk",
+    "domain": "nimir.com.pk",
+    "resolved": true
+  },
+  "PPP": {
+    "website": "http://www.pakpaper.com",
+    "domain": "pakpaper.com",
+    "resolved": true
+  },
+  "SHCM": {
+    "website": "http://www.shadman.com.pk",
+    "domain": "shadman.com.pk",
+    "resolved": true
+  },
+  "TSBL": {
+    "website": "http://www.tsbl.com.pk",
+    "domain": "tsbl.com.pk",
+    "resolved": true
+  },
+  "TSMF": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "UCAPM": {
+    "website": "http://www.unicapmodaraba.com",
+    "domain": "unicapmodaraba.com",
+    "resolved": true
+  },
+  "UVIC": {
+    "website": "http://www.uic.com.pk",
+    "domain": "uic.com.pk",
+    "resolved": true
   }
 }
