@@ -1,40 +1,5 @@
 [
   {
-    "id": "psx-payout-AVN-2026-05-16",
-    "type": "book_closure",
-    "status": "confirmed",
-    "date": "2026-05-16",
-    "time": null,
-    "scope": "company",
-    "symbol": "AVN",
-    "sector": "TECHNOLOGY & COMMUNICATION",
-    "company_name": "Avanceon Limited",
-    "title": "Avanceon Limited \u2014 10% final cash dividend",
-    "source_url": "https://dps.psx.com.pk/company/AVN",
-    "payload": {
-      "dividend": {
-        "raw": "10%(F) (D)",
-        "percent": 10.0,
-        "status": "final",
-        "kind": "cash dividend",
-        "display": "10% final cash dividend",
-        "parse_ok": true
-      },
-      "announcement_date": "2026-04-30",
-      "announcement_time": "14:53",
-      "book_closure_start": "2026-05-16",
-      "book_closure_end": "2026-05-23",
-      "book_closure_note": "ok",
-      "estimated_ex_date": "2026-05-15",
-      "estimated_last_buy_date": "2026-05-14",
-      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
-    },
-    "revision_of": null,
-    "source": "psx_payouts",
-    "logo_url": "https://img.logo.dev/avanceon.ae?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
-    "shariah_compliant": true
-  },
-  {
     "id": "psx-annc-GEMPACRA-2026-05-18-1520",
     "type": "agm",
     "status": "confirmed",
@@ -301,7 +266,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-05-18",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",

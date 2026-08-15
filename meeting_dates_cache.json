@@ -2094,9 +2094,10 @@
     "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-SGPL-2026-05-18-1259": {
-    "scheduled_date": null,
+    "scheduled_date": "2026-05-18",
     "scheduled_time": null,
-    "method": null
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-FRSM-2026-05-18-1224": {
     "scheduled_date": "2026-05-25",
