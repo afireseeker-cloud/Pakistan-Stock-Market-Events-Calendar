@@ -87895,5 +87895,24 @@
     },
     "revision_of": null,
     "source": "pbs_calendar"
+  },
+  {
+    "id": "pama-auto-sales-2027-08-16",
+    "type": "auto_sales_monthly",
+    "status": "estimated",
+    "date": "2027-08-16",
+    "time": null,
+    "scope": "sector",
+    "symbol": null,
+    "sector": "AUTOMOBILE",
+    "title": "Monthly automobile production and sales data (PAMA)",
+    "source_url": "https://pama.org.pk/monthly-production-sales-of-vehicles/",
+    "payload": {
+      "recurrence": "monthly_following_monday_10_to_14",
+      "reference_month": "2027-07",
+      "date_confidence": "fallback_monday_outside_10_14_window"
+    },
+    "revision_of": null,
+    "source": "pama_auto_sales"
   }
 ]
