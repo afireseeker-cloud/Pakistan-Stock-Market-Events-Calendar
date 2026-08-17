@@ -2935,5 +2935,79 @@
     "scheduled_time": "16:00",
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-JSML-2026-08-17-0901": {
+    "scheduled_date": "2026-09-07",
+    "scheduled_time": "11:30",
+    "method": "text"
+  },
+  "psx-annc-SPAC2-2026-08-17-1523": {
+    "scheduled_date": "2026-09-19",
+    "scheduled_time": "09:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-IGIHL-2026-08-17-1511": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "12:00",
+    "method": "text"
+  },
+  "psx-annc-ATBA-2026-08-17-1454": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ALAC-2026-08-17-1358": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-AHL-2026-08-17-1112": {
+    "scheduled_date": "2026-08-21",
+    "scheduled_time": "16:00",
+    "method": "text"
+  },
+  "psx-annc-BATA-2026-08-17-1100": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ATRL-2026-08-17-1059": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "13:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ITANZ-2026-08-17-1030": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "11:00",
+    "method": "text"
+  },
+  "psx-annc-NML-2026-08-17-1007": {
+    "scheduled_date": "2026-08-19",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-NRL-2026-08-17-0908": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-APL-2026-08-17-0837": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "12:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-EPCL-2026-08-17-1453": {
+    "scheduled_date": "2026-08-18",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }

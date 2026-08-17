@@ -2373,5 +2373,10 @@
     "website": "http://www.uic.com.pk",
     "domain": "uic.com.pk",
     "resolved": true
+  },
+  "BECO": {
+    "website": "http://www.becosteel.com",
+    "domain": "becosteel.com",
+    "resolved": true
   }
 }

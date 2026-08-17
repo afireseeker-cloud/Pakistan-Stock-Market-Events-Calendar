@@ -3568,5 +3568,13 @@
     "latest_quarterly_eps": -0.12,
     "latest_quarterly_label": "Q1 2026",
     "yoy_quarterly_eps": -0.14
+  },
+  "BECO": {
+    "resolved": true,
+    "latest_annual_eps": 0.89,
+    "prior_annual_eps": -0.73,
+    "latest_quarterly_eps": 0.22,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.08
   }
 }
