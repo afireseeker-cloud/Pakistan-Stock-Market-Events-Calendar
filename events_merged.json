@@ -26955,18 +26955,18 @@
   {
     "id": "sbp-ca-2026-05",
     "type": "current_account",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-06-18",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Current Account Balance for May 2026",
-    "source_url": null,
+    "source_url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.pdf",
     "payload": {
       "period": "May 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": -304.0,
+      "prior_value": -590.0
     },
     "revision_of": null,
     "source": "sbp_current_account"
@@ -85172,6 +85172,41 @@
     "source": "psx_holidays"
   },
   {
+    "id": "psx-payout-JLICL-2026-08-27",
+    "type": "book_closure",
+    "status": "confirmed",
+    "date": "2026-08-27",
+    "time": null,
+    "scope": "company",
+    "symbol": "JLICL",
+    "sector": "INSURANCE",
+    "company_name": "Jubilee Life Insurance Company Limited",
+    "title": "Jubilee Life Insurance Company Limited \u2014 50% (B)  -  30%(i) (D)",
+    "source_url": "https://dps.psx.com.pk/company/JLICL",
+    "payload": {
+      "dividend": {
+        "raw": "50% (B)  -  30%(i) (D)",
+        "percent": null,
+        "status": null,
+        "kind": null,
+        "display": "50% (B)  -  30%(i) (D)",
+        "parse_ok": false
+      },
+      "announcement_date": "2026-08-18",
+      "announcement_time": "15:55",
+      "book_closure_start": "2026-08-27",
+      "book_closure_end": "2026-08-31",
+      "book_closure_note": "ok",
+      "estimated_ex_date": "2026-08-26",
+      "estimated_last_buy_date": "2026-08-25",
+      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
+    },
+    "revision_of": null,
+    "source": "psx_payouts",
+    "logo_url": "https://img.logo.dev/jubileelife.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": false
+  },
+  {
     "id": "sbp-fxres-2026-08-28",
     "type": "fx_reserves",
     "status": "estimated",
@@ -85206,6 +85241,41 @@
     },
     "revision_of": null,
     "source": "pbs_calendar"
+  },
+  {
+    "id": "psx-payout-CENI-2026-09-01",
+    "type": "book_closure",
+    "status": "confirmed",
+    "date": "2026-09-01",
+    "time": null,
+    "scope": "company",
+    "symbol": "CENI",
+    "sector": "INSURANCE",
+    "company_name": "Century Insurance Company Limited",
+    "title": "Century Insurance Company Limited \u2014 80% interim cash dividend",
+    "source_url": "https://dps.psx.com.pk/company/CENI",
+    "payload": {
+      "dividend": {
+        "raw": "80%(i) (D)",
+        "percent": 80.0,
+        "status": "interim",
+        "kind": "cash dividend",
+        "display": "80% interim cash dividend",
+        "parse_ok": true
+      },
+      "announcement_date": "2026-08-18",
+      "announcement_time": "15:41",
+      "book_closure_start": "2026-09-01",
+      "book_closure_end": "2026-09-03",
+      "book_closure_note": "ok",
+      "estimated_ex_date": "2026-08-31",
+      "estimated_last_buy_date": "2026-08-28",
+      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
+    },
+    "revision_of": null,
+    "source": "psx_payouts",
+    "logo_url": "https://img.logo.dev/cicl.com.pk?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": false
   },
   {
     "id": "pbs-cpi_monthly-2026-09-02",
@@ -85655,6 +85725,41 @@
     "source": "pbs_calendar"
   },
   {
+    "id": "psx-payout-CPPL-2026-10-01",
+    "type": "book_closure",
+    "status": "confirmed",
+    "date": "2026-10-01",
+    "time": null,
+    "scope": "company",
+    "symbol": "CPPL",
+    "sector": "PAPER, BOARD & PACKAGING",
+    "company_name": "Cherat Packaging Limited",
+    "title": "Cherat Packaging Limited \u2014 30% final cash dividend",
+    "source_url": "https://dps.psx.com.pk/company/CPPL",
+    "payload": {
+      "dividend": {
+        "raw": "30%(F) (D)",
+        "percent": 30.0,
+        "status": "final",
+        "kind": "cash dividend",
+        "display": "30% final cash dividend",
+        "parse_ok": true
+      },
+      "announcement_date": "2026-08-18",
+      "announcement_time": "15:46",
+      "book_closure_start": "2026-10-01",
+      "book_closure_end": "2026-10-08",
+      "book_closure_note": "ok",
+      "estimated_ex_date": "2026-09-30",
+      "estimated_last_buy_date": "2026-09-29",
+      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
+    },
+    "revision_of": null,
+    "source": "psx_payouts",
+    "logo_url": "https://img.logo.dev/gfg.com.pk?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": true
+  },
+  {
     "id": "psx-payout-FHAM-2026-10-01",
     "type": "book_closure",
     "status": "confirmed",
@@ -85762,6 +85867,41 @@
     "source": "pbs_calendar"
   },
   {
+    "id": "psx-payout-SPEL-2026-10-03",
+    "type": "book_closure",
+    "status": "confirmed",
+    "date": "2026-10-03",
+    "time": null,
+    "scope": "company",
+    "symbol": "SPEL",
+    "sector": "PAPER, BOARD & PACKAGING",
+    "company_name": "SPEL Limited",
+    "title": "SPEL Limited \u2014 10% final cash dividend",
+    "source_url": "https://dps.psx.com.pk/company/SPEL",
+    "payload": {
+      "dividend": {
+        "raw": "10%(F) (D)",
+        "percent": 10.0,
+        "status": "final",
+        "kind": "cash dividend",
+        "display": "10% final cash dividend",
+        "parse_ok": true
+      },
+      "announcement_date": "2026-08-18",
+      "announcement_time": "15:36",
+      "book_closure_start": "2026-10-03",
+      "book_closure_end": "2026-10-09",
+      "book_closure_note": "ok",
+      "estimated_ex_date": "2026-10-02",
+      "estimated_last_buy_date": "2026-10-01",
+      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
+    },
+    "revision_of": null,
+    "source": "psx_payouts",
+    "logo_url": "https://img.logo.dev/spelgroup.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": true
+  },
+  {
     "id": "sbp-remit-2026-09",
     "type": "remittances",
     "status": "estimated",
@@ -85852,6 +85992,41 @@
     },
     "revision_of": null,
     "source": "pama_auto_sales"
+  },
+  {
+    "id": "psx-payout-FCL-2026-10-16",
+    "type": "book_closure",
+    "status": "confirmed",
+    "date": "2026-10-16",
+    "time": null,
+    "scope": "company",
+    "symbol": "FCL",
+    "sector": "CABLE & ELECTRICAL GOODS",
+    "company_name": "Fast Cables Limited",
+    "title": "Fast Cables Limited \u2014 15% final cash dividend",
+    "source_url": "https://dps.psx.com.pk/company/FCL",
+    "payload": {
+      "dividend": {
+        "raw": "15%(F) (D)",
+        "percent": 15.0,
+        "status": "final",
+        "kind": "cash dividend",
+        "display": "15% final cash dividend",
+        "parse_ok": true
+      },
+      "announcement_date": "2026-08-18",
+      "announcement_time": "15:44",
+      "book_closure_start": "2026-10-16",
+      "book_closure_end": "2026-10-22",
+      "book_closure_note": "ok",
+      "estimated_ex_date": "2026-10-15",
+      "estimated_last_buy_date": "2026-10-14",
+      "estimate_assumption": "settlement_lag_days=1 (T+1 regime, live since 9-Feb-2026) -- UNVERIFIED against a live NCCPL/PSX restatement of the book-closure offset rule, confirm before relying on this for trading decisions"
+    },
+    "revision_of": null,
+    "source": "psx_payouts",
+    "logo_url": "https://img.logo.dev/fast-cables.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": true
   },
   {
     "id": "psx-payout-FECTC-2026-10-16",
