@@ -3009,5 +3009,87 @@
     "scheduled_time": null,
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-BOP-2026-08-18-1449": {
+    "scheduled_date": "2026-09-08",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-EXIDE-2026-08-18-0824": {
+    "scheduled_date": "2026-07-29",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-HASCOL-2026-08-18-0813": {
+    "scheduled_date": "2026-09-08",
+    "scheduled_time": "12:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PIAHCLA-2026-08-18-1521": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-MZNPETF-2026-08-18-1521": {
+    "scheduled_date": "2026-08-18",
+    "scheduled_time": "15:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-TRIPF-2026-08-18-1520": {
+    "scheduled_date": "2026-08-18",
+    "scheduled_time": "15:00",
+    "method": "text"
+  },
+  "psx-annc-MEEZAN-FUNDS-2026-08-18-1519": {
+    "scheduled_date": "2026-08-18",
+    "scheduled_time": "15:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-HASCOL-2026-08-18-1340": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "14:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SHNI-2026-08-18-1147": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-DLL-2026-08-18-1114": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "15:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-JSBL-2026-08-18-1059": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "14:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SPAC2-2026-08-18-1010": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "10:00",
+    "method": "text"
+  },
+  "psx-annc-GLAXO-2026-08-18-0903": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-HINO-2026-08-18-1526": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "09:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }
