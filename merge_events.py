@@ -188,6 +188,9 @@ def main():
     ap.add_argument("--pbs", default="events_pbs.json")
     ap.add_argument("--pama", default="events_pama.json")
     ap.add_argument("--holidays", default="events_holidays.json")
+    ap.add_argument("--remittances", default="events_remittances.json")
+    ap.add_argument("--fx-reserves", dest="fx_reserves", default="events_fx_reserves.json")
+    ap.add_argument("--current-account", dest="current_account", default="events_current_account.json")
     ap.add_argument("--announcements", default="events_psx_announcements.jsonl")
     ap.add_argument("--notices", default="events_psx_notices.jsonl")
     ap.add_argument("--payouts", default="events_psx_payouts.jsonl")
@@ -212,6 +215,9 @@ def main():
         "pbs_calendar": (args.pbs, "json"),
         "pama_auto_sales": (args.pama, "json"),
         "psx_holidays": (args.holidays, "json"),
+        "sbp_remittances": (args.remittances, "json"),
+        "sbp_fx_reserves": (args.fx_reserves, "json"),
+        "sbp_current_account": (args.current_account, "json"),
         "psx_announcements": (args.announcements, "jsonl"),
         "psx_notices": (args.notices, "jsonl"),
         "psx_payouts": (args.payouts, "jsonl"),

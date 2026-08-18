@@ -89,6 +89,12 @@ def main():
     ap.add_argument("--skip-logos", action="store_true")
     ap.add_argument("--skip-eps", action="store_true")
     ap.add_argument("--skip-shariah", action="store_true")
+    ap.add_argument("--skip-remittances", action="store_true",
+                     help="skip the confirm step only -- predicted dates still generate")
+    ap.add_argument("--skip-fx-reserves", action="store_true",
+                     help="skip the confirm step only -- predicted dates still generate")
+    ap.add_argument("--skip-current-account", action="store_true",
+                     help="skip the confirm step only -- predicted dates still generate")
     args = ap.parse_args()
 
     skip_vision = args.quick or args.skip_vision
@@ -124,6 +130,21 @@ def main():
         [sys.executable, "ingest_psx_holidays.py"],
         stdout_file="events_holidays.json",
     )
+    results["remittances_predict"] = run_step(
+        "SBP remittances calendar (predicted dates)",
+        [sys.executable, "ingest_sbp_remittances.py", "--from", window_from, "--to", window_to],
+        stdout_file="events_remittances.json",
+    )
+    results["fx_reserves_predict"] = run_step(
+        "SBP FX reserves calendar (predicted dates)",
+        [sys.executable, "ingest_sbp_fx_reserves.py", "--from", window_from, "--to", window_to],
+        stdout_file="events_fx_reserves.json",
+    )
+    results["current_account_predict"] = run_step(
+        "SBP current account calendar (predicted dates)",
+        [sys.executable, "ingest_sbp_current_account.py", "--from", window_from, "--to", window_to],
+        stdout_file="events_current_account.json",
+    )
 
     results["announcements"] = run_step(
         "PSX announcements",
@@ -146,6 +167,9 @@ def main():
         [sys.executable, "merge_events.py",
          "--sbp", "events_sbp.json", "--pbs", "events_pbs.json",
          "--pama", "events_pama.json", "--holidays", "events_holidays.json",
+         "--remittances", "events_remittances.json",
+         "--fx-reserves", "events_fx_reserves.json",
+         "--current-account", "events_current_account.json",
          "--announcements", "events_psx_announcements.jsonl",
          "--notices", "events_psx_notices.jsonl",
          "--payouts", "events_psx_payouts.jsonl",
@@ -215,6 +239,33 @@ def main():
         print("SKIP  Shariah compliance (--skip-shariah)", file=sys.stderr)
         results["shariah"] = "skip"
 
+    if not args.skip_remittances:
+        results["remittances_confirm"] = run_step(
+            "Confirm SBP remittances (real values)",
+            [sys.executable, "fetch_sbp_remittances.py", MERGED_FILE, "--out", MERGED_FILE],
+        )
+    else:
+        print("SKIP  Remittances confirm (--skip-remittances)", file=sys.stderr)
+        results["remittances_confirm"] = "skip"
+
+    if not args.skip_fx_reserves:
+        results["fx_reserves_confirm"] = run_step(
+            "Confirm SBP FX reserves (real values)",
+            [sys.executable, "fetch_sbp_fx_reserves.py", MERGED_FILE, "--out", MERGED_FILE],
+        )
+    else:
+        print("SKIP  FX reserves confirm (--skip-fx-reserves)", file=sys.stderr)
+        results["fx_reserves_confirm"] = "skip"
+
+    if not args.skip_current_account:
+        results["current_account_confirm"] = run_step(
+            "Confirm SBP current account (real values)",
+            [sys.executable, "fetch_sbp_current_account.py", MERGED_FILE, "--out", MERGED_FILE],
+        )
+    else:
+        print("SKIP  Current account confirm (--skip-current-account)", file=sys.stderr)
+        results["current_account_confirm"] = "skip"
+
     # ---------- summary ----------
     total_elapsed = time.time() - pipeline_start
     print(f"\n{'=' * 60}\nPIPELINE SUMMARY ({total_elapsed / 60:.1f} min total)\n{'=' * 60}",
@@ -224,9 +275,23 @@ def main():
         print(f"  {labels[status]}  {step}", file=sys.stderr)
 
     if any(status == "fail" for status in results.values()):
-        print("\nOne or more steps failed -- see FAIL lines above. Later steps still "
-              "ran where possible.", file=sys.stderr)
-        sys.exit(1)
+        print("\nOne or more OPTIONAL enrichment steps failed -- see FAIL lines above. "
+              "This is not fatal: merge_events.py already succeeded by the time we "
+              "reach this point (it's the one step that hard-stops the whole script on "
+              "failure, via continue_on_error=False above), so there's a genuinely good "
+              "events_merged.json ready to publish even if some enrichment didn't land "
+              "this run. Exiting 0 deliberately, so the workflow's deploy step still "
+              "runs -- a partial-but-real update beats no update at all. Fix the FAIL'd "
+              "steps for next time, but don't let them block what already worked.",
+              file=sys.stderr)
+        # deliberately NOT sys.exit(1) here anymore -- see comment above.
+        # Confirmed in production this was blocking deploy entirely: a run
+        # with 11 successful steps and 2 failed optional ones still exited
+        # non-zero, and since the GitHub Actions workflow has no
+        # continue-on-error on this step, "Prepare publish directory" and
+        # "Deploy to gh-pages" were both silently skipped -- meaning
+        # genuinely good, freshly-scraped data never got published because
+        # two unrelated enrichment steps had a bug.
 
 
 if __name__ == "__main__":
