@@ -169,16 +169,32 @@ def main():
     with open(args.input) as f:
         events = json.load(f)
 
-    pending = [e for e in events if e.get("type") == "remittances" and e.get("status") == "estimated"]
+    pending_all = [e for e in events if e.get("type") == "remittances" and e.get("status") == "estimated"]
+    # Skip anything predicted more than ~20 days in the future -- given the
+    # real observed release window is days 5-12 of the month, there's no
+    # way a release exists yet for anything further out than that, and
+    # trying anyway just burns through the full retry+backoff logic for a
+    # guaranteed failure. With --from spanning up to a year ahead, this is
+    # the difference between checking ~2 months for real vs. silently
+    # grinding through a dozen future months that can't possibly have data.
+    today = date.today()
+    pending = [e for e in pending_all if (date.fromisoformat(e["date"]) - today).days <= 20]
+    skipped_future = len(pending_all) - len(pending)
+    if skipped_future:
+        print(f"INFO: skipping {skipped_future} event(s) predicted more than 20 days out "
+              f"-- no realistic chance of a release existing yet", file=sys.stderr)
     print(f"INFO: {len(pending)} remittances events pending confirmation", file=sys.stderr)
 
     session = requests.Session()
     confirmed = 0
 
-    for e in pending:
+    for i, e in enumerate(pending, 1):
         predicted_date = date.fromisoformat(e["date"])
+        print(f"[{i}/{len(pending)}] Checking {e['payload']['period']} "
+              f"(trying days 5-12 of {predicted_date.strftime('%B %Y')})...", file=sys.stderr)
         text, real_url = try_fetch_release(session, predicted_date)
         if text is None:
+            print(f"  -> not found in that range, leaving as estimated", file=sys.stderr)
             continue  # not published yet, or genuinely not found in the candidate range -- stays estimated
 
         values = extract_values(text)
@@ -193,7 +209,7 @@ def main():
         e["payload"]["prior_value"] = values["prior_value"]
         e["payload"]["growth_pct_yoy"] = values["growth_pct"]
         confirmed += 1
-        print(f"INFO: confirmed {e['payload']['period']} -- ${values['actual_value']}bn "
+        print(f"  -> confirmed: ${values['actual_value']}bn "
               f"(prior ${values['prior_value']}bn, {values['growth_pct']:+.1f}% y/y)", file=sys.stderr)
 
     out_path = args.out or args.input
