@@ -173,6 +173,10 @@
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .symbolTag {
+    font-weight: 700; color: var(--brand-accent); font-size: 13px;
+    letter-spacing: 0.02em;
+  }
   .subtitle {
     font-size: 13px; color: var(--text-secondary); margin: 3px 0 0;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
@@ -844,6 +848,10 @@ function dataColumns(e) {
   if (!parts.length) return '';
   return `<div style="display:flex;gap:16px;flex-shrink:0">${parts.join('')}</div>`;
 }
+function symbolBadge(e) {
+  if (!e.symbol) return '';
+  return `<span class="symbolTag">${e.symbol}</span> `;
+}
 const MOSQUE_ICON = '<path d="M4 20h16M5 20v-5a7 7 0 0 1 14 0v5"/><circle cx="12" cy="6" r="1"/>';
 function shariahBadge(e) {
   if (e.shariah_compliant !== true) return '';
@@ -998,7 +1006,7 @@ function eventRow(e) {
       <span class="time">${e.time || '\u2014'}</span>
       <div class="avatarSlot">${avatarFor(e, accent)}</div>
       <div class="rowContent" style="min-width:0">
-        <p class="rowtitle ${cancelled ? 'strike' : ''}">${displayTitle(e)}${shariahBadge(e)}</p>
+        <p class="rowtitle ${cancelled ? 'strike' : ''}">${symbolBadge(e)}${displayTitle(e)}${shariahBadge(e)}</p>
         <p class="subtitle">${displaySubtitle(e)}</p>
         ${countdownLine}
       </div>
