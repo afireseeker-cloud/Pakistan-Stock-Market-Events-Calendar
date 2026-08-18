@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This tag was missing from every prior version of this file. Without
+     it, mobile browsers render the page at a fixed desktop-width virtual
+     viewport (typically ~980px) and zoom the whole thing out to fit the
+     screen -- meaning every max-width media query in this file has been
+     silently inert on real phones the entire time, since the browser
+     never considered itself to be at a "narrow" width in the first
+     place. This single tag is what actually lets those media queries
+     fire at all. -->
 <title>PSX calendar</title>
 <style>
   :root {
@@ -51,27 +60,27 @@
   .weekNav button { padding: 5px 12px; font-size: 13px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); background: var(--surface-2); color: var(--text-primary); cursor: pointer; }
   #weekToday { background: var(--brand-accent); color: #fff; border-color: var(--brand-accent); font-weight: 500; }
   #monthViewBtn { display: flex; align-items: center; justify-content: center; padding: 5px 9px; }
-  .weekNav { position: relative; }
+  .monthViewWrap { position: relative; display: inline-flex; }
   .monthPopover {
     position: absolute; top: 100%; right: 0; margin-top: 6px; z-index: 20;
     background: var(--surface-2); border: 0.5px solid var(--border-strong); border-radius: var(--radius-lg);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15); padding: 12px; width: 320px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); padding: 14px; width: 400px; max-width: calc(100vw - 24px);
   }
   [data-mode="dark"] .monthPopover { box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
-  .monthNav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .monthNav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .monthNav button { padding: 3px 8px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); background: var(--surface-2); color: var(--text-primary); cursor: pointer; }
-  .monthWeekdayHeader { display: grid; grid-template-columns: repeat(7, 1fr); font-size: 10px; color: var(--text-muted); text-align: center; margin-bottom: 4px; }
+  .monthWeekdayHeader { display: grid; grid-template-columns: repeat(7, 1fr); font-size: 11px; color: var(--text-muted); text-align: center; margin-bottom: 6px; }
   .monthWeekRow { display: grid; grid-template-columns: repeat(7, 1fr); border-radius: var(--radius); cursor: pointer; transition: background 0.1s ease; }
   .monthWeekRow:hover { background: color-mix(in srgb, var(--brand-accent) 12%, transparent); }
   .monthWeekRow.currentWeek { border: 1.5px solid var(--brand-accent); }
   .monthWeekRow.currentWeek:hover { background: color-mix(in srgb, var(--brand-accent) 20%, transparent); }
-  .monthDay { padding: 4px 2px; text-align: center; min-height: 40px; }
+  .monthDay { padding: 6px 2px; text-align: center; min-height: 48px; }
   .monthDay.outMonth { opacity: 0.35; }
-  .monthDayNum { font-size: 11px; }
-  .monthDots { display: flex; justify-content: center; gap: 2px; margin-top: 2px; flex-wrap: wrap; }
+  .monthDayNum { font-size: 12px; }
+  .monthDots { display: flex; justify-content: center; gap: 2px; margin-top: 3px; flex-wrap: wrap; }
   .monthDot { width: 5px; height: 5px; border-radius: 50%; }
-  .monthLegend { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-top: 10px; padding-top: 10px; border-top: 0.5px solid var(--border); }
-  .monthLegend .legendItem { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-secondary); }
+  .monthLegend { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 0.5px solid var(--border); }
+  .monthLegend .legendItem { display: flex; align-items: center; gap: 4px; font-size: 10.5px; color: var(--text-secondary); white-space: nowrap; }
   .monthLegend .legendDot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
   #weekToday:hover { background: var(--brand-accent-hover); }
   .weekStrip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 1.25rem; }
@@ -228,9 +237,33 @@
     .controls { flex-direction: column; align-items: stretch; }
     .controls input[type=text] { width: 100%; }
     .header { flex-wrap: wrap; gap: 10px; }
+    /* Same shape of bug as the week-nav overflow fixed earlier: .header
+       itself wraps, but the inner row holding holdings/Shariah/theme
+       (three groups, one with a rigid 220px input) doesn't wrap on its
+       own, so it overflows horizontally instead of stacking -- forcing a
+       sideways scroll to reach the Shariah toggle and theme switch. */
+    .headerControls { flex-wrap: wrap; row-gap: 8px; width: 100%; }
+    .headerControls > div { flex-wrap: wrap; }
+    #holdingsInput { width: 100% !important; min-width: 0; }
+    /* The week-nav row (Today, prev/label/next/calendar-btn, data-source
+       note) was cramming all of it onto one line, and since flex shrinks
+       children to fit by default, the label text bore the brunt of the
+       squeeze -- "Aug 10 -- Aug 16, 2026" was getting forced into a
+       column barely wide enough for one word, breaking mid-phrase across
+       five lines. Fix: let the row wrap onto multiple lines as a whole,
+       but keep the label itself as one unbreakable unit that either fits
+       or moves to its own line -- never fragments internally. */
+    .weekNav { flex-wrap: wrap; row-gap: 8px; }
+    .weekNavGroup { flex-wrap: wrap; justify-content: center; row-gap: 8px; flex: 1 1 100%; order: 1; }
+    .weekNav .label { white-space: nowrap; }
+    #weekToday { order: 0; }
+    #dataSourceNote { order: 2; flex: 1 1 100%; text-align: center; margin-left: 0 !important; }
   }
   @media (max-width: 480px) {
     .weekStrip { grid-template-columns: repeat(2, 1fr); }
+    .monthPopover { padding: 10px; }
+    .monthLegend .legendItem { font-size: 9.5px; gap: 3px; }
+    .monthLegend .legendDot { width: 6px; height: 6px; }
   }
 </style>
 </head>
@@ -238,11 +271,16 @@
 
 <div class="header">
   <h1>PSX calendar</h1>
-  <div style="display:flex;align-items:center;gap:16px">
+  <div class="headerControls" style="display:flex;align-items:center;gap:16px">
     <div style="display:flex;align-items:center;gap:8px">
       <button class="toggle" id="holdingsToggle" role="switch" aria-checked="false" aria-label="My holdings only"></button>
       <span style="font-size:13px;color:var(--text-secondary)">My holdings only</span>
       <input type="text" id="holdingsInput" placeholder="LUCK, UBL, HUBC" style="width:220px">
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="toggle" id="shariahToggle" role="switch" aria-checked="false" aria-label="Shariah compliant only"></button>
+      <span style="font-size:13px;color:var(--text-secondary)">Shariah compliant only</span>
+      <span id="shariahNote" style="font-size:11px;color:var(--text-muted)"></span>
     </div>
     <button class="themeSwitch" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
       <span class="thumb">
@@ -255,27 +293,29 @@
 <div id="main">
   <div class="weekNav">
     <button id="weekToday">Today</button>
-    <div style="display:flex;align-items:center;gap:10px">
+    <div class="weekNavGroup" style="display:flex;align-items:center;gap:10px">
       <button id="weekPrev">&larr;</button>
       <span class="label" id="weekLabel"></span>
       <button id="weekNext">&rarr;</button>
-      <button id="monthViewBtn" aria-label="Month view" title="Month view">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      </button>
+      <div class="monthViewWrap">
+        <button id="monthViewBtn" aria-label="Month view" title="Month view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </button>
+        <div class="monthPopover" id="monthPopover" style="display:none">
+          <div class="monthNav">
+            <button id="monthPrev">&larr;</button>
+            <span id="monthLabel" style="font-weight:500"></span>
+            <button id="monthNext">&rarr;</button>
+          </div>
+          <div class="monthWeekdayHeader">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div id="monthGrid"></div>
+          <div class="monthLegend" id="monthLegend"></div>
+        </div>
+      </div>
     </div>
     <span id="dataSourceNote" style="font-size:11px;color:var(--text-muted);margin-left:8px"></span>
-  </div>
-  <div class="monthPopover" id="monthPopover" style="display:none">
-    <div class="monthNav">
-      <button id="monthPrev">&larr;</button>
-      <span id="monthLabel" style="font-weight:500"></span>
-      <button id="monthNext">&rarr;</button>
-    </div>
-    <div class="monthWeekdayHeader">
-      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-    </div>
-    <div id="monthGrid"></div>
-    <div class="monthLegend" id="monthLegend"></div>
   </div>
 
   <div class="weekStrip" id="weekStrip"></div>
@@ -286,12 +326,6 @@
     <div class="sidebar" id="sidebar" style="display:none">
       <h3>Category</h3>
       <div id="sidebarChips"></div>
-      <h3 style="margin-top:16px">Shariah</h3>
-      <div style="display:flex;align-items:center;gap:8px">
-        <button id="shariahToggle" class="toggle" role="switch" aria-checked="false"></button>
-        <span style="font-size:12px;color:var(--text-secondary)">Compliant only</span>
-      </div>
-      <p id="shariahNote" style="font-size:11px;color:var(--text-muted);margin:6px 0 0"></p>
     </div>
 
     <div class="content">
@@ -315,7 +349,7 @@ const TABS = [
 ];
 const TAB_ACCENT = { macro: '#0891B2', earnings: '#0F6E56', dividends: '#B45309', ipo: '#993556', announcements: '#78716C' };
 
-const MACRO_TYPES_SET = new Set(['mpc','mpc_briefing','mpc_presser','mpc_minutes','mpc_report','spi_weekly','cpi_monthly','wpi_monthly','auto_sales_monthly','market_holiday']);
+const MACRO_TYPES_SET = new Set(['mpc','mpc_briefing','mpc_presser','mpc_minutes','mpc_report','spi_weekly','cpi_monthly','wpi_monthly','auto_sales_monthly','market_holiday','remittances','fx_reserves','current_account']);
 const IPO_TYPES_SET = new Set(['ipo_subscription','ipo_book_building','ipo_prospectus','ipo_listing']);
 const DIVIDEND_TYPES_SET = new Set(['book_closure']);
 
@@ -357,6 +391,7 @@ const SIDEBAR_CATEGORIES = [
 const CATEGORY_ACCENT = {
   mpc: '#0891B2', mpc_briefing: '#0891B2', mpc_presser: '#0891B2', mpc_minutes: '#0891B2', mpc_report: '#0891B2',
   spi_weekly: '#0891B2', cpi_monthly: '#0891B2', wpi_monthly: '#0891B2', auto_sales_monthly: '#BE185D',
+  remittances: '#0891B2', fx_reserves: '#0891B2', current_account: '#0891B2',
   market_holiday: '#57534E', board_meeting: '#0F6E56', agm: '#0F6E56', corporate_briefing: '#0F6E56',
   results: '#0F6E56', book_closure: '#B45309', dividend_announced: '#B45309',
   director_disclosure: '#78716C', governance_change: '#78716C', other_announcement: '#78716C', other_psx_notice: '#78716C',
@@ -365,6 +400,7 @@ const CATEGORY_ACCENT = {
   trading_halt: '#A32D2D', risk_warning: '#A32D2D',
 };
 const TYPE_LABELS = {
+  remittances: 'Workers\u2019 remittances, monthly', fx_reserves: 'Foreign exchange reserves, weekly', current_account: 'Current account balance, monthly',
   mpc: 'Monetary policy statement', mpc_briefing: 'Monetary policy analyst briefing',
   mpc_presser: 'Monetary policy press conference', mpc_minutes: 'Monetary policy meeting minutes',
   mpc_report: 'Monetary Policy Report', spi_weekly: 'Sensitive Price Indicator, weekly',
@@ -474,7 +510,7 @@ function loadSample() {
   allEvents = [
     { id:'s1', type:'mpc', status:'confirmed', date: isoDate(weekDates(weekStart)[0]), time:null, symbol:null, title:'Monetary policy statement', source:'sbp_mpc', source_url:null },
     { id:'s2', type:'cpi_monthly', status:'confirmed', date: isoDate(weekDates(weekStart)[1]), time:null, symbol:null, title:'Monthly Consumer Price Index (CPI) release', source:'pbs_calendar', source_url:null, payload:{actual_value:'4.2%', prior_value:'3.9%'} },
-    { id:'s3', type:'board_meeting', status:'confirmed', date: isoDate(weekDates(weekStart)[2]), time:'15:27', symbol:'UBL', company_name:'United Bank Limited', title:'Board meeting', source:'psx_announcements', source_url:null },
+    { id:'s3', type:'board_meeting', status:'confirmed', date: isoDate(weekDates(weekStart)[2]), time:'15:27', symbol:'UBL', company_name:'United Bank Limited', title:'Board meeting', source:'psx_announcements', source_url:null, shariah_compliant:false },
     { id:'s4', type:'book_closure', status:'confirmed', date: isoDate(weekDates(weekStart)[2]), time:null, symbol:'LUCK', company_name:'Lucky Cement Limited', title:'Lucky Cement Limited \u2014 250% final cash dividend', source:'psx_payouts', source_url:'https://dps.psx.com.pk/company/LUCK', logo_url:'https://img.logo.dev/this-domain-does-not-exist-deliberately.invalid?token=fake', shariah_compliant:true, payload:{dividend:{percent:250, status:'final', kind:'cash dividend', display:'250% final cash dividend'}, estimated_ex_date:'2026-08-17', estimated_last_buy_date:'2026-08-14'} },
     { id:'s5', type:'board_meeting', status:'cancelled', date: isoDate(weekDates(weekStart)[3]), time:'12:56', symbol:'PICT', company_name:'Pakistan International Container Terminal', title:'Board meeting', source:'psx_announcements', source_url:null },
     { id:'s6', type:'dividend_announced', status:'pending_book_closure', date: isoDate(weekDates(weekStart)[3]), time:'13:00', symbol:'SGPL', company_name:'S.G. Power Limited', title:'S.G. Power Limited \u2014 dividend announced: 300% right', source:'psx_payouts', source_url:null, payload:{dividend:{display:'300% right'}} },
@@ -635,8 +671,6 @@ function renderSidebar() {
   document.querySelectorAll('.sidebarChip').forEach(chip => {
     chip.addEventListener('click', () => { activeSidebarCat = chip.dataset.cat; render(); });
   });
-
-  updateShariahAvailability();
 }
 document.getElementById('shariahToggle').addEventListener('click', function() {
   if (this.disabled) return;
@@ -673,11 +707,17 @@ document.getElementById('holdingsInput').addEventListener('input', (e) => {
 // Shared by both getFiltered() (the main list) and renderWeekStrip() (the
 // day-pill counts) -- holdings/Shariah are persistent content filters that
 // should shrink what's counted everywhere, unlike tab/day-selection/search
-// which are navigation and deliberately don't change the day-pill counts
+// which is navigation and deliberately doesn't change the day-pill counts
 // (per earlier explicit design: counts stay constant regardless of which
 // day or tab you're currently looking at, so you can compare days at a
-// glance -- holdings and Shariah are a different kind of filter, they
-// change what you actually care about seeing, everywhere, all the time).
+// glance). Shariah IS a hard filter here, same as holdings -- matches how
+// it originally worked scoped to the Announcements sidebar, now applied
+// app-wide instead. Worth knowing this does mean unresolved-compliance
+// events (roughly 10% of symbols never matched the KMI list) and every
+// macro/holiday event (the concept doesn't apply to those at all) also
+// get hidden when this is on, since only e.shariah_compliant === true
+// passes -- that's the deliberate tradeoff of a real filter versus a
+// highlight.
 function matchesPersistentFilters(e) {
   if (holdingsOnly && e.symbol && holdingsSet.size > 0 && !holdingsSet.has(e.symbol.toUpperCase())) return false;
   if (shariahOnly && e.shariah_compliant !== true) return false;
@@ -975,6 +1015,7 @@ function render() {
   renderWeekStrip();
   renderTabBar();
   renderSidebar();
+  updateShariahAvailability();
   document.getElementById('controlsRow').style.display = activeTab === 'macro' ? 'none' : 'flex';
 
   // fixed grid column width for the data-columns slot, sized to whatever
