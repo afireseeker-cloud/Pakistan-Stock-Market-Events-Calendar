@@ -3091,5 +3091,80 @@
     "scheduled_time": "09:00",
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-BOP-2026-08-19-1115": {
+    "scheduled_date": "2026-09-08",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ISL-2026-08-19-1518": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-HUBC-2026-08-19-1512": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-DGKC-2026-08-19-1504": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "11:45",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-HICL-2026-08-19-1436": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SYS-2026-08-19-1414": {
+    "scheduled_date": "2026-08-26",
+    "scheduled_time": "17:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ATIL-2026-08-19-1248": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "11:00",
+    "method": "text"
+  },
+  "psx-annc-NBP-2026-08-19-1246": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-OCTOPUS-2026-08-19-1231": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PAEL-2026-08-19-1116": {
+    "scheduled_date": "2026-08-27",
+    "scheduled_time": "11:30",
+    "method": "text"
+  },
+  "psx-annc-PQGTL-2026-08-19-1523": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "12:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PAKQATAR-2026-08-19-1517": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SWL-2026-08-19-1029": {
+    "scheduled_date": "2026-08-24",
+    "scheduled_time": "14:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }

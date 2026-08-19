@@ -2383,5 +2383,30 @@
     "website": "http://www.theunitedinsurance.com",
     "domain": "theunitedinsurance.com",
     "resolved": true
+  },
+  "ASLCPS": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "ASLPS": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "ATIL": {
+    "website": "http://www.ail.atlas.pk",
+    "domain": "ail.atlas.pk",
+    "resolved": true
+  },
+  "PQGTL": {
+    "website": "http://www.pqgtl.com.pk",
+    "domain": "pqgtl.com.pk",
+    "resolved": true
+  },
+  "ZIL": {
+    "website": "http://www.zil.com.pk",
+    "domain": "zil.com.pk",
+    "resolved": true
   }
 }

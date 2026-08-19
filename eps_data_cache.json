@@ -3584,5 +3584,35 @@
     "latest_quarterly_eps": 1.11,
     "latest_quarterly_label": "Q1 2026",
     "yoy_quarterly_eps": 1.05
+  },
+  "ASLCPS": {
+    "resolved": false
+  },
+  "ASLPS": {
+    "resolved": false
+  },
+  "ATIL": {
+    "resolved": true,
+    "latest_annual_eps": 13.9,
+    "prior_annual_eps": 12.64,
+    "latest_quarterly_eps": 3.62,
+    "latest_quarterly_label": "Q1 2026",
+    "yoy_quarterly_eps": 2.2
+  },
+  "PQGTL": {
+    "resolved": true,
+    "latest_annual_eps": 1.83,
+    "prior_annual_eps": null,
+    "latest_quarterly_eps": 0.3,
+    "latest_quarterly_label": "Q1 2026",
+    "yoy_quarterly_eps": 0.45
+  },
+  "ZIL": {
+    "resolved": true,
+    "latest_annual_eps": 8.21,
+    "prior_annual_eps": 7.01,
+    "latest_quarterly_eps": 0.22,
+    "latest_quarterly_label": "Q1 2026",
+    "yoy_quarterly_eps": 0.18
   }
 }
