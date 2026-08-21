@@ -2408,5 +2408,15 @@
     "website": "http://www.zil.com.pk",
     "domain": "zil.com.pk",
     "resolved": true
+  },
+  "MEHT": {
+    "website": "http://www.mahmoodtextile.com",
+    "domain": "mahmoodtextile.com",
+    "resolved": true
+  },
+  "MFL": {
+    "website": "http://www.matcofoods.com",
+    "domain": "matcofoods.com",
+    "resolved": true
   }
 }

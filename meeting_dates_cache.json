@@ -3271,5 +3271,93 @@
     "scheduled_date": null,
     "scheduled_time": null,
     "method": null
+  },
+  "psx-annc-WAVESAPP-2026-08-21-1616": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "15:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WAVES-2026-08-21-1614": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "16:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-MFL-2026-08-21-1553": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WTL-2026-08-21-1552": {
+    "scheduled_date": "2026-08-29",
+    "scheduled_time": "16:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PAKQATAR-2026-08-21-1551": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "14:00",
+    "method": "text"
+  },
+  "psx-annc-PQGTL-2026-08-21-1546": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "15:00",
+    "method": "text"
+  },
+  "psx-annc-SEPL-2026-08-21-1538": {
+    "scheduled_date": "2026-08-21",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ISIL-2026-08-21-1530": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-BML-2026-08-21-1510": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "12:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-LPL-2026-08-21-1449": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "11:15",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PKGP-2026-08-21-1447": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WTL-2026-08-21-1432": {
+    "scheduled_date": "2026-08-28",
+    "scheduled_time": "16:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-AGIL-2026-08-21-1125": {
+    "scheduled_date": "2026-09-01",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WAVES-2026-08-21-1332": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "16:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WAVESAPP-2026-08-21-1246": {
+    "scheduled_date": "2026-08-25",
+    "scheduled_time": "16:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }

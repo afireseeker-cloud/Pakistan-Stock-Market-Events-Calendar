@@ -3614,5 +3614,21 @@
     "latest_quarterly_eps": 0.22,
     "latest_quarterly_label": "Q1 2026",
     "yoy_quarterly_eps": 0.18
+  },
+  "MEHT": {
+    "resolved": true,
+    "latest_annual_eps": 32.6,
+    "prior_annual_eps": 8.32,
+    "latest_quarterly_eps": 6.41,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 5.52
+  },
+  "MFL": {
+    "resolved": true,
+    "latest_annual_eps": 3.38,
+    "prior_annual_eps": -2.14,
+    "latest_quarterly_eps": 0.24,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.48
   }
 }
