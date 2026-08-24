@@ -3630,5 +3630,13 @@
     "latest_quarterly_eps": 0.24,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 0.48
+  },
+  "FANM": {
+    "resolved": true,
+    "latest_annual_eps": 0.1,
+    "prior_annual_eps": 0.02,
+    "latest_quarterly_eps": -1.11,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": -0.18
   }
 }

@@ -2418,5 +2418,10 @@
     "website": "http://www.matcofoods.com",
     "domain": "matcofoods.com",
     "resolved": true
+  },
+  "FANM": {
+    "website": "http://www.fanm.co",
+    "domain": "fanm.co",
+    "resolved": true
   }
 }
