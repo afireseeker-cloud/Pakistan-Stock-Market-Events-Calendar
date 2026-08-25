@@ -2423,5 +2423,15 @@
     "website": "http://www.fanm.co",
     "domain": "fanm.co",
     "resolved": true
+  },
+  "ALTN": {
+    "website": "http://www.alternenergypk.com",
+    "domain": "alternenergypk.com",
+    "resolved": true
+  },
+  "DOL": {
+    "website": "http://www.desconoxychem.com",
+    "domain": "desconoxychem.com",
+    "resolved": true
   }
 }

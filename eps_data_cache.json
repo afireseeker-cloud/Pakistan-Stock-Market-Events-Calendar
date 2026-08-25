@@ -3638,5 +3638,21 @@
     "latest_quarterly_eps": -1.11,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.18
+  },
+  "ALTN": {
+    "resolved": true,
+    "latest_annual_eps": 15.93,
+    "prior_annual_eps": 11.93,
+    "latest_quarterly_eps": -0.1,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 10.21
+  },
+  "DOL": {
+    "resolved": true,
+    "latest_annual_eps": 4.51,
+    "prior_annual_eps": 2.69,
+    "latest_quarterly_eps": 0.14,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 1.25
   }
 }
