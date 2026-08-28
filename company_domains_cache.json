@@ -2433,5 +2433,15 @@
     "website": "http://www.desconoxychem.com",
     "domain": "desconoxychem.com",
     "resolved": true
+  },
+  "GIL": {
+    "website": "http://www.goodluckind.com",
+    "domain": "goodluckind.com",
+    "resolved": true
+  },
+  "RUPL": {
+    "website": "http://www.rupaligroup.com",
+    "domain": "rupaligroup.com",
+    "resolved": true
   }
 }
