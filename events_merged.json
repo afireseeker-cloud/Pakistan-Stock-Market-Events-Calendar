@@ -6683,25 +6683,6 @@
     "sentiment": "neutral"
   },
   {
-    "id": "sbp-remit-2026-05",
-    "type": "remittances",
-    "status": "estimated",
-    "date": "2026-06-08",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Workers' Remittances for May 2026",
-    "source_url": null,
-    "payload": {
-      "period": "May 2026",
-      "actual_value": null,
-      "prior_value": null
-    },
-    "revision_of": null,
-    "source": "sbp_remittances"
-  },
-  {
     "id": "psx-annc-ATLH-2026-06-08-1458",
     "type": "results",
     "status": "confirmed",
@@ -16563,25 +16544,6 @@
     "source": "psx_announcements",
     "logo_url": "https://img.logo.dev/octopusdtl.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
     "shariah_compliant": true
-  },
-  {
-    "id": "sbp-ca-2026-05",
-    "type": "current_account",
-    "status": "confirmed",
-    "date": "2026-06-18",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Current Account Balance for May 2026",
-    "source_url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.pdf",
-    "payload": {
-      "period": "May 2026",
-      "actual_value": -304.0,
-      "prior_value": -590.0
-    },
-    "revision_of": null,
-    "source": "sbp_current_account"
   },
   {
     "id": "psx-notice-2026-06-18-1210",
@@ -45783,18 +45745,18 @@
   {
     "id": "sbp-ca-2026-06",
     "type": "current_account",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-07-18",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Current Account Balance for June 2026",
-    "source_url": null,
+    "source_url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.pdf",
     "payload": {
       "period": "June 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": -304.0,
+      "prior_value": -590.0
     },
     "revision_of": null,
     "source": "sbp_current_account"
