@@ -3644,5 +3644,33 @@
     "scheduled_time": null,
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SPAC2-2026-08-31-1437": {
+    "scheduled_date": "2026-09-19",
+    "scheduled_time": "09:30",
+    "method": "text"
+  },
+  "psx-annc-ACPL-2026-08-31-1413": {
+    "scheduled_date": "2026-09-22",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GTYR-2026-08-31-1250": {
+    "scheduled_date": "2026-08-31",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-COLG-2026-08-31-1152": {
+    "scheduled_date": "2026-09-24",
+    "scheduled_time": "15:00",
+    "method": "text"
+  },
+  "psx-annc-DYNO-2026-08-31-1010": {
+    "scheduled_date": "2026-09-09",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }

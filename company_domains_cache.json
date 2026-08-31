@@ -2443,5 +2443,25 @@
     "website": "http://www.rupaligroup.com",
     "domain": "rupaligroup.com",
     "resolved": true
+  },
+  "AKGL": {
+    "website": "http://www.alkhairgadoon.com",
+    "domain": "alkhairgadoon.com",
+    "resolved": true
+  },
+  "IREIT": {
+    "website": "http://www.sinolinkreit.com",
+    "domain": "sinolinkreit.com",
+    "resolved": true
+  },
+  "LPGL": {
+    "website": "http://www.leinerpakgelatine.com",
+    "domain": "leinerpakgelatine.com",
+    "resolved": true
+  },
+  "PIM": {
+    "website": "http://www.popularislamicmodaraba.com",
+    "domain": "popularislamicmodaraba.com",
+    "resolved": true
   }
 }

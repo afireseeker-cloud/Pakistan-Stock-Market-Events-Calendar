@@ -3670,5 +3670,37 @@
     "latest_quarterly_eps": -7.21,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -8.49
+  },
+  "AKGL": {
+    "resolved": true,
+    "latest_annual_eps": 1.71,
+    "prior_annual_eps": 2.73,
+    "latest_quarterly_eps": -0.73,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.97
+  },
+  "IREIT": {
+    "resolved": true,
+    "latest_annual_eps": 1.28,
+    "prior_annual_eps": null,
+    "latest_quarterly_eps": 0.11,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.08
+  },
+  "LPGL": {
+    "resolved": true,
+    "latest_annual_eps": 2.11,
+    "prior_annual_eps": 10.87,
+    "latest_quarterly_eps": 0.17,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.23
+  },
+  "PIM": {
+    "resolved": true,
+    "latest_annual_eps": null,
+    "prior_annual_eps": null,
+    "latest_quarterly_eps": null,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": null
   }
 }
