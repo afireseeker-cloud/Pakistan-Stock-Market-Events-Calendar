@@ -2463,5 +2463,25 @@
     "website": "http://www.popularislamicmodaraba.com",
     "domain": "popularislamicmodaraba.com",
     "resolved": true
+  },
+  "AKDHL": {
+    "website": "http://www.akdhospitality.com",
+    "domain": "akdhospitality.com",
+    "resolved": true
+  },
+  "CHBL": {
+    "website": "http://www.chenabgroup.com",
+    "domain": "chenabgroup.com",
+    "resolved": true
+  },
+  "FIBLM": {
+    "website": "http://www.firstibl.com",
+    "domain": "firstibl.com",
+    "resolved": true
+  },
+  "IDEAL": {
+    "website": "http://www.idealsm.com",
+    "domain": "idealsm.com",
+    "resolved": true
   }
 }
