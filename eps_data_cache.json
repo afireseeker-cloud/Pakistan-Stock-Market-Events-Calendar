@@ -3742,5 +3742,13 @@
     "latest_quarterly_eps": 0.08,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 0.33
+  },
+  "GFIL": {
+    "resolved": true,
+    "latest_annual_eps": -11.55,
+    "prior_annual_eps": -20.42,
+    "latest_quarterly_eps": -2.2,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": -1.93
   }
 }
