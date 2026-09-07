@@ -2493,5 +2493,25 @@
     "website": "http://www.ghazifabrics.com",
     "domain": "ghazifabrics.com",
     "resolved": true
+  },
+  "BCL": {
+    "website": "http://www.bolancastings.com",
+    "domain": "bolancastings.com",
+    "resolved": true
+  },
+  "FTMM": {
+    "website": "http://www.ftmm.com.pk",
+    "domain": "ftmm.com.pk",
+    "resolved": true
+  },
+  "KOIL": {
+    "website": "http://www.kil.com.pk",
+    "domain": "kil.com.pk",
+    "resolved": true
+  },
+  "PRIC": {
+    "website": null,
+    "domain": null,
+    "resolved": false
   }
 }

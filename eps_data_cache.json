@@ -3750,5 +3750,37 @@
     "latest_quarterly_eps": -2.2,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -1.93
+  },
+  "BCL": {
+    "resolved": true,
+    "latest_annual_eps": -1.67,
+    "prior_annual_eps": 10.34,
+    "latest_quarterly_eps": 0.58,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 1.33
+  },
+  "FTMM": {
+    "resolved": true,
+    "latest_annual_eps": 0.14,
+    "prior_annual_eps": 0.31,
+    "latest_quarterly_eps": 0.07,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.19
+  },
+  "KOIL": {
+    "resolved": true,
+    "latest_annual_eps": 2.49,
+    "prior_annual_eps": 1.28,
+    "latest_quarterly_eps": 0.62,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 0.31
+  },
+  "PRIC": {
+    "resolved": true,
+    "latest_annual_eps": -0.76,
+    "prior_annual_eps": -0.53,
+    "latest_quarterly_eps": -0.2,
+    "latest_quarterly_label": "Q2 2023",
+    "yoy_quarterly_eps": -0.13
   }
 }

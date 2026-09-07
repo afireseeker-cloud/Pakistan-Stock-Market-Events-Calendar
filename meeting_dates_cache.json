@@ -3926,5 +3926,70 @@
     "scheduled_time": "15:00",
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-NRL-2026-09-07-1526": {
+    "scheduled_date": "2026-09-30",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-JSML-2026-09-07-1319": {
+    "scheduled_date": "2026-09-07",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PIAHCLA-2026-09-07-1238": {
+    "scheduled_date": "2026-09-28",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ATBA-2026-09-07-1221": {
+    "scheduled_date": "2026-09-29",
+    "scheduled_time": "09:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-INDU-2026-09-07-1218": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-FCCL-2026-09-07-1036": {
+    "scheduled_date": "2026-09-28",
+    "scheduled_time": "15:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-KOIL-2026-09-07-1518": {
+    "scheduled_date": "2026-09-14",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-KOHP-2026-09-07-1514": {
+    "scheduled_date": "2026-09-14",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-CHCC-2026-09-07-1511": {
+    "scheduled_date": "2026-09-10",
+    "scheduled_time": "12:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GWLC-2026-09-07-1506": {
+    "scheduled_date": "2026-09-14",
+    "scheduled_time": "15:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-786-2026-09-07-0939": {
+    "scheduled_date": "2026-09-14",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }
