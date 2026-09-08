@@ -2513,5 +2513,25 @@
     "website": null,
     "domain": null,
     "resolved": false
+  },
+  "GRYL": {
+    "website": "http://www.graysleasing.com",
+    "domain": "graysleasing.com",
+    "resolved": true
+  },
+  "SINDM": {
+    "website": "http://www.sindhmodarabaltd.com",
+    "domain": "sindhmodarabaltd.com",
+    "resolved": true
+  },
+  "SLYT": {
+    "website": "http://www.sallytextile.com",
+    "domain": "sallytextile.com",
+    "resolved": true
+  },
+  "TOWL": {
+    "website": "http://www.towellers.com",
+    "domain": "towellers.com",
+    "resolved": true
   }
 }
