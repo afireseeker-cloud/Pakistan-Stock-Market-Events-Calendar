@@ -3814,5 +3814,13 @@
     "latest_quarterly_eps": 0.89,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 1.4
+  },
+  "KCL": {
+    "resolved": true,
+    "latest_annual_eps": -50.05,
+    "prior_annual_eps": -29.7,
+    "latest_quarterly_eps": -1.92,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": -14.95
   }
 }

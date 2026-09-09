@@ -2533,5 +2533,10 @@
     "website": "http://www.towellers.com",
     "domain": "towellers.com",
     "resolved": true
+  },
+  "KCL": {
+    "website": "http://www.karamceramics.com",
+    "domain": "karamceramics.com",
+    "resolved": true
   }
 }
