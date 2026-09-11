@@ -3822,5 +3822,13 @@
     "latest_quarterly_eps": -1.92,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -14.95
+  },
+  "BGL": {
+    "resolved": true,
+    "latest_annual_eps": -1.85,
+    "prior_annual_eps": -1.94,
+    "latest_quarterly_eps": -0.19,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": -0.33
   }
 }
