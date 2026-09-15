@@ -3830,5 +3830,24 @@
     "latest_quarterly_eps": -0.19,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.33
+  },
+  "JVDCPS": {
+    "resolved": false
+  },
+  "MUGHALC": {
+    "resolved": true,
+    "latest_annual_eps": 5.96,
+    "prior_annual_eps": 10.37,
+    "latest_quarterly_eps": 0.7,
+    "latest_quarterly_label": "Q3 2025",
+    "yoy_quarterly_eps": 0.31
+  },
+  "WAHN": {
+    "resolved": true,
+    "latest_annual_eps": 53.55,
+    "prior_annual_eps": 61.05,
+    "latest_quarterly_eps": 12.79,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 13.5
   }
 }

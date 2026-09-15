@@ -2543,5 +2543,20 @@
     "website": "http://www.balochistanglass.com",
     "domain": "balochistanglass.com",
     "resolved": true
+  },
+  "JVDCPS": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "MUGHALC": {
+    "website": "http://www.mughalsteel.com",
+    "domain": "mughalsteel.com",
+    "resolved": true
+  },
+  "WAHN": {
+    "website": "http://www.wahnobel.com",
+    "domain": "wahnobel.com",
+    "resolved": true
   }
 }

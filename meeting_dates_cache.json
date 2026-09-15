@@ -4210,5 +4210,78 @@
     "scheduled_time": "10:00",
     "method": "vision",
     "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PCAL-2026-09-15-1412": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-PCAL-2026-09-15-1404": {
+    "scheduled_date": "2026-10-06",
+    "scheduled_time": "10:00",
+    "method": "text"
+  },
+  "psx-annc-JKSM-2026-09-15-1023": {
+    "scheduled_date": "2026-10-07",
+    "scheduled_time": "11:00",
+    "method": "text"
+  },
+  "psx-annc-PRL-2026-09-15-0800": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-BERG-2026-09-15-1448": {
+    "scheduled_date": "2026-09-23",
+    "scheduled_time": "14:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PNSC-2026-09-15-1430": {
+    "scheduled_date": "2026-09-16",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-WAHN-2026-09-15-1339": {
+    "scheduled_date": "2026-09-23",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-DADX-2026-09-15-1234": {
+    "scheduled_date": "2026-09-24",
+    "scheduled_time": "16:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-JDMT-2026-09-15-1211": {
+    "scheduled_date": "2026-09-22",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-HRPL-2026-09-15-1132": {
+    "scheduled_date": "2026-09-22",
+    "scheduled_time": "11:00",
+    "method": "text"
+  },
+  "psx-annc-ICL-2026-09-15-0954": {
+    "scheduled_date": "2026-09-22",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SIEM-2026-09-15-0948": {
+    "scheduled_date": "2026-09-22",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ARPL-2026-09-15-1301": {
+    "scheduled_date": "2026-09-18",
+    "scheduled_time": "11:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }
