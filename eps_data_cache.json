@@ -3849,5 +3849,13 @@
     "latest_quarterly_eps": 12.79,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 13.5
+  },
+  "FCSC": {
+    "resolved": true,
+    "latest_annual_eps": 3.75,
+    "prior_annual_eps": -0.5,
+    "latest_quarterly_eps": -0.04,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": -0.41
   }
 }
