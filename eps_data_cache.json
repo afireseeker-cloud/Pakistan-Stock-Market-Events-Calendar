@@ -3857,5 +3857,13 @@
     "latest_quarterly_eps": -0.04,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.41
+  },
+  "STJT": {
+    "resolved": true,
+    "latest_annual_eps": 11.49,
+    "prior_annual_eps": 2.81,
+    "latest_quarterly_eps": 9.13,
+    "latest_quarterly_label": "Q3 2026",
+    "yoy_quarterly_eps": 2.74
   }
 }
