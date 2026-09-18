@@ -2568,5 +2568,35 @@
     "website": "http://www.shahtaj.com",
     "domain": "shahtaj.com",
     "resolved": true
+  },
+  "ASHT": {
+    "website": "http://www.ashfaqtextile.com",
+    "domain": "ashfaqtextile.com",
+    "resolved": true
+  },
+  "GATM": {
+    "website": "http://www.gulahmed.com",
+    "domain": "gulahmed.com",
+    "resolved": true
+  },
+  "HATM": {
+    "website": "http://www.hamid-textile.com",
+    "domain": "hamid-textile.com",
+    "resolved": true
+  },
+  "PGLC": {
+    "website": "http://www.pakgulfleasing.com",
+    "domain": "pakgulfleasing.com",
+    "resolved": true
+  },
+  "SOYASUP": {
+    "website": "http://www.apag.com.pk",
+    "domain": "apag.com.pk",
+    "resolved": true
+  },
+  "SSML": {
+    "website": "http://www.saritowspinningmillsltd.com",
+    "domain": "saritowspinningmillsltd.com",
+    "resolved": true
   }
 }
