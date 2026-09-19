@@ -92933,8 +92933,8 @@
     "id": "psx-annc-SLCL-2026-09-18-1127",
     "type": "agm",
     "status": "confirmed",
-    "date": "2026-09-18",
-    "time": null,
+    "date": "2026-10-15",
+    "time": "10:00",
     "scope": "company",
     "symbol": "SLCL",
     "sector": null,
@@ -92948,7 +92948,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-09-18",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -93315,8 +93317,8 @@
     "id": "psx-annc-AHTM-2026-09-18-1511",
     "type": "board_meeting",
     "status": "confirmed",
-    "date": "2026-09-18",
-    "time": null,
+    "date": "2026-09-23",
+    "time": "11:00",
     "scope": "company",
     "symbol": "AHTM",
     "sector": null,
@@ -93330,7 +93332,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-09-18",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",
