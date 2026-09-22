@@ -2628,5 +2628,45 @@
     "website": "http://www.sana-industries.com",
     "domain": "sana-industries.com",
     "resolved": true
+  },
+  "CTM": {
+    "website": "http://www.colonytextiles.com",
+    "domain": "colonytextiles.com",
+    "resolved": true
+  },
+  "ELSM": {
+    "website": "http://www.nagina.com",
+    "domain": "nagina.com",
+    "resolved": true
+  },
+  "HAFL": {
+    "website": "http://www.hafiztm.com",
+    "domain": "hafiztm.com",
+    "resolved": true
+  },
+  "ITTEFAQ": {
+    "website": "http://www.ittefaqsteel.com",
+    "domain": "ittefaqsteel.com",
+    "resolved": true
+  },
+  "KHYT": {
+    "website": "http://www.khybertextile.com",
+    "domain": "khybertextile.com",
+    "resolved": true
+  },
+  "MERIT": {
+    "website": "http://www.meritpack.com",
+    "domain": "meritpack.com",
+    "resolved": true
+  },
+  "NAGC": {
+    "website": "http://www.nagina.com",
+    "domain": "nagina.com",
+    "resolved": true
+  },
+  "PRWM": {
+    "website": "http://www.nagina.com",
+    "domain": "nagina.com",
+    "resolved": true
   }
 }
