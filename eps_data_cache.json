@@ -4025,5 +4025,13 @@
     "latest_quarterly_eps": 3.94,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 2.91
+  },
+  "TISL": {
+    "resolved": true,
+    "latest_annual_eps": null,
+    "prior_annual_eps": null,
+    "latest_quarterly_eps": null,
+    "latest_quarterly_label": null,
+    "yoy_quarterly_eps": null
   }
 }

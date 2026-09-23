@@ -2668,5 +2668,10 @@
     "website": "http://www.nagina.com",
     "domain": "nagina.com",
     "resolved": true
+  },
+  "TISL": {
+    "website": "http://www.tasdeeq.com",
+    "domain": "tasdeeq.com",
+    "resolved": true
   }
 }
