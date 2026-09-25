@@ -1,41 +1,5 @@
 [
   {
-    "id": "sbp-fxres-2026-06-26",
-    "type": "fx_reserves",
-    "status": "estimated",
-    "date": "2026-06-26",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly FX Reserves \u2014 week ending 26 Jun 2026",
-    "source_url": null,
-    "payload": {
-      "week_ending": "2026-06-26",
-      "actual_value": null,
-      "prior_value": null
-    },
-    "revision_of": null,
-    "source": "sbp_fx_reserves"
-  },
-  {
-    "id": "pbs-spi-2026-06-26",
-    "type": "spi_weekly",
-    "status": "confirmed",
-    "date": "2026-06-26",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly Sensitive Price Indicator (SPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
-    "payload": {
-      "recurrence": "weekly_friday"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
     "id": "pbs-cpi_monthly-2026-07-02",
     "type": "cpi_monthly",
     "status": "confirmed",
@@ -932,7 +896,7 @@
   {
     "id": "pbs-spi-2026-09-25",
     "type": "spi_weekly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-09-25",
     "time": null,
     "scope": "market",
