@@ -1,41 +1,5 @@
 [
   {
-    "id": "sbp-fxres-2026-07-03",
-    "type": "fx_reserves",
-    "status": "estimated",
-    "date": "2026-07-03",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly FX Reserves \u2014 week ending 03 Jul 2026",
-    "source_url": null,
-    "payload": {
-      "week_ending": "2026-07-03",
-      "actual_value": null,
-      "prior_value": null
-    },
-    "revision_of": null,
-    "source": "sbp_fx_reserves"
-  },
-  {
-    "id": "pbs-spi-2026-07-03",
-    "type": "spi_weekly",
-    "status": "confirmed",
-    "date": "2026-07-03",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly Sensitive Price Indicator (SPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
-    "payload": {
-      "recurrence": "weekly_friday"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
     "id": "sbp-fxres-2026-07-10",
     "type": "fx_reserves",
     "status": "estimated",
@@ -839,7 +803,7 @@
   {
     "id": "pbs-cpi_monthly-2026-10-02",
     "type": "cpi_monthly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-02",
     "time": null,
     "scope": "market",
@@ -876,7 +840,7 @@
   {
     "id": "pbs-spi-2026-10-02",
     "type": "spi_weekly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-02",
     "time": null,
     "scope": "market",
@@ -893,7 +857,7 @@
   {
     "id": "pbs-wpi_monthly-2026-10-02",
     "type": "wpi_monthly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-02",
     "time": null,
     "scope": "market",
@@ -4302,6 +4266,42 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "weekly_friday"
+    },
+    "revision_of": null,
+    "source": "pbs_calendar"
+  },
+  {
+    "id": "pbs-cpi_monthly-2027-10-02",
+    "type": "cpi_monthly",
+    "status": "estimated",
+    "date": "2027-10-02",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "title": "Monthly Consumer Price Index (CPI) release",
+    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "payload": {
+      "recurrence": "monthly_early",
+      "reference_month": "2027-10"
+    },
+    "revision_of": null,
+    "source": "pbs_calendar"
+  },
+  {
+    "id": "pbs-wpi_monthly-2027-10-02",
+    "type": "wpi_monthly",
+    "status": "estimated",
+    "date": "2027-10-02",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "title": "Monthly Wholesale Price Index (WPI) release",
+    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "payload": {
+      "recurrence": "monthly_early",
+      "reference_month": "2027-10"
     },
     "revision_of": null,
     "source": "pbs_calendar"
