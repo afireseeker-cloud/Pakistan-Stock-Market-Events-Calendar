@@ -1,41 +1,5 @@
 [
   {
-    "id": "sbp-fxres-2026-07-10",
-    "type": "fx_reserves",
-    "status": "estimated",
-    "date": "2026-07-10",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly FX Reserves \u2014 week ending 10 Jul 2026",
-    "source_url": null,
-    "payload": {
-      "week_ending": "2026-07-10",
-      "actual_value": null,
-      "prior_value": null
-    },
-    "revision_of": null,
-    "source": "sbp_fx_reserves"
-  },
-  {
-    "id": "pbs-spi-2026-07-10",
-    "type": "spi_weekly",
-    "status": "confirmed",
-    "date": "2026-07-10",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly Sensitive Price Indicator (SPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
-    "payload": {
-      "recurrence": "weekly_friday"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
     "id": "pama-auto-sales-2026-07-13",
     "type": "auto_sales_monthly",
     "status": "confirmed",
@@ -931,7 +895,7 @@
   {
     "id": "pbs-spi-2026-10-09",
     "type": "spi_weekly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-09",
     "time": null,
     "scope": "market",
