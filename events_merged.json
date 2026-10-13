@@ -1,24 +1,5 @@
 [
   {
-    "id": "pama-auto-sales-2026-07-13",
-    "type": "auto_sales_monthly",
-    "status": "confirmed",
-    "date": "2026-07-13",
-    "time": null,
-    "scope": "sector",
-    "symbol": null,
-    "sector": "AUTOMOBILE",
-    "title": "Monthly automobile production and sales data (PAMA)",
-    "source_url": "https://pama.org.pk/monthly-production-sales-of-vehicles/",
-    "payload": {
-      "recurrence": "monthly_following_monday_10_to_14",
-      "reference_month": "2026-06",
-      "date_confidence": "confirmed_pattern"
-    },
-    "revision_of": null,
-    "source": "pama_auto_sales"
-  },
-  {
     "id": "sbp-fxres-2026-07-17",
     "type": "fx_reserves",
     "status": "estimated",
@@ -912,7 +893,7 @@
   {
     "id": "pama-auto-sales-2026-10-12",
     "type": "auto_sales_monthly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-12",
     "time": null,
     "scope": "sector",
