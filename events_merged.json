@@ -764,20 +764,18 @@
   {
     "id": "sbp-fxres-2026-10-02",
     "type": "fx_reserves",
-    "status": "confirmed",
+    "status": "estimated",
     "date": "2026-10-02",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Weekly FX Reserves \u2014 week ending 02 Oct 2026",
-    "source_url": "https://www.sbp.org.pk/",
+    "source_url": null,
     "payload": {
       "week_ending": "2026-10-02",
-      "actual_value": 21453.7,
-      "prior_value": null,
-      "bank_reserves": 5343.7,
-      "total_reserves": 26797.4
+      "actual_value": null,
+      "prior_value": null
     },
     "revision_of": null,
     "source": "sbp_fx_reserves"
@@ -839,18 +837,20 @@
   {
     "id": "sbp-fxres-2026-10-09",
     "type": "fx_reserves",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-09",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Weekly FX Reserves \u2014 week ending 09 Oct 2026",
-    "source_url": null,
+    "source_url": "https://www.sbp.org.pk/",
     "payload": {
       "week_ending": "2026-10-09",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": 21469.5,
+      "prior_value": null,
+      "bank_reserves": 5393.8,
+      "total_reserves": 26863.3
     },
     "revision_of": null,
     "source": "sbp_fx_reserves"
@@ -4324,5 +4324,41 @@
     },
     "revision_of": null,
     "source": "pama_auto_sales"
+  },
+  {
+    "id": "sbp-fxres-2027-10-15",
+    "type": "fx_reserves",
+    "status": "estimated",
+    "date": "2027-10-15",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "title": "Weekly FX Reserves \u2014 week ending 15 Oct 2027",
+    "source_url": null,
+    "payload": {
+      "week_ending": "2027-10-15",
+      "actual_value": null,
+      "prior_value": null
+    },
+    "revision_of": null,
+    "source": "sbp_fx_reserves"
+  },
+  {
+    "id": "pbs-spi-2027-10-15",
+    "type": "spi_weekly",
+    "status": "estimated",
+    "date": "2027-10-15",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "title": "Weekly Sensitive Price Indicator (SPI) release",
+    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "payload": {
+      "recurrence": "weekly_friday"
+    },
+    "revision_of": null,
+    "source": "pbs_calendar"
   }
 ]
