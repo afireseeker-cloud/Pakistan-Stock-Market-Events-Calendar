@@ -752,14 +752,35 @@ function avatarFor(e, accent) {
   }
   return `<span class="avatarFallback" style="background:${accent}22;color:${accent}">${initials}</span>`;
 }
+// Announcements dated by when they were filed (results, dividend credits,
+// disclosures...) record something that has already happened, so they
+// never count down. Only scheduled items (meetings, briefings, releases)
+// can be upcoming.
+const FILED_TYPES = new Set(['results','dividend_announced','other_announcement','director_disclosure','governance_change']);
+function alreadyHappened(e) {
+  const p = e.payload || {};
+  if (FILED_TYPES.has(e.type) || p.dated_by === 'filing') return true;
+  if (p.actual_value !== undefined && p.actual_value !== null) return true; // value already released
+  return false;
+}
 function getCountdownInfo(e) {
   if (!e.date || e.status === 'cancelled') return null;
   const now = new Date();
-  // date-only events (no scheduled time -- the common case after the
-  // filed-time-vs-scheduled-time fix) are treated as due at end of day,
-  // so "today" stays "upcoming" all day rather than flipping to "past"
-  // the moment the clock ticks past midnight-plus-a-few-hours
-  const target = e.time ? new Date(`${e.date}T${e.time}:00`) : new Date(`${e.date}T23:59:59`);
+  const todayStr = isoDate(now);
+  if (e.date <= todayStr && alreadyHappened(e)) return null;
+
+  if (!e.time) {
+    // date-only: we know the day but not the hour, so don't invent a
+    // countdown to midnight -- say "Today" on the day, and count days
+    // to the start of that day before it
+    if (e.date < todayStr) return null;
+    if (e.date === todayStr) return { upcoming: true, hoursLeft: 24, label: 'today, time not announced' };
+    const diffMs = new Date(`${e.date}T00:00:00`) - now;
+    const days = Math.ceil(diffMs / 86400000);
+    return { upcoming: false, hoursLeft: diffMs / 3600000, label: days === 1 ? 'tomorrow' : `in ${days}d` };
+  }
+
+  const target = new Date(`${e.date}T${e.time}:00`);
   const diffMs = target - now;
   if (diffMs < 0) return null;
   const hoursLeft = diffMs / 3600000;

@@ -2645,7 +2645,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285604-1.gif",
       "finhisaab_id": "6ace03e816a1ad83225b695e",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2672,7 +2673,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285649-1.gif",
       "finhisaab_id": "6acf2b4c570bab118703cf69",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2699,7 +2701,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285656-1.gif",
       "finhisaab_id": "6acf3171570bab1187053350",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2725,7 +2728,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285737-1.gif",
       "finhisaab_id": "6ad081ba570bab11872e57e8",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2752,7 +2756,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285890-1.gif",
       "finhisaab_id": "6ad20a9242cf74e232dcb2f7",
       "news_type": "AGM_EGM",
-      "impact": "low"
+      "impact": "low",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2798,7 +2803,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285790-1.gif",
       "finhisaab_id": "6ad1a10942cf74e232cbc6b8",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2825,7 +2831,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285888-1.gif",
       "finhisaab_id": "6ad207f342cf74e232dc306a",
       "news_type": "BONUS_RIGHTS",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2852,7 +2859,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285891-1.gif",
       "finhisaab_id": "6ad2008142cf74e232da1768",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2879,7 +2887,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285909-1.gif",
       "finhisaab_id": "6ad20a9242cf74e232dcb2d3",
       "news_type": "CORPORATE_BRIEFING",
-      "impact": "low"
+      "impact": "low",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2906,7 +2915,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285912-1.gif",
       "finhisaab_id": "6ad207f242cf74e232dc3056",
       "news_type": "BOARD_MEETING",
-      "impact": "low"
+      "impact": "low",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2933,7 +2943,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285913-1.gif",
       "finhisaab_id": "6ad208b142cf74e232dc7193",
       "news_type": "DIVIDEND",
-      "impact": "medium"
+      "impact": "medium",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2960,7 +2971,8 @@
       "image_url": "https://dps.psx.com.pk/download/image/285918-1.gif",
       "finhisaab_id": "6ad20a3042cf74e232dcad11",
       "news_type": "CORPORATE_BRIEFING",
-      "impact": "low"
+      "impact": "low",
+      "dated_by": "filing"
     },
     "revision_of": null,
     "source": "finhisaab_announcements",
@@ -2988,6 +3000,7 @@
       "finhisaab_id": "6ad2031d42cf74e232dacd01",
       "news_type": "EARNINGS",
       "impact": "high",
+      "dated_by": "filing",
       "eps_actual": 0.11,
       "eps_prior": 0.17,
       "eps_period": "Q3 2026"
@@ -3018,6 +3031,7 @@
       "finhisaab_id": "6ad2043a42cf74e232db27bc",
       "news_type": "EARNINGS",
       "impact": "high",
+      "dated_by": "filing",
       "eps_actual": 0.24,
       "eps_prior": 0.64,
       "eps_period": "QUARTERLY",
