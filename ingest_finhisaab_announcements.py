@@ -108,6 +108,7 @@ def results_events(item: dict) -> list[dict]:
     fr = item.get("financialResults") or {}
     filed = day(item.get("announcementDate"))
     e = base_event(item, "results", filed, None)
+    e["payload"]["dated_by"] = "filing"
     cur = (fr.get("quarterFigures") or {}).get("current") or (fr.get("periodFigures") or {}).get("current") or {}
     cmp_ = (fr.get("quarterFigures") or {}).get("comparative") or (fr.get("periodFigures") or {}).get("comparative") or {}
     if cur.get("eps") is not None:
@@ -125,6 +126,7 @@ def results_events(item: dict) -> list[dict]:
         d = base_event(item, "dividend_announced", filed, None, suffix="-div")
         d["title"] = f"Dividend declared: {div['display']}"
         d["payload"]["dividend"] = div
+        d["payload"]["dated_by"] = "filing"
         out.append(d)
     return out
 
@@ -163,7 +165,10 @@ def to_events(item: dict) -> list[dict]:
 
     if not filed:
         return []
-    return [base_event(item, SIMPLE_TYPES.get(news, "other_announcement"), filed, None)]
+    e = base_event(item, SIMPLE_TYPES.get(news, "other_announcement"), filed, None)
+    # dated by when it was filed, not when anything is scheduled to happen
+    e["payload"]["dated_by"] = "filing"
+    return [e]
 
 
 def dedupe(events: list[dict]) -> list[dict]:
