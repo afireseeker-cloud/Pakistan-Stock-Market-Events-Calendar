@@ -50,66 +50,16 @@ INFO: generated 14 current account events
 OK    SBP current account calendar (predicted dates) (0s)
 
 ============================================================
-RUNNING: PSX announcements
+RUNNING: FinHisaab company announcements
 ============================================================
-INFO: fetching 2026-07-18 to 2026-08-17...
-WARNING: fetch failed (attempt 1/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 1s...
-WARNING: fetch failed (attempt 2/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 2s...
-WARNING: fetch failed (attempt 3/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 4s...
-Traceback (most recent call last):
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 199, in <module>
-    main()
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 168, in main
-    html_pages = fetch_all_pages(
-                 ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 107, in fetch_all_pages
-    html = fetch_page(session, date_from=date_from, date_to=date_to,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 93, in fetch_page
-    raise RuntimeError(f"Giving up after {MAX_RETRIES} attempts: {last_error}")
-RuntimeError: Giving up after 3 attempts: 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements
-FAIL  PSX announcements (exit 1, 13s)
 
-============================================================
-RUNNING: PSX notices
-============================================================
-INFO: fetching 2026-07-18 to 2026-08-17...
-WARNING: fetch failed (attempt 1/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 1s...
-WARNING: fetch failed (attempt 2/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 2s...
-WARNING: fetch failed (attempt 3/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements. Retrying in 4s...
-Traceback (most recent call last):
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 199, in <module>
-    main()
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 168, in main
-    html_pages = fetch_all_pages(
-                 ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 107, in fetch_all_pages
-    html = fetch_page(session, date_from=date_from, date_to=date_to,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_announcements.py", line 93, in fetch_page
-    raise RuntimeError(f"Giving up after {MAX_RETRIES} attempts: {last_error}")
-RuntimeError: Giving up after 3 attempts: 403 Client Error: Forbidden for url: https://dps.psx.com.pk/announcements
-FAIL  PSX notices (exit 1, 10s)
-
-============================================================
-RUNNING: PSX payouts
-============================================================
-WARNING: fetch failed (attempt 1/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/payouts. Retrying in 1s...
-WARNING: fetch failed (attempt 2/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/payouts. Retrying in 2s...
-WARNING: fetch failed (attempt 3/3): 403 Client Error: Forbidden for url: https://dps.psx.com.pk/payouts. Retrying in 4s...
-Traceback (most recent call last):
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_payouts.py", line 127, in <module>
-    main()
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_payouts.py", line 100, in main
-    html_pages = fetch_all_pages(session, symbol=args.symbol, debug=args.debug)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_payouts.py", line 68, in fetch_all_pages
-    html = fetch_page(session, offset=offset, symbol=symbol,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_psx_payouts.py", line 56, in fetch_page
-    raise RuntimeError(f"Giving up after {MAX_RETRIES} attempts: {last_error}")
-RuntimeError: Giving up after 3 attempts: 403 Client Error: Forbidden for url: https://dps.psx.com.pk/payouts
-FAIL  PSX payouts (exit 1, 11s)
+DONE: 97 company events from 132 FinHisaab announcements
+  board_meeting          73
+  other_announcement     11
+  corporate_briefing     10
+  results                2
+  agm                    1
+OK    FinHisaab company announcements (0s)
 
 ============================================================
 RUNNING: Merge all sources
@@ -124,10 +74,12 @@ INFO: loaded 14 events from sbp_current_account (events_current_account.json)
 WARNING: events_psx_announcements.jsonl not found, skipping psx_announcements -- run its ingestion script first if this is unexpected
 WARNING: events_psx_notices.jsonl not found, skipping psx_notices -- run its ingestion script first if this is unexpected
 WARNING: events_psx_payouts.jsonl not found, skipping psx_payouts -- run its ingestion script first if this is unexpected
+INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
 INFO: 12 events trimmed outside [2026-07-18, 2027-10-16]
 
-DONE: 238 total events written to events_merged.json
+DONE: 335 total events written to events_merged.json
   window: 2026-07-18 to 2027-10-16
+  finhisaab_announcements    97
   pama_auto_sales         15
   pbs_calendar            95
   psx_holidays             4
@@ -142,7 +94,7 @@ OK    Merge all sources (0s)
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-INFO: 0 events eligible (238 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
+INFO: 0 events eligible (335 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
 
 DONE: 0/0 resolved this run (0 via text, 0 via vision), 0 total events now show real scheduled dates, written to events_merged.json
 OK    Meeting date extraction (text + vision OCR) (0s)
@@ -150,15 +102,15 @@ OK    Meeting date extraction (text + vision OCR) (0s)
 ============================================================
 RUNNING: Sentiment classification
 ============================================================
-INFO: 0 already cached, 0 rule-classified, 238 skipped (no sentiment applicable), 0 need a Gemini call
+INFO: 97 already cached, 0 rule-classified, 238 skipped (no sentiment applicable), 0 need a Gemini call
 
-DONE: 0/238 events now have sentiment, written to events_merged.json
+DONE: 97/335 events now have sentiment, written to events_merged.json
 OK    Sentiment classification (0s)
 
 ============================================================
 RUNNING: Fetch company domains
 ============================================================
-INFO: 0 symbols total, 0 already cached, 0 to fetch
+INFO: 82 symbols total, 82 already cached, 0 to fetch
 
 DONE: 487/535 symbols have a resolved website domain, written to company_domains_cache.json
 OK    Fetch company domains (0s)
@@ -166,13 +118,13 @@ OK    Fetch company domains (0s)
 ============================================================
 RUNNING: Attach company logos
 ============================================================
-DONE: logo_url attached to 0 events, written to events_merged.json
+DONE: logo_url attached to 93 events, written to events_merged.json
 OK    Attach company logos (0s)
 
 ============================================================
 RUNNING: Fetch EPS data
 ============================================================
-INFO: 0 symbols total, 0 already cached, 0 to fetch
+INFO: 82 symbols total, 82 already cached, 0 to fetch
 
 DONE: 486/535 symbols have EPS data, written to eps_data_cache.json
 OK    Fetch EPS data (0s)
@@ -180,13 +132,14 @@ OK    Fetch EPS data (0s)
 ============================================================
 RUNNING: Attach EPS data
 ============================================================
-DONE: EPS data attached to 0 results events, written to events_merged.json
+DONE: EPS data attached to 1 results events, written to events_merged.json
 OK    Attach EPS data (0s)
 
 ============================================================
 RUNNING: Attach Shariah compliance
 ============================================================
-DONE: shariah_compliant attached to 0 events, written to events_merged.json
+DONE: shariah_compliant attached to 94 events, written to events_merged.json
+INFO: 2 symbols in your events had no match in the compliance list (funds/ETFs/ ecomposites not covered by this notice, or symbols that have since changed): ['OPENFUND', 'SLM']
 OK    Attach Shariah compliance (0s)
 
 ============================================================
@@ -207,10 +160,10 @@ INFO: no prior week in history yet -- this is either the first run, or last week
 INFO: confirmed event for 2026-10-09
 
 DONE: written to events_merged.json
-OK    Confirm SBP FX reserves (real values) (5s)
+OK    Confirm SBP FX reserves (real values) (6s)
 
 ============================================================
-PIPELINE SUMMARY (0.7 min total)
+PIPELINE SUMMARY (0.1 min total)
 ============================================================
   OK    sbp
   OK    pbs
@@ -219,9 +172,7 @@ PIPELINE SUMMARY (0.7 min total)
   OK    remittances_predict
   OK    fx_reserves_predict
   OK    current_account_predict
-  FAIL  announcements
-  FAIL  notices
-  FAIL  payouts
+  OK    finhisaab_company
   OK    merge
   OK    meeting_dates
   OK    sentiment
@@ -230,5 +181,3 @@ PIPELINE SUMMARY (0.7 min total)
   OK    shariah
   OK    finhisaab_values
   OK    fx_reserves_confirm
-
-One or more OPTIONAL enrichment steps failed -- see FAIL lines above. This is not fatal: merge_events.py already succeeded by the time we reach this point (it's the one step that hard-stops the whole script on failure, via continue_on_error=False above), so there's a genuinely good events_merged.json ready to publish even if some enrichment didn't land this run. Exiting 0 deliberately, so the workflow's deploy step still runs -- a partial-but-real update beats no update at all. Fix the FAIL'd steps for next time, but don't let them block what already worked.
