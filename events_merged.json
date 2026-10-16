@@ -1,41 +1,5 @@
 [
   {
-    "id": "sbp-fxres-2026-07-17",
-    "type": "fx_reserves",
-    "status": "estimated",
-    "date": "2026-07-17",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly FX Reserves \u2014 week ending 17 Jul 2026",
-    "source_url": null,
-    "payload": {
-      "week_ending": "2026-07-17",
-      "actual_value": null,
-      "prior_value": null
-    },
-    "revision_of": null,
-    "source": "sbp_fx_reserves"
-  },
-  {
-    "id": "pbs-spi-2026-07-17",
-    "type": "spi_weekly",
-    "status": "confirmed",
-    "date": "2026-07-17",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Weekly Sensitive Price Indicator (SPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
-    "payload": {
-      "recurrence": "weekly_friday"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
     "id": "sbp-fxres-2026-07-24",
     "type": "fx_reserves",
     "status": "estimated",
@@ -81,9 +45,17 @@
     "symbol": null,
     "sector": null,
     "title": "State Bank monetary policy statement (Monetary Policy Committee)",
-    "source_url": "https://mettisglobal.news/SBP-releases-FY27-MPC-meeting-calendar-expands-monetary-policy-communication-61352",
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
-      "deliverable": "statement"
+      "deliverable": "statement",
+      "actual_value": "11.5%",
+      "prior_value": "11.5%",
+      "actual_numeric": 11.5,
+      "prior_numeric": 11.5,
+      "unit": "percent",
+      "value_period": "2026-07-27",
+      "value_source": "finhisaab",
+      "decision": "hold"
     },
     "revision_of": null,
     "source": "sbp_mpc"
@@ -170,10 +142,17 @@
     "symbol": null,
     "sector": null,
     "title": "Monthly Consumer Price Index (CPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "source_url": "https://finhisaab.com/inflation",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-08"
+      "reference_month": "2026-07",
+      "actual_value": "9.2%",
+      "prior_value": "11.07%",
+      "actual_numeric": 9.2,
+      "prior_numeric": 11.07,
+      "unit": "percent YoY",
+      "value_period": "2026-07",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -191,7 +170,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-08"
+      "reference_month": "2026-07"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -235,18 +214,23 @@
   {
     "id": "sbp-remit-2026-07",
     "type": "remittances",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-08-08",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Workers' Remittances for July 2026",
-    "source_url": null,
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
       "period": "July 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": "$3,630M",
+      "prior_value": "$3,474M",
+      "actual_numeric": 3630.476883,
+      "prior_numeric": 3473.776432,
+      "unit": "USD million",
+      "value_period": "2026-07",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "sbp_remittances"
@@ -353,11 +337,16 @@
     "symbol": null,
     "sector": null,
     "title": "Current Account Balance for July 2026",
-    "source_url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.pdf",
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
       "period": "July 2026",
-      "actual_value": -543.0,
-      "prior_value": -853.0
+      "actual_value": "-$445M",
+      "prior_value": "-$814M",
+      "actual_numeric": -445,
+      "prior_numeric": -814,
+      "unit": "USD million",
+      "value_period": "2026-07",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "sbp_current_account"
@@ -481,10 +470,17 @@
     "symbol": null,
     "sector": null,
     "title": "Monthly Consumer Price Index (CPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "source_url": "https://finhisaab.com/inflation",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-09"
+      "reference_month": "2026-08",
+      "actual_value": "11.15%",
+      "prior_value": "9.2%",
+      "actual_numeric": 11.15,
+      "prior_numeric": 9.2,
+      "unit": "percent YoY",
+      "value_period": "2026-08",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -502,7 +498,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-09"
+      "reference_month": "2026-08"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -546,18 +542,23 @@
   {
     "id": "sbp-remit-2026-08",
     "type": "remittances",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-09-08",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Workers' Remittances for August 2026",
-    "source_url": null,
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
       "period": "August 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": "$3,657M",
+      "prior_value": "$3,630M",
+      "actual_numeric": 3656.816978,
+      "prior_numeric": 3630.476883,
+      "unit": "USD million",
+      "value_period": "2026-08",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "sbp_remittances"
@@ -627,9 +628,17 @@
     "symbol": null,
     "sector": null,
     "title": "State Bank monetary policy statement (Monetary Policy Committee)",
-    "source_url": "https://mettisglobal.news/SBP-releases-FY27-MPC-meeting-calendar-expands-monetary-policy-communication-61352",
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
-      "deliverable": "statement"
+      "deliverable": "statement",
+      "actual_value": "11.5%",
+      "prior_value": "11.5%",
+      "actual_numeric": 11.5,
+      "prior_numeric": 11.5,
+      "unit": "percent",
+      "value_period": "2026-09-14",
+      "value_source": "finhisaab",
+      "decision": "hold"
     },
     "revision_of": null,
     "source": "sbp_mpc"
@@ -655,18 +664,23 @@
   {
     "id": "sbp-ca-2026-08",
     "type": "current_account",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-09-18",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Current Account Balance for August 2026",
-    "source_url": null,
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
       "period": "August 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": "-$98M",
+      "prior_value": "-$445M",
+      "actual_numeric": -98,
+      "prior_numeric": -445,
+      "unit": "USD million",
+      "value_period": "2026-08",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "sbp_current_account"
@@ -753,10 +767,17 @@
     "symbol": null,
     "sector": null,
     "title": "Monthly Consumer Price Index (CPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
+    "source_url": "https://finhisaab.com/inflation",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-10"
+      "reference_month": "2026-09",
+      "actual_value": "10.26%",
+      "prior_value": "11.15%",
+      "actual_numeric": 10.26,
+      "prior_numeric": 11.15,
+      "unit": "percent YoY",
+      "value_period": "2026-09",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -810,7 +831,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-10"
+      "reference_month": "2026-09"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -818,18 +839,23 @@
   {
     "id": "sbp-remit-2026-09",
     "type": "remittances",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-08",
     "time": null,
     "scope": "market",
     "symbol": null,
     "sector": null,
     "title": "Workers' Remittances for September 2026",
-    "source_url": null,
+    "source_url": "https://finhisaab.com/economic-data",
     "payload": {
       "period": "September 2026",
-      "actual_value": null,
-      "prior_value": null
+      "actual_value": "$3,588M",
+      "prior_value": "$3,657M",
+      "actual_numeric": 3587.764715,
+      "prior_numeric": 3656.816978,
+      "unit": "USD million",
+      "value_period": "2026-09",
+      "value_source": "finhisaab"
     },
     "revision_of": null,
     "source": "sbp_remittances"
@@ -931,7 +957,7 @@
   {
     "id": "pbs-spi-2026-10-16",
     "type": "spi_weekly",
-    "status": "estimated",
+    "status": "confirmed",
     "date": "2026-10-16",
     "time": null,
     "scope": "market",
@@ -1102,7 +1128,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-11"
+      "reference_month": "2026-10"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -1120,7 +1146,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-11"
+      "reference_month": "2026-10"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -1376,7 +1402,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-12"
+      "reference_month": "2026-11"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -1394,7 +1420,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2026-12"
+      "reference_month": "2026-11"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -1703,7 +1729,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-01"
+      "reference_month": "2026-12"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -1721,7 +1747,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-01"
+      "reference_month": "2026-12"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2011,7 +2037,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-02"
+      "reference_month": "2027-01"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2029,7 +2055,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-02"
+      "reference_month": "2027-01"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2284,7 +2310,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-03"
+      "reference_month": "2027-02"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2302,7 +2328,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-03"
+      "reference_month": "2027-02"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2556,7 +2582,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-04"
+      "reference_month": "2027-03"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2628,7 +2654,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-04"
+      "reference_month": "2027-03"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2900,7 +2926,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-05"
+      "reference_month": "2027-04"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -2918,7 +2944,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-05"
+      "reference_month": "2027-04"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3155,7 +3181,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-06"
+      "reference_month": "2027-05"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3173,7 +3199,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-06"
+      "reference_month": "2027-05"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3427,7 +3453,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-07"
+      "reference_month": "2027-06"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3481,7 +3507,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-07"
+      "reference_month": "2027-06"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3718,7 +3744,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-08"
+      "reference_month": "2027-07"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3736,7 +3762,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-08"
+      "reference_month": "2027-07"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3955,7 +3981,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-09"
+      "reference_month": "2027-08"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -3973,7 +3999,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-09"
+      "reference_month": "2027-08"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -4228,7 +4254,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-10"
+      "reference_month": "2027-09"
     },
     "revision_of": null,
     "source": "pbs_calendar"
@@ -4246,7 +4272,7 @@
     "source_url": "https://www.pbs.gov.pk/price-statistics/",
     "payload": {
       "recurrence": "monthly_early",
-      "reference_month": "2027-10"
+      "reference_month": "2027-09"
     },
     "revision_of": null,
     "source": "pbs_calendar"
