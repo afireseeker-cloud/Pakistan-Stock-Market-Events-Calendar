@@ -75,7 +75,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           LOGO_DEV_TOKEN: ${{ secrets.LOGO_DEV_TOKEN }}
-        run: python run_pipeline.py
+        run: |
+          set -o pipefail
+          python run_pipeline.py 2>&1 | tee pipeline_log.txt
 
       - name: Prepare publish directory
         run: |
@@ -90,6 +92,8 @@ jobs:
           cp company_domains_cache.json _site/ 2>/dev/null || true
           cp eps_data_cache.json _site/ 2>/dev/null || true
           cp kmi_compliance_cache.json _site/ 2>/dev/null || true
+          # last run's log, so failed steps can be read from gh-pages
+          cp pipeline_log.txt _site/ 2>/dev/null || true
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
