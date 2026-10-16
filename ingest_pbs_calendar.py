@@ -77,6 +77,9 @@ def build_events(start: date, end: date) -> list[dict]:
 
     for month_start in month_starts_between(start, end):
         release_estimate = month_start + timedelta(days=1)  # ~2nd of month
+        # the early-month release reports the PREVIOUS month's index
+        # (the 2 Oct release is September's CPI), not the current month
+        reference_month = (month_start - timedelta(days=1)).strftime("%Y-%m")
         if start <= release_estimate <= end:
             for kind, label in (("cpi_monthly", "Monthly Consumer Price Index (CPI) release"),
                                  ("wpi_monthly", "Monthly Wholesale Price Index (WPI) release")):
@@ -92,7 +95,7 @@ def build_events(start: date, end: date) -> list[dict]:
                     "title": label,
                     "source_url": SOURCE_URL,
                     "payload": {"recurrence": "monthly_early",
-                                "reference_month": month_start.strftime("%Y-%m")},
+                                "reference_month": reference_month},
                     "revision_of": None,
                 })
 

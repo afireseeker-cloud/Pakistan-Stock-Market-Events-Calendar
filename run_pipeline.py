@@ -89,11 +89,9 @@ def main():
     ap.add_argument("--skip-logos", action="store_true")
     ap.add_argument("--skip-eps", action="store_true")
     ap.add_argument("--skip-shariah", action="store_true")
-    ap.add_argument("--skip-remittances", action="store_true",
-                     help="skip the confirm step only -- predicted dates still generate")
+    ap.add_argument("--skip-finhisaab", action="store_true",
+                     help="don't attach values from data/finhisaab_values.json")
     ap.add_argument("--skip-fx-reserves", action="store_true",
-                     help="skip the confirm step only -- predicted dates still generate")
-    ap.add_argument("--skip-current-account", action="store_true",
                      help="skip the confirm step only -- predicted dates still generate")
     args = ap.parse_args()
 
@@ -239,15 +237,21 @@ def main():
         print("SKIP  Shariah compliance (--skip-shariah)", file=sys.stderr)
         results["shariah"] = "skip"
 
-    if not args.skip_remittances:
-        results["remittances_confirm"] = run_step(
-            "Confirm SBP remittances (real values)",
-            [sys.executable, "fetch_sbp_remittances.py", MERGED_FILE, "--out", MERGED_FILE],
+    # Remittances, current account, MPC policy rate and CPI values come from
+    # FinHisaab via data/finhisaab_values.json (refreshed daily by a
+    # scheduled task, since FinHisaab has no API the runner can call).
+    # The old fetch_sbp_remittances.py / fetch_sbp_current_account.py
+    # scrapers are kept in the repo but no longer run.
+    if not args.skip_finhisaab:
+        results["finhisaab_values"] = run_step(
+            "Attach FinHisaab values (remittances, current account, policy rate, CPI)",
+            [sys.executable, "attach_finhisaab_values.py", MERGED_FILE, "--out", MERGED_FILE],
         )
     else:
-        print("SKIP  Remittances confirm (--skip-remittances)", file=sys.stderr)
-        results["remittances_confirm"] = "skip"
+        print("SKIP  FinHisaab values (--skip-finhisaab)", file=sys.stderr)
+        results["finhisaab_values"] = "skip"
 
+    # FX reserves are not in FinHisaab, so this scraper stays
     if not args.skip_fx_reserves:
         results["fx_reserves_confirm"] = run_step(
             "Confirm SBP FX reserves (real values)",
@@ -256,15 +260,6 @@ def main():
     else:
         print("SKIP  FX reserves confirm (--skip-fx-reserves)", file=sys.stderr)
         results["fx_reserves_confirm"] = "skip"
-
-    if not args.skip_current_account:
-        results["current_account_confirm"] = run_step(
-            "Confirm SBP current account (real values)",
-            [sys.executable, "fetch_sbp_current_account.py", MERGED_FILE, "--out", MERGED_FILE],
-        )
-    else:
-        print("SKIP  Current account confirm (--skip-current-account)", file=sys.stderr)
-        results["current_account_confirm"] = "skip"
 
     # ---------- summary ----------
     total_elapsed = time.time() - pipeline_start

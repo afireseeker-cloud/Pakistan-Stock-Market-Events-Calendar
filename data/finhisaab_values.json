@@ -1,0 +1,298 @@
+{
+  "_about": "Values pulled from FinHisaab (SBP EasyData + PBS CPI) by a scheduled Claude task. attach_finhisaab_values.py reads this file. Do not edit by hand; the next refresh overwrites it.",
+  "generated_at": "2026-10-16T15:28:00Z",
+  "series": {
+    "remittances": {
+      "series_key": "TS_GP_BOP_WR_M.WR0340",
+      "unit": "USD million",
+      "last_sync": "2026-10-11T23:16:25.745Z",
+      "observations": [
+        {
+          "period": "2025-01-31",
+          "value": 3003.375873
+        },
+        {
+          "period": "2025-02-28",
+          "value": 3126.670931
+        },
+        {
+          "period": "2025-03-31",
+          "value": 4053.579523
+        },
+        {
+          "period": "2025-04-30",
+          "value": 3176.93
+        },
+        {
+          "period": "2025-05-31",
+          "value": 3685.588476
+        },
+        {
+          "period": "2025-06-30",
+          "value": 3406.389361
+        },
+        {
+          "period": "2025-07-31",
+          "value": 3214.514462
+        },
+        {
+          "period": "2025-08-31",
+          "value": 3138.174787
+        },
+        {
+          "period": "2025-09-30",
+          "value": 3184.123961
+        },
+        {
+          "period": "2025-10-31",
+          "value": 3419.61361
+        },
+        {
+          "period": "2025-11-30",
+          "value": 3188.337716
+        },
+        {
+          "period": "2025-12-31",
+          "value": 3592.442722
+        },
+        {
+          "period": "2026-01-31",
+          "value": 3464.468094
+        },
+        {
+          "period": "2026-02-28",
+          "value": 3287.872847
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3831.405102
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3537.025479
+        },
+        {
+          "period": "2026-05-31",
+          "value": 4252.157161
+        },
+        {
+          "period": "2026-06-30",
+          "value": 3473.776432
+        },
+        {
+          "period": "2026-07-31",
+          "value": 3630.476883
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3656.816978
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3587.764715
+        }
+      ]
+    },
+    "current_account": {
+      "series_key": "TS_GP_BOP_BPM6SUM_M.P00010",
+      "unit": "USD million",
+      "last_sync": "2026-10-11T23:16:59.394Z",
+      "observations": [
+        {
+          "period": "2025-01-31",
+          "value": -428
+        },
+        {
+          "period": "2025-02-28",
+          "value": -98
+        },
+        {
+          "period": "2025-03-31",
+          "value": 1275
+        },
+        {
+          "period": "2025-04-30",
+          "value": -12
+        },
+        {
+          "period": "2025-05-31",
+          "value": -44
+        },
+        {
+          "period": "2025-06-30",
+          "value": 220
+        },
+        {
+          "period": "2025-07-31",
+          "value": -529
+        },
+        {
+          "period": "2025-08-31",
+          "value": -324
+        },
+        {
+          "period": "2025-09-30",
+          "value": 116
+        },
+        {
+          "period": "2025-10-31",
+          "value": -347
+        },
+        {
+          "period": "2025-11-30",
+          "value": -5
+        },
+        {
+          "period": "2025-12-31",
+          "value": -272
+        },
+        {
+          "period": "2026-01-31",
+          "value": 133
+        },
+        {
+          "period": "2026-02-28",
+          "value": 332
+        },
+        {
+          "period": "2026-03-31",
+          "value": 1182
+        },
+        {
+          "period": "2026-04-30",
+          "value": -276
+        },
+        {
+          "period": "2026-05-31",
+          "value": 500
+        },
+        {
+          "period": "2026-06-30",
+          "value": -814
+        },
+        {
+          "period": "2026-07-31",
+          "value": -445
+        },
+        {
+          "period": "2026-08-31",
+          "value": -98
+        }
+      ]
+    },
+    "policy_rate": {
+      "series_key": "TS_GP_IR_SIRPR_AH.SBPOL0030",
+      "unit": "percent",
+      "last_sync": "2026-10-11T21:19:33.521Z",
+      "observations": [
+        {
+          "period": "2025-01-28",
+          "value": 12
+        },
+        {
+          "period": "2025-05-06",
+          "value": 11
+        },
+        {
+          "period": "2025-12-16",
+          "value": 10.5
+        },
+        {
+          "period": "2026-04-28",
+          "value": 11.5
+        }
+      ]
+    },
+    "cpi_yoy": {
+      "series_key": "research_inflation.yoyInflationPercent",
+      "unit": "percent",
+      "last_sync": "2026-10-16T15:27:53Z",
+      "observations": [
+        {
+          "period": "2025-01",
+          "value": 2.4
+        },
+        {
+          "period": "2025-02",
+          "value": 1.5
+        },
+        {
+          "period": "2025-03",
+          "value": 0.7
+        },
+        {
+          "period": "2025-04",
+          "value": 0.3
+        },
+        {
+          "period": "2025-05",
+          "value": 3.5
+        },
+        {
+          "period": "2025-06",
+          "value": 3.2
+        },
+        {
+          "period": "2025-07",
+          "value": 4.1
+        },
+        {
+          "period": "2025-08",
+          "value": 3.0
+        },
+        {
+          "period": "2025-09",
+          "value": 5.6
+        },
+        {
+          "period": "2025-10",
+          "value": 6.2
+        },
+        {
+          "period": "2025-11",
+          "value": 6.1
+        },
+        {
+          "period": "2025-12",
+          "value": 5.6
+        },
+        {
+          "period": "2026-01",
+          "value": 5.8
+        },
+        {
+          "period": "2026-02",
+          "value": 7.1
+        },
+        {
+          "period": "2026-03",
+          "value": 7.3
+        },
+        {
+          "period": "2026-04",
+          "value": 10.89
+        },
+        {
+          "period": "2026-05",
+          "value": 11.7
+        },
+        {
+          "period": "2026-06",
+          "value": 11.07
+        },
+        {
+          "period": "2026-07",
+          "value": 9.2
+        },
+        {
+          "period": "2026-08",
+          "value": 11.15
+        },
+        {
+          "period": "2026-09",
+          "value": 10.26
+        }
+      ]
+    }
+  }
+}

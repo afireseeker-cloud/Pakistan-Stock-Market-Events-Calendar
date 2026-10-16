@@ -28,6 +28,12 @@ These add real data on top of the merged calendar — none are required to use t
 
 Both Gemini-based scripts need a free API key (no credit card) from https://aistudio.google.com, set as `GEMINI_API_KEY`. Same key works for both.
 
+## Macro values (FinHisaab)
+
+Actual and prior values for remittances, current account, MPC policy rate and CPI come from FinHisaab (SBP EasyData and PBS CPI). FinHisaab has no public API, so a scheduled Claude task reads it through the FinHisaab connector every day and commits `data/finhisaab_values.json` to `main`. `attach_finhisaab_values.py` then applies those values during the pipeline run. The file holds full history, so every run re-applies every value.
+
+Weekly FX reserves and weekly SPI are not in FinHisaab. FX reserves still use `fetch_sbp_fx_reserves.py`; SPI events carry release dates only. `fetch_sbp_remittances.py` and `fetch_sbp_current_account.py` are no longer run.
+
 ## Setup
 
 ```
