@@ -32,6 +32,10 @@ Both Gemini-based scripts need a free API key (no credit card) from https://aist
 
 Actual and prior values for remittances, current account, MPC policy rate and CPI come from FinHisaab (SBP EasyData and PBS CPI). FinHisaab has no public API, so a scheduled Claude task reads it through the FinHisaab connector every day and commits `data/finhisaab_values.json` to `main`. `attach_finhisaab_values.py` then applies those values during the pipeline run. The file holds full history, so every run re-applies every value.
 
+## Company events (FinHisaab)
+
+dps.psx.com.pk returns 403 to GitHub Actions, so the direct PSX scrapers no longer run by default (`run_pipeline.py --psx-direct` still runs them from a machine PSX doesn't block). Company events come from FinHisaab's PSX announcements instead. A scheduled Claude task calls FinHisaab's `research_announcements` tool each day and runs `collect_finhisaab_announcements.py`, which reads those results from the session and merges them into `data/finhisaab_announcements.json`. `ingest_finhisaab_announcements.py` turns that file into board meetings (on the real meeting date), corporate briefings, results with EPS, declared dividends, AGMs and other announcements, with FinHisaab's sentiment attached. Mutual-fund entries are skipped. Book closure ex-dates are not available from FinHisaab.
+
 Weekly FX reserves and weekly SPI are not in FinHisaab. FX reserves still use `fetch_sbp_fx_reserves.py`; SPI events carry release dates only. `fetch_sbp_remittances.py` and `fetch_sbp_current_account.py` are no longer run.
 
 ## Setup

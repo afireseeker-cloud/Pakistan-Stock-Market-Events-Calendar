@@ -89,6 +89,8 @@ def main():
     ap.add_argument("--skip-logos", action="store_true")
     ap.add_argument("--skip-eps", action="store_true")
     ap.add_argument("--skip-shariah", action="store_true")
+    ap.add_argument("--psx-direct", action="store_true",
+                     help="also scrape dps.psx.com.pk directly (blocked from GitHub Actions)")
     ap.add_argument("--skip-finhisaab", action="store_true",
                      help="don't attach values from data/finhisaab_values.json")
     ap.add_argument("--skip-fx-reserves", action="store_true",
@@ -144,20 +146,30 @@ def main():
         stdout_file="events_current_account.json",
     )
 
-    results["announcements"] = run_step(
-        "PSX announcements",
-        [sys.executable, "fetch_psx_announcements.py", "--from", fetch_from, "--to", fetch_to,
-         "--out", "events_psx_announcements.jsonl"],
+    # Company events come from FinHisaab (data/finhisaab_announcements.json,
+    # refreshed daily by a scheduled task). dps.psx.com.pk returns 403 to
+    # GitHub Actions, so the direct PSX scrapers only run with --psx-direct
+    # (useful from a machine PSX doesn't block).
+    results["finhisaab_company"] = run_step(
+        "FinHisaab company announcements",
+        [sys.executable, "ingest_finhisaab_announcements.py"],
+        stdout_file="events_finhisaab_company.json",
     )
-    results["notices"] = run_step(
-        "PSX notices",
-        [sys.executable, "fetch_psx_announcements.py", "--from", fetch_from, "--to", fetch_to,
-         "--type", "E", "--out", "events_psx_notices.jsonl"],
-    )
-    results["payouts"] = run_step(
-        "PSX payouts",
-        [sys.executable, "fetch_psx_payouts.py", "--out", "events_psx_payouts.jsonl"],
-    )
+    if args.psx_direct:
+        results["announcements"] = run_step(
+            "PSX announcements",
+            [sys.executable, "fetch_psx_announcements.py", "--from", fetch_from, "--to", fetch_to,
+             "--out", "events_psx_announcements.jsonl"],
+        )
+        results["notices"] = run_step(
+            "PSX notices",
+            [sys.executable, "fetch_psx_announcements.py", "--from", fetch_from, "--to", fetch_to,
+             "--type", "E", "--out", "events_psx_notices.jsonl"],
+        )
+        results["payouts"] = run_step(
+            "PSX payouts",
+            [sys.executable, "fetch_psx_payouts.py", "--out", "events_psx_payouts.jsonl"],
+        )
 
     # ---------- Tier 1: merge ----------
     merge_ok = run_step(
@@ -171,6 +183,7 @@ def main():
          "--announcements", "events_psx_announcements.jsonl",
          "--notices", "events_psx_notices.jsonl",
          "--payouts", "events_psx_payouts.jsonl",
+         "--finhisaab-company", "events_finhisaab_company.json",
          "--out", MERGED_FILE],
         continue_on_error=False,  # nothing downstream makes sense without this
     )

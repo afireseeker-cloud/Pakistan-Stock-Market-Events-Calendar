@@ -229,7 +229,10 @@ def main():
     to_classify = []
 
     for e in events:
-        if e["id"] in cache:
+        if e.get("sentiment"):
+            # already classified at source (FinHisaab) -- no Gemini call needed
+            already_cached += 1
+        elif e["id"] in cache:
             e["sentiment"] = cache[e["id"]]
             already_cached += 1
         elif e["type"] in RULE_BASED:

@@ -46,6 +46,8 @@ def main():
     for e in events:
         if e.get("type") != "results":
             continue
+        if e.get("payload", {}).get("eps_source") == "finhisaab":
+            continue  # EPS read from the results filing itself, keep it
         symbol = e.get("symbol")
         if not symbol:
             continue

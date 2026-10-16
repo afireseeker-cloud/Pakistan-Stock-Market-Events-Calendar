@@ -194,6 +194,8 @@ def main():
     ap.add_argument("--announcements", default="events_psx_announcements.jsonl")
     ap.add_argument("--notices", default="events_psx_notices.jsonl")
     ap.add_argument("--payouts", default="events_psx_payouts.jsonl")
+    ap.add_argument("--finhisaab-company", dest="finhisaab_company",
+                     default="events_finhisaab_company.json")
     ap.add_argument("--out", default="events_merged.json")
     ap.add_argument("--from", dest="date_from", default=None,
                      help="YYYY-MM-DD, defaults to 90 days ago")
@@ -221,6 +223,7 @@ def main():
         "psx_announcements": (args.announcements, "jsonl"),
         "psx_notices": (args.notices, "jsonl"),
         "psx_payouts": (args.payouts, "jsonl"),
+        "finhisaab_announcements": (args.finhisaab_company, "json"),
     }
 
     merged = merge(sources, date_from=date_from, date_to=date_to)
