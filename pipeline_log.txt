@@ -12,7 +12,7 @@ RUNNING: PBS calendar
 ============================================================
 
 
--- 95 estimated events generated (2026-07-18 to 2027-10-16) --
+-- 95 estimated events generated (2026-07-19 to 2027-10-17) --
 OK    PBS calendar (0s)
 
 ============================================================
@@ -20,7 +20,7 @@ RUNNING: PAMA calendar
 ============================================================
 
 
--- 15 events generated (2026-07-18 to 2027-10-16) --
+-- 15 events generated (2026-07-19 to 2027-10-17) --
 OK    PAMA calendar (0s)
 
 ============================================================
@@ -75,10 +75,10 @@ WARNING: events_psx_announcements.jsonl not found, skipping psx_announcements --
 WARNING: events_psx_notices.jsonl not found, skipping psx_notices -- run its ingestion script first if this is unexpected
 WARNING: events_psx_payouts.jsonl not found, skipping psx_payouts -- run its ingestion script first if this is unexpected
 INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
-INFO: 12 events trimmed outside [2026-07-18, 2027-10-16]
+INFO: 12 events trimmed outside [2026-07-19, 2027-10-17]
 
 DONE: 335 total events written to events_merged.json
-  window: 2026-07-18 to 2027-10-16
+  window: 2026-07-19 to 2027-10-17
   finhisaab_announcements    97
   pama_auto_sales         15
   pbs_calendar            95
@@ -160,7 +160,7 @@ INFO: no prior week in history yet -- this is either the first run, or last week
 INFO: confirmed event for 2026-10-09
 
 DONE: written to events_merged.json
-OK    Confirm SBP FX reserves (real values) (5s)
+OK    Confirm SBP FX reserves (real values) (4s)
 
 ============================================================
 PIPELINE SUMMARY (0.1 min total)
