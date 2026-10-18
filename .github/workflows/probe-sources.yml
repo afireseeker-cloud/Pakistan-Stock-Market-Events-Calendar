@@ -2,10 +2,16 @@ name: Probe sources (temporary)
 on:
   push:
     branches: ['probe/sources']
+    paths: ['probe_sources.py', '.github/workflows/probe-sources.yml']
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests
-      - run: python probe_sources.py
+      - run: pip install requests openpyxl xlrd pdfplumber
+      - run: python probe_sources.py > probe_out.txt 2>&1 || true
+      - run: |
+          git config user.name probe; git config user.email probe@users.noreply.github.com
+          git add probe_out.txt && git commit -m "probe output" && git push
