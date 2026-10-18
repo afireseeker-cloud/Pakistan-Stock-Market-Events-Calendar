@@ -1,121 +1,16 @@
-== https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls 200 application/vnd.ms-excel 61440
-SHEET BPM6_Summary 115 9
-1 |Summary Balanc|||||||
-3 ||||||||(Million US$)
-4 |Items|Jul-Jun|Sep|Jul-Jun|Aug|Sep|Jul-Sep|
-5 ||FY25|FY26R|FY26R|FY27R|FY27P|FY26R|FY27P
-7 |Current Accoun|1838.0|133.0|-391.0|-73.0|-356.0|-755.0|-874.0
-8 |Current Accoun|1332.0|78.0|-990.0|-140.0|-382.0|-888.0|-1009.0
-9 |Exports of Goo|32343.0|2611.0|30836.0|2454.0|3015.0|7853.0|8454.0
-10 |Imports of Goo|59146.0|5032.0|64527.0|5463.0|6172.0|15558.0|17784.0
-11 |Balance on Tra|-26803.0|-2421.0|-33691.0|-3009.0|-3157.0|-7705.0|-9330.0
-12 |Exports of Ser|8450.0|806.0|10047.0|849.0|931.0|2214.0|2719.0
-13 |Imports of Ser|11286.19082865|961.0|11938.0|1123.0|1212.0|3054.0|3550.0
-14 |Balance on Tra|-2836.19082865|-155.0|-1891.0|-274.0|-281.0|-840.0|-831.0
-15 |Balance on Tra|-29639.1908286|-2576.0|-35582.0|-3283.0|-3438.0|-8545.0|-10161.0
-16 |Primary Income|999.0|127.0|1217.0|70.0|93.0|316.0|244.0
-17 |Primary Income|9836.809171343|810.0|9714.0|749.0|885.0|2588.0|2564.0
-18 |Balance on Pri|-8837.80917134|-683.0|-8497.0|-679.0|-792.0|-2272.0|-2320.0
-19 |Balance on Goo|-38477.0|-3259.0|-44079.0|-3962.0|-4230.0|-10817.0|-12481.0
-20 |Secondary Inco|40906.0|3432.0|44223.0|3926.0|3925.0|10204.0|11725.0
-21 |General Govern|576.0|61.0|695.0|69.0|45.0|145.0|157.0
-22 |Current Intern|33.0|3.0|46.0|0.0|0.0|8.0|1.0
-23 |Other Official|543.0|58.0|649.0|69.0|45.0|137.0|156.0
-24 |Financial Corp|40330.0|3371.0|43528.0|3857.0|3880.0|10059.0|11568.0
-25 |Workers' Remit|38300.0|3184.0|41585.0|3657.0|3588.0|9536.0|10875.0
-26 |Other Personal|0.0|0.0|0.0|0.0|0.0|0.0|0.0
-27 |Other Current |2030.0|187.0|1943.0|200.0|292.0|523.0|693.0
-28 |Secondary Inco|591.0|40.0|535.0|37.0|51.0|142.0|118.0
-29 |Balance on Sec|40315.0|3392.0|43688.0|3889.0|3874.0|10062.0|11607.0
-30 |Capital Accoun|168.0|1.0|131.0|3.0|5.0|31.0|27.0
-31 |Capital Accoun|198.0|2.0|132.0|3.0|5.0|32.0|27.0
-32 |Capital Accoun|30.0|1.0|1.0|0.0|0.0|1.0|0.0
-33 |Net Lending (+|2006.0|134.0|-260.0|-70.0|-351.0|-724.0|-847.0
-34 |Financial Acco|-1585.0|71.0|-2029.0|-329.0|-4663.0|-726.0|-4160.0
-35 |Direct Investm|-2462.0|-161.0|-1450.0|-317.0|-217.0|-554.0|-714.0
-36 |Direct Investm|15.0|24.0|342.0|5.0|2.0|46.0|6.0
-37 |Equity and Inv|15.0|24.0|342.0|5.0|2.0|46.0|6.0
-38 |Debt Instrumen|0.0|0.0|0.0|0.0|0.0|0.0|0.0
-39 |Direct Investm|2477.0|185.0|1792.0|322.0|219.0|600.0|720.0
-40 |Equity and Inv|2497.0|214.0|2060.0|256.0|225.0|657.0|649.0
-41 |Debt Instrumen|-20.0|-29.0|-268.0|66.0|-6.0|-57.0|71.0
-42 |Portfolio Inve|720.0|547.0|1176.0|-42.0|-2866.0|630.0|-2935.0
-43 |Portfolio Inve|-9.0|0.0|-9.0|-1.0|0.0|-1.0|-2.0
-44 |Equity and Inv|-9.0|0.0|-4.0|-1.0|0.0|-1.0|-2.0
-45 |Debt Securitie|0.0|0.0|-5.0|0.0|0.0|0.0|0.0
-46 |Portfolio Inve|-729.0|-547.0|-1185.0|41.0|2866.0|-631.0|2933.0
-47 |Equity and Inv|-355.0|-47.0|-594.0|-21.0|-25.0|-120.0|-28.0
-48 |Debt Securitie|-374.0|-500.0|-591.0|62.0|2891.0|-511.0|2961.0
-49 |Financial Deri|-2.0|1.0|15.0|1.0|0.0|7.0|6.0
-50 |Other Investme|159.0|-316.0|-1770.0|29.0|-1580.0|-809.0|-517.0
-51 |Net Acquisitio|82.0|-388.0|388.0|-4.0|22.0|-504.0|-222.0
-52 |Central Bank|0.0|0.0|0.0|0.0|0.0|0.0|0.0
-53 |Deposit Taking|-420.0|-393.0|-31.0|-103.0|-148.0|-595.0|-688.0
-54 |General Govern|42.0|0.0|2.0|1.0|1.0|-1.0|1.0
-55 |Other Sector|460.0|5.0|417.0|98.0|169.0|92.0|465.0
-56 |Net Incurrence|-77.0|-72.0|2158.0|-33.0|1602.0|305.0|295.0
-57 |Central Bank|0.0|0.0|-3455.0|16.0|-22.0|0.0|0.0
-58 |Deposit Taking|-1536.0|250.0|1061.0|-211.0|1737.0|168.0|728.0
-59 |General Govern|2346.0|-161.0|5220.0|131.0|-240.0|381.0|-663.0
-== https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-September-2026.pdf 200 application/pdf 123328
-Government of Pakistan
-Ministry of Planning, Development and Special Initiatives
-PAKISTAN BUREAU OF STATISTICS
-**************
-PRESS RELEASE ON CONSUMER PRICE INDEX (CPI) INFLATION
-FOR THE MONTH OF SEPTEMBER, 2026
-Base Year
-Indicators
-2015-16 (%)
-Inflation Rate, September, 2026 over August, 2026 (Month on Month) 1.27
-Inflation Rate, September, 2026 over September, 2025 (Year on Year) 10.26
-Average Inflation Rate, July- September, 2026-27 over July-September, 2025-26 10.20
-Analysis of Consumer Price Index (CPI) Base Year (2015-16)
-1. The CPI for base year (2015-16) comprises of urban and rural CPIs. The Urban CPI covers
-35 cities and 356 consumer items. The Rural CPI covers 27 Rural Centers and 244 consumer items.
-The National CPI for 12 major groups is also computed by taking weighted average of Urban and
-Rural CPIs.
-Monthly Analysis [September, 2026 over August, 2026]
-2. CPI National for the month of September, 2026 increased by 1.27% over August, 2026. The
-Urban CPI recorded an increase of 1.31% while Rural CPI recorded an increase of 1.23% on MoM
-basis.
-NATIONAL URBAN RURAL
-Group Weight INDICES % Weight INDICES % Weight INDICES %
-(%) Sep, 2026 Aug, 2026 Change (%) Sep, 2026 Aug, 2026 Change (%) Sep, 2026 Aug, 2026 Change
-General 100.00 304.33 300.50 1.27 100.00 300.11 296.24 1.31 100.00 310.69 306.92 1.23
-Food & non-alcoholic
-34.58 314.58 313.99 0.19 30.42 311.67 311.32 0.11 40.87 317.85 316.99 0.27
-Beverages
-Non-perishable food items 29.60 316.01 315.74 0.09 25.97 312.51 312.13 0.12 35.08 319.93 319.77 0.05
-Perishable food items 4.99 306.08 303.63 0.81 4.46 306.81 306.61 0.07 5.79 305.24 300.17 1.69
-Alcoholic Beverages,
-1.02 410.23 410.53 -0.07 0.85 436.38 435.49 0.20 1.28 383.87 385.37 -0.39
-Tobacco
-Clothing and footwear 8.60 289.66 289.14 0.18 8.01 284.36 283.87 0.
-== https://www.sbp.org.pk/assets/document/publications/MPS-July-2026-Eng.pdf 200 application/pdf 122831
-MONETARY POLICY COMMITTEE
-STATE BANK OF PAKISTAN
-Monetary Policy Statement
-July 27, 2026
-1. The Monetary Policy Committee (MPC) unanimously decided to keep the policy rate unchanged at
-11.5 percent in its meeting held today. The Committee assessed that the macroeconomic outlook has
-improved from its previous meeting, though it remains susceptible to heightened risks, particularly following
-the resurgence of conflict in the Middle East. Meanwhile, the Committee observed that the earlier de-
-escalation had led to a decline in global oil prices and a relative ease in supply chain disruptions, which
-resulted in some improvement in recent economic indicators. Headline and core inflation moderated in June,
-though both remained at elevated levels. At the same time, incoming high frequency indicators pointed to
-some pickup in economic activity, whereas external account pressures remained moderate. Taking into
-account these developments and evolving risks, the MPC assessed that the current monetary policy stance
-remains appropriate to guide inflation towards the target range of 5-7 percent over the medium term.
-2. The Committee noted the following key developments since its last meeting. First, SBP’s FX reserves
-surpassed the end-June 2026 target of $18 billion, largely due to continued FX purchases amidst a small
-current account deficit in FY26, and realization of planned official inflows. Second, Pakistan’s sovereign
-credit rating was upgraded to “B” by Standard & Poor’s. Third, inflation expectations eased for both
-consumers and businesses in the latest sentiment surveys, while confidence indicators showed a mixed
-picture. Fourth, FBR met its revised tax revenue target for FY26. Lastly, the IMF increased its global inflation
-forecast for both CY26 and CY27 in the latest World
-== https://www.sbp.org.pk/m_policy/2025/MPS-Dec-2025-Eng.pdf 200 text/html; charset=UTF-8 216147
-== https://www.sbp.org.pk/press/2026/Pr-09-Feb-2026.pdf 522 None 0
-== https://www.pbs.gov.pk/price-statistics/ 200 text/html; charset=UTF-8 344667
-['https://www.pbs.gov.pk/wp-content/uploads/2020/07/13.-SPI-Monthly-Prices-Annex.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/4.-Annex-03-07-2025.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/ANNEX202620USCP2002.05.2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex26USCP_16052024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/AnnexUSCP_05092024-1.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_April_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_August_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_December_2022.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_December_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_February_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_January_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_January_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_July_2024-1.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_June_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_June_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_March_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_May_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_November_2022.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_November_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Annex_Sep_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Prices_Annex_0.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Prices_Annex_April_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Review_April_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Review_Febuary_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Review_March_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Monthly_Review_September_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_April_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_August_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_December_2022.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_December_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_February_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_January_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_January_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_July_2024-1.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_June_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_June_2024.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_March_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_May_2023.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_November_2022.pdf', 'https://www.pbs.gov.pk/wp-content/uploads/2020/07/CPI_Review_November_2023-1.pdf']
-== https://pkdata.afireseeker.workers.dev/company/HUBC 200 text/html; charset=utf-8 72688
+== relay POST 200 {'Date': 'Sun, 18 Oct 2026 14:24:47 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Ray': 'a4c8355bab446e22-LAX', 'CF-Cache-Status': 'DYNAMIC', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'no-store', 'Server': 'cloudflare', 'Strict-Transport-Security': 'max-age=15552000; includeSubdomains', 'Vary': 'accept-encoding', 'Content-Security-Policy': "object-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data:;img-src 'self' https://www.capitalstake.com https://www.google-analytics.com https://www.google.com.pk/ads; frame-ancestors 'self';", 'Feature-Policy': "fullscreen 'none'; microphone 'none'", 'Referrer-Policy': 'strict-origin-when-cross-origin, same-origin', 'X-Content-Type-Options': 'nosniff, nosniff', 'X-DIS-Request-ID': '6ee226d90b942d2ebd620fd10c2946df', 'X-Frame-Options': 'SAMEORIGIN, SAMEORIGIN', 'X-PSX-Token-Found': 'yes', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '1; mode=block', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=5ix0g3Yf5ggBo0o%2BI6lK8LSYoi2%2B4wuFKhSdpnJ%2B1lo2r8TF%2BfjYnFj1Yx2q9xzcnI1YeYBRmdHO65FwUThjY2efXcCMb6n9pTB9VghxLwugfGxMnsIxFUgLdCbsZY7Iinn3SRpvsMkpmLxaeFaTi1I%3D"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'zstd', 'alt-svc': 'h3=":443"; ma=86400'}
+len 25362 tr 51
+<div class="announcementsResults__header"><div>Showing 1 to 50 of 1207 entries</div><div><button class="form__button prev disabled" data-offset="0" data-total="1207">Prev</button><button class="form__button next" data-offset="0" data-total="1207">Next</button></div></div><div class="tbl__wrapper"><table class="tbl" id="announcementsTable"><thead class="tbl__head"><tr><th style="width: 110px;">DATE</th><th style="width: 70px;">TIME</th><th style="width: 100px;">SYMBOL</th><th style="width: 200px;">NAME</th><th>TITLE</th><th style="width: 130px;"> </th></tr></thead><tbody class="tbl__body"><tr><td>Oct 16, 2026</td><td>4:29 PM</td><td><a class="tbl__symbol" href="/company/PRET"><strong>PRET</strong></a></td><td><a class="tbl__symbol" href="/company/PRET"><strong>Premium Textile Mills Limited</strong></a></td><td>Board meeting for the period ended 30-09-2026 </td><td> <i class="icon-file-image"></i><a href="javascript:" data-images="285919-1.gif">View</a>&nbsp;&nbsp;&nbsp;</td></tr><tr><td>Oct 16, 2026</td><td>4:27 PM</td><td><a class="tbl__symbol" href="/company/PIOC"><strong>PIOC</strong></a></td><td><a class="tbl__symbol" href="/company/PIOC"><strong>Pioneer Cement Limited</strong></a></td><td>General MeetinVideo Recording of CBSgs / Briefing Sessions </td><td> <i class="icon-file-image"></i><a href="javascript:" data-images="285918-1.gif">View</a>&nbsp;&nbsp;&nbsp;<i class="icon-file-pdf"></i><a href="/download/document/285918.pdf" target="_blank">PDF</a></td></tr><tr><td>Oc
+tbl__body at 585 th: 110px;">DATE</th><th style="width: 70px;">TIME</th><th style="width: 100px;">SYMBOL</th><th style="width: 200px;">NAME</th><th>TITLE</th><th style="width: 130px;"> </th></tr></thead><tbody class="tbl__body"><tr><td>Oct 16, 2026</td><td>4:29 PM</td><td><a class="tbl__symbol" href="/company/PRET"><strong>PRET</strong></a></td><td><a class="tbl__symbol" href="/company/PRET"><strong>Premium Textile Mills Limited</strong></a></td><td>Board meeting for the period ended 30-09-2026 </td><td> <i class="icon-file-image"></i><a href="javascript:" data-images="285919-1.gif">View</a>&nbsp;&nbsp;&nbsp;</td></tr><tr><td>Oct 16, 2026</td><td>4:27 PM</td><td><a class="tbl__symbol" href="/company/PIOC"><strong>PIOC</strong></a></td><td><a class="tbl__symbol" href="/company/PIOC"><strong>Pioneer Cement Limited</strong></a></td><td>General MeetinVideo Recording of CBSgs / Briefing Sessions </td><td> <i class="icon-file-image"></i><a href="javascript:" data-images="285918-1.gif">View</a>&nbsp;&nbsp;&nb
+== relay GET qs 200 {'Date': 'Sun, 18 Oct 2026 14:24:49 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Ray': 'a4c8356abd102ee7-LAX', 'CF-Cache-Status': 'DYNAMIC', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'max-age=300', 'Server': 'cloudflare', 'Strict-Transport-Security': 'max-age=15552000; includeSubdomains', 'Vary': 'accept-encoding', 'Content-Security-Policy': "object-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data:;img-src 'self' https://www.capitalstake.com https://www.google-analytics.com https://www.google.com.pk/ads; frame-ancestors 'self';", 'Feature-Policy': "fullscreen 'none'; microphone 'none'", 'Referrer-Policy': 'strict-origin-when-cross-origin, same-origin', 'X-Content-Type-Options': 'nosniff, nosniff', 'X-DIS-Request-ID': 'd1aa94d98965be1247a43797021077de', 'X-Frame-Options': 'SAMEORIGIN, SAMEORIGIN', 'X-PSX-Token-Found': 'yes', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '1; mode=block', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=eb%2B8LvvMr2SifOS%2Fua1F9NyX547bEq9dXrPnPmKPXOqzt%2BLybCL92maZgtHVMj6sajaPsLkQbjItEeF3KB36Ewn1yLqPpRoPy%2BaZgXDBvT8Hu5jh1FWbd4%2BUoGhjsdA9yIC6BAWOdVxQik0qQ8XYG4g%3D"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'zstd', 'alt-svc': 'h3=":443"; ma=86400'}
+len 48977 tr 0
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="google-site-verification" content="ucGuScv6fdM8uhZru-aeXK4qsaPfO3HiuZFKB90UpPU"><meta name="description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/share market data; information to investors on KSE 100, stock quotes, indices and corporate announcements."><meta name="keywords" content="Pakistan Stock Exchange, Stock Exchange in Pakistan, PSX, PSX Pakistan, dps, data portal, KSE, KSE100, KSE announcement, PSX announcement, Lahore Stock Exchange, Karachi Stock Exchange, stock exchange, share markets, stock markets, live stock market, share market in Pakistan"><link rel="icon" type="image/png" href="https://dps.psx.com.pk/static/images/favicon.png"><!-- Apple specific--><link rel="apple-touch-icon" href="https://dps.psx.com.pk/static/images/logo-200.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta property="og:url" content="https://dps.psx.com.pk/announcements?type=C&amp;symbol=&amp;query=&amp;count=50&amp;offset=0&amp;date_from=2026-10-05&amp;date_to=2026-10-18&amp;page=annc"><meta property="og:type" content="website"><meta property="og:title" content="Announcements - Pakistan Stock Exchange (PSX)"><meta property="og:description" content="PSX (Pakista
+tbl__body at -1 
+== relay payouts 200 {'Date': 'Sun, 18 Oct 2026 14:24:52 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Ray': 'a4c83578ffcd02fe-LAX', 'CF-Cache-Status': 'DYNAMIC', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'no-store', 'Server': 'cloudflare', 'Strict-Transport-Security': 'max-age=15552000; includeSubdomains', 'Vary': 'accept-encoding', 'Content-Security-Policy': "object-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data:;img-src 'self' https://www.capitalstake.com https://www.google-analytics.com https://www.google.com.pk/ads; frame-ancestors 'self';", 'Feature-Policy': "fullscreen 'none'; microphone 'none'", 'Referrer-Policy': 'strict-origin-when-cross-origin, same-origin', 'X-Content-Type-Options': 'nosniff, nosniff', 'X-DIS-Request-ID': '6ce3f89c74750daba02cd11084399d0f', 'X-Frame-Options': 'SAMEORIGIN, SAMEORIGIN', 'X-PSX-Token-Found': 'yes', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '1; mode=block', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=M22Jv2eESDcZZDp1S3DPiVdY%2Bge8GDJwrbS0HP7FE%2F4Wd0RFLDg%2FQU12AnjymqHwa7sWV5HbqhRlh536oK4Z2fjg3CwPBDOSx6JS9KtSLWo3SPfB1nKidEOLupeoA7gk4qt76g0PEs6%2BMVJA1So%2BvGo%3D"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'zstd', 'alt-svc': 'h3=":443"; ma=86400'}
+len 12771 tr 51
+<div class="announcementsResults__header"><div>Showing 1 to 50 of 723 entries</div><div><button class="form__button prev disabled" data-offset="0" data-total="723">Prev</button><button class="form__button next" data-offset="0" data-total="723">Next</button></div></div><div class="tbl__wrapper"><table class="tbl" id="announcementsTable"><thead class="tbl__head"><tr><th style="width: 100px;">Symbol</th><th>Company</th><th>Sector</th><th>Dividend Announcement</th><th>Date / Time of Announcement</th><th>Book Closure Date</th></tr></thead><tbody class="tbl__body"><tr><td><a class="tbl__symbol" href="/company/SSOM"><strong>SSOM</strong></a></td><td>S.S.Oil Mills Limited</td><td>VANASPATI &amp; ALLIED INDUSTRIES</td><td> 50%(F) (D) </td><td>October 6, 2026 3:50 PM</td><td>22/10/2026 - 28/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/IMAGE"><strong>IMAGE</strong></a></td><td>Image Pakistan Limited</td><td>APPAREL</td><td> 10%(F) (D) </td><td>October 6, 2026 3:39 PM</td><td>23/10/2026 - 30/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/HUMNL"><strong>HUMNL</strong></a></td><td>Hum Network Limited</td><td>TECHNOLOGY &amp; COMMUNICATION</td><td> 50%)F) (D) </td><td>October 6, 2026 3:07 PM</td><td>21/10/2026 - 28/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/MSOTPS"><strong>MSOTPS</strong></a></td><td>Masood Textile (Pref)</td><td>APPAREL</td><td> 1.29% (D) </td><td>October 5, 2026 3:52 PM</td><td>20/10/2026 - 27/10/2026 </td></tr
+tbl__body at 555 l__head"><tr><th style="width: 100px;">Symbol</th><th>Company</th><th>Sector</th><th>Dividend Announcement</th><th>Date / Time of Announcement</th><th>Book Closure Date</th></tr></thead><tbody class="tbl__body"><tr><td><a class="tbl__symbol" href="/company/SSOM"><strong>SSOM</strong></a></td><td>S.S.Oil Mills Limited</td><td>VANASPATI &amp; ALLIED INDUSTRIES</td><td> 50%(F) (D) </td><td>October 6, 2026 3:50 PM</td><td>22/10/2026 - 28/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/IMAGE"><strong>IMAGE</strong></a></td><td>Image Pakistan Limited</td><td>APPAREL</td><td> 10%(F) (D) </td><td>October 6, 2026 3:39 PM</td><td>23/10/2026 - 30/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/HUMNL"><strong>HUMNL</strong></a></td><td>Hum Network Limited</td><td>TECHNOLOGY &amp; COMMUNICATION</td><td> 50%)F) (D) </td><td>October 6, 2026 3:07 PM</td><td>21/10/2026 - 28/10/2026 </td></tr><tr><td><a class="tbl__symbol" href="/company/MSOTPS"><strong>MSOTPS</strong>
+== relay GET companies page 200 {'Date': 'Sun, 18 Oct 2026 14:24:57 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Ray': 'a4c8358af96919b7-LAX', 'CF-Cache-Status': 'DYNAMIC', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'max-age=300', 'Server': 'cloudflare', 'Strict-Transport-Security': 'max-age=15552000; includeSubdomains', 'Vary': 'accept-encoding', 'Content-Security-Policy': "object-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data:;img-src 'self' https://www.capitalstake.com https://www.google-analytics.com https://www.google.com.pk/ads; frame-ancestors 'self';", 'Feature-Policy': "fullscreen 'none'; microphone 'none'", 'Referrer-Policy': 'strict-origin-when-cross-origin, same-origin', 'X-Content-Type-Options': 'nosniff, nosniff', 'X-DIS-Request-ID': '3bc466bdf5c06881125383c4ff238745', 'X-Frame-Options': 'SAMEORIGIN, SAMEORIGIN', 'X-PSX-Token-Found': 'yes', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '1; mode=block', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xNyF9sSj%2BE%2Bp2vmNRTCLl3WYMKAVQHDm0TTAzb3mCh2FmkIxvbL0%2FDoNPnqvdoXkRQmsYeSgY25dHQBo%2FiYVffD7ElMhiucJaDRjwUXPd0V5UkYHHIrAhhJ8W4lQuYaGiQXNn9kYm%2B5OchEfRgC%2BIwg%3D"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'zstd', 'alt-svc': 'h3=":443"; ma=86400'}
+len 48869 tr 0
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="google-site-verification" content="ucGuScv6fdM8uhZru-aeXK4qsaPfO3HiuZFKB90UpPU"><meta name="description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/share market data; information to investors on KSE 100, stock quotes, indices and corporate announcements."><meta name="keywords" content="Pakistan Stock Exchange, Stock Exchange in Pakistan, PSX, PSX Pakistan, dps, data portal, KSE, KSE100, KSE announcement, PSX announcement, Lahore Stock Exchange, Karachi Stock Exchange, stock exchange, share markets, stock markets, live stock market, share market in Pakistan"><link rel="icon" type="image/png" href="https://dps.psx.com.pk/static/images/favicon.png"><!-- Apple specific--><link rel="apple-touch-icon" href="https://dps.psx.com.pk/static/images/logo-200.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta property="og:url" content="https://dps.psx.com.pk/announcements/companies"><meta property="og:type" content="website"><meta property="og:title" content="Announcements - Pakistan Stock Exchange (PSX)"><meta property="og:description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the c
+tbl__body at -1 
