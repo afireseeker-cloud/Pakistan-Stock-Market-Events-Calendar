@@ -193,6 +193,7 @@ INFO: page 22 (offset=1050): 51 rows
 INFO: page 23 (offset=1100): 51 rows
 INFO: page 24 (offset=1150): 51 rows
 INFO: page 25 (offset=1200): 51 rows
+WARNING: fetch failed (attempt 1/3): 502 Server Error: Bad Gateway for url: https://pkdata.afireseeker.workers.dev/announcements. Retrying in 1s...
 INFO: page 26 (offset=1250): 51 rows
 INFO: page 27 (offset=1300): 51 rows
 INFO: page 28 (offset=1350): 51 rows
@@ -281,13 +282,12 @@ INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 3/15 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice to Shareholders', 'RESIGNATION OF CHIEF EXECUTIVE OFFICER AND DIRECTO', 'President and Chief Executive Officer Designate of']
 
 DONE: 4461 unique events written to events_psx_announcements.jsonl (64 duplicates dropped)
-OK    PSX announcements (118s)
+OK    PSX announcements (122s)
 
 ============================================================
 RUNNING: PSX notices
 ============================================================
 INFO: fetching 2026-07-20 to 2026-08-19...
-WARNING: fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/announcements. Retrying in 1s...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -295,7 +295,6 @@ INFO: page 4 (offset=150): 3 rows
 INFO: 3 IPO-related notices found: [('2026-08-19', 'ipo_book_building', 'BOOK BUILDING OF AGRO PROCESSORS & ATMOSPHERIC GAS'), ('2026-08-18', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-08-13', 'ipo_subscription', 'Topline Securities Limited Public Subscription Res')]
 INFO: 4 IPO-related notices found: [('2026-08-07', 'ipo_subscription', 'Topline Securities Limited - Break up of Book Buil'), ('2026-08-05', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF SE FRUITS AND VEG'), ('2026-08-03', 'ipo_prospectus', 'Placement of Notice & Draft Prospectus of Abhi Mic'), ('2026-07-30', 'ipo_book_building', 'BOOK BUILDING OF TASDEEQ INFORMATION SERVICES LIMI')]
 INFO: fetching 2026-08-20 to 2026-09-19...
-WARNING: fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/announcements. Retrying in 1s...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -314,13 +313,12 @@ INFO: 3 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CO
 INFO: 4 IPO-related notices found: [('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
 
 DONE: 492 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
-OK    PSX notices (20s)
+OK    PSX notices (16s)
 
 ============================================================
 RUNNING: PSX payouts
 ============================================================
 INFO: page 1 (offset=0): 26 rows
-WARNING: fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/payouts. Retrying in 1s...
 INFO: page 21 (offset=500): 26 rows
 INFO: reached last page at offset=700 (24 rows)
 WARNING: skipped malformed payout row: unexpected token count (1) in book closure cell: '08/09/2026  - 0/09//2026 '
@@ -347,13 +345,12 @@ INFO: loaded 4461 events from psx_announcements (events_psx_announcements.jsonl)
 INFO: loaded 492 events from psx_notices (events_psx_notices.jsonl)
 INFO: loaded 716 events from psx_payouts (events_psx_payouts.jsonl)
 INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
-INFO: 94 FinHisaab events dropped -- the same PSX document is already in the PSX feed
+INFO: 97 FinHisaab events dropped -- the same PSX document is already in the PSX feed
 INFO: 111 duplicate ids dropped on merge
 INFO: 567 events trimmed outside [2026-07-20, 2027-10-18]
 
-DONE: 5245 total events written to events_merged.json
+DONE: 5242 total events written to events_merged.json
   window: 2026-07-20 to 2027-10-18
-  finhisaab_announcements     3
   pama_auto_sales         15
   pbs_calendar            95
   psx_announcements     4402
@@ -371,457 +368,366 @@ OK    Merge all sources (0s)
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-INFO: 300 events eligible (4945 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/300] TSBL: vision
-  [2/300] DWTM: unresolved
-  [3/300] DKTM: unresolved
-  [4/300] DMTM: vision
-  [5/300] DFML: unresolved
-  [6/300] GWLC: vision
-  [7/300] AHL: text
-  [8/300] JSCL: vision
-  [9/300] OGDC: vision
-  [10/300] BERG: vision
-  [11/300] CTM: unresolved
-  [12/300] EPQL: vision
-  [13/300] INDU: vision
-  [14/300] GWLC: vision
-  [15/300] NEXT: vision
-  [16/300] BIPL: vision
-  [17/300] JDMT: vision
-  [18/300] LCI: vision
-  [19/300] ALTN: vision
-  [20/300] ALAC: vision
-INFO: 20/300 processed -- 1 via text, 15 via vision
-  [21/300] NATF: vision
-  [22/300] BOP: vision
-  [23/300] SLCL: vision
-  [24/300] GRYL: vision
-  [25/300] BNWM: vision
-  [26/300] PIOC: vision
-  [27/300] TISL: text
-  [28/300] TOWL: vision
-  [29/300] SRVI: vision
-  [30/300] SGF: text
-  [31/300] SNBL: vision
-  [32/300] DYNO: vision
-  [33/300] ICIBL: vision
-  [34/300] MUREB: vision
-  [35/300] GATM: vision
-  [36/300] PIM: vision
-  [37/300] NRL: vision
-  [38/300] GOC: unresolved
-  [39/300] ZTL: vision
-  [40/300] PRL: vision
-INFO: 40/300 processed -- 3 via text, 32 via vision
-  [41/300] TRSM: vision
-  [42/300] TRSM: vision
-  [43/300] PIM: unresolved
-  [44/300] PIM: vision
-  [45/300] AGIL: text
-  [46/300] JSCL: vision
+INFO: 300 events eligible (4942 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
+  [1/300] DWTM: unresolved
+  [2/300] DKTM: unresolved
+  [3/300] DFML: unresolved
+  [4/300] CTM: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [5/300] GOC: vision
+  [6/300] PIM: unresolved
+  [7/300] SLM: unresolved
+  [8/300] POML: unresolved
+  [9/300] FIL: unresolved
+  [10/300] FHAM: unresolved
+  [11/300] FRCL: unresolved
+  [12/300] OBOY: unresolved
+  [13/300] SSGC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [14/300] CLVL: unresolved
+  [15/300] CHBL: unresolved
+  [16/300] KEL: unresolved
+  [17/300] JKSM: unresolved
+  [18/300] HUMNL: unresolved
+  [19/300] TSPL: unresolved
+  [20/300] MFFL: unresolved
+INFO: 20/300 processed -- 0 via text, 1 via vision
+  [21/300] IML: unresolved
+  [22/300] CFL: unresolved
+  [23/300] CTM: unresolved
+  [24/300] DADX: unresolved
+  [25/300] BAPL: unresolved
+  [26/300] STJT: unresolved
+  [27/300] CCM: unresolved
+  [28/300] KHTC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [29/300] FCCL: unresolved
+  [30/300] GVGL: unresolved
+  [31/300] BFAGRO: unresolved
+  [32/300] FEROZ: vision
+  [33/300] BFBIO: vision
+  [34/300] SMCPL: text
+  [35/300] GHGL: unresolved
+  [36/300] RUBY: vision
+  [37/300] AKDHL: vision
+  [38/300] TBL: vision
+  [39/300] FZCM: unresolved
+  [40/300] REDCO: vision
+INFO: 40/300 processed -- 1 via text, 7 via vision
+  [41/300] DIIL: vision
+  [42/300] AHTM: vision
+  [43/300] INKL: text
+  [44/300] MCBIM: vision
+  [45/300] MUGHAL: text
+  [46/300] RPL: text
+  [47/300] ACPL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [48/300] UBDL: vision
+  [49/300] KOHE: vision
+  [50/300] HRPL: vision
+  [51/300] PIBTL: vision
+  [52/300] STYLERS: vision
+  [53/300] KOSM: vision
+  [54/300] SHCI: vision
+  [55/300] OML: vision
+  [56/300] PGLC: vision
+  [57/300] ZTL: vision
+  [58/300] CSAP: text
+  [59/300] SYM: vision
+  [60/300] IBLHL: text
+INFO: 60/300 processed -- 6 via text, 22 via vision
+  [61/300] MUBT: unresolved
+  [62/300] TPLP: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [63/300] RUPL: unresolved
+  [64/300] MSOTPS: vision
+  [65/300] SNAI: vision
+  [66/300] TPL: vision
+  [67/300] TPLT: unresolved
+  [68/300] ADMM: vision
+  [69/300] REWM: vision
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname M identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
   warnings.warn("tzname {tzname} identified but not understood.  "
-  [47/300] PIAHCLA: text
-  [48/300] IBFL: vision
-  [49/300] IGIL: text
-  [50/300] UVIC: vision
-  [51/300] SHFA: vision
-  [52/300] BFAGRO: vision
-  [53/300] OLPL: vision
-  [54/300] FECM: text
-  [55/300] INIL: vision
-  [56/300] KOHE: vision
-  [57/300] SPEL: vision
-  [58/300] CHCC: text
-  [59/300] FCEPL: vision
-  [60/300] SLM: unresolved
-INFO: 60/300 processed -- 8 via text, 45 via vision
-WARNING: https://dps.psx.com.pk/download/document/285773.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/285773.pdf. Retrying in 1s...
-  [61/300] ILP: vision
-  [62/300] FCIBL: vision
-  [63/300] SEPL: vision
-  [64/300] BPL: vision
-  [65/300] BPL: vision
-  [66/300] ECOP: vision
-  [67/300] AGIL: vision
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-  [68/300] BELA: vision
-  [69/300] NBP: text
-  [70/300] NICL: vision
-  [71/300] ILP: vision
-  [72/300] GOC: vision
-  [73/300] DINT: vision
-  [74/300] GEMMEL: vision
-  [75/300] PRL: vision
-  [76/300] JSIL: vision
-  [77/300] KCL: vision
-  [78/300] SEARL: vision
-  [79/300] DINT: vision
-  [80/300] ILP: vision
-INFO: 80/300 processed -- 9 via text, 64 via vision
-  [81/300] BAHL: vision
-  [82/300] MCB: vision
-  [83/300] ATIL: text
-  [84/300] OLPM: vision
-  [85/300] RMPL: vision
-  [86/300] GRYL: vision
-  [87/300] FNBM: vision
-  [88/300] TELE: vision
-  [89/300] GHNI: vision
-  [90/300] GAL: vision
-  [91/300] NRSL: text
-  [92/300] CHCC: vision
-  [93/300] HPL: text
-  [94/300] TRIPF: text
-  [95/300] FPRM: vision
-  [96/300] DADX: vision
-  [97/300] JSCL: vision
-WARNING: https://dps.psx.com.pk/download/document/285567.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/285567.pdf. Retrying in 1s...
-  [98/300] BAFL: vision
-  [99/300] DOL: vision
-  [100/300] ISL: text
-INFO: 100/300 processed -- 14 via text, 79 via vision
-  [101/300] NRSL: vision
-  [102/300] NICL: vision
-  [103/300] ANTM: vision
-  [104/300] LUCK: text
-  [105/300] SEPL: vision
-  [106/300] SLM: vision
-  [107/300] QUET: vision
-  [108/300] CCM: vision
+  [70/300] FNEL: text
+  [71/300] SARC: text
+  [72/300] PIOC: vision
+  [73/300] HTL: unresolved
+  [74/300] GEMPAPL: vision
+  [75/300] SFL: unresolved
+  [76/300] AIRLINK: vision
+  [77/300] AIRLINK: vision
+  [78/300] MTL: text
+  [79/300] ALTN: vision
+  [80/300] BCL: vision
+INFO: 80/300 processed -- 9 via text, 34 via vision
+  [81/300] SAPT: text
+  [82/300] PECO: vision
+  [83/300] SUHJ: vision
+  [84/300] FPRM: vision
+  [85/300] MLCF: vision
+  [86/300] KTML: vision
+Could not get FontBBox from font descriptor because None cannot be parsed as 4 floats
+  [87/300] INIL: vision
+  [88/300] FHAM: vision
+  [89/300] GGL: text
+  [90/300] GGGL: text
+  [91/300] MCBIM: text
+  [92/300] PGLC: vision
+  [93/300] LIVEN: text
+  [94/300] ACPL: vision
+  [95/300] TOMCL: vision
+  [96/300] DEL: vision
+  [97/300] FML: text
+  [98/300] MFFL: vision
+  [99/300] PAKL: vision
+  [100/300] ARMG: unresolved
+INFO: 100/300 processed -- 15 via text, 47 via vision
+  [101/300] HTL: vision
+  [102/300] CNERGY: vision
+  [103/300] BRRG: text
+  [104/300] SHEZ: vision
+  [105/300] KHYT: text
+  [106/300] GCWL: vision
+  [107/300] AKGL: unresolved
+  [108/300] MSOT: vision
   [109/300] GCIL: vision
-  [110/300] POML: unresolved
-  [111/300] SPAC1: vision
-  [112/300] STPL: vision
-  [113/300] SPL: text
-  [114/300] FIL: unresolved
-  [115/300] FSWL: vision
-  [116/300] IDRT: vision
-  [117/300] MQTM: vision
-  [118/300] LSEFSL: vision
-  [119/300] LSECL: vision
-  [120/300] LSEVL: vision
-INFO: 120/300 processed -- 16 via text, 95 via vision
-  [121/300] PRET: vision
-  [122/300] PAKOXY: vision
-  [123/300] KSBP: vision
-  [124/300] JSGBETF: vision
-  [125/300] JSGCL: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [126/300] MEBL: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [127/300] AGTL: vision
-  [128/300] PIOC: vision
-  [129/300] MLCF: vision
-  [130/300] KTML: vision
-  [131/300] GOC: vision
-  [132/300] SPEL: vision
-  [133/300] DBSL: vision
-  [134/300] DBCI: vision
-  [135/300] INDU: vision
-  [136/300] SPWL: text
-  [137/300] PAKD: vision
-  [138/300] SANSM: vision
-  [139/300] AHL: text
-  [140/300] OPENFUND: vision
-INFO: 140/300 processed -- 18 via text, 113 via vision
-  [141/300] GUTM: vision
-  [142/300] PACE: vision
-  [143/300] FCEL: vision
-  [144/300] MDTL: vision
-  [145/300] NRL: vision
-  [146/300] FCSC: vision
-  [147/300] ATBA: vision
-  [148/300] AKBL: text
-  [149/300] APL: vision
-  [150/300] ILP: vision
-  [151/300] FHAM: unresolved
-  [152/300] FRCL: unresolved
-  [153/300] CTM: text
-  [154/300] STPL: vision
-  [155/300] OBOY: unresolved
-  [156/300] CPPL: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [157/300] PAKL: vision
-  [158/300] SPAC1: text
-  [159/300] AATM: vision
-  [160/300] JATM: vision
-INFO: 160/300 processed -- 21 via text, 127 via vision
-  [161/300] ASTM: vision
-  [162/300] ELCM: vision
-  [163/300] SSGC: unresolved
-  [164/300] CLVL: unresolved
-  [165/300] CHBL: unresolved
-  [166/300] KEL: unresolved
-  [167/300] CLVL: text
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [168/300] CLVL: vision
-  [169/300] LOTCHEM: vision
-  [170/300] OML: vision
-  [171/300] GLOT: vision
-  [172/300] ATRL: vision
-  [173/300] PIAHCLA: vision
-  [174/300] MLCF: vision
-  [175/300] KTML: vision
-  [176/300] JKSM: unresolved
-  [177/300] ISL: text
-  [178/300] CPPL: vision
-  [179/300] PCAL: text
-  [180/300] SPAC1: text
-INFO: 180/300 processed -- 25 via text, 138 via vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [181/300] DSL: vision
-  [182/300] SUTM: vision
-  [183/300] ZAL: vision
-  [184/300] BECO: vision
-  [185/300] BLUEX: vision
-  [186/300] MEHT: vision
-  [187/300] IDYM: vision
-  [188/300] HUMNL: unresolved
-  [189/300] HUMNL: text
-  [190/300] FEROZ: text
-  [191/300] AMTEX: text
-  [192/300] DSIL: vision
-  [193/300] SGABL: vision
-  [194/300] INDU: text
-  [195/300] QUICE: vision
-  [196/300] TSMF: vision
-  [197/300] MWMP: vision
-  [198/300] IMAGE: vision
-  [199/300] DNCC: vision
-  [200/300] TSPL: unresolved
-INFO: 200/300 processed -- 29 via text, 152 via vision
-  [201/300] NEXT: vision
-  [202/300] LSEFSL: vision
-  [203/300] LSECL: vision
-  [204/300] AKDSL: text
-  [205/300] LSEVL: vision
-  [206/300] NEXT: text
-  [207/300] SERT: vision
-  [208/300] HAEL: vision
-  [209/300] FZCM: vision
-  [210/300] BNL: vision
-  [211/300] BFBIO: text
-  [212/300] HUSI: text
-  [213/300] INIL: vision
-  [214/300] ESBL: text
-  [215/300] KOSM: vision
-  [216/300] DAAG: vision
-  [217/300] CLOV: vision
-  [218/300] GEMPACRA: text
-  [219/300] STL: text
-  [220/300] DMC: vision
-INFO: 220/300 processed -- 36 via text, 165 via vision
-  [221/300] JKSM: text
-  [222/300] MFFL: vision
-  [223/300] MFFL: unresolved
-  [224/300] CPHL: vision
-  [225/300] SGPL: text
-  [226/300] NETSOL: text
-  [227/300] ARUJ: vision
-  [228/300] BNL: text
-  [229/300] IML: unresolved
-  [230/300] SEL: vision
-  [231/300] DADX: vision
-  [232/300] KSTM: text
-  [233/300] LPGL: text
-  [234/300] AGHA: vision
-  [235/300] CFL: unresolved
-  [236/300] SHCM: vision
-  [237/300] CTM: unresolved
-  [238/300] KML: text
-  [239/300] AASM: vision
-  [240/300] CLOV: text
-INFO: 240/300 processed -- 44 via text, 173 via vision
-  [241/300] DADX: unresolved
-  [242/300] BAPL: unresolved
-  [243/300] STJT: unresolved
-  [244/300] CCM: unresolved
-  [245/300] REWM: vision
-  [246/300] KHTC: unresolved
-[WARNING] Metadata key "Pages" could not be parsed due to exception: maximum recursion depth exceeded
-  [247/300] AWTX: vision
-  [248/300] ISIL: vision
-  [249/300] PACE: text
-  [250/300] MDTL: text
-  [251/300] FCSC: text
-  [252/300] FCEL: text
-  [253/300] SSOM: vision
-  [254/300] SERT: vision
-  [255/300] QTECH: vision
-  [256/300] YOUW: vision
-  [257/300] GAMON: vision
-  [258/300] ICCI: vision
-  [259/300] PASM: vision
-  [260/300] PSX: vision
-INFO: 260/300 processed -- 48 via text, 184 via vision
-  [261/300] GEMNETS: text
-  [262/300] SNGP: vision
-  [263/300] NCML: vision
-  [264/300] MFL: vision
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-  [265/300] LEUL: vision
-  [266/300] MACTER: vision
-  [267/300] PQGTL: vision
-  [268/300] PAKQATAR: vision
+  [110/300] ARMG: text
+  [111/300] IDEAL: vision
+  [112/300] GATI: vision
+  [113/300] MACFL: text
+  [114/300] ELSM: vision
+  [115/300] ALTN: unresolved
+  [116/300] SOYASUP: vision
+  [117/300] PPL: vision
+  [118/300] AKDHL: vision
+  [119/300] ISL: vision
+  [120/300] ITTEFAQ: vision
+INFO: 120/300 processed -- 19 via text, 61 via vision
+  [121/300] FZCM: text
+  [122/300] IDRT: unresolved
+  [123/300] IDEAL: vision
+  [124/300] EMCO: vision
+  [125/300] ARPAK: vision
+  [126/300] PSYL: text
+  [127/300] ARCTM: vision
+  [128/300] PREMA: vision
+  [129/300] CRTM: vision
+  [130/300] SITC: vision
+  [131/300] PASL: vision
+  [132/300] ASTL: vision
+  [133/300] DSFL: vision
+  [134/300] DFSM: vision
+  [135/300] DWAE: vision
+  [136/300] BTL: vision
+  [137/300] DCL: vision
+  [138/300] GATM: vision
+  [139/300] ANTM: vision
+  [140/300] FASM: vision
+INFO: 140/300 processed -- 21 via text, 78 via vision
+  [141/300] SLM: text
+  [142/300] TGL: text
+  [143/300] BHAT: vision
+  [144/300] TSBL: vision
+  [145/300] SHDT: vision
+  [146/300] HRPL: text
+  [147/300] FDPL: vision
+  [148/300] SAIF: vision
+  [149/300] NETSOL: text
+  [150/300] KOHTM: text
+  [151/300] KCL: vision
+  [152/300] NATF: unresolved
+  [153/300] GIL: vision
+  [154/300] GDL: vision
+  [155/300] JUBS: unresolved
+  [156/300] PREMA: text
+  [157/300] NATF: vision
+  [158/300] GTYR: unresolved
+  [159/300] GFIL: text
+  [160/300] TPLI: vision
+INFO: 160/300 processed -- 28 via text, 88 via vision
+  [161/300] NATM: vision
+  [162/300] BIFO: vision
+  [163/300] ZAHID: text
+  [164/300] ASHT: vision
+  [165/300] SELECT: vision
+  [166/300] SELECT: text
+  [167/300] ICIBL: vision
+  [168/300] DADX: text
+  [169/300] BUXL: vision
+  [170/300] PAKD: unresolved
+  [171/300] PIOC: vision
+  [172/300] FZCM: text
+  [173/300] UDPL: text
+  [174/300] NAGC: vision
+  [175/300] PRWM: vision
+  [176/300] GIL: text
+  [177/300] SHFA: vision
+  [178/300] MSCL: vision
+  [179/300] PQGTL: text
+  [180/300] KHTC: unresolved
+INFO: 180/300 processed -- 35 via text, 99 via vision
+  [181/300] PAKQATAR: text
+  [182/300] ZAHID: vision
+  [183/300] FCCL: vision
+  [184/300] MARI: unresolved
+  [185/300] GCWL: vision
+  [186/300] GGL: vision
+  [187/300] JKSM: vision
+  [188/300] PCAL: unresolved
+  [189/300] FCCL: vision
+  [190/300] DGKC: text
+  [191/300] PAKD: unresolved
+  [192/300] BBFL: vision
+  [193/300] ICL: text
+  [194/300] SEARL: text
+  [195/300] ITANZ: text
+  [196/300] TATM: vision
+  [197/300] ASTL: vision
+  [198/300] ANL: vision
+  [199/300] RUPL: text
+  [200/300] FDPL: vision
+INFO: 200/300 processed -- 41 via text, 110 via vision
+  [201/300] GTYR: unresolved
+  [202/300] CEPB: text
+  [203/300] OTSU: vision
+WARNING: gemini-3.1-flash-lite appears rate-limited (likely daily quota) -- switching to gemini-3.5-flash-lite for the rest of this run
+  [204/300] SHFA: vision
+  [205/300] WAHDAT: text
+  [206/300] CJPL: text
+  [207/300] PECO: unresolved
+  [208/300] ICIBL: vision
+  [209/300] REDCO: vision
+  [210/300] NCL: text
+  [211/300] FECTC: text
+  [212/300] TELE: unresolved
+  [213/300] FCIBL: text
+  [214/300] TSBL: text
+  [215/300] TPLI: vision
+  [216/300] MUREB: vision
+  [217/300] SLYT: vision
+  [218/300] IPAK: text
+  [219/300] SYM: text
+  [220/300] GRYL: vision
+INFO: 220/300 processed -- 50 via text, 118 via vision
+  [221/300] SPCL: vision
+  [222/300] PPVC: vision
+  [223/300] BERG: vision
+  [224/300] WAHN: vision
+  [225/300] KAPCO: text
+  [226/300] WAHN: vision
+  [227/300] MEEZAN-FUNDS: vision
+  [228/300] MARI: text
+  [229/300] DNCC: vision
+  [230/300] ISL: vision
+  [231/300] INIL: text
+  [232/300] OTSU: vision
+  [233/300] FHAM: vision
+  [234/300] JKSM: vision
+  [235/300] LCI: unresolved
+  [236/300] PCAL: vision
+  [237/300] SANE: unresolved
+  [238/300] ASL: vision
+  [239/300] DINT: vision
+  [240/300] ECOP: vision
+INFO: 240/300 processed -- 53 via text, 133 via vision
+  [241/300] FECTC: vision
+  [242/300] MUREB: vision
+  [243/300] CHBL: unresolved
+  [244/300] STML: vision
+  [245/300] QUET: unresolved
+  [246/300] FCL: vision
+  [247/300] NATF: text
+  [248/300] JDMT: vision
+  [249/300] HAFL: vision
+  [250/300] TOWL: vision
+  [251/300] NBP: vision
+  [252/300] BNWM: text
+  [253/300] KOHC: vision
+  [254/300] MERIT: vision
+  [255/300] CEPB: vision
+  [256/300] NPL: text
+  [257/300] JUBS: vision
+  [258/300] STCL: text
+  [259/300] OLPL: text
+  [260/300] SSGC: unresolved
+INFO: 260/300 processed -- 58 via text, 145 via vision
+  [261/300] IMS: text
+  [262/300] PREMA: text
+  [263/300] KOHC: text
+  [264/300] FCL: vision
+  [265/300] DCR: vision
+  [266/300] NNAR: vision
+  [267/300] SRR: vision
+  [268/300] SRR: vision
   [269/300] DCR: vision
-  [270/300] UBL: vision
-  [271/300] FAYSAL-FUNDS: vision
-  [272/300] EPCL: text
-  [273/300] PIOC: vision
-  [274/300] FCCL: unresolved
-  [275/300] ZAHID: vision
-  [276/300] PNSC: vision
-WARNING: https://dps.psx.com.pk/download/document/284903.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/284903.pdf. Retrying in 1s...
-  [277/300] NML: text
-  [278/300] IML: text
-  [279/300] SSML: text
-  [280/300] MERIT: text
-INFO: 280/300 processed -- 54 via text, 197 via vision
-  [281/300] KOHP: text
-  [282/300] FML: vision
-  [283/300] STL: text
-  [284/300] CNERGY: text
-  [285/300] TOMCL: vision
-  [286/300] AHCL: text
-  [287/300] GVGL: unresolved
-  [288/300] BFAGRO: unresolved
-  [289/300] FLYNG: vision
-  [290/300] FML: vision
-  [291/300] SUTM: vision
-  [292/300] CPHL: vision
-  [293/300] IDYM: vision
-  [294/300] PSO: text
-  [295/300] SPSL: vision
-  [296/300] TREET: text
-  [297/300] PCAL: vision
-  [298/300] KOIL: vision
-  [299/300] UDLI: vision
-  [300/300] ZUMA: text
-INFO: 300/300 processed -- 61 via text, 208 via vision
+  [270/300] DBCI: vision
+  [271/300] DBSL: vision
+  [272/300] AATM: vision
+  [273/300] PAKD: vision
+  [274/300] MWMP: vision
+  [275/300] TOMCL: vision
+  [276/300] NCPL: text
+  [277/300] SURC: text
+  [278/300] SPCL: vision
+  [279/300] BGL: vision
+  [280/300] JDMT: text
+INFO: 280/300 processed -- 64 via text, 159 via vision
+  [281/300] OLPL: unresolved
+  [282/300] NBP: vision
+  [283/300] PPP: vision
+  [284/300] KCL: unresolved
+  [285/300] DYNO: vision
+  [286/300] PPP: text
+  [287/300] ELCM: vision
+  [288/300] THCCL: unresolved
+  [289/300] SOYASUP: vision
+  [290/300] SMCPL: vision
+  [291/300] BECO: vision
+  [292/300] TOMCL: vision
+  [293/300] FRCL: vision
+  [294/300] CLVL: vision
+  [295/300] GEMPACRA: text
+  [296/300] PECO: vision
+  [297/300] SML: vision
+  [298/300] SGABL: vision
+  [299/300] GAMON: vision
+  [300/300] LCI: vision
+INFO: 300/300 processed -- 66 via text, 174 via vision
 
-DONE: 269/300 resolved this run (61 via text, 208 via vision), 776 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (3102s)
+DONE: 240/300 resolved this run (66 via text, 174 via vision), 965 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (3743s)
 
 ============================================================
 RUNNING: Sentiment classification
 ============================================================
-INFO: 1700 already cached, 3 rule-classified, 2344 skipped (no sentiment applicable), 1198 need a Gemini call
-INFO: classifying batch 1/80 (15 events)...
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-INFO: classifying batch 2/80 (15 events)...
-INFO: classifying batch 3/80 (15 events)...
-INFO: classifying batch 4/80 (15 events)...
-INFO: classifying batch 5/80 (15 events)...
-INFO: classifying batch 6/80 (15 events)...
-INFO: classifying batch 7/80 (15 events)...
-INFO: classifying batch 8/80 (15 events)...
-INFO: classifying batch 9/80 (15 events)...
-INFO: classifying batch 10/80 (15 events)...
-INFO: classifying batch 11/80 (15 events)...
-INFO: classifying batch 12/80 (15 events)...
-INFO: classifying batch 13/80 (15 events)...
-INFO: classifying batch 14/80 (15 events)...
-INFO: classifying batch 15/80 (15 events)...
-INFO: classifying batch 16/80 (15 events)...
-INFO: classifying batch 17/80 (15 events)...
-INFO: classifying batch 18/80 (15 events)...
-INFO: classifying batch 19/80 (15 events)...
-INFO: classifying batch 20/80 (15 events)...
-INFO: classifying batch 21/80 (15 events)...
-INFO: classifying batch 22/80 (15 events)...
-INFO: classifying batch 23/80 (15 events)...
-INFO: classifying batch 24/80 (15 events)...
-INFO: classifying batch 25/80 (15 events)...
-INFO: classifying batch 26/80 (15 events)...
-INFO: classifying batch 27/80 (15 events)...
-INFO: classifying batch 28/80 (15 events)...
-INFO: classifying batch 29/80 (15 events)...
-INFO: classifying batch 30/80 (15 events)...
-INFO: classifying batch 31/80 (15 events)...
-INFO: classifying batch 32/80 (15 events)...
-INFO: classifying batch 33/80 (15 events)...
-INFO: classifying batch 34/80 (15 events)...
-INFO: classifying batch 35/80 (15 events)...
-INFO: classifying batch 36/80 (15 events)...
-INFO: classifying batch 37/80 (15 events)...
-INFO: classifying batch 38/80 (15 events)...
-INFO: classifying batch 39/80 (15 events)...
-INFO: classifying batch 40/80 (15 events)...
-INFO: classifying batch 41/80 (15 events)...
-INFO: classifying batch 42/80 (15 events)...
-INFO: classifying batch 43/80 (15 events)...
-INFO: classifying batch 44/80 (15 events)...
-INFO: classifying batch 45/80 (15 events)...
-INFO: classifying batch 46/80 (15 events)...
-INFO: classifying batch 47/80 (15 events)...
-INFO: classifying batch 48/80 (15 events)...
-INFO: classifying batch 49/80 (15 events)...
-INFO: classifying batch 50/80 (15 events)...
-INFO: classifying batch 51/80 (15 events)...
-INFO: classifying batch 52/80 (15 events)...
-INFO: classifying batch 53/80 (15 events)...
-INFO: classifying batch 54/80 (15 events)...
-INFO: classifying batch 55/80 (15 events)...
-INFO: classifying batch 56/80 (15 events)...
-INFO: classifying batch 57/80 (15 events)...
-INFO: classifying batch 58/80 (15 events)...
-INFO: classifying batch 59/80 (15 events)...
-INFO: classifying batch 60/80 (15 events)...
-INFO: classifying batch 61/80 (15 events)...
-INFO: classifying batch 62/80 (15 events)...
-INFO: classifying batch 63/80 (15 events)...
-INFO: classifying batch 64/80 (15 events)...
-INFO: classifying batch 65/80 (15 events)...
-INFO: classifying batch 66/80 (15 events)...
-INFO: classifying batch 67/80 (15 events)...
-INFO: classifying batch 68/80 (15 events)...
-INFO: classifying batch 69/80 (15 events)...
-INFO: classifying batch 70/80 (15 events)...
-INFO: classifying batch 71/80 (15 events)...
-INFO: classifying batch 72/80 (15 events)...
-INFO: classifying batch 73/80 (15 events)...
-INFO: classifying batch 74/80 (15 events)...
-INFO: classifying batch 75/80 (15 events)...
-INFO: classifying batch 76/80 (15 events)...
-INFO: classifying batch 77/80 (15 events)...
-INFO: classifying batch 78/80 (15 events)...
-INFO: classifying batch 79/80 (15 events)...
-INFO: classifying batch 80/80 (13 events)...
+INFO: 2978 already cached, 0 rule-classified, 2264 skipped (no sentiment applicable), 0 need a Gemini call
 
-DONE: 2901/5245 events now have sentiment, written to events_merged.json
-OK    Sentiment classification (568s)
+DONE: 2978/5242 events now have sentiment, written to events_merged.json
+OK    Sentiment classification (0s)
 
 ============================================================
 RUNNING: Fetch company domains
 ============================================================
-INFO: 546 symbols total, 527 already cached, 19 to fetch
-WARNING: BAHLTFC9 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 1s...
-WARNING: BAHLTFC9 fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 2s...
-WARNING: BAHLTFC9 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 4s...
-WARNING: giving up on BAHLTFC9 after 3 attempts
+INFO: 546 symbols total, 546 already cached, 0 to fetch
 
 DONE: 504/554 symbols have a resolved website domain, written to company_domains_cache.json
-OK    Fetch company domains (32s)
+OK    Fetch company domains (0s)
 
 ============================================================
 RUNNING: Attach company logos
 ============================================================
-DONE: logo_url attached to 4034 events, written to events_merged.json
+DONE: logo_url attached to 4033 events, written to events_merged.json
 OK    Attach company logos (0s)
 
 ============================================================
 RUNNING: Fetch EPS data
 ============================================================
-INFO: 546 symbols total, 527 already cached, 19 to fetch
-WARNING: BAHLTFC9 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 1s...
-WARNING: BAHLTFC9 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 2s...
-WARNING: BAHLTFC9 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 4s...
-WARNING: giving up on BAHLTFC9 after 3 attempts
+INFO: 546 symbols total, 546 already cached, 0 to fetch
 
 DONE: 503/554 symbols have EPS data, written to eps_data_cache.json
-OK    Fetch EPS data (35s)
+OK    Fetch EPS data (0s)
 
 ============================================================
 RUNNING: Attach EPS data
@@ -832,7 +738,7 @@ OK    Attach EPS data (0s)
 ============================================================
 RUNNING: Attach Shariah compliance
 ============================================================
-DONE: shariah_compliant attached to 4027 events, written to events_merged.json
+DONE: shariah_compliant attached to 4026 events, written to events_merged.json
 INFO: 45 symbols in your events had no match in the compliance list (funds/ETFs/ ecomposites not covered by this notice, or symbols that have since changed): ['786', 'ABL-FUNDS', 'AKD-FUNDS', 'ALFALAH-FUNDS', 'ALHAML-FUNDS', 'ASLCPS', 'ASLPS', 'ATLAS-FUNDS', 'AWT-FUNDS', 'BAFLTFC6', 'BAHLTFC9', 'BIPLSC', 'BIPLSC2', 'DDCI', 'FAYSAL-FUNDS']...
 OK    Attach Shariah compliance (0s)
 
@@ -844,8 +750,8 @@ INFO: BPM6 {'current_account': {'2025-09-30': 133.0, '2026-08-31': -73.0, '2026-
   current_account  3 values, latest ('2026-09-30', -356.0)
   cpi_yoy          3 values, latest ('2026-09', 10.26)
   policy_rate      2 values, latest ('2026-09-14', 11.5)
-DONE: 11 values added or revised
-OK    Fetch macro values from SBP and PBS (21s)
+DONE: 0 values added or revised
+OK    Fetch macro values from SBP and PBS (3s)
 
 ============================================================
 RUNNING: Attach macro values (SBP/PBS first, FinHisaab fallback)
@@ -864,10 +770,10 @@ INFO: no prior week in history yet -- this is either the first run, or last week
 INFO: confirmed event for 2026-10-09
 
 DONE: written to events_merged.json
-OK    Confirm SBP FX reserves (real values) (3s)
+OK    Confirm SBP FX reserves (real values) (4s)
 
 ============================================================
-PIPELINE SUMMARY (65.5 min total)
+PIPELINE SUMMARY (65.3 min total)
 ============================================================
   OK    sbp
   OK    pbs
