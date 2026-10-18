@@ -296,6 +296,7 @@ def main():
     eligible = [e for e in events if e["type"] in TARGET_TYPES
                 and e.get("payload", {}).get("pdf_url")
                 and e.get("date", "") >= since
+                and not e.get("payload", {}).get("date_source")  # FinHisaab already gave it
                 and cache.get(e["id"], {}).get("scheduled_date") is None]
     eligible.sort(key=lambda e: e.get("date", ""), reverse=True)
     if args.limit:
@@ -349,7 +350,7 @@ def main():
     applied = 0
     for e in events:
         entry = cache.get(e["id"])
-        if entry and entry.get("scheduled_date"):
+        if entry and entry.get("scheduled_date") and not e.get("payload", {}).get("date_source"):
             e.setdefault("payload", {})["filed_date"] = e["date"]
             e.setdefault("payload", {})["date_source"] = entry.get("method")
             e["date"] = entry["scheduled_date"]

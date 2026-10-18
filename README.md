@@ -10,9 +10,11 @@ A calendar tracker for Pakistan Stock Exchange events — monetary policy, infla
 | Pakistan Bureau of Statistics | `ingest_pbs_calendar.py` | Weekly SPI, monthly CPI/WPI release dates (recurrence-generated; date-aware confirmed/estimated status) |
 | PAMA | `ingest_pama.py` | Monthly automobile sales data (Monday between the 10th–14th of the following month, confirmed against real observation) |
 | PSX holidays | `ingest_psx_holidays.py` | Official market holiday calendar (transcribed from PSX's published notice; 2026 only, PSX hasn't published 2027 yet) |
-| PSX company announcements | `fetch_psx_announcements.py` + `parse_announcements.py` | Board meetings, results, AGMs, disclosures — classified from free-text titles |
+| PSX company announcements (via the pkdata relay) | `fetch_psx_announcements.py` + `parse_announcements.py` | Board meetings, results, AGMs, disclosures — classified from free-text titles |
 | PSX payouts | `fetch_psx_payouts.py` + `parse_payouts.py` | Dividends, book closures, computed ex-dates and last-buy-dates |
 | PSX notices | `fetch_psx_announcements.py --type E` + `parse_psx_notices.py` | IPOs (subscription, book building, prospectus, listing), delistings, trading halts |
+| SBP and PBS values | `fetch_macro_values.py` | Actual and prior values: remittances and current account (SBP BPM6 workbook), CPI YoY (PBS press release), policy rate (SBP monetary policy statement) |
+| FinHisaab (weekly fallback) | `ingest_finhisaab_announcements.py`, `data/finhisaab_values.json` | Fills company events and macro values the direct sources missed |
 
 All sources normalize into one shared event schema (see below) and merge via `merge_events.py`.
 

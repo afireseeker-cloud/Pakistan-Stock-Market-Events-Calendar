@@ -73,9 +73,14 @@ def is_pdf(r: requests.Response | None) -> bool:
 
 
 def pdf_text(content: bytes, pages: int = 2) -> str:
+    """Text of the first pages, or "" when the PDF can't be read."""
     import pdfplumber
-    with pdfplumber.open(io.BytesIO(content)) as p:
-        return "\n".join((pg.extract_text() or "") for pg in p.pages[:pages])
+    try:
+        with pdfplumber.open(io.BytesIO(content)) as p:
+            return "\n".join((pg.extract_text() or "") for pg in p.pages[:pages])
+    except Exception as e:
+        print(f"WARNING: unreadable PDF: {e}", file=sys.stderr)
+        return ""
 
 
 def month_end(y: int, m: int) -> str:
@@ -161,8 +166,13 @@ def fetch_cpi(y: int, m: int) -> tuple[float, str] | None:
 
 # ---------- SBP Monetary Policy Statement ----------
 
+# "keep the policy rate unchanged at 11.5 percent", "cut the policy rate by
+# 100 bps to 10.5 percent", "by 1.5 percentage points to 10 percent": the
+# rate is the number after the last "at"/"to" before "percent" (decimals in
+# between are allowed, sentence ends are not).
 RATE_RE = re.compile(
-    r"policy\s+rate\b[^.]{0,160}?\b(?:at|to)\s+(\d{1,2}(?:\.\d{1,2})?)\s*(?:percent|%)", re.I | re.S)
+    r"policy\s+rate\b(?:[^.]|\.(?=\d)){0,160}?\b(?:at|to)\s+(\d{1,2}(?:\.\d{1,2})?)\s*(?:percent|%)",
+    re.I | re.S)
 
 
 def mps_urls(d: date) -> list[str]:

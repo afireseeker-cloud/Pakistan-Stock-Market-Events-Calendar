@@ -33,6 +33,9 @@ Run:
     python run_pipeline.py --skip-logos
     python run_pipeline.py --skip-eps
     python run_pipeline.py --skip-shariah
+    python run_pipeline.py --skip-psx        # no PSX announcements/notices/payouts (FinHisaab only)
+    python run_pipeline.py --psx-direct      # PSX straight, not through the pkdata relay
+    python run_pipeline.py --skip-finhisaab  # attach only the SBP/PBS macro values
 """
 import argparse
 import os

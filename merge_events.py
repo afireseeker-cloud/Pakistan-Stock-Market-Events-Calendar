@@ -120,7 +120,7 @@ def carry_forward_enrichment(new_events: list[dict], previous_output_path: str) 
     return carried
 
 
-PSX_DOC_RE = re.compile(r"/download/(?:document|image)/(\d+)")
+PSX_DOC_RE = re.compile(r"/download/(?:document|image|attachment)/(\d+)")
 
 
 def psx_doc_id(e: dict) -> str | None:
@@ -139,13 +139,48 @@ def drop_finhisaab_duplicates(events: list[dict]) -> tuple[list[dict], int]:
     """PSX is the primary source for company events; FinHisaab only fills
     gaps (an announcement the PSX fetch missed, or a run where the PSX fetch
     failed). A FinHisaab event is dropped when PSX already has the same
-    document."""
-    psx_docs = {psx_doc_id(e) for e in events
-                if (e.get("source") or "").startswith("psx_")} - {None}
+    document -- but what FinHisaab knew is kept on the PSX event first: the
+    real meeting date (PSX events carry the filing date until
+    extract_meeting_dates.py resolves them, which needs a PDF and Gemini),
+    its sentiment and any EPS."""
+    fh_by_doc = {}
+    for e in events:
+        if e.get("source") == "finhisaab_announcements":
+            d = psx_doc_id(e)
+            if d:
+                fh_by_doc.setdefault(d, e)
+
+    psx_docs = set()
+    for e in events:
+        if not (e.get("source") or "").startswith("psx_"):
+            continue
+        d = psx_doc_id(e)
+        if not d:
+            continue
+        psx_docs.add(d)
+        fh = fh_by_doc.get(d)
+        if fh:
+            enrich_from_finhisaab(e, fh)
+
     kept = [e for e in events
             if not (e.get("source") == "finhisaab_announcements"
                     and psx_doc_id(e) in psx_docs)]
     return kept, len(events) - len(kept)
+
+
+def enrich_from_finhisaab(e: dict, fh: dict) -> None:
+    p, fp = e.setdefault("payload", {}), fh.get("payload") or {}
+    if (fp.get("date_source") and not p.get("date_source")
+            and fh.get("type") == e.get("type")):
+        p["filed_date"] = e["date"]
+        p["date_source"] = fp["date_source"]
+        e["date"], e["time"] = fh["date"], fh.get("time")
+    if fh.get("sentiment") and not e.get("sentiment"):
+        e["sentiment"] = fh["sentiment"]
+    if fp.get("eps_actual") is not None and p.get("eps_actual") is None:
+        for k in ("eps_actual", "eps_prior", "eps_period", "profit"):
+            if k in fp:
+                p[k] = fp[k]
 
 
 def merge(sources: dict[str, tuple[str, str]], date_from: str | None = None,

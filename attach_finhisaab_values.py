@@ -112,6 +112,8 @@ def apply_mpc(e: dict, rates: dict, fh_series: dict | None, today: date) -> bool
     before = [v for d, v in obs if d < meeting]
     after = [v for d, v in obs
              if meeting <= d <= meeting + timedelta(days=MPC_EFFECTIVE_WINDOW_DAYS)]
+    # the statement for this meeting beats a FinHisaab entry dated a day later
+    after = [v for v in after if v[1] != "finhisaab"] or after
     if not before and not after:
         return False
     prior = before[-1] if before else None
@@ -147,10 +149,12 @@ def apply_cpi(e: dict, months: dict[str, float]) -> bool:
 def load_values(path: str) -> dict:
     try:
         with open(path) as f:
-            return json.load(f).get("series", {})
+            return json.load(f).get("series", {}) or {}
     except FileNotFoundError:
         print(f"INFO: {path} not found", file=sys.stderr)
-        return {}
+    except (json.JSONDecodeError, AttributeError) as e:
+        print(f"WARNING: {path} unreadable ({e}), ignoring it", file=sys.stderr)
+    return {}
 
 
 def main():
