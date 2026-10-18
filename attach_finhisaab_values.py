@@ -1,13 +1,14 @@
 """
-Fills the actual/prior values on macro events from data/finhisaab_values.json.
+Fills the actual/prior values on macro events from two files:
 
-That file is refreshed daily by a scheduled Claude task that reads FinHisaab
-(SBP EasyData + PBS CPI) through its MCP connector and commits the result to
-main. FinHisaab has no public API, so the GitHub Actions run can not call it
-directly; it only reads the committed file.
+    macro_values.json          fetched straight from SBP and PBS every run by
+                               fetch_macro_values.py (primary)
+    data/finhisaab_values.json refreshed weekly by a scheduled Claude task that
+                               reads FinHisaab through its MCP connector
+                               (fallback for anything the direct fetch missed)
 
-FinHisaab is the source of truth for these event types, so its values
-overwrite whatever an older scraper put there:
+For the same period the direct value wins. These values overwrite whatever an
+older scraper put on the event:
 
     remittances      sbp-remit-YYYY-MM   total inflow, USD million
     current_account  sbp-ca-YYYY-MM      BPM6 current account balance, USD million
@@ -31,6 +32,7 @@ import sys
 from datetime import date, datetime, timedelta
 
 VALUES_FILE = "data/finhisaab_values.json"
+DIRECT_FILE = "macro_values.json"
 SOURCE_URL = "https://finhisaab.com/economic-data"
 CPI_SOURCE_URL = "https://finhisaab.com/inflation"
 
@@ -56,61 +58,77 @@ def fmt_pct(v: float) -> str:
     return f"{v:.2f}".rstrip("0").rstrip(".") + "%"
 
 
-def by_month(series: dict) -> dict[str, float]:
-    return {month_key(o["period"]): o["value"] for o in series.get("observations", [])}
+def obs_map(fh: dict | None, direct: dict | None, key=lambda p: p) -> dict:
+    """{period_key: (value, source, url)}: FinHisaab first, direct values on top."""
+    out = {}
+    for series, source, url in ((fh, "finhisaab", None), (direct, None, None)):
+        for o in (series or {}).get("observations", []):
+            out[key(o["period"])] = (o["value"], o.get("source") or source or "finhisaab",
+                                     o.get("url") or url)
+    return out
 
 
-def sync_date(series: dict) -> date | None:
-    ts = series.get("last_sync")
+def by_month(fh: dict | None, direct: dict | None) -> dict:
+    return obs_map(fh, direct, month_key)
+
+
+def sync_date(series: dict | None) -> date | None:
+    ts = (series or {}).get("last_sync")
     if not ts:
         return None
     return datetime.fromisoformat(ts.replace("Z", "+00:00")).date()
 
 
-def set_values(e: dict, actual: float, prior: float | None, fmt, unit: str,
-               period: str, url: str) -> None:
+def set_values(e: dict, actual, prior, fmt, unit: str, period: str, default_url: str) -> None:
+    """actual/prior are (value, source, url) tuples (prior may be None)."""
     p = e.setdefault("payload", {})
-    p["actual_value"] = fmt(actual)
-    p["prior_value"] = fmt(prior) if prior is not None else None
-    p["actual_numeric"] = actual
-    p["prior_numeric"] = prior
+    p["actual_value"] = fmt(actual[0])
+    p["prior_value"] = fmt(prior[0]) if prior is not None else None
+    p["actual_numeric"] = actual[0]
+    p["prior_numeric"] = prior[0] if prior is not None else None
     p["unit"] = unit
     p["value_period"] = period
-    p["value_source"] = "finhisaab"
+    p["value_source"] = actual[1]
     e["status"] = "confirmed"
-    e["source_url"] = url
+    e["source_url"] = actual[2] or default_url
 
 
-def apply_monthly(e: dict, months: dict[str, float], ym: str, unit: str) -> bool:
+def apply_monthly(e: dict, months: dict, ym: str, unit: str) -> bool:
     if ym not in months:
         return False
     set_values(e, months[ym], months.get(prev_month(ym)), fmt_usd_mn, unit, ym, SOURCE_URL)
     return True
 
 
-def apply_mpc(e: dict, series: dict, today: date) -> bool:
+def apply_mpc(e: dict, rates: dict, fh_series: dict | None, today: date) -> bool:
+    """rates: {date: (value, source, url)} from both files. A statement fetched
+    for the meeting (or a FinHisaab change dated within a week of it) gives the
+    decision; with neither, FinHisaab having synced after the meeting with no
+    change means the rate was held."""
     meeting = date.fromisoformat(e["date"])
-    synced = sync_date(series)
-    # don't claim "held" until FinHisaab has synced after the meeting --
-    # otherwise a cut announced today would show as unchanged
-    if meeting > today or synced is None or synced <= meeting:
+    if meeting > today:
         return False
-
-    obs = sorted(
-        ((date.fromisoformat(o["period"]), o["value"]) for o in series["observations"]),
-        key=lambda x: x[0],
-    )
+    obs = sorted(((date.fromisoformat(d), v) for d, v in rates.items()), key=lambda x: x[0])
     before = [v for d, v in obs if d < meeting]
-    if not before:
+    after = [v for d, v in obs
+             if meeting <= d <= meeting + timedelta(days=MPC_EFFECTIVE_WINDOW_DAYS)]
+    if not before and not after:
         return False
-    prior = before[-1]
-    changed = [v for d, v in obs
-               if meeting <= d <= meeting + timedelta(days=MPC_EFFECTIVE_WINDOW_DAYS)]
-    actual = changed[-1] if changed else prior
+    prior = before[-1] if before else None
+    if after:
+        actual = after[-1]
+    else:
+        synced = sync_date(fh_series)
+        # don't claim "held" until FinHisaab has synced after the meeting --
+        # otherwise a cut announced today would show as unchanged
+        if prior is None or synced is None or synced <= meeting:
+            return False
+        actual = (prior[0], "finhisaab", None)
 
     set_values(e, actual, prior, fmt_pct, "percent", e["date"], SOURCE_URL)
     p = e["payload"]
-    p["decision"] = "hold" if actual == prior else ("cut" if actual < prior else "hike")
+    if prior is not None:
+        p["decision"] = "hold" if actual[0] == prior[0] else ("cut" if actual[0] < prior[0] else "hike")
     return True
 
 
@@ -126,30 +144,39 @@ def apply_cpi(e: dict, months: dict[str, float]) -> bool:
     return True
 
 
+def load_values(path: str) -> dict:
+    try:
+        with open(path) as f:
+            return json.load(f).get("series", {})
+    except FileNotFoundError:
+        print(f"INFO: {path} not found", file=sys.stderr)
+        return {}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("events")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--values", default=VALUES_FILE)
+    ap.add_argument("--values", default=VALUES_FILE, help="FinHisaab values (fallback)")
+    ap.add_argument("--direct", default=DIRECT_FILE, help="SBP/PBS values (primary)")
     args = ap.parse_args()
 
-    try:
-        with open(args.values) as f:
-            values = json.load(f)
-    except FileNotFoundError:
-        print(f"SKIP  {args.values} not found -- no FinHisaab values to attach", file=sys.stderr)
+    fh, direct = load_values(args.values), load_values(args.direct)
+    if not fh and not direct:
+        print("SKIP  no macro values to attach", file=sys.stderr)
         return
 
     with open(args.events) as f:
         events = json.load(f)
 
-    s = values["series"]
-    remit = by_month(s["remittances"])
-    ca = by_month(s["current_account"])
-    cpi = by_month(s["cpi_yoy"])
+    remit = by_month(fh.get("remittances"), direct.get("remittances"))
+    ca = by_month(fh.get("current_account"), direct.get("current_account"))
+    cpi = by_month(fh.get("cpi_yoy"), direct.get("cpi_yoy"))
+    rates = obs_map(fh.get("policy_rate"), direct.get("policy_rate"))
     today = date.today()
 
     counts = {"remittances": [0, 0], "current_account": [0, 0], "mpc": [0, 0], "cpi_monthly": [0, 0]}
+    sources = {}
     for e in events:
         t = e.get("type")
         if t not in counts or e.get("date", "9999") > today.isoformat():
@@ -160,17 +187,20 @@ def main():
         elif t == "current_account":
             ok = apply_monthly(e, ca, e["id"].removeprefix("sbp-ca-"), "USD million")
         elif t == "mpc":
-            ok = apply_mpc(e, s["policy_rate"], today)
+            ok = apply_mpc(e, rates, fh.get("policy_rate"), today)
         else:
             ok = apply_cpi(e, cpi)
         counts[t][0] += ok
+        if ok:
+            src = e["payload"]["value_source"]
+            sources[(t, src)] = sources.get((t, src), 0) + 1
 
     with open(args.out, "w") as f:
         json.dump(events, f, indent=2)
 
-    print(f"FinHisaab values generated {values.get('generated_at')}", file=sys.stderr)
     for t, (filled, due) in counts.items():
-        print(f"  {t:16s} {filled}/{due} past events filled", file=sys.stderr)
+        by = ", ".join(f"{n} from {src}" for (tt, src), n in sorted(sources.items()) if tt == t)
+        print(f"  {t:16s} {filled}/{due} past events filled ({by or 'none'})", file=sys.stderr)
 
 
 if __name__ == "__main__":

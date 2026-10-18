@@ -70,6 +70,7 @@ jobs:
           git show origin/gh-pages:company_domains_cache.json > company_domains_cache.json 2>/dev/null || true
           git show origin/gh-pages:eps_data_cache.json > eps_data_cache.json 2>/dev/null || true
           git show origin/gh-pages:kmi_compliance_cache.json > kmi_compliance_cache.json 2>/dev/null || true
+          git show origin/gh-pages:macro_values.json > macro_values.json 2>/dev/null || true
 
       - name: Run the pipeline
         env:
@@ -92,6 +93,7 @@ jobs:
           cp company_domains_cache.json _site/ 2>/dev/null || true
           cp eps_data_cache.json _site/ 2>/dev/null || true
           cp kmi_compliance_cache.json _site/ 2>/dev/null || true
+          cp macro_values.json _site/ 2>/dev/null || true
           # last run's log, so failed steps can be read from gh-pages
           cp pipeline_log.txt _site/ 2>/dev/null || true
 

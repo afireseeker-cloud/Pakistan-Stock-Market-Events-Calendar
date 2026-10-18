@@ -18,7 +18,9 @@ import requests
 
 from parse_payouts import parse_payouts_html
 
-BASE_URL = "https://dps.psx.com.pk/payouts"
+from psx_relay import psx_base  # PSX blocks GitHub Actions: see psx_relay.py
+
+BASE_URL = psx_base() + "/payouts"
 PAGE_SIZE = 25  # matches PSX's own default (seen in the captured payload)
 RATE_LIMIT_SECONDS = 0.5
 MAX_RETRIES = 3

@@ -26,6 +26,8 @@ import sys
 import time
 
 import requests
+
+from psx_relay import via_relay  # PSX blocks GitHub Actions
 from bs4 import BeautifulSoup
 
 from parse_financials import extract_financials, compute_eps_summary
@@ -41,7 +43,7 @@ HEADERS = {
 
 
 def fetch_company_page(session: requests.Session, symbol: str) -> str | None:
-    url = f"https://dps.psx.com.pk/company/{symbol}"
+    url = via_relay(f"https://dps.psx.com.pk/company/{symbol}")
     for attempt in range(MAX_RETRIES):
         try:
             resp = session.get(url, headers=HEADERS, timeout=30)

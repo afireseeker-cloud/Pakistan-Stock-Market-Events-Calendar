@@ -41,7 +41,9 @@ import requests
 from parse_announcements import parse_announcements_html
 from parse_psx_notices import parse_psx_notices_html
 
-BASE_URL = "https://dps.psx.com.pk/announcements"
+from psx_relay import psx_base  # PSX blocks GitHub Actions: see psx_relay.py
+
+BASE_URL = psx_base() + "/announcements"
 PAGE_SIZE = 50
 RATE_LIMIT_SECONDS = 0.5  # 2 req/sec, matches psxdata's documented limiter
 MAX_RETRIES = 3

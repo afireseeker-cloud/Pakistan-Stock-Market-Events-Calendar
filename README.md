@@ -28,20 +28,22 @@ These add real data on top of the merged calendar — none are required to use t
 
 Both Gemini-based scripts need a free API key (no credit card) from https://aistudio.google.com, set as `GEMINI_API_KEY`. Same key works for both.
 
-## Macro values (FinHisaab)
+## Macro values (SBP and PBS, FinHisaab fallback)
 
-Actual and prior values for remittances, current account, MPC policy rate and CPI come from FinHisaab (SBP EasyData and PBS CPI). FinHisaab has no public API, so a scheduled Claude task reads it through the FinHisaab connector every day and commits `data/finhisaab_values.json` to `main`. `attach_finhisaab_values.py` then applies those values during the pipeline run. The file holds full history, so every run re-applies every value.
+`fetch_macro_values.py` reads actual values straight from the source on every run: remittances and the current account from SBP's BPM6 summary workbook (`ecodata/Balancepayment_BPM6.xls`), CPI YoY from PBS's monthly press release PDF, and the policy rate from SBP's Monetary Policy Statement PDF for each past MPC meeting. SBP's HTML pages block GitHub Actions behind a Cloudflare challenge, but these static files don't. Values build up in `macro_values.json`, which travels on `gh-pages` between runs like the other caches.
 
-## Company events (FinHisaab)
+FinHisaab is the fallback. A scheduled Claude task reads it through the FinHisaab connector once a week and commits `data/finhisaab_values.json`. `attach_finhisaab_values.py` applies both files; for the same period the SBP/PBS value wins. Weekly FX reserves still use `fetch_sbp_fx_reserves.py`; SPI events carry release dates only. `fetch_sbp_remittances.py` and `fetch_sbp_current_account.py` are no longer run.
 
-dps.psx.com.pk returns 403 to GitHub Actions, so the direct PSX scrapers no longer run by default (`run_pipeline.py --psx-direct` still runs them from a machine PSX doesn't block). Company events come from FinHisaab's PSX announcements instead. A scheduled Claude task calls FinHisaab's `research_announcements` tool each day and runs `collect_finhisaab_announcements.py`, which reads those results from the session and merges them into `data/finhisaab_announcements.json`. `ingest_finhisaab_announcements.py` turns that file into board meetings (on the real meeting date), corporate briefings, results with EPS, declared dividends, AGMs and other announcements, with FinHisaab's sentiment attached. Mutual-fund entries are skipped. Book closure ex-dates are not available from FinHisaab.
+## Company events (PSX through the pkdata relay, FinHisaab fallback)
 
-Weekly FX reserves and weekly SPI are not in FinHisaab. FX reserves still use `fetch_sbp_fx_reserves.py`; SPI events carry release dates only. `fetch_sbp_remittances.py` and `fetch_sbp_current_account.py` are no longer run.
+dps.psx.com.pk returns 403 to GitHub Actions, so every PSX request goes through the portfolio tracker's Cloudflare Worker, pkdata (`psx_relay.py`). The Worker relays the `/announcements` and `/payouts` form posts and forwards GET requests for company pages and notice PDFs, using its own PSX session. Stored links still point at dps.psx.com.pk. `PSX_BASE_URL=https://dps.psx.com.pk` (or `run_pipeline.py --psx-direct`) fetches directly from a machine PSX doesn't block.
+
+FinHisaab's announcements are the fallback: a scheduled Claude task refreshes `data/finhisaab_announcements.json` once a week, and `merge_events.py` drops any FinHisaab event whose PSX document is already in the PSX feed, so FinHisaab only fills gaps. Meeting dates for recent notices (last 45 days, newest first, up to 300 per run) come from `extract_meeting_dates.py`.
 
 ## Setup
 
 ```
-pip install requests beautifulsoup4 lxml pdfplumber python-dateutil pymupdf
+pip install -r requirements.txt
 ```
 
 ## Usage

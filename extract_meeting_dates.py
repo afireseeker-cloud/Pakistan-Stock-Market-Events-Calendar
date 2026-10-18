@@ -53,7 +53,11 @@ from io import BytesIO
 
 import pdfplumber
 import pymupdf  # PyMuPDF -- 'fitz' is the deprecated legacy import name
+from datetime import date, timedelta
+
 import requests
+
+from psx_relay import via_relay  # PSX blocks GitHub Actions
 from dateutil import parser as dateparser
 
 CACHE_FILE = "meeting_dates_cache.json"
@@ -113,7 +117,7 @@ GEMINI_RESPONSE_SCHEMA = {
 def fetch_pdf_bytes(session: requests.Session, url: str) -> bytes | None:
     for attempt in range(MAX_RETRIES):
         try:
-            resp = session.get(url, headers=HEADERS, timeout=30)
+            resp = session.get(via_relay(url), headers=HEADERS, timeout=30)
             resp.raise_for_status()
             return resp.content
         except requests.RequestException as e:
@@ -255,6 +259,8 @@ def main():
     ap.add_argument("--out", default=None, help="defaults to overwriting the input file")
     ap.add_argument("--limit", type=int, default=None,
                      help="only process the first N eligible events -- use to sanity check before a full run")
+    ap.add_argument("--since-days", type=int, default=45,
+                     help="only notices filed in the last N days (default 45)")
     ap.add_argument("--no-vision", action="store_true",
                      help="text extraction only, skip the vision-OCR fallback (no API needed at all)")
     args = ap.parse_args()
@@ -282,9 +288,16 @@ def main():
     # permanently skipped them, even though the whole point of adding
     # vision was to go back and retry exactly those failures with a
     # capability the first run didn't have.
+    # Only notices filed recently: a meeting notice is filed days or a few
+    # weeks ahead, so an older one's meeting has already happened and the
+    # Gemini call would be wasted. Newest first, so a capped run (--limit)
+    # resolves the dates that matter for the upcoming list before older ones.
+    since = (date.today() - timedelta(days=args.since_days)).isoformat()
     eligible = [e for e in events if e["type"] in TARGET_TYPES
                 and e.get("payload", {}).get("pdf_url")
+                and e.get("date", "") >= since
                 and cache.get(e["id"], {}).get("scheduled_date") is None]
+    eligible.sort(key=lambda e: e.get("date", ""), reverse=True)
     if args.limit:
         eligible = eligible[:args.limit]
 
