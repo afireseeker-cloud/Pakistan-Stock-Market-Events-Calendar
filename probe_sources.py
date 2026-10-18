@@ -11,3 +11,4 @@ print([ (e["symbol"],e["date"],e["title"][:60]) for e in ev if e["type"]=="board
 sh("python fetch_psx_payouts.py --out p.jsonl")
 pv=[json.loads(l) for l in open("p.jsonl")] if __import__('os').path.exists("p.jsonl") else []
 print(len(pv), collections.Counter(e["type"] for e in pv).most_common()); print([ (e["symbol"],e["date"],e["title"][:60]) for e in pv if e["date"]>="2026-10-18"][:15])
+# rerun
