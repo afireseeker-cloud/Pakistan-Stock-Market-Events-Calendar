@@ -11,6 +11,7 @@ paginates by offset/count with no date chunking.
 Run: python3 fetch_psx_payouts.py --out events_psx_payouts.jsonl
 """
 import argparse
+import os
 import sys
 import time
 
@@ -18,7 +19,12 @@ import requests
 
 from parse_payouts import parse_payouts_html
 
-BASE_URL = "https://dps.psx.com.pk/payouts"
+# PSX returns 403 to GitHub Actions, so by default these posts go through the
+# portfolio tracker's Cloudflare Worker (pkdata), which relays /announcements
+# and /payouts with its own PSX session. Set PSX_BASE_URL=https://dps.psx.com.pk
+# to go direct from a machine PSX doesn't block.
+PSX_BASE_URL = os.environ.get("PSX_BASE_URL", "https://pkdata.afireseeker.workers.dev").rstrip("/")
+BASE_URL = PSX_BASE_URL + "/payouts"
 PAGE_SIZE = 25  # matches PSX's own default (seen in the captured payload)
 RATE_LIMIT_SECONDS = 0.5
 MAX_RETRIES = 3

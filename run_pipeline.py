@@ -90,9 +90,12 @@ def main():
     ap.add_argument("--skip-eps", action="store_true")
     ap.add_argument("--skip-shariah", action="store_true")
     ap.add_argument("--psx-direct", action="store_true",
-                     help="also scrape dps.psx.com.pk directly (blocked from GitHub Actions)")
+                     help="fetch from dps.psx.com.pk directly instead of through the "
+                          "pkdata Worker relay (PSX blocks GitHub Actions)")
+    ap.add_argument("--skip-psx", action="store_true",
+                     help="don't fetch PSX announcements/notices/payouts at all")
     ap.add_argument("--skip-finhisaab", action="store_true",
-                     help="don't attach values from data/finhisaab_values.json")
+                     help="attach only the direct SBP/PBS values, not data/finhisaab_values.json")
     ap.add_argument("--skip-fx-reserves", action="store_true",
                      help="skip the confirm step only -- predicted dates still generate")
     args = ap.parse_args()
@@ -146,16 +149,21 @@ def main():
         stdout_file="events_current_account.json",
     )
 
-    # Company events come from FinHisaab (data/finhisaab_announcements.json,
-    # refreshed daily by a scheduled task). dps.psx.com.pk returns 403 to
-    # GitHub Actions, so the direct PSX scrapers only run with --psx-direct
-    # (useful from a machine PSX doesn't block).
+    # Company events come from PSX itself. dps.psx.com.pk returns 403 to
+    # GitHub Actions, so the fetchers post through the pkdata Cloudflare
+    # Worker, which relays /announcements and /payouts (PSX_BASE_URL;
+    # --psx-direct goes straight to PSX instead). FinHisaab
+    # (data/finhisaab_announcements.json, refreshed weekly by a scheduled
+    # task) is the fallback: merge_events.py drops any FinHisaab event whose
+    # PSX document is already in the PSX feed, so it only fills gaps.
+    if args.psx_direct:
+        os.environ["PSX_BASE_URL"] = "https://dps.psx.com.pk"
     results["finhisaab_company"] = run_step(
-        "FinHisaab company announcements",
+        "FinHisaab company announcements (fallback)",
         [sys.executable, "ingest_finhisaab_announcements.py"],
         stdout_file="events_finhisaab_company.json",
     )
-    if args.psx_direct:
+    if not args.skip_psx:
         results["announcements"] = run_step(
             "PSX announcements",
             [sys.executable, "fetch_psx_announcements.py", "--from", fetch_from, "--to", fetch_to,
@@ -250,19 +258,22 @@ def main():
         print("SKIP  Shariah compliance (--skip-shariah)", file=sys.stderr)
         results["shariah"] = "skip"
 
-    # Remittances, current account, MPC policy rate and CPI values come from
-    # FinHisaab via data/finhisaab_values.json (refreshed daily by a
-    # scheduled task, since FinHisaab has no API the runner can call).
+    # Macro values: SBP's BPM6 workbook (remittances, current account), PBS
+    # CPI press releases and SBP Monetary Policy Statements, fetched directly
+    # into macro_values.json (kept on gh-pages between runs). FinHisaab's
+    # data/finhisaab_values.json, refreshed weekly by a scheduled task, fills
+    # anything the direct fetch missed; the direct value wins for a period.
     # The old fetch_sbp_remittances.py / fetch_sbp_current_account.py
     # scrapers are kept in the repo but no longer run.
-    if not args.skip_finhisaab:
-        results["finhisaab_values"] = run_step(
-            "Attach FinHisaab values (remittances, current account, policy rate, CPI)",
-            [sys.executable, "attach_finhisaab_values.py", MERGED_FILE, "--out", MERGED_FILE],
-        )
-    else:
-        print("SKIP  FinHisaab values (--skip-finhisaab)", file=sys.stderr)
-        results["finhisaab_values"] = "skip"
+    results["macro_values"] = run_step(
+        "Fetch macro values from SBP and PBS",
+        [sys.executable, "fetch_macro_values.py", MERGED_FILE, "--out", "macro_values.json"],
+    )
+    attach_cmd = [sys.executable, "attach_finhisaab_values.py", MERGED_FILE, "--out", MERGED_FILE]
+    if args.skip_finhisaab:
+        attach_cmd += ["--values", "no-finhisaab-values.json"]  # direct values only
+    results["finhisaab_values"] = run_step(
+        "Attach macro values (SBP/PBS first, FinHisaab fallback)", attach_cmd)
 
     # FX reserves are not in FinHisaab, so this scraper stays
     if not args.skip_fx_reserves:

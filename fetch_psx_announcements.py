@@ -32,6 +32,7 @@ use while a licensing conversation with PSX's market data team is pending --
 not licensed for redistribution at scale.
 """
 import argparse
+import os
 import sys
 import time
 from datetime import date, timedelta
@@ -41,7 +42,12 @@ import requests
 from parse_announcements import parse_announcements_html
 from parse_psx_notices import parse_psx_notices_html
 
-BASE_URL = "https://dps.psx.com.pk/announcements"
+# PSX returns 403 to GitHub Actions, so by default these posts go through the
+# portfolio tracker's Cloudflare Worker (pkdata), which relays /announcements
+# and /payouts with its own PSX session. Set PSX_BASE_URL=https://dps.psx.com.pk
+# to go direct from a machine PSX doesn't block.
+PSX_BASE_URL = os.environ.get("PSX_BASE_URL", "https://pkdata.afireseeker.workers.dev").rstrip("/")
+BASE_URL = PSX_BASE_URL + "/announcements"
 PAGE_SIZE = 50
 RATE_LIMIT_SECONDS = 0.5  # 2 req/sec, matches psxdata's documented limiter
 MAX_RETRIES = 3
