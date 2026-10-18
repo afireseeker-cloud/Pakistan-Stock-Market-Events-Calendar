@@ -1,0 +1,11 @@
+name: Probe sources (temporary)
+on:
+  push:
+    branches: ['probe/sources']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - run: python probe_sources.py
