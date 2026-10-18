@@ -127066,7 +127066,7 @@
     "id": "psx-annc-FIL-2026-10-12-1109",
     "type": "agm",
     "status": "confirmed",
-    "date": "2026-10-12",
+    "date": "2026-11-27",
     "time": null,
     "scope": "company",
     "symbol": "FIL",
@@ -127082,7 +127082,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-10-12",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",

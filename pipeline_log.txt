@@ -283,7 +283,7 @@ INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 3/15 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice to Shareholders', 'RESIGNATION OF CHIEF EXECUTIVE OFFICER AND DIRECTO', 'President and Chief Executive Officer Designate of']
 
 DONE: 4461 unique events written to events_psx_announcements.jsonl (64 duplicates dropped)
-OK    PSX announcements (147s)
+OK    PSX announcements (123s)
 
 ============================================================
 RUNNING: PSX notices
@@ -314,12 +314,13 @@ INFO: 3 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CO
 INFO: 4 IPO-related notices found: [('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
 
 DONE: 492 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
-OK    PSX notices (14s)
+OK    PSX notices (15s)
 
 ============================================================
 RUNNING: PSX payouts
 ============================================================
 INFO: page 1 (offset=0): 26 rows
+WARNING: fetch failed (attempt 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')). Retrying in 1s...
 INFO: page 21 (offset=500): 26 rows
 INFO: reached last page at offset=700 (24 rows)
 WARNING: skipped malformed payout row: unexpected token count (1) in book closure cell: '08/09/2026  - 0/09//2026 '
@@ -330,7 +331,7 @@ WARNING: skipped malformed payout row: time data '13/13/2025' does not match for
 INFO: 1/25 rows skipped as malformed
 
 DONE: 716 unique payout events written to events_psx_payouts.jsonl (4 duplicates dropped)
-OK    PSX payouts (38s)
+OK    PSX payouts (31s)
 
 ============================================================
 RUNNING: Merge all sources
@@ -369,236 +370,98 @@ OK    Merge all sources (0s)
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-INFO: 212 events eligible (5030 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/212] PIOC: text
-  [2/212] DWTM: unresolved
-  [3/212] DKTM: unresolved
-  [4/212] DFML: unresolved
+INFO: 81 events eligible (5161 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
+  [1/81] DWTM: unresolved
+  [2/81] DKTM: unresolved
+  [3/81] DFML: unresolved
 WARNING: gemini-3.1-flash-lite appears rate-limited (likely daily quota) -- switching to gemini-3.5-flash-lite for the rest of this run
-  [5/212] CTM: unresolved
-  [6/212] STYLERS: vision
-  [7/212] PIM: unresolved
-  [8/212] NCL: text
-  [9/212] HMB: vision
-  [10/212] BIFO: vision
-  [11/212] SLM: unresolved
-  [12/212] OTSU: vision
-  [13/212] SCBPL: vision
-  [14/212] UBL-FUNDS: text
-  [15/212] HBL: vision
-  [16/212] POML: unresolved
-  [17/212] FIL: unresolved
-  [18/212] FABL: vision
-  [19/212] ALHAML-FUNDS: vision
-  [20/212] FHAM: vision
-INFO: 20/212 processed -- 3 via text, 9 via vision
-  [21/212] FRCL: unresolved
-  [22/212] OBOY: unresolved
-  [23/212] SSGC: unresolved
-  [24/212] CLVL: unresolved
-  [25/212] CHBL: vision
-  [26/212] KEL: unresolved
-  [27/212] JKSM: unresolved
-  [28/212] HUMNL: unresolved
-  [29/212] TSPL: unresolved
-  [30/212] MFFL: unresolved
-  [31/212] IML: unresolved
-  [32/212] CFL: unresolved
-  [33/212] CTM: unresolved
-  [34/212] DADX: unresolved
-  [35/212] BAPL: unresolved
-  [36/212] STJT: unresolved
-  [37/212] CCM: vision
-  [38/212] KHTC: unresolved
-  [39/212] FCCL: vision
-  [40/212] GVGL: unresolved
-INFO: 40/212 processed -- 3 via text, 12 via vision
-  [41/212] BFAGRO: unresolved
-  [42/212] GHGL: unresolved
-  [43/212] FZCM: unresolved
-  [44/212] MUBT: unresolved
-  [45/212] RUPL: vision
-  [46/212] TPLT: vision
-  [47/212] HTL: unresolved
-  [48/212] SFL: unresolved
-  [49/212] ARMG: unresolved
-  [50/212] AKGL: unresolved
-  [51/212] ALTN: unresolved
-  [52/212] IDRT: unresolved
-  [53/212] NATF: unresolved
-  [54/212] JUBS: unresolved
-  [55/212] GTYR: unresolved
-  [56/212] PAKD: unresolved
-  [57/212] KHTC: unresolved
-  [58/212] MARI: unresolved
-  [59/212] PCAL: unresolved
-  [60/212] PAKD: unresolved
-INFO: 60/212 processed -- 3 via text, 14 via vision
-  [61/212] GTYR: unresolved
-  [62/212] PECO: unresolved
-  [63/212] TELE: unresolved
-  [64/212] LCI: unresolved
-  [65/212] SANE: unresolved
-  [66/212] CHBL: unresolved
-  [67/212] QUET: unresolved
-  [68/212] SSGC: unresolved
-  [69/212] OLPL: unresolved
-  [70/212] KCL: unresolved
-  [71/212] THCCL: unresolved
-  [72/212] ASC: unresolved
-  [73/212] ACPL: vision
-  [74/212] 786: vision
-  [75/212] BIFO: vision
-  [76/212] PRL: unresolved
-  [77/212] LOADS: vision
-  [78/212] ECOP: vision
-  [79/212] ATBA: vision
-  [80/212] GEMMEL: text
-INFO: 80/212 processed -- 4 via text, 20 via vision
-  [81/212] PTL: vision
-  [82/212] POWER: text
-  [83/212] FCCL: vision
-  [84/212] THALL: unresolved
-  [85/212] STPL: vision
-  [86/212] ARUJ: vision
-  [87/212] FPRM: vision
-  [88/212] BAPL: vision
-  [89/212] MEHT: vision
-  [90/212] GUTM: vision
-  [91/212] GUSM: vision
-  [92/212] PASM: vision
-  [93/212] GSPM: vision
-  [94/212] NCML: vision
-  [95/212] SZTM: vision
-  [96/212] SERT: vision
-  [97/212] ASTM: vision
-  [98/212] JATM: vision
+  [4/81] CTM: unresolved
+  [5/81] PIM: unresolved
+  [6/81] SLM: unresolved
+  [7/81] POML: unresolved
+  [8/81] FIL: vision
+  [9/81] FRCL: unresolved
+  [10/81] OBOY: unresolved
+  [11/81] SSGC: unresolved
+  [12/81] CLVL: unresolved
+  [13/81] KEL: unresolved
+  [14/81] JKSM: unresolved
+  [15/81] HUMNL: unresolved
+  [16/81] TSPL: unresolved
+INFO: 16/81 processed -- 0 via text, 1 via vision
+  [17/81] MFFL: unresolved
+  [18/81] IML: unresolved
+  [19/81] CFL: unresolved
+  [20/81] CTM: unresolved
+  [21/81] DADX: unresolved
+  [22/81] BAPL: unresolved
+  [23/81] STJT: unresolved
+  [24/81] KHTC: unresolved
+  [25/81] GVGL: unresolved
+  [26/81] BFAGRO: unresolved
+  [27/81] GHGL: unresolved
+  [28/81] FZCM: unresolved
+  [29/81] MUBT: unresolved
+  [30/81] HTL: unresolved
+  [31/81] SFL: unresolved
+  [32/81] ARMG: unresolved
+INFO: 32/81 processed -- 0 via text, 1 via vision
+  [33/81] AKGL: unresolved
+  [34/81] ALTN: unresolved
+  [35/81] IDRT: unresolved
+  [36/81] NATF: unresolved
+  [37/81] JUBS: unresolved
+  [38/81] GTYR: unresolved
+  [39/81] PAKD: unresolved
+  [40/81] KHTC: unresolved
+  [41/81] MARI: unresolved
+  [42/81] PCAL: unresolved
+  [43/81] PAKD: unresolved
+  [44/81] GTYR: unresolved
+  [45/81] PECO: unresolved
+  [46/81] TELE: unresolved
+  [47/81] LCI: unresolved
+  [48/81] SANE: unresolved
+INFO: 48/81 processed -- 0 via text, 1 via vision
+  [49/81] CHBL: unresolved
+  [50/81] QUET: unresolved
+  [51/81] SSGC: unresolved
+  [52/81] OLPL: unresolved
+  [53/81] KCL: unresolved
+  [54/81] THCCL: unresolved
+  [55/81] ASC: unresolved
+  [56/81] PRL: unresolved
+  [57/81] THALL: unresolved
 Cannot set non-stroke color: /'P0' is an invalid float value
-  [99/212] BWCL: unresolved
-  [100/212] SAZEW: vision
-INFO: 100/212 processed -- 5 via text, 37 via vision
-  [101/212] MARI: vision
-  [102/212] PIAHCLA: vision
-  [103/212] INDU: vision
-  [104/212] SNGP: unresolved
-  [105/212] PRL: unresolved
-  [106/212] BWHL: vision
-  [107/212] BLUEX: unresolved
-  [108/212] AGIL: vision
-  [109/212] ACPL: vision
-  [110/212] GADT: vision
-  [111/212] LOADS: text
-  [112/212] DOL: vision
-  [113/212] FSWL: unresolved
-  [114/212] FIL: unresolved
-  [115/212] ATRL: text
-  [116/212] POL: vision
-  [117/212] SAZEW: vision
-  [118/212] APL: vision
-  [119/212] PGLC: vision
-  [120/212] AHTM: vision
-INFO: 120/212 processed -- 7 via text, 50 via vision
-  [121/212] MIRKS: vision
-  [122/212] BML: text
-  [123/212] FLYNG: vision
-  [124/212] PAKL: vision
-  [125/212] BNL: vision
-  [126/212] HUMNL: vision
-  [127/212] QTECH: vision
-  [128/212] RPL: vision
-  [129/212] QTECH: vision
-/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname M identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
-  warnings.warn("tzname {tzname} identified but not understood.  "
-  [130/212] WASL: text
-  [131/212] YOUW: vision
-  [132/212] GEMPAPL: vision
-  [133/212] KHTC: text
-  [134/212] BFMOD: vision
-  [135/212] ZAHID: vision
-  [136/212] KSTM: vision
-  [137/212] CPHL: vision
-  [138/212] GCIL: vision
-  [139/212] LUCK: vision
-  [140/212] MLCF: unresolved
-INFO: 140/212 processed -- 10 via text, 66 via vision
-  [141/212] MARI: vision
-  [142/212] AHL: text
-  [143/212] HUBC: unresolved
-  [144/212] HATM: vision
-  [145/212] LCI: vision
-  [146/212] TPLT: unresolved
-  [147/212] TPL: unresolved
-  [148/212] TPLP: vision
-  [149/212] SEPL: vision
-  [150/212] JUBS: vision
-  [151/212] DMC: vision
-  [152/212] AKGL: vision
-  [153/212] GEMNETS: text
-  [154/212] HAEL: vision
-  [155/212] NEXT: vision
-  [156/212] LSEFSL: text
-  [157/212] SSML: vision
-  [158/212] LSECL: text
-  [159/212] KOHE: vision
-  [160/212] LIVEN: vision
-INFO: 160/212 processed -- 14 via text, 79 via vision
-  [161/212] JLICL: vision
-  [162/212] PAKD: vision
-  [163/212] DSL: vision
-  [164/212] ZUMA: text
-  [165/212] ICIBL: vision
-  [166/212] JVDC: text
-  [167/212] PRL: vision
-  [168/212] HUBC: text
-  [169/212] SEPL: vision
-  [170/212] BPL: vision
-  [171/212] OGDC: vision
-  [172/212] SUTM: text
-  [173/212] IDYM: text
-  [174/212] RUPL: vision
-  [175/212] SMCPL: vision
-  [176/212] CLOV: vision
-  [177/212] UPFL: vision
-  [178/212] REDCO: vision
-  [179/212] AASM: vision
-  [180/212] SAZEW: vision
-INFO: 180/212 processed -- 19 via text, 94 via vision
-  [181/212] PIAHCLA: vision
-  [182/212] COLG: unresolved
-  [183/212] SAZEW: vision
-  [184/212] FATIMA: vision
-  [185/212] SML: vision
-  [186/212] PAKOXY: vision
-  [187/212] PECO: vision
-  [188/212] FZCM: vision
-  [189/212] NRSL: unresolved
-  [190/212] GGL: vision
-  [191/212] GGGL: vision
-  [192/212] ZTL: vision
-  [193/212] BWHL: unresolved
-  [194/212] ITANZ: unresolved
-  [195/212] GCWL: vision
-  [196/212] GCIL: vision
-  [197/212] HATM: vision
-  [198/212] TRSM: vision
-  [199/212] BIFO: vision
-  [200/212] ARPL: unresolved
-INFO: 200/212 processed -- 19 via text, 109 via vision
-  [201/212] SAPT: unresolved
-  [202/212] PCAL: unresolved
-  [203/212] PRL: unresolved
-  [204/212] PRL: unresolved
-  [205/212] GCIL: unresolved
-  [206/212] NCL: text
-  [207/212] INDU: unresolved
-  [208/212] OLPM: vision
-  [209/212] PPL: vision
-  [210/212] LCI: unresolved
-  [211/212] PCAL: unresolved
-  [212/212] PINL: unresolved
+  [58/81] BWCL: unresolved
+  [59/81] SNGP: unresolved
+  [60/81] PRL: unresolved
+  [61/81] BLUEX: unresolved
+  [62/81] FSWL: unresolved
+  [63/81] FIL: unresolved
+  [64/81] MLCF: unresolved
+INFO: 64/81 processed -- 0 via text, 1 via vision
+  [65/81] HUBC: unresolved
+  [66/81] TPLT: unresolved
+  [67/81] TPL: unresolved
+  [68/81] COLG: unresolved
+  [69/81] NRSL: unresolved
+  [70/81] BWHL: unresolved
+  [71/81] ITANZ: unresolved
+  [72/81] ARPL: unresolved
+  [73/81] SAPT: unresolved
+  [74/81] PCAL: unresolved
+  [75/81] PRL: unresolved
+  [76/81] PRL: unresolved
+  [77/81] GCIL: unresolved
+  [78/81] INDU: unresolved
+  [79/81] LCI: unresolved
+  [80/81] PCAL: unresolved
+INFO: 80/81 processed -- 0 via text, 1 via vision
+  [81/81] PINL: unresolved
 
-DONE: 131/212 resolved this run (20 via text, 111 via vision), 1096 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (2230s)
+DONE: 1/81 resolved this run (0 via text, 1 via vision), 1097 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (870s)
 
 ============================================================
 RUNNING: Sentiment classification
@@ -652,7 +515,7 @@ INFO: BPM6 {'current_account': {'2025-09-30': 133.0, '2026-08-31': -73.0, '2026-
   cpi_yoy          3 values, latest ('2026-09', 10.26)
   policy_rate      2 values, latest ('2026-09-14', 11.5)
 DONE: 0 values added or revised
-OK    Fetch macro values from SBP and PBS (2s)
+OK    Fetch macro values from SBP and PBS (3s)
 
 ============================================================
 RUNNING: Attach macro values (SBP/PBS first, FinHisaab fallback)
@@ -671,10 +534,10 @@ INFO: no prior week in history yet -- this is either the first run, or last week
 INFO: confirmed event for 2026-10-09
 
 DONE: written to events_merged.json
-OK    Confirm SBP FX reserves (real values) (3s)
+OK    Confirm SBP FX reserves (real values) (4s)
 
 ============================================================
-PIPELINE SUMMARY (40.6 min total)
+PIPELINE SUMMARY (17.4 min total)
 ============================================================
   OK    sbp
   OK    pbs

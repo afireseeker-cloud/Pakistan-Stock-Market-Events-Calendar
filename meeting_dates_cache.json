@@ -5752,9 +5752,10 @@
     "method": "text"
   },
   "psx-annc-FIL-2026-10-12-1109": {
-    "scheduled_date": null,
+    "scheduled_date": "2026-11-27",
     "scheduled_time": null,
-    "method": null
+    "method": "vision",
+    "model": "gemini-3.5-flash-lite"
   },
   "psx-annc-FSWL-2026-10-12-1106": {
     "scheduled_date": "2026-11-27",
