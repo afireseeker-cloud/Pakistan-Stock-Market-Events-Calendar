@@ -3,10 +3,164 @@ $ git fetch -q --depth 1 origin gh-pages && git show origin/gh-pages:events_merg
 
 $ python fetch_macro_values.py live.json --out macro_values.json
 
-python: can't open file '/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/fetch_macro_values.py': [Errno 2] No such file or directory
+INFO: BPM6 {'current_account': {'2025-09-30': 133.0, '2026-08-31': -73.0, '2026-09-30': -356.0}, 'remittances': {'2025-09-30': 3184.0, '2026-08-31': 3657.0, '2026-09-30': 3588.0}}
+  remittances      3 values, latest ('2026-09-30', 3588.0)
+  current_account  3 values, latest ('2026-09-30', -356.0)
+  cpi_yoy          3 values, latest ('2026-09', 10.26)
+  policy_rate      2 values, latest ('2026-09-14', 11.5)
+DONE: 11 values added or revised
 
-Traceback (most recent call last):
-  File "/home/runner/work/Pakistan-Stock-Market-Events-Calendar/Pakistan-Stock-Market-Events-Calendar/probe_sources.py", line 6, in <module>
-    print(open("macro_values.json").read()[:4000])
-          ^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'macro_values.json'
+{
+  "series": {
+    "remittances": {
+      "unit": "USD million",
+      "label": "Workers' remittances (SBP BPM6 summary)",
+      "observations": [
+        {
+          "period": "2025-09-30",
+          "value": 3184.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3657.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3588.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        }
+      ],
+      "last_sync": "2026-10-18T14:29:10Z"
+    },
+    "current_account": {
+      "unit": "USD million",
+      "label": "Current account balance (SBP BPM6 summary)",
+      "observations": [
+        {
+          "period": "2025-09-30",
+          "value": 133.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-08-31",
+          "value": -73.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-09-30",
+          "value": -356.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        }
+      ],
+      "last_sync": "2026-10-18T14:29:10Z"
+    },
+    "cpi_yoy": {
+      "unit": "percent",
+      "label": "National CPI YoY (PBS press release)",
+      "observations": [
+        {
+          "period": "2026-07",
+          "value": 9.2,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-July-2026.pdf"
+        },
+        {
+          "period": "2026-08",
+          "value": 11.15,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-August-2026.pdf"
+        },
+        {
+          "period": "2026-09",
+          "value": 10.26,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-September-2026.pdf"
+        }
+      ],
+      "last_sync": "2026-10-18T14:29:24Z"
+    },
+    "policy_rate": {
+      "unit": "percent",
+      "label": "SBP policy rate (Monetary Policy Statement)",
+      "observations": [
+        {
+          "period": "2026-07-27",
+          "value": 11.5,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/assets/document/publications/MPS-July-2026-Eng.pdf"
+        },
+        {
+          "period": "2026-09-14",
+          "value": 11.5,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/assets/document/publications/MPS-Sep-2026-Eng.pdf"
+        }
+      ],
+      "last_sync": "2026-10-18T14:29:36Z"
+    }
+  },
+  "_about": "Macro values fetched directly from SBP and PBS by fetch_macro_values.py. attach_finhisaab_values.py prefers these over data/finhisaab_values.json.",
+  "generated_at": "2026-10-18T14:29:36Z",
+  "failures": []
+}
+$ python fetch_psx_announcements.py --from 2026-10-01 --to 2026-10-18 --out a.jsonl
+
+neous', 'DISCLOSURE OF MATERIAL INFORMATION']
+INFO: 2 cancelled/revoked events detected: [('STPL', 'Notice of Annual General Meeting'), ('SPAC1', 'SPAC1 | LSE SPAC-I Limited Notice of Ann')]
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Transmission o f Annual Audited Accounts for the y', 'Transmission of Annual Audited Accounts for the ye']
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Newspaper Cuttings - GHANI CHEMICAL INDUSTRIES LIM', 'Newspaper Cuttings', 'Progress Report September-2026']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Resignation Of Company Secretary', 'Progress Report', 'Rebalancing of Alfalah Consumer Index ETF (ACIETF)']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Registered Office', 'Disclosure of Material Information', 'Material Information']
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Financial Result for the Year Ended June 30, 2026', 'Reporting of shares purchased (buy-back) by Engro ', 'SZTM | Shahzad Textile Mills Limited NOTICE OF ANN']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting for the year ended', 'Notice u/s 159(4) of The Companies Act, 2017 Regar', 'Financial Result for the year Ended 2026-06-30']
+INFO: 1 cancelled/revoked events detected: [('STL', 'Notice of 47th Annual General Meeting, S')]
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Mandatory Shariah Disclosures for the Year Ended -', 'Appointment of Chairman and Chief Executive Office', 'Change of Independent Director/Chairman of the Aud']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Credit of Unpaid Right Shares into CDS in Book-Ent', 'Notice of Declaration of Letter of Rights of EFU L', 'Notice of Annual Genera Meeting prior its publicat']
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Resignation of Drirector', 'Quarterly Progress Report', 'Notice of Annual Review Meeting']
+INFO: 2 cancelled/revoked events detected: [('UBDL', 'Notice of Annual General Meeting'), ('GEMPAPL', 'Notice of Annual General Meeting')]
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'Issuance of Ordinary Shares of Tariq Corporation L', 'Miscellaneous Information']
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Submission of Final Offer Documents of Right Issue', 'DISCLOSURE OF MATERIAL INFORMATION', 'Financial Result for the Year Ended June-2026']
+INFO: 1 cancelled/revoked events detected: [('ALTN', 'Notice of Annual General Meeting')]
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DECISION OF THE BOARD - GHANI CHEMWORLD LIMITED', 'Un usual movement of shares', 'Dispatch/Credit of Remaining Bonus Shares under Se']
+INFO: 2/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sustainability Report for the year ended June 30, ', 'Annual Free-Float Certificate duly verified by the']
+INFO: 3 cancelled/revoked events detected: [('LIVEN', 'Notice of Annual General Meeting'), ('PIOC', 'Notice of Extraordinary General Meeting'), ('FZCM', 'Submission of Notice of Annual General M')]
+INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'Appointment of New Independent Director', 'Quarterly Progress Report - Q1 2027, Ended Septemb']
+INFO: 2 cancelled/revoked events detected: [('GATI', 'Notice of 46th Annual General Meeting'), ('ICL', 'Notice of Annual General Meeting')]
+INFO: 3/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Quarterly Progress Report for the Quarter ended Se', 'RESIGNATION AND APPOINTMENT OF CHIEF FINANCIAL OFF', 'Grant of Shariah Compliance Certificate']
+INFO: 1 cancelled/revoked events detected: [('JKSM', 'Notice of Corporate Briefing Session')]
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice Under Section 159(4) of the Companies Act, ', 'General Meetings / Briefing Sessions', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 3 cancelled/revoked events detected: [('SRR', 'Emergent Board Meeting / Closed Period'), ('DCR', 'Emergent Board Meeting / Closed Period'), ('DAAG', 'Board Meeting')]
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Financial Result for the Year ended June 30, 2026', 'Material Information']
+INFO: 1 cancelled/revoked events detected: [('ECOP', 'Notice of the 35th Annual General Meetin')]
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Newspaper Cuttings - GHANI CHEMICAL INDUSTRIES LIM', 'Mandatory Shariah Disclosures for the Year Ended 2', 'Resignation of Chief Financial Officer']
+INFO: 1 cancelled/revoked events detected: [('PAKD', 'Board Meeting Rescheduled')]
+INFO: 3/24 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting for the Certificat', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
+
+DONE: 1457 unique events written to a.jsonl (17 duplicates dropped)
+
+1457 [('results', 432), ('agm', 387), ('other_announcement', 273), ('board_meeting', 151), ('dividend', 70), ('director_disclosure', 66), ('corporate_briefing', 58), ('book_closure', 13), ('governance_change', 7)]
+[('PRET', '2026-10-16', 'Board meeting for the period ended 30-09-2026'), ('EPQL', '2026-10-16', 'Board Meeting in Progress'), ('BBFL', '2026-10-16', 'Board Meeting'), ('INDU', '2026-10-16', 'BOARD MEETING AND ANNOUNCEMENT OF CLOSED PERIOD'), ('GWLC', '2026-10-16', 'Board Meeting'), ('NEXT', '2026-10-16', 'Board Meeting'), ('BIPL', '2026-10-16', 'Board Meeting - BankIslami Pakistan Limited'), ('JDMT', '2026-10-16', 'Board Meeting'), ('LCI', '2026-10-16', 'Board Meeting / Closed Period'), ('ALTN', '2026-10-16', 'Board Meeting'), ('ASIC', '2026-10-16', 'Board Meeting'), ('ALAC', '2026-10-16', 'Board Meeting'), ('FNBM', '2026-10-16', 'Notice of Board Meeting'), ('NATF', '2026-10-16', 'BOARD MEETING'), ('BOP', '2026-10-16', 'Board Meeting')]
+$ python fetch_psx_payouts.py --out p.jsonl
+
+INFO: page 1 (offset=0): 26 rows
+INFO: page 21 (offset=500): 26 rows
+INFO: reached last page at offset=700 (24 rows)
+WARNING: skipped malformed payout row: unexpected token count (1) in book closure cell: '08/09/2026  - 0/09//2026 '
+INFO: 1/25 rows skipped as malformed
+WARNING: skipped malformed payout row: time data '19/25/2026' does not match format '%d/%m/%Y'
+INFO: 1/25 rows skipped as malformed
+WARNING: skipped malformed payout row: time data '13/13/2025' does not match format '%d/%m/%Y'
+INFO: 1/25 rows skipped as malformed
+
+DONE: 716 unique payout events written to p.jsonl (4 duplicates dropped)
+
+716 [('book_closure', 693), ('dividend_announced', 23)]
+[('SSOM', '2026-10-22', 'S.S.Oil Mills Limited — 50% final cash dividend'), ('IMAGE', '2026-10-23', 'Image Pakistan Limited — 10% final cash dividend'), ('HUMNL', '2026-10-21', 'Hum Network Limited — 50%)F) (D)'), ('MSOTPS', '2026-10-20', 'Masood Textile (Pref) — 1.29% (D)'), ('BFMOD', '2026-10-22', 'B.F. Modaraba — 5% final cash dividend'), ('AHTM', '2026-10-21', 'Ahmad Hassan Textile Mills Limited — 7.50% final cash divide'), ('GIL', '2026-10-19', 'Good Luck Industries Ltd. — 30% final cash dividend'), ('DIIL', '2026-10-20', 'Diamond Industries Limited — 10% final cash dividend'), ('FZCM', '2026-10-22', 'Fazal Cloth Mills Limited — 150% final cash dividend'), ('KOHTM', '2026-10-21', 'Kohat Textile Mills Limited — 15% final cash dividend'), ('SMCPL', '2026-10-20', 'Safe Mix Concrete Limited — 30% final cash dividend'), ('ZAL', '2026-10-22', 'Zarea Limited — 100% final cash dividend'), ('MSOT', '2026-10-20', 'Masood Textile Mills Limited — 10% final cash dividend'), ('NML', '2026-10-21', 'Nishat Mills Limited — 20% final cash dividend'), ('AHCL', '2026-10-21', 'Arif Habib Corporation Limited — 125% final cash dividend')]
