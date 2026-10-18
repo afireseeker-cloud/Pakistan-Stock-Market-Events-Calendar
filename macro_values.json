@@ -1,0 +1,101 @@
+{
+  "series": {
+    "remittances": {
+      "unit": "USD million",
+      "label": "Workers' remittances (SBP BPM6 summary)",
+      "observations": [
+        {
+          "period": "2025-09-30",
+          "value": 3184.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3657.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3588.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        }
+      ],
+      "last_sync": "2026-10-18T15:38:36Z"
+    },
+    "current_account": {
+      "unit": "USD million",
+      "label": "Current account balance (SBP BPM6 summary)",
+      "observations": [
+        {
+          "period": "2025-09-30",
+          "value": 133.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-08-31",
+          "value": -73.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-09-30",
+          "value": -356.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        }
+      ],
+      "last_sync": "2026-10-18T15:38:36Z"
+    },
+    "cpi_yoy": {
+      "unit": "percent",
+      "label": "National CPI YoY (PBS press release)",
+      "observations": [
+        {
+          "period": "2026-07",
+          "value": 9.2,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-July-2026.pdf"
+        },
+        {
+          "period": "2026-08",
+          "value": 11.15,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-August-2026.pdf"
+        },
+        {
+          "period": "2026-09",
+          "value": 10.26,
+          "source": "pbs",
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-September-2026.pdf"
+        }
+      ],
+      "last_sync": "2026-10-18T15:38:45Z"
+    },
+    "policy_rate": {
+      "unit": "percent",
+      "label": "SBP policy rate (Monetary Policy Statement)",
+      "observations": [
+        {
+          "period": "2026-07-27",
+          "value": 11.5,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/assets/document/publications/MPS-July-2026-Eng.pdf"
+        },
+        {
+          "period": "2026-09-14",
+          "value": 11.5,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/assets/document/publications/MPS-Sep-2026-Eng.pdf"
+        }
+      ],
+      "last_sync": "2026-10-18T15:38:54Z"
+    }
+  },
+  "_about": "Macro values fetched directly from SBP and PBS by fetch_macro_values.py. attach_finhisaab_values.py prefers these over data/finhisaab_values.json.",
+  "generated_at": "2026-10-18T15:38:55Z",
+  "failures": []
+}

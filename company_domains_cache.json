@@ -2673,5 +2673,100 @@
     "website": "http://www.tasdeeq.com",
     "domain": "tasdeeq.com",
     "resolved": true
+  },
+  "AMTEX": {
+    "website": "http://www.amtextile.com",
+    "domain": "amtextile.com",
+    "resolved": true
+  },
+  "ARUJ": {
+    "website": "http://www.aruj.com",
+    "domain": "aruj.com",
+    "resolved": true
+  },
+  "BAHLTFC9": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "BELA": {
+    "website": "http://www.belaautomotivesltd.com",
+    "domain": "belaautomotivesltd.com",
+    "resolved": true
+  },
+  "BFMOD": {
+    "website": "http://www.bfmodaraba.com.pk",
+    "domain": "bfmodaraba.com.pk",
+    "resolved": true
+  },
+  "DBSL": {
+    "website": "http://www.mhdadabhoy.com",
+    "domain": "mhdadabhoy.com",
+    "resolved": true
+  },
+  "DFML": {
+    "website": "http://www.yousufdewan.com",
+    "domain": "yousufdewan.com",
+    "resolved": true
+  },
+  "DMC": {
+    "website": "http://www.dmtextile.com.pk",
+    "domain": "dmtextile.com.pk",
+    "resolved": true
+  },
+  "DWTM": {
+    "website": "http://www.yousufdewan.com",
+    "domain": "yousufdewan.com",
+    "resolved": true
+  },
+  "FEM": {
+    "website": "http://www.firstequitymodaraba.com.pk",
+    "domain": "firstequitymodaraba.com.pk",
+    "resolved": true
+  },
+  "IMAGE": {
+    "website": "http://imagepakistan.net",
+    "domain": "imagepakistan.net",
+    "resolved": true
+  },
+  "MSOTPS": {
+    "website": null,
+    "domain": null,
+    "resolved": false
+  },
+  "NATM": {
+    "website": "http://www.nadeem.com.pk",
+    "domain": "nadeem.com.pk",
+    "resolved": true
+  },
+  "NNAR": {
+    "website": "http://www.arifhabibdolmenreit.com",
+    "domain": "arifhabibdolmenreit.com",
+    "resolved": true
+  },
+  "PASL": {
+    "website": "http://www.pervezahmed.net",
+    "domain": "pervezahmed.net",
+    "resolved": true
+  },
+  "RPL": {
+    "website": "http://www.roshanpackages.com.pk",
+    "domain": "roshanpackages.com.pk",
+    "resolved": true
+  },
+  "SGABL": {
+    "website": "http://www.sgabl.com.pk",
+    "domain": "sgabl.com.pk",
+    "resolved": true
+  },
+  "SRR": {
+    "website": "http://www.arifhabibdolmenreit.com",
+    "domain": "arifhabibdolmenreit.com",
+    "resolved": true
+  },
+  "SSOM": {
+    "website": "http://www.ssgroup.pk",
+    "domain": "ssgroup.pk",
+    "resolved": true
   }
 }
