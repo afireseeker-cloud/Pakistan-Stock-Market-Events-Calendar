@@ -170,6 +170,11 @@ def drop_finhisaab_duplicates(events: list[dict]) -> tuple[list[dict], int]:
 
 def enrich_from_finhisaab(e: dict, fh: dict) -> None:
     p, fp = e.setdefault("payload", {}), fh.get("payload") or {}
+    # FinHisaab types meetings from structured data; trust it over a PSX
+    # title that fell through to a generic type
+    if (fh.get("type") in ("board_meeting", "agm", "corporate_briefing")
+            and e.get("type") in ("other_announcement", "results")):
+        e["type"] = fh["type"]
     if (fp.get("date_source") and not p.get("date_source")
             and fh.get("type") == e.get("type")):
         p["filed_date"] = e["date"]

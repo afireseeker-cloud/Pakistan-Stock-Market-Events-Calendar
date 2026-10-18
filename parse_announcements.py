@@ -46,6 +46,16 @@ CLASSIFICATION_RULES = [
     # Without this, the results rule below would misclassify it.
     ("board_meeting", re.compile(r"board meeting.*other than.*results|other than.*financial results", re.I)),
     ("agm", re.compile(r"\b(agm|annual general meeting|eogm|extraordinary general meeting)\b", re.I)),
+    # A NOTICE of a board meeting is a future meeting even when its title
+    # names the agenda ("Board Meeting for the Announcement of Financial
+    # Results..."). Classed as results it showed on the filing day as if the
+    # results were out, and extract_meeting_dates.py never looked up the
+    # real meeting date. Now it is a board_meeting with
+    # payload.will_consider_results set; the results themselves arrive later
+    # as their own "Financial Results for..." filing, which is still results.
+    ("board_meeting", re.compile(
+        r"board meeting|meeting of the board|board of directors.{0,30}meeting|"
+        r"emergent meeting", re.I)),
     ("dividend", re.compile(r"dividend", re.I)),
     # checked BEFORE the generic board_meeting rule below -- real PSX
     # titles very commonly combine both ("Board Meeting for the
@@ -56,7 +66,7 @@ CLASSIFICATION_RULES = [
     # reaches the Earnings tab at all -- confirmed against real captured
     # data (ENGROH's own filing uses exactly this phrasing).
     ("results", re.compile(
-        r"financial results|quarterly results|annual results|"
+        r"financial results?\b|quarterly results|annual results|"
         r"financial statements|quarterly financial|"
         r"quarterly report|half.?yearly report|annual report", re.I)),
     ("board_meeting", re.compile(r"board meeting", re.I)),
@@ -176,6 +186,10 @@ def parse_row(tr) -> dict:
         "company_name": company_name,
         "source_url": attachments["pdf_url"] or attachments["image_url"],
         "payload": {
+            "will_consider_results": (event_type == "board_meeting"
+                                      and not re.search(r"other than", title, re.I)
+                                      and bool(re.search(r"results|financial statements|accounts",
+                                                         title, re.I))) or None,
             "pdf_url": attachments["pdf_url"],
             "image_url": attachments["image_url"],
             "filed_time": time_24h,

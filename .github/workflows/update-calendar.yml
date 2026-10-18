@@ -46,6 +46,11 @@ on:
 permissions:
   contents: write
 
+# a manual run and the nightly run queue instead of racing to publish gh-pages
+concurrency:
+  group: update-calendar
+  cancel-in-progress: false
+
 jobs:
   update-calendar:
     runs-on: ubuntu-latest
