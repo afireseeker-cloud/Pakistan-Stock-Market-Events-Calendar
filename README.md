@@ -14,6 +14,8 @@ A calendar tracker for Pakistan Stock Exchange events — monetary policy, infla
 | PSX payouts | `fetch_psx_payouts.py` + `parse_payouts.py` | Dividends, book closures, computed ex-dates and last-buy-dates |
 | PSX notices | `fetch_psx_announcements.py --type E` + `parse_psx_notices.py` | IPOs (subscription, book building, prospectus, listing), delistings, trading halts |
 | SBP and PBS values | `fetch_macro_values.py` | Actual and prior values: remittances and current account (SBP BPM6 workbook), CPI YoY (PBS press release), policy rate (SBP monetary policy statement) |
+| Broker expectations | `fetch_expectations.py` | Expected CPI YoY and policy rate for the next release or meeting within 10 days, from brokerage previews found with Gemini's Google Search grounding; blank unless a brokerage is named (cached in `expectations.json` on gh-pages) |
+| Portfolio tracker feed | `export_upcoming.py` | `upcoming.json` on gh-pages: upcoming company and macro events with last and expected values, read by the tracker's pkdata Worker for its Coming Up list |
 | FinHisaab (weekly fallback) | `ingest_finhisaab_announcements.py`, `data/finhisaab_values.json` | Fills company events and macro values the direct sources missed |
 
 All sources normalize into one shared event schema (see below) and merge via `merge_events.py`.

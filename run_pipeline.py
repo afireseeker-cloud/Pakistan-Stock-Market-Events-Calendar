@@ -279,6 +279,13 @@ def main():
     results["finhisaab_values"] = run_step(
         "Attach macro values (SBP/PBS first, FinHisaab fallback)", attach_cmd)
 
+    # Broker expectations for the next CPI release and MPC decision
+    # (Gemini with Google Search grounding; blank unless a brokerage is named)
+    results["expectations"] = run_step(
+        "Broker expectations for CPI and MPC",
+        [sys.executable, "fetch_expectations.py", MERGED_FILE, "--out", MERGED_FILE],
+    )
+
     # FX reserves are not in FinHisaab, so this scraper stays
     if not args.skip_fx_reserves:
         results["fx_reserves_confirm"] = run_step(
@@ -288,6 +295,13 @@ def main():
     else:
         print("SKIP  FX reserves confirm (--skip-fx-reserves)", file=sys.stderr)
         results["fx_reserves_confirm"] = "skip"
+
+    # Compact slice for the portfolio tracker's "Coming Up" list (read by the
+    # pkdata Worker); published next to events_merged.json
+    results["upcoming_export"] = run_step(
+        "Export upcoming.json for the portfolio tracker",
+        [sys.executable, "export_upcoming.py", MERGED_FILE, "--out", "upcoming.json"],
+    )
 
     # ---------- summary ----------
     total_elapsed = time.time() - pipeline_start
