@@ -12,7 +12,7 @@ RUNNING: PBS calendar
 ============================================================
 
 
--- 95 estimated events generated (2026-07-21 to 2027-10-19) --
+-- 95 estimated events generated (2026-07-22 to 2027-10-20) --
 OK    PBS calendar (0s)
 
 ============================================================
@@ -20,7 +20,7 @@ RUNNING: PAMA calendar
 ============================================================
 
 
--- 15 events generated (2026-07-21 to 2027-10-19) --
+-- 15 events generated (2026-07-22 to 2027-10-20) --
 OK    PAMA calendar (0s)
 
 ============================================================
@@ -64,7 +64,7 @@ OK    FinHisaab company announcements (fallback) (0s)
 ============================================================
 RUNNING: PSX announcements
 ============================================================
-INFO: fetching 2026-07-21 to 2026-08-20...
+INFO: fetching 2026-07-22 to 2026-08-21...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -86,33 +86,35 @@ INFO: page 18 (offset=850): 51 rows
 INFO: page 19 (offset=900): 51 rows
 INFO: page 20 (offset=950): 51 rows
 INFO: page 21 (offset=1000): 51 rows
-INFO: page 22 (offset=1050): 7 rows
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['MATERIAL INFORMATION', 'Credit of Shares Other Than Right into CDS', 'BAHL - Disclosure of Material Information']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Clippings of Newspapers - Placement of Half Yearly', 'Material Information', 'Dispatch of Letter of Rights']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Credit of unpaid rights into CDS', 'Material Information', 'Submission of Final Offer Document of 56% Rights I']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sukuk - VII - Redemption', 'Intimation for extension in timeline for Public An', 'Material Information']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE UNDER REGULATION 5.6.6A OF THE PSX REGU', 'Change of Registered Office', 'FMR of Meezan Pakistan Exchange Traded Fund for th']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['STL | Supernet Technologies Limited Right Issue 85', 'Disclosure regarding SECP Order in Relation to the', 'Appointment of Chief Executive Officer']
+INFO: page 22 (offset=1050): 23 rows
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NBP | National Bank of Pakistan Appointment of Pre', 'Declaration of Right Issue', 'Transmission of Annual Financials of AL Habib Fund']
+INFO: 1 cancelled/revoked events detected: [('WTL', 'Board Meeting Notice')]
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Expiry of Tenure of Mr. Rehmat Ali Hasnie As Presi', '300% RIGHT ISSUE OF RS.10/- PER SHARE (AT PAR).', 'FINAL PROGRESS REPORT ON UTILIZATION OF PROCEEDS O']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['POSTPONEMENT OF ELECTION OF DIRECTORS UNDER SECTIO', 'Unusual Movement in the Price of the Shares of D S', 'Dispatch of Physical Letter of Rights and Credit o']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Declaration of Letter of Rights of S.G. ', 'Unusual Movement in Price of the Shares of Baba Fa', 'Material Information']
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Sukuk - VII - Redemption', 'Intimation for extension in timeline for Public An']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Misc', 'DISCLOSURE UNDER REGULATION 5.6.6A OF THE PSX REGU']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Update on Pending Matters', 'Material Information', 'FPRM | First Paramount Modaraba Right Issue 50% at']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Declaration of LOR of FPRM as a CDS Elig', 'Resignation of Company Secretary and Chief Legal O', 'Notice of Declaration of Letter of Rights of STL a']
 INFO: 1 cancelled/revoked events detected: [('PPL', 'Presentation of Trades in the Board of D')]
-INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information - VIS Reaffirms Entity Rating', 'Final Offer Document - Right Issue', 'MATERIAL INFORMATION -DISCLOSURE OF INFORMATION RE']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Unusual Movement in Volume of the Shares of Suraj ', 'Approval Granted by Securities and Exchange Commis']
-INFO: 3 cancelled/revoked events detected: [('PICT', 'Board Meeting'), ('PPL', 'Calling off the Extraordinary General Me'), ('JLICL', 'Board Meeting')]
-INFO: 21/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Dissemination of Information - Completion of Court', 'RESOLUTIONS PASSED IN EXTRAORDINARY (SPECIAL) GENE', 'UNUSUAL MOVEMENT IN THE VOLUME OF CERTIFICATES OF ']
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NBPGETF | NBP Pakistan Growth ETF Reconstitution o', 'Disclosure of Material Information 07-08-2026', 'Chief Financial Officer']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['MATERIAL INFORMATION', 'MATERIAL INFORMATION', 'Appointment of Company Secretary']
-INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'POSTAL BALLOT PAPER', 'Material Information - Allotment and Credit of Con']
-INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual movement in the volume of the shares of Cr', 'RE-BALANCING OF UBL PAKISTAN ENTERPRISE EXCHANGE T', 'Resignation by a Director']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Share Price Movement', 'Request for Delisting of Samba bank Limited Term F', 'APPROVAL OF BUDGET FOR THE YEAR 2026-27']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NOTICE OF POSTAL BALLOT PAPER AND E-VOTING PROVISI', 'Discovery of Hydrocarbons from Exploratory Well Ra', 'Progress Report']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['ACQUISITION OF LAND FOR DEVELOPMENT OF OIL STORAGE', 'Material Information', 'Director Report']
+INFO: 2 cancelled/revoked events detected: [('PICT', 'Board Meeting'), ('PPL', 'Calling off the Extraordinary General Me')]
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Production and Sales data regarding Four Wheelers ', 'Disclosure under Regulation 5.6.6A of the PSX Regu', 'Dissemination of Information - Completion of Court']
+INFO: 1 cancelled/revoked events detected: [('JLICL', 'Board Meeting')]
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE OF MATERIAL INFORMATION', 'Completion of Rebalancing of JS Momentum Factor Ex', 'Material Information']
+INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sukuk - VIII - Issuance', 'Material Information -', 'Material Information']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Third Corporate Briefing - FFC', 'Change of Registered Office', 'Election of Directors']
+INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Intimation for E-voting and inviting Zoom Meeting ', 'Unusual movement in the volume of the shares of Cr']
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Publication of Extension Period Notice - Public An', 'Material Information', 'Change of Registered Office - Engro Polymer & Chem']
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Advertisement regarding placement of quarterly acc', 'FFC Third Corporate Briefing']
+INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information - Issuance of Sukuk - PKR 10,', 'Allocation of Unsubscribed Right Shares and Approv', 'Unusual movement in the volume of the shares of Sh']
 INFO: 1 cancelled/revoked events detected: [('MARI', 'Board Meeting')]
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Arrangement of Underwriting for Rights Issue', 'Bank statement for payment of profit and Principal', 'Unusual Movement in price of share of GOC (Pak) Li']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['ANNUAL FINANCIAL BUDGET FOR THE FY 2026-27', 'Disclosure of Material Information Exclusive Distr', 'Certified Copy of Resolutions Passed in Extra Ordi']
-INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Certified Copy of Return of Allotment Form-3', 'SHARE PRICE OF SARDAR CHEMICAL INDUSTRIES LTD.', 'Material Information']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['OCTOPUS | Octopus Digital Limited - CERTIFICATE IN', 'Material Information - Transfer of 51% Shares - SE', 'Material Information']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['List of Elected Directors', 'Unusual Movement in Price of Shares of Service Ind', 'Material Information']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sukuk - V - Redemption', 'Notice of Extra Ordinary General Meeting', 'Material Information']
-INFO: 3/6 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NEWSPAPER CLIPPINGS REGARDING VOLUNTARY DELISTING ', 'Material Information', 'Election of Directors']
-INFO: fetching 2026-08-21 to 2026-09-20...
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['inancial Results for the Quarter Ended 30.06.2026', 'Change of Management', 'ANNUAL FINANCIAL BUDGET FOR THE FY 2026-27']
+INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Credit of 116,055,709 Ordinary Shares by way of ot', 'Notice of Extra Ordinary General Meeting', 'Appointment of Chief Executive Officer /Chairman o']
+INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice under Section 159(4) of the Companies Act, ', 'UNUSUAL MOVEMENT I PRICE OF THE SHARES - FSWL', 'UNUSUAL MOVEMENT IN PRICE OF THE SHARES - FIL']
+INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['SUKUK I - CERTIFICATE HOLDERS - FINAL REDEMPTION', 'Material Information', 'Material Information - Declaration of Right Shares']
+INFO: 6/22 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Approval of Appointment Directors - Casual Vacanci', 'Unusual Movement in Price of Shares of Olympia Mil', 'Material Information Regarding Identification of P']
+INFO: fetching 2026-08-22 to 2026-09-21...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -136,39 +138,39 @@ INFO: page 20 (offset=950): 51 rows
 INFO: page 21 (offset=1000): 51 rows
 INFO: page 22 (offset=1050): 51 rows
 INFO: page 23 (offset=1100): 51 rows
-INFO: page 24 (offset=1150): 18 rows
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material information', 'Material Information', 'DECISIONS OF THE BOARD - GHANI CHEMWORLD LIMITED']
+INFO: page 24 (offset=1150): 36 rows
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sustainability Report for the Year Ended June 30, ', 'Resignation of Chief Executive Officer', 'Appointment of Chairman of the Board and Chief Exe']
+INFO: 1 cancelled/revoked events detected: [('CHCC', 'otice of Annual General Meeting')]
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Issuance of No Objection Certificate (NOC) for Rel', 'Material Information', 'Mandatory Shariah Disclosures for the year ended J']
 INFO: 2 cancelled/revoked events detected: [('MLCF', 'MLCF | Maple Leaf Cement Factory Limited'), ('MLCF', 'MLCF-Notice of Extraordinary General Mee')]
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['PUBLIC NOTICE - Intimation Regarding Circulation o', 'Withdrawal of Notices of Intention to Offer for El', 'MANDATORY SHARIAH DISCLOSURE FOR THE HALF YEAR END']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Submission of Mandatory Shariah Disclosures', 'Material Information']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['MANDATORY SHARIAH DISCLOSURE FOR THE HALF YEAR END', 'Reporting of shares purchased (buy-back) by Engro ', 'PUBLIC NOTICE Intimation Regarding Circulation of ']
 INFO: 1 cancelled/revoked events detected: [('ITANZ', 'Notice of Annual General Meeting for the')]
-INFO: 22/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Resignation of Chief Financial Officer', 'Material Information', 'Credit of Right Shares into CDS - Supernet Technol']
-INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual movement in Volume of the Shares of Media ', 'Newspaper Cuttings - GHANI CHEMICAL INDUSTRIES LIM', 'UNUSUAL MOVEMENT IN PRICE OF THE SHARES - FIL']
+INFO: 23/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in Volume of the Shares', 'SUBMISSION OF MANDATORY SHARIAH DISCLOSURES', 'SUBMISSION OF MANDATORY SHARIAH DISCLOSURES']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE PURSUANT TO SECTION 110 OF THE SECURITI', 'Draft Offer Document Bawany Air Products Limited', 'Reporting of shares purchased (buy-back) by Engro ']
 INFO: 2 cancelled/revoked events detected: [('SAPT', 'Board Meeting'), ('PIOC', 'Certified Copy of Resolutions passed in ')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of 189th BOD Meeting', 'Appointment of Head of Internal Audit', 'Shariah Disclosure for the Half Year ended June 30']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['FNEL | First National Equities Limited UNUSUAL MOV', 'Material Information', 'Draft Right Offer Document of LSEFSL Circular u/s ']
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting 2026', 'Shariah Disclosures for Financial Statement 30 Jun', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Allocation of Unsubscribed Right Shares and Approv', 'Allocation of Unsubscribed Right Shares and Approv', 'OPEN FUND inancial Result of 786 Islamic Money Mar']
 INFO: 1 cancelled/revoked events detected: [('PRL', 'Notice of AGM - (Pre-Publication)')]
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Decision of the Board – Declaration of Right Share', 'Right Shares Subscription Status - STL', 'Icrease in Authorized Capital']
-INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['PUBLICATION OF POSTAL BALLOT PAPER AND PROVISION O', 'FMR of Meezan Pakistan Exchange Traded Fund for th', 'PKGI | The Pakistan General Insurance Company Limi']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Resignation of Company Secretary', 'MATERIAL INFORMATION', 'Material Information - Incorporation of LSE SPAC I']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Miscellaneous Information', 'INFORMATION IN RESPECT OF VOLUNTARILY WINDING-UP O', 'Material Information']
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Names of the Candidates and Postal Ballo', 'Clarification regarding stories circulating on Soc', 'Unusual Movement in Volume of the Shares of NETSOL']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice Under Section 159(4) of the Companies Act, ', 'ABL | Allied Bank Limited UNUSUAL MOVEMENT IN VOLU', 'DECLARATION OF RIGHT ISSUE']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Compliance with Clause 5.6.4 (b)', 'INTIMATION OF RELAXATION FROM CONSOLIDATION OF FIN', 'DISCLOSURE OF MATERIAL INFORMATION - GHANI GLOBAL ']
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information - Incorporation of LSE SPAC I', 'Disclosure of Material Information', 'Disclosure Regarding Incorporation of Fazal Gas Di']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Completion of Rebalancing of JS Momentum Factor Ex', 'Reporting of shares purchased (buy-back) by Engro ', 'Transmission of Annual Accounts for the Year Ended']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information- Appointment of Chief Financi', 'Rebalancing of JS Momentum Factor Exchange Traded ', 'Reporting of shares purchased (buy-back) by Engro ']
 INFO: 2 cancelled/revoked events detected: [('INDU', 'Notice of 37th Annual General Meeting'), ('ECOP', 'Intimation of the 153rd Meeting of the B')]
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of the Shares', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
-INFO: 22/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Book Building Results of the Offer for Sale of Nay', 'Resignation of Member Board of Management', 'UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF DIN TE']
-INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE OF MATERIAL INFORMATION - GHANI CHEMICA', 'Change of Director', 'Election of Directors of Pakgen Limited (formerly ']
-INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['EWIC | East West Insurance Company Limited Transmi', 'WTL | Worldcall Telecom Limited Transmission of Qu', 'WAVESAPP | Waves Home Appliances Limited Company B']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['WAVESAPP | Waves Home Appliances Limited - NCCPL N', 'Material Information', 'UNUSUAL MOVEMENT IN THE PRICE AND/OR VOLUME OF SHA']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Placement of Half Yearly Accounts for the period e', 'UNUSUAL MOVEMENT IN THE VOLUME OF THE SHARES OF BE', 'Company Secretary']
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Executive Director', 'Unusual Movement in the Price of the Shares of Arc', 'Material Information']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['General Meetings / Briefing Sessions', 'Annual Environment Excellence Award 2026 by the Na', 'Material Information']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['WAVESAPP | Waves Home Appliances Limited AUDITORS ', 'Credit of Bonus Share Certificates', 'Election of Directors']
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual movement in price of the shares of Aisha S', 'Material Information', 'UNUSUAL MOVEMENT IN PRICE OF THE SHARES OF J.A TEX']
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Material Information regarding Approval of Competi', 'Material Information']
+INFO: 22/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Company Secretary', 'Transmission of Quartely report for the period End', 'UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF M/S LE']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Subscription of Right Shares by Directors and Subs', 'Disclosure of Material Information']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Company Secretary', 'Material Information', 'Transmission of Half Year Report for the Period En']
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF RUPALI', 'Sad Demise of Mrs. Goshi M. Bhandara, Director', 'Unusual Movement in the Price of the Shares of Baw']
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Certified Copy of Resolution(s) passed in Extraodi', 'Unusual Movement in Price of Shares', 'Appointment of Chief Financial Officer Ghani Glass']
 INFO: 1 cancelled/revoked events detected: [('SPAC2', 'Notice of Annual General Meeting of LSE ')]
-INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Head of Internal Audit', 'Financials for the Period Ended June 30, 2026', 'WAVESAPP | Waves Home Appliances Limited (Formerly']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CHANGE OF DIRECTOR', 'MANDATORY SHARIAH DISCLOSURES FOR THE YEAR ENDED J', 'Newspaper Cuttings - Publication of Notices regard']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Financial Officer Ghani Value', 'Proposed Stock Split of Ordinary Shares of ITANZ', 'Appointment of Chief Executive']
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NBP | National Bank of Pakistan Appointment of Pre', 'Declaration of Right Issue', 'Transmission of Annual Financials of AL Habib Fund']
-INFO: 1 cancelled/revoked events detected: [('WTL', 'Board Meeting Notice')]
-INFO: 5/17 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Expiry of Tenure of Mr. Rehmat Ali Hasnie As Presi', '300% RIGHT ISSUE OF RS.10/- PER SHARE (AT PAR).', 'FINAL PROGRESS REPORT ON UTILIZATION OF PROCEEDS O']
-INFO: fetching 2026-09-21 to 2026-10-19...
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Financials for the Period Ended June 30, 2026', 'WAVESAPP | Waves Home Appliances Limited (Formerly', 'Draft Offer Document - Right Issue']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Transmission of 2nd Quarter for the Period Ended 3', 'CHANGE OF TELEPHONE NUMBERS', 'Appointment of Chief Executive Officer']
+INFO: 11/35 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Management', 'Shariah Disclosure for the Half Year ended June 30', 'Dispatch of Letters of Right']
+INFO: fetching 2026-09-22 to 2026-10-20...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -216,34 +218,39 @@ INFO: page 44 (offset=2150): 51 rows
 INFO: page 45 (offset=2200): 51 rows
 INFO: page 46 (offset=2250): 51 rows
 INFO: page 47 (offset=2300): 51 rows
-INFO: page 48 (offset=2350): 26 rows
+INFO: page 48 (offset=2350): 51 rows
+INFO: page 49 (offset=2400): 43 rows
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Declaration of Letter of Right of Bawany', 'COMPLETION OF PURCHASE PERIOD FOR BUY-BACK OF SHAR', 'Co-option of Director of Faysal Bank Limited']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Newspaper Cuttings - Notice u/s 159(4) of the Comp', 'Fraudulent Announcement posted on social media', 'Newspaper Cuttings - Notice u/s 159(4) of the Comp']
+INFO: 1 cancelled/revoked events detected: [('ANTM', 'Notice of Corporate Briefing Session')]
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['PUBLICATION OF BALLOT PAPER IN NEWSPAPERS', 'ELECTION OF DIRECTORS', 'TCORP | Tariq Corporation Limited Auditors Certifi']
 INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CLARIFICATION REGARDING PRODUCTION SUSPENSION AND ', 'NOTICE OF ELECTION OF DIRECTORS AND BALLOT PAPERS ', 'Notice u/s 159(4) of The Companies Act, 2017 Regar']
 INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['General Meetings / Briefing Sessions', 'General Meetings / Briefing Sessions', 'MANDATORY SHARIAH DISCLOSURES FOR THE YEAR ENDED J']
 INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'INTIMATION OF PURCHASE / BUY-BACK OF SHARES BY AGP', 'Material Information']
-INFO: 2 cancelled/revoked events detected: [('DKTM', 'Approval of Extension in Time for Holdin'), ('DMTM', 'Approval of Extension in Time for Holdin')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Auditors Certificate Regarding Subscription of Rig', 'MATERIAL INFORMATION-SALE OF LAND', 'Notice under Section 159(4) of the Companies Act, ']
-INFO: 1 cancelled/revoked events detected: [('DFML', 'Approval of Extension in Time for Holdin')]
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CENI | Century Insurance Company Limited -NCCPL No', 'UBLP ETF Fund Manager Report August 2026', 'Shariah Disclosures for the year ended June 30, 20']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information - Credit of Sha', 'INTIMATION OF PURCHASE / BUY-BACK OF SHARES BY AGP', 'PROGRESS REPORT FOR THE QUARTER ENDED 30-09-2026']
+INFO: 1 cancelled/revoked events detected: [('DKTM', 'Approval of Extension in Time for Holdin')]
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Auditors Certificate Regarding Subscription of Rig', 'MATERIAL INFORMATION-SALE OF LAND', 'Notice under Section 159(4) of the Companies Act, ']
+INFO: 2 cancelled/revoked events detected: [('DMTM', 'Approval of Extension in Time for Holdin'), ('DFML', 'Approval of Extension in Time for Holdin')]
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Shariah Disclosures for the year ended June 30, 20', 'CENI | Century Insurance Company Limited -NCCPL No', 'UBLP ETF Fund Manager Report August 2026']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Miscellaneous', 'Disclosure of Material Information - Credit of Sha', 'INTIMATION OF PURCHASE / BUY-BACK OF SHARES BY AGP']
 INFO: 1 cancelled/revoked events detected: [('BAPL', 'Notice of Closure of Share Transfer Book')]
 INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Ex-Officio Director on the Board of the ', 'Announcement regarding Election of Directors', 'Material Information']
-INFO: 1 cancelled/revoked events detected: [('BAPL', 'Right Issue Ordinary Shares Book Closure')]
+INFO: 2 cancelled/revoked events detected: [('ANTM', 'Corporate briefing Session'), ('BAPL', 'Right Issue Ordinary Shares Book Closure')]
 INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'EFUL - Auditors Certificate Confirming Deposit of ', 'Material Information']
 INFO: 1 cancelled/revoked events detected: [('NICL', 'Board Meeting and Closed Period')]
 INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Presentation of Corportate Briefing Session (CBS) ', 'Newspaper publication (before publication)']
 INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'ANNUAL CERTIFICATE OF FREE FLOAT SIGNED BY THE AUD', 'Fund Manager Report of JS Momentum Factor ETF for ']
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Application for Extension in the period for submis', 'Rebalancing of Alfalah Consumer Index ETF (ACIETF)', 'Material Information']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Election of Directors', 'NEWSPAPER CUTTINGS - PUBLICATION OF NOTICES REGARD', 'PROGRESS REPORT']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['EFUL | EFU Life Assurance Limited -CDC', 'Intimation of Extra Ordinary General Meeting', 'Completion of Rebalancing of JS Momentum Factor Ex']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Application for Extension in the period for submis', 'Rebalancing of Alfalah Consumer Index ETF (ACIETF)', 'Material Information']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Cessation of Directorship of Mr. Manzoor Ahmed, No', 'Election of Directors', 'NEWSPAPER CUTTINGS - PUBLICATION OF NOTICES REGARD']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Progress Report', 'EFUL | EFU Life Assurance Limited -CDC', 'Intimation of Extra Ordinary General Meeting']
 INFO: 2 cancelled/revoked events detected: [('STPL', 'Notice of Annual General Meeting'), ('SPAC1', 'SPAC1 | LSE SPAC-I Limited Notice of Ann')]
 INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Disclosure of Material Information - GHANI GLOBAL ', 'Material Information']
 INFO: 3/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Newspaper Cuttings - GHANI CHEMICAL INDUSTRIES LIM', 'Newspaper Cuttings', 'Progress Report September-2026']
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting June-2026', 'Progress Report', 'Resignation Of Company Secretary']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Registered Office', 'Disclosure of Material Information', 'Material Information']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting June-2026', 'Progress Report', 'Resignation Of Company Secretary']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Change of Registered Office', 'Disclosure of Material Information']
 INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['TRANSMISSION OF ANNUAL FINANCIAL STATEMENT FOR THE', 'Rebalancing of JS Momentum Factor Exchange Traded ', 'Notice of Anual General Meeting']
-INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting for the year ended', 'Notice u/s 159(4) of The Companies Act, 2017 Regar', 'Appointment of Chief Financial Officer']
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting for the year ended', 'Notice u/s 159(4) of The Companies Act, 2017 Regar', 'Appointment of Chief Financial Officer']
 INFO: 1 cancelled/revoked events detected: [('STL', 'Notice of 47th Annual General Meeting, S')]
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['QUARTERLY PROGRESS REPORT', 'Mandatory Shariah Disclosures for the Year Ended -', 'Appointment of Chairman and Chief Executive Office']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of 63rd Annual General Meeting_Post Publica', 'QUARTERLY PROGRESS REPORT', 'Mandatory Shariah Disclosures for the Year Ended -']
 INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Credit of Unpaid Rights into CDS - EFUL', 'Credit of Unpaid Right Shares into CDS in Book-Ent', 'Notice of Declaration of Letter of Rights of EFU L']
 INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Miscellaneous Information', 'TRANSMISSION OF ANNUAL ACCOUNTS FOR THE PERIOD END', 'Resignation of Drirector']
 INFO: 2 cancelled/revoked events detected: [('UBDL', 'Notice of Annual General Meeting'), ('GEMPAPL', 'Notice of Annual General Meeting')]
@@ -253,9 +260,9 @@ INFO: 1 cancelled/revoked events detected: [('ALTN', 'Notice of Annual General M
 INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DECISIONS OF THE BOARD - GHANI GLOBAL HOLDINGS LIM', 'Material Information', 'POST BALLOT PAPER']
 INFO: 3/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Declaration of Letter of Right of LSE Financial Se', 'Material Information', 'Sustainability Report for the year ended June 30, ']
 INFO: 3 cancelled/revoked events detected: [('LIVEN', 'Notice of Annual General Meeting'), ('PIOC', 'Notice of Extraordinary General Meeting'), ('FZCM', 'Submission of Notice of Annual General M')]
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Annual Free-Float Certificate duly verified by the', 'Reporting of shares purchased (buy-back) by Engro ', 'Appointment of New Independent Director']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Annual Free-Float Certificate duly verified by the', 'Reporting of shares purchased (buy-back) by Engro ', 'Appointment of New Independent Director']
 INFO: 2 cancelled/revoked events detected: [('GATI', 'Notice of 46th Annual General Meeting'), ('ICL', 'Notice of Annual General Meeting')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change in the Board', 'Notice of Annual Review Meeting', 'Annual Free-Float Certificate duly verified by the']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Change in the Board', 'Notice of Annual Review Meeting']
 INFO: 1 cancelled/revoked events detected: [('JKSM', 'Notice of Corporate Briefing Session')]
 INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Grant of Shariah Compliance Certificate', 'Notice Under Section 159(4) of the Companies Act, ', 'General Meetings / Briefing Sessions']
 INFO: 3/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Material Information', 'Resignation of Independent Director']
@@ -269,56 +276,55 @@ INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Financial Statement for the year ended 30 June 202', 'Financial Statement for the year ended 30 June 202', 'Financial Statement for the year ended 30 June 202']
 INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Notice of BOD Meeting to consider Annual Accounts ', 'Notice of Annual Review Meeting']
 INFO: 1 cancelled/revoked events detected: [('ECOP', 'Notice of the 35th Annual General Meetin')]
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Proposed Increase in Authorized Share Capital and ', 'MATERIAL INFORMATION', 'Reporting of shares purchased (buy-back) by Engro ']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['change of Auditors', 'Financial Statement for the Year Ended June 30 202', 'Financial Statement for the Year Ended June 30 202']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Financial Statement for the Year Ended June 30 202', 'Financial Statement for the Year Ended June 30 202', 'Financial Statement for the Year Ended June 30 202']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Proposed Increase in Authorized Share Capital and ', 'MATERIAL INFORMATION', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of President & Chief Executive Officer', 'change of Auditors', 'Financial Statement for the Year Ended June 30 202']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Death of Director - Mr. Abdul Hai M. Bhaimia', 'Financial Statement for the Year Ended June 30 202', 'Financial Statement for the Year Ended June 30 202']
 INFO: 1 cancelled/revoked events detected: [('YOUW', 'Board Meeting')]
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'Final Offer Document - Right Issue', 'UNUSUAL MOVEMENT IN PRICE OF THE SHARES OF ASIM TE']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'Final Offer Document - Right Issue', 'UNUSUAL MOVEMENT IN PRICE OF THE SHARES OF ASIM TE']
 INFO: 1 cancelled/revoked events detected: [('AKGL', 'Board Meeting Annual Financial Results 3')]
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['MEETING - BOARD OF DIRECTORS', 'Notice of Annual Review Meeting', 'Transmission of Annual Financial Statement 2026-06']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'MEETING - BOARD OF DIRECTORS', 'Notice of Annual Review Meeting']
 INFO: 1 cancelled/revoked events detected: [('KEL', 'Board Meeting Other Than Financial Resul')]
 INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Declaration of Right Issue', 'Material Information', 'MATERIAL INFORMATION CHANGE OF LEGAL ADVISOR']
 INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Reporting of shares purchased (buy-back) by Engro ', 'Annual BOD Meeting']
 INFO: 1 cancelled/revoked events detected: [('SAZEW', 'CORPORATE BRIEFING SESSION (CBS)')]
 INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Fire incident at Blow Room (Unit No. 10) and resto', 'CREDIT RATING ASSIGNED TO ITANZ TECHNOLOGIES LIMIT', 'Postal Ballot Paper (English and Urdu)']
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Submission of Mandatory Shariah Disclosures', 'Miscellaneous']
-INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chairman of the Board and Chief Exe', 'DISCLOSURE OF MATERIAL INFORMATION', '188th BOD Meeting']
-INFO: 1 cancelled/revoked events detected: [('CHCC', 'otice of Annual General Meeting')]
-INFO: 6/25 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Mandatory Shariah Disclosures for the year ended J', 'Publication of Ballot Paper in Newspapers']
+INFO: 7/42 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Submission of Mandatory Shariah Disclosures', 'Miscellaneous']
 
-DONE: 4533 unique events written to events_psx_announcements.jsonl (65 duplicates dropped)
-OK    PSX announcements (120s)
+DONE: 4633 unique events written to events_psx_announcements.jsonl (66 duplicates dropped)
+OK    PSX announcements (152s)
 
 ============================================================
 RUNNING: PSX notices
 ============================================================
-INFO: fetching 2026-07-21 to 2026-08-20...
+INFO: fetching 2026-07-22 to 2026-08-21...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 5 rows
-INFO: 4 IPO-related notices found: [('2026-08-20', 'ipo_listing', 'LISTING OF TASDEEQ INFORMATION SERVICES LIMITED'), ('2026-08-19', 'ipo_book_building', 'BOOK BUILDING OF AGRO PROCESSORS & ATMOSPHERIC GAS'), ('2026-08-18', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-08-13', 'ipo_subscription', 'Topline Securities Limited Public Subscription Res')]
-INFO: 4 IPO-related notices found: [('2026-08-07', 'ipo_subscription', 'Topline Securities Limited - Break up of Book Buil'), ('2026-08-05', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF SE FRUITS AND VEG'), ('2026-08-03', 'ipo_prospectus', 'Placement of Notice & Draft Prospectus of Abhi Mic'), ('2026-07-30', 'ipo_book_building', 'BOOK BUILDING OF TASDEEQ INFORMATION SERVICES LIMI')]
-INFO: fetching 2026-08-21 to 2026-09-20...
+INFO: page 4 (offset=150): 18 rows
+INFO: 6 IPO-related notices found: [('2026-08-21', 'ipo_subscription', 'Topline Securites Limited -Revised Allocation of I'), ('2026-08-21', 'ipo_listing', 'LISTING OF PARTIALLY REDEEMABLE SHARES OF GHANI CH'), ('2026-08-20', 'ipo_listing', 'LISTING OF TASDEEQ INFORMATION SERVICES LIMITED'), ('2026-08-19', 'ipo_book_building', 'BOOK BUILDING OF AGRO PROCESSORS & ATMOSPHERIC GAS'), ('2026-08-18', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-08-13', 'ipo_subscription', 'Topline Securities Limited Public Subscription Res')]
+INFO: 3 IPO-related notices found: [('2026-08-07', 'ipo_subscription', 'Topline Securities Limited - Break up of Book Buil'), ('2026-08-05', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF SE FRUITS AND VEG'), ('2026-08-03', 'ipo_prospectus', 'Placement of Notice & Draft Prospectus of Abhi Mic')]
+INFO: 1 IPO-related notices found: [('2026-07-30', 'ipo_book_building', 'BOOK BUILDING OF TASDEEQ INFORMATION SERVICES LIMI')]
+INFO: fetching 2026-08-22 to 2026-09-21...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 34 rows
-INFO: 2 IPO-related notices found: [('2026-09-16', 'ipo_listing', 'LISTING OF NAYA NAZIMABAD APARTMENT REIT (NNAR)'), ('2026-09-15', 'ipo_book_building', 'BOOK BUILDING OF SE FRUITS AND VEGETABLE LIMITED')]
-INFO: 2 IPO-related notices found: [('2026-09-14', 'ipo_listing', 'LISTING OF AGRO PROCESSORS & ATMOSPHERIC GASES LIM'), ('2026-09-08', 'ipo_subscription', 'KTrade Securities Limited Public Subscription Resu')]
+INFO: page 4 (offset=150): 25 rows
+INFO: 1 IPO-related notices found: [('2026-09-16', 'ipo_listing', 'LISTING OF NAYA NAZIMABAD APARTMENT REIT (NNAR)')]
+INFO: 3 IPO-related notices found: [('2026-09-15', 'ipo_book_building', 'BOOK BUILDING OF SE FRUITS AND VEGETABLE LIMITED'), ('2026-09-14', 'ipo_listing', 'LISTING OF AGRO PROCESSORS & ATMOSPHERIC GASES LIM'), ('2026-09-08', 'ipo_subscription', 'KTrade Securities Limited Public Subscription Resu')]
 INFO: 1 IPO-related notices found: [('2026-08-31', 'ipo_subscription', 'K-Trade Securities Limited Strike Price- Book Buil')]
-INFO: 3 IPO-related notices found: [('2026-08-25', 'ipo_book_building', 'BOOK BUILDING OF NAYA NAZIMABAD APARTMENT REIT'), ('2026-08-21', 'ipo_subscription', 'Topline Securites Limited -Revised Allocation of I'), ('2026-08-21', 'ipo_listing', 'LISTING OF PARTIALLY REDEEMABLE SHARES OF GHANI CH')]
-INFO: fetching 2026-09-21 to 2026-10-19...
+INFO: 1 IPO-related notices found: [('2026-08-25', 'ipo_book_building', 'BOOK BUILDING OF NAYA NAZIMABAD APARTMENT REIT')]
+INFO: fetching 2026-09-22 to 2026-10-20...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 11 rows
+INFO: page 4 (offset=150): 10 rows
 INFO: 1 IPO-related notices found: [('2026-10-16', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
-INFO: 2 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-10-01', 'ipo_prospectus', 'Revised-FOR ALL CONCERNED PLACEMENT OF REVISED DRA')]
-INFO: 5 IPO-related notices found: [('2026-09-29', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
+INFO: 1 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
+INFO: 4 IPO-related notices found: [('2026-10-01', 'ipo_prospectus', 'Revised-FOR ALL CONCERNED PLACEMENT OF REVISED DRA'), ('2026-09-29', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE')]
+INFO: 2 IPO-related notices found: [('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
 
-DONE: 493 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
-OK    PSX notices (14s)
+DONE: 496 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
+OK    PSX notices (16s)
 
 ============================================================
 RUNNING: PSX payouts
@@ -334,7 +340,7 @@ WARNING: skipped malformed payout row: time data '13/13/2025' does not match for
 INFO: 1/25 rows skipped as malformed
 
 DONE: 720 unique payout events written to events_psx_payouts.jsonl (4 duplicates dropped)
-OK    PSX payouts (34s)
+OK    PSX payouts (44s)
 
 ============================================================
 RUNNING: Merge all sources
@@ -346,185 +352,300 @@ INFO: loaded 16 events from psx_holidays (events_holidays.json)
 INFO: loaded 15 events from sbp_remittances (events_remittances.json)
 INFO: loaded 65 events from sbp_fx_reserves (events_fx_reserves.json)
 INFO: loaded 15 events from sbp_current_account (events_current_account.json)
-INFO: loaded 4533 events from psx_announcements (events_psx_announcements.jsonl)
-INFO: loaded 493 events from psx_notices (events_psx_notices.jsonl)
+INFO: loaded 4633 events from psx_announcements (events_psx_announcements.jsonl)
+INFO: loaded 496 events from psx_notices (events_psx_notices.jsonl)
 INFO: loaded 720 events from psx_payouts (events_psx_payouts.jsonl)
 INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
 INFO: 97 FinHisaab events dropped -- the same PSX document is already in the PSX feed
 INFO: 115 duplicate ids dropped on merge
-INFO: 567 events trimmed outside [2026-07-21, 2027-10-19]
+INFO: 569 events trimmed outside [2026-07-22, 2027-10-20]
 
-DONE: 5315 total events written to events_merged.json
-  window: 2026-07-21 to 2027-10-19
+DONE: 5416 total events written to events_merged.json
+  window: 2026-07-22 to 2027-10-20
   pama_auto_sales         15
   pbs_calendar            95
-  psx_announcements     4472
+  psx_announcements     4572
   psx_holidays             4
-  psx_notices            439
-  psx_payouts            165
+  psx_notices            442
+  psx_payouts            163
   sbp_current_account     15
   sbp_fx_reserves         65
   sbp_mpc                 30
   sbp_remittances         15
 
-Date range: 2026-07-21 to 2027-10-18
+Date range: 2026-07-22 to 2027-10-18
 OK    Merge all sources (0s)
 
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-[0;93m2026-10-19 22:08:25.965586525 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-INFO: 106 events eligible (5209 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/106] ATRL: vision
-  [2/106] POL: vision
-  [3/106] APL: vision
-  [4/106] ATBA: vision
+[0;93m2026-10-20 21:24:48.720591697 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+INFO: 141 events eligible (5275 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [5/106] APL: vision
-  [6/106] PNSC: vision
-  [7/106] IGIHL: text
-  [8/106] MCBIM: vision
-  [9/106] EFUL: vision
-  [10/106] STJT: vision
-  [11/106] BWCL: vision
-  [12/106] NCPL: vision
-  [13/106] NPL: vision
-  [14/106] AGHA: vision
-  [15/106] HGFA: vision
-  [16/106] CNERGY: vision
-WARNING: https://dps.psx.com.pk/download/document/286008.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/286008.pdf. Retrying in 1s...
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [17/106] WAFI: vision
-  [18/106] ENGROH: text
-  [19/106] EFUG: text
-  [20/106] SHDT: vision
-INFO: 20/106 processed -- 3 via text, 17 via vision
-  [21/106] ARPL: vision
-  [22/106] SMCPL: vision
-  [23/106] JVDC: text
-  [24/106] LOADS: vision
-  [25/106] BGL: vision
-  [26/106] FFL: vision
-  [27/106] SBL: vision
-  [28/106] GADT: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [29/106] NRL: unresolved
-  [30/106] DWTM: unresolved
-  [31/106] DKTM: unresolved
-  [32/106] DFML: unresolved
-  [33/106] CTM: unresolved
-  [34/106] PIM: unresolved
-  [35/106] SLM: unresolved
-  [36/106] POML: unresolved
-  [37/106] FRCL: unresolved
-  [38/106] OBOY: unresolved
-  [39/106] SSGC: unresolved
-  [40/106] CLVL: unresolved
-INFO: 40/106 processed -- 4 via text, 24 via vision
-  [41/106] KEL: unresolved
-  [42/106] JKSM: unresolved
-  [43/106] HUMNL: unresolved
-  [44/106] TSPL: unresolved
-  [45/106] MFFL: unresolved
-  [46/106] IML: unresolved
-  [47/106] CFL: unresolved
-  [48/106] CTM: unresolved
-  [49/106] DADX: unresolved
-  [50/106] BAPL: unresolved
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [51/106] STJT: unresolved
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [52/106] KHTC: unresolved
-  [53/106] GVGL: unresolved
-  [54/106] BFAGRO: unresolved
-  [55/106] GHGL: unresolved
-  [56/106] FZCM: unresolved
-  [57/106] MUBT: unresolved
-  [58/106] HTL: unresolved
-  [59/106] SFL: unresolved
-  [60/106] ARMG: unresolved
-INFO: 60/106 processed -- 4 via text, 24 via vision
-  [61/106] AKGL: unresolved
-  [62/106] ALTN: unresolved
-  [63/106] IDRT: unresolved
-  [64/106] NATF: unresolved
-WARNING: https://dps.psx.com.pk/download/document/284437.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/284437.pdf. Retrying in 1s...
-  [65/106] JUBS: unresolved
-  [66/106] GTYR: unresolved
-  [67/106] PAKD: unresolved
-  [68/106] KHTC: unresolved
-  [69/106] MARI: unresolved
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [70/106] PCAL: unresolved
-  [71/106] PAKD: unresolved
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [72/106] GTYR: unresolved
-  [73/106] PECO: unresolved
-  [74/106] TELE: unresolved
-  [75/106] LCI: unresolved
-  [76/106] SANE: unresolved
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [77/106] CHBL: unresolved
-  [78/106] QUET: unresolved
+  [1/141] PTL: vision
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
 WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-  [79/106] SSGC: unresolved
-  [80/106] OLPL: unresolved
-INFO: 80/106 processed -- 4 via text, 24 via vision
-  [81/106] KCL: unresolved
+  [2/141] HUBC: vision
+  [3/141] MUGHAL: vision
+  [4/141] ACPL: vision
+  [5/141] POWER: vision
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [82/106] THCCL: unresolved
-  [83/106] ASC: unresolved
-  [84/106] PRL: unresolved
-  [85/106] THALL: unresolved
+  [6/141] LOADS: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 4s...
+  [7/141] PIOC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [8/141] MLCF: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [9/141] BUXL: vision
+  [10/141] QTECH: vision
+  [11/141] EPCL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [12/141] PPL: vision
+  [13/141] HTL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [14/141] WAVESAPP: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [15/141] WAVES: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [16/141] ARCTM: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [17/141] HUBC: vision
+  [18/141] HAFL: vision
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname M identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+  [19/141] PPP: text
+  [20/141] ORM: vision
+INFO: 20/141 processed -- 1 via text, 18 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [21/141] ABL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 4s...
+  [22/141] GOC: unresolved
+  [23/141] PECO: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [24/141] GHNI: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [25/141] AGIL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [26/141] AGIL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [27/141] WTL: vision
+  [28/141] LPGL: vision
+  [29/141] DNCC: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 4s...
+  [30/141] THALL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [31/141] IMS: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [32/141] TBL: vision
+  [33/141] PGLC: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [34/141] FHAM: vision
+  [35/141] PICT: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [36/141] BATA: vision
+  [37/141] OCTOPUS: text
+  [38/141] ELCM: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [39/141] KOHC: unresolved
+  [40/141] WAHN: vision
+INFO: 40/141 processed -- 2 via text, 33 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [41/141] KTML: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [42/141] PIBTL: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [43/141] PSX: unresolved
+  [44/141] HINOON: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [45/141] GTYR: vision
+  [46/141] GAL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [47/141] ABOT: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [48/141] ABL-FUNDS: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [49/141] JLICL: vision
+  [50/141] DSFL: vision
+  [51/141] FIBLM: text
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [52/141] DFSM: vision
+  [53/141] DCL: vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [54/141] DWAE: vision
+  [55/141] UNIC: text
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [56/141] SELECT: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [57/141] AHL: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [58/141] ATBA: vision
+  [59/141] EFERT: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [60/141] FDPL: vision
+INFO: 60/141 processed -- 4 via text, 49 via vision
+  [61/141] ANTM: vision
+  [62/141] MUREB: vision
+  [63/141] MUBT: vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [64/141] NRL: unresolved
+  [65/141] DWTM: unresolved
+  [66/141] DKTM: unresolved
+  [67/141] DFML: unresolved
+  [68/141] CTM: unresolved
+  [69/141] PIM: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [70/141] SLM: unresolved
+  [71/141] POML: unresolved
+  [72/141] FRCL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [73/141] OBOY: unresolved
+  [74/141] SSGC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [75/141] CLVL: unresolved
+  [76/141] KEL: unresolved
+  [77/141] JKSM: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [78/141] HUMNL: unresolved
+  [79/141] TSPL: unresolved
+  [80/141] MFFL: unresolved
+INFO: 80/141 processed -- 4 via text, 52 via vision
+  [81/141] IML: unresolved
+  [82/141] CFL: unresolved
+  [83/141] CTM: unresolved
+  [84/141] DADX: unresolved
+  [85/141] BAPL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [86/141] STJT: unresolved
+  [87/141] KHTC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [88/141] GVGL: unresolved
+  [89/141] BFAGRO: unresolved
+  [90/141] GHGL: unresolved
+  [91/141] FZCM: unresolved
+  [92/141] MUBT: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [93/141] HTL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [94/141] SFL: unresolved
+  [95/141] ARMG: unresolved
+  [96/141] AKGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [97/141] ALTN: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [98/141] IDRT: unresolved
+  [99/141] NATF: unresolved
+  [100/141] JUBS: unresolved
+INFO: 100/141 processed -- 4 via text, 52 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [101/141] GTYR: unresolved
+  [102/141] PAKD: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [103/141] KHTC: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [104/141] MARI: unresolved
+  [105/141] PCAL: unresolved
+  [106/141] PAKD: unresolved
+  [107/141] GTYR: unresolved
+  [108/141] PECO: unresolved
+  [109/141] TELE: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [110/141] LCI: unresolved
+  [111/141] SANE: unresolved
+  [112/141] CHBL: unresolved
+  [113/141] QUET: unresolved
+  [114/141] SSGC: unresolved
+  [115/141] OLPL: unresolved
+  [116/141] KCL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [117/141] THCCL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [118/141] ASC: unresolved
+  [119/141] PRL: unresolved
+  [120/141] THALL: unresolved
+INFO: 120/141 processed -- 4 via text, 52 via vision
 Cannot set non-stroke color: /'P0' is an invalid float value
-  [86/106] BWCL: unresolved
-  [87/106] SNGP: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [88/106] PRL: unresolved
-  [89/106] BLUEX: unresolved
-  [90/106] FSWL: unresolved
+  [121/141] BWCL: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [91/106] FIL: unresolved
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [122/141] SNGP: unresolved
+  [123/141] PRL: unresolved
+  [124/141] BLUEX: unresolved
+  [125/141] FSWL: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [92/106] MLCF: unresolved
-  [93/106] HUBC: unresolved
+  [126/141] FIL: unresolved
+  [127/141] MLCF: unresolved
+  [128/141] HUBC: unresolved
+  [129/141] TPLT: unresolved
+  [130/141] TPL: unresolved
+  [131/141] COLG: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [94/106] TPLT: unresolved
-  [95/106] TPL: unresolved
-  [96/106] COLG: unresolved
-  [97/106] NRSL: unresolved
-  [98/106] BWHL: unresolved
-  [99/106] ITANZ: unresolved
-  [100/106] ARPL: unresolved
-INFO: 100/106 processed -- 4 via text, 24 via vision
-  [101/106] SAPT: unresolved
-  [102/106] PCAL: unresolved
-  [103/106] PRL: unresolved
-  [104/106] PRL: unresolved
-  [105/106] GCIL: unresolved
+  [132/141] NRSL: unresolved
+  [133/141] BWHL: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [106/106] INDU: unresolved
+  [134/141] ITANZ: unresolved
+  [135/141] ARPL: unresolved
+  [136/141] SAPT: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [137/141] PCAL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [138/141] PRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [139/141] PRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [140/141] GCIL: unresolved
+INFO: 140/141 processed -- 4 via text, 52 via vision
+  [141/141] INDU: unresolved
 
-DONE: 28/106 resolved this run (4 via text, 24 via vision), 1128 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (1670s)
+DONE: 56/141 resolved this run (4 via text, 52 via vision), 1174 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (5291s)
 
 ============================================================
 RUNNING: Sentiment classification
 ============================================================
-INFO: 2963 already cached, 0 rule-classified, 2318 skipped (no sentiment applicable), 34 need a Gemini call
-INFO: classifying batch 1/3 (15 events)...
+INFO: 2974 already cached, 1 rule-classified, 2375 skipped (no sentiment applicable), 66 need a Gemini call
+INFO: classifying batch 1/5 (15 events)...
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-INFO: classifying batch 2/3 (15 events)...
-INFO: classifying batch 3/3 (4 events)...
+INFO: classifying batch 2/5 (15 events)...
+INFO: classifying batch 3/5 (15 events)...
+INFO: classifying batch 4/5 (15 events)...
+INFO: classifying batch 5/5 (6 events)...
 
-DONE: 2997/5315 events now have sentiment, written to events_merged.json
-OK    Sentiment classification (38s)
+DONE: 3041/5416 events now have sentiment, written to events_merged.json
+OK    Sentiment classification (108s)
 
 ============================================================
 RUNNING: Fetch company domains
 ============================================================
-INFO: 545 symbols total, 545 already cached, 0 to fetch
+INFO: 544 symbols total, 544 already cached, 0 to fetch
 
 DONE: 504/554 symbols have a resolved website domain, written to company_domains_cache.json
 OK    Fetch company domains (0s)
@@ -532,13 +653,13 @@ OK    Fetch company domains (0s)
 ============================================================
 RUNNING: Attach company logos
 ============================================================
-DONE: logo_url attached to 4096 events, written to events_merged.json
+DONE: logo_url attached to 4183 events, written to events_merged.json
 OK    Attach company logos (0s)
 
 ============================================================
 RUNNING: Fetch EPS data
 ============================================================
-INFO: 545 symbols total, 545 already cached, 0 to fetch
+INFO: 544 symbols total, 544 already cached, 0 to fetch
 
 DONE: 503/554 symbols have EPS data, written to eps_data_cache.json
 OK    Fetch EPS data (0s)
@@ -546,13 +667,13 @@ OK    Fetch EPS data (0s)
 ============================================================
 RUNNING: Attach EPS data
 ============================================================
-DONE: EPS data attached to 915 results events, written to events_merged.json
+DONE: EPS data attached to 926 results events, written to events_merged.json
 OK    Attach EPS data (0s)
 
 ============================================================
 RUNNING: Attach Shariah compliance
 ============================================================
-DONE: shariah_compliant attached to 4090 events, written to events_merged.json
+DONE: shariah_compliant attached to 4177 events, written to events_merged.json
 INFO: 44 symbols in your events had no match in the compliance list (funds/ETFs/ ecomposites not covered by this notice, or symbols that have since changed): ['786', 'ABL-FUNDS', 'AKD-FUNDS', 'ALFALAH-FUNDS', 'ALHAML-FUNDS', 'ASLCPS', 'ASLPS', 'ATLAS-FUNDS', 'AWT-FUNDS', 'BAFLTFC6', 'BAHLTFC9', 'BIPLSC', 'BIPLSC2', 'DDCI', 'FAYSAL-FUNDS']...
 OK    Attach Shariah compliance (0s)
 
@@ -579,8 +700,15 @@ OK    Attach macro values (SBP/PBS first, FinHisaab fallback) (0s)
 ============================================================
 RUNNING: Broker expectations for CPI and MPC
 ============================================================
+INFO: gemini-3.5-flash HTTP 429, trying the next model
+INFO: gemini-3.6-flash HTTP 429, trying the next model
+INFO: gemini-3-flash HTTP 404, trying the next model
+INFO: gemini-2.5-flash HTTP 404, trying the next model
+INFO: gemini-3.5-flash-lite HTTP 429, trying the next model
+INFO: gemini-3.1-flash-lite HTTP 429, trying the next model
+INFO: sbp-mpc-2026-10-26: None (0 sources) -> None
 DONE: 1 CPI/MPC events in the next 10 days, 0 carry a broker expectation
-OK    Broker expectations for CPI and MPC (0s)
+OK    Broker expectations for CPI and MPC (5s)
 
 ============================================================
 RUNNING: Confirm SBP FX reserves (real values)
@@ -590,16 +718,16 @@ INFO: no prior week in history yet -- this is either the first run, or last week
 INFO: confirmed event for 2026-10-09
 
 DONE: written to events_merged.json
-OK    Confirm SBP FX reserves (real values) (5s)
+OK    Confirm SBP FX reserves (real values) (3s)
 
 ============================================================
 RUNNING: Export upcoming.json for the portfolio tracker
 ============================================================
-DONE: 723 events (563 company, 160 macro) written to upcoming.json
+DONE: 778 events (618 company, 160 macro) written to upcoming.json
 OK    Export upcoming.json for the portfolio tracker (0s)
 
 ============================================================
-PIPELINE SUMMARY (31.4 min total)
+PIPELINE SUMMARY (93.7 min total)
 ============================================================
   OK    sbp
   OK    pbs
