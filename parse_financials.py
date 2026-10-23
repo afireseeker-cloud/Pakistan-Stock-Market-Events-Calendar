@@ -98,6 +98,7 @@ def compute_eps_summary(financials: dict) -> dict:
 
     return {
         "latest_annual_eps": latest_annual_eps,
+        "latest_annual_label": annual_years[0] if annual_years else None,
         "prior_annual_eps": prior_annual_eps,
         "latest_quarterly_eps": latest_quarterly_eps,
         "latest_quarterly_label": latest_q_label,
