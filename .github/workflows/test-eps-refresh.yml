@@ -89,6 +89,17 @@ jobs:
               f.write("\n".join(symbols) + "\n")
 
           print("Symbols selected for testing:", symbols)
+
+          selected = set(symbols)
+          test_events = [
+              e for e in events
+              if e.get("symbol") in selected
+          ]
+
+          with open("test_events.json", "w", encoding="utf-8") as f:
+              json.dump(test_events, f)
+
+          print(f"Prepared {len(symbols)} selected symbols for testing.")
           PY
         env:
           REQUESTED_SYMBOLS: ${{ inputs.symbols }}
@@ -97,7 +108,7 @@ jobs:
         run: |
           set -o pipefail
           python fetch_eps_data.py \
-            --from-events events_merged.json \
+            --from-events test_events.json \
             --debug \
             --limit 5 2>&1 | tee eps_test.log
 
