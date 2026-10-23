@@ -311,7 +311,7 @@ INFO: 6/28 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 2 cancelled/revoked events detected: [('PAKD', 'Notice of Board Meeting to Approve Annua'), ('KEL', 'Board Meeting Other Than Financial Resul')]
 
 DONE: 5004 unique events written to events_psx_announcements.jsonl (72 duplicates dropped)
-OK    PSX announcements (132s)
+OK    PSX announcements (134s)
 
 ============================================================
 RUNNING: PSX notices
@@ -343,7 +343,7 @@ INFO: 2 IPO-related notices found: [('2026-10-01', 'ipo_prospectus', 'Revised-FO
 INFO: 1 IPO-related notices found: [('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
 
 DONE: 488 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
-OK    PSX notices (15s)
+OK    PSX notices (14s)
 
 ============================================================
 RUNNING: PSX payouts
@@ -359,7 +359,7 @@ WARNING: skipped malformed payout row: time data '13/13/2025' does not match for
 INFO: 1/25 rows skipped as malformed
 
 DONE: 729 unique payout events written to events_psx_payouts.jsonl (4 duplicates dropped)
-OK    PSX payouts (33s)
+OK    PSX payouts (36s)
 
 ============================================================
 RUNNING: Merge all sources
@@ -398,216 +398,130 @@ OK    Merge all sources (0s)
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-[0;93m2026-10-23 15:39:44.954395049 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-INFO: 172 events eligible (5616 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/172] PACE: vision
-  [2/172] DYNO: vision
-  [3/172] JDMT: vision
-  [4/172] DINT: vision
-  [5/172] ASL: vision
-  [6/172] AKGL: vision
-  [7/172] AKGL: vision
-  [8/172] ICL: vision
-  [9/172] BGL: text
-  [10/172] STML: vision
-  [11/172] BIFO: vision
-  [12/172] SEARL: vision
-/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname M identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
-  warnings.warn("tzname {tzname} identified but not understood.  "
-  [13/172] BERG: text
-  [14/172] NCL: text
-  [15/172] MUREB: vision
-  [16/172] NBP: vision
-  [17/172] BNWM: vision
-  [18/172] PPVC: vision
-  [19/172] IMS: vision
-  [20/172] FCEPL: vision
-INFO: 20/172 processed -- 3 via text, 17 via vision
-  [21/172] SPAC2: text
-  [22/172] SRR: vision
-  [23/172] NNAR: vision
-  [24/172] PQGTL: text
-  [25/172] PAKQATAR: text
-  [26/172] DCR: vision
-  [27/172] RPL: vision
-  [28/172] GRR: vision
-  [29/172] IDEAL: vision
-  [30/172] ATLAS-FUNDS: vision
-  [31/172] CLVL: vision
-  [32/172] NBP-FUNDS: vision
-  [33/172] ZTL: vision
-  [34/172] KCL: vision
-  [35/172] BERG: vision
-  [36/172] LSEFSL: text
-  [37/172] CRTM: text
-  [38/172] LSECL: text
-  [39/172] BNL: vision
-  [40/172] RUBY: vision
-INFO: 40/172 processed -- 9 via text, 31 via vision
-  [41/172] ARUJ: vision
-  [42/172] STL: text
-  [43/172] LSEVL: text
-  [44/172] SERT: vision
-  [45/172] HUMNL: text
-  [46/172] BML: vision
-  [47/172] BFMOD: vision
-  [48/172] DBCI: vision
-  [49/172] DBSL: vision
-  [50/172] STML: vision
-  [51/172] ZUMA: vision
-  [52/172] STCL: vision
-  [53/172] REWM: vision
-  [54/172] CPHL: vision
-  [55/172] IML: vision
-  [56/172] SIBL: vision
-  [57/172] FZCM: vision
-  [58/172] MUGHAL: vision
-  [59/172] OGDC: vision
-  [60/172] ALAC: unresolved
-INFO: 60/172 processed -- 12 via text, 47 via vision
-  [61/172] GGGL: vision
-  [62/172] GCIL: vision
-  [63/172] HUMNL: vision
-  [64/172] FLYNG: vision
-  [65/172] ATRL: vision
-  [66/172] KAPCO: vision
-  [67/172] DMC: vision
-  [68/172] STJT: vision
-  [69/172] IDEAL: vision
-  [70/172] ZAL: vision
-  [71/172] SHEZ: vision
-  [72/172] NRL: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [73/172] EPCL: vision
-WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+[0;93m2026-10-23 21:10:04.610457387 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+INFO: 89 events eligible (5699 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
+  [1/89] ALAC: unresolved
+  [2/89] NETSOL: vision
+  [3/89] ATBA: unresolved
+  [4/89] AHL: unresolved
+  [5/89] STCL: unresolved
+  [6/89] LSEFSL: unresolved
+  [7/89] LSECL: unresolved
+  [8/89] LSEVL: unresolved
+  [9/89] AHL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [10/89] MUREB: unresolved
+  [11/89] PRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [12/89] GADT: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 2s...
 WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
-  [74/172] NETSOL: unresolved
-  [75/172] ATBA: unresolved
-  [76/172] FECM: text
-  [77/172] OLPM: vision
-  [78/172] GATI: vision
-  [79/172] ARUJ: vision
-  [80/172] NATF: vision
-INFO: 80/172 processed -- 13 via text, 64 via vision
+  [13/89] NRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [14/89] DWTM: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [15/89] DKTM: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
-  [81/172] MUREB: vision
-  [82/172] GTYR: vision
-  [83/172] AKGL: vision
-  [84/172] HRPL: text
-  [85/172] AHL: unresolved
-  [86/172] STCL: unresolved
-  [87/172] LSEFSL: unresolved
-  [88/172] LSECL: unresolved
-  [89/172] LSEVL: unresolved
-  [90/172] HMB: vision
-  [91/172] ZAHID: vision
-  [92/172] AHL: unresolved
-  [93/172] MUREB: unresolved
-  [94/172] PRL: unresolved
-  [95/172] GADT: unresolved
-  [96/172] NRL: unresolved
-  [97/172] DWTM: unresolved
-  [98/172] DKTM: unresolved
-  [99/172] DFML: unresolved
-  [100/172] CTM: unresolved
-INFO: 100/172 processed -- 14 via text, 69 via vision
-  [101/172] PIM: unresolved
-  [102/172] SLM: unresolved
-  [103/172] POML: unresolved
-  [104/172] FRCL: unresolved
-  [105/172] OBOY: unresolved
-  [106/172] SSGC: unresolved
-  [107/172] CLVL: unresolved
-  [108/172] KEL: unresolved
-  [109/172] JKSM: unresolved
-  [110/172] HUMNL: unresolved
-  [111/172] TSPL: unresolved
-  [112/172] MFFL: unresolved
-  [113/172] IML: unresolved
-  [114/172] CFL: unresolved
-  [115/172] CTM: unresolved
-  [116/172] DADX: unresolved
-  [117/172] BAPL: unresolved
-  [118/172] STJT: unresolved
-  [119/172] KHTC: unresolved
-  [120/172] GVGL: unresolved
-INFO: 120/172 processed -- 14 via text, 69 via vision
-  [121/172] BFAGRO: unresolved
-  [122/172] GHGL: unresolved
-  [123/172] FZCM: unresolved
-  [124/172] MUBT: unresolved
-  [125/172] HTL: unresolved
-  [126/172] SFL: unresolved
-  [127/172] ARMG: unresolved
-  [128/172] AKGL: unresolved
-  [129/172] ALTN: unresolved
-  [130/172] IDRT: unresolved
-  [131/172] NATF: unresolved
-  [132/172] JUBS: unresolved
-  [133/172] GTYR: unresolved
-  [134/172] PAKD: unresolved
-  [135/172] KHTC: unresolved
-  [136/172] MARI: unresolved
-  [137/172] PCAL: unresolved
-  [138/172] PAKD: unresolved
-  [139/172] GTYR: unresolved
-  [140/172] PECO: unresolved
-INFO: 140/172 processed -- 14 via text, 69 via vision
-  [141/172] TELE: unresolved
-  [142/172] LCI: unresolved
-  [143/172] SANE: unresolved
-  [144/172] CHBL: unresolved
-  [145/172] QUET: unresolved
-  [146/172] SSGC: unresolved
-  [147/172] OLPL: unresolved
-  [148/172] KCL: unresolved
-  [149/172] THCCL: unresolved
-  [150/172] ASC: unresolved
-  [151/172] PRL: unresolved
-  [152/172] THALL: unresolved
+  [16/89] DFML: unresolved
+  [17/89] CTM: unresolved
+INFO: 17/89 processed -- 0 via text, 1 via vision
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [18/89] PIM: unresolved
+  [19/89] SLM: unresolved
+  [20/89] POML: unresolved
+  [21/89] FRCL: unresolved
+  [22/89] OBOY: unresolved
+  [23/89] SSGC: unresolved
+  [24/89] CLVL: unresolved
+  [25/89] KEL: unresolved
+  [26/89] JKSM: unresolved
+  [27/89] HUMNL: unresolved
+  [28/89] TSPL: unresolved
+  [29/89] MFFL: unresolved
+  [30/89] IML: unresolved
+  [31/89] CFL: unresolved
+  [32/89] CTM: unresolved
+  [33/89] DADX: unresolved
+  [34/89] BAPL: unresolved
+INFO: 34/89 processed -- 0 via text, 1 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [35/89] STJT: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [36/89] KHTC: unresolved
+  [37/89] GVGL: unresolved
+  [38/89] BFAGRO: unresolved
+  [39/89] GHGL: unresolved
+  [40/89] FZCM: unresolved
+  [41/89] MUBT: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [42/89] HTL: unresolved
+  [43/89] SFL: unresolved
+  [44/89] ARMG: unresolved
+  [45/89] AKGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [46/89] ALTN: unresolved
+  [47/89] IDRT: unresolved
+  [48/89] NATF: unresolved
+  [49/89] JUBS: unresolved
+  [50/89] GTYR: unresolved
+  [51/89] PAKD: unresolved
+INFO: 51/89 processed -- 0 via text, 1 via vision
+  [52/89] KHTC: unresolved
+  [53/89] MARI: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [54/89] PCAL: unresolved
+  [55/89] PAKD: unresolved
+  [56/89] GTYR: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [57/89] PECO: unresolved
+  [58/89] TELE: unresolved
+  [59/89] LCI: unresolved
+  [60/89] SANE: unresolved
+  [61/89] CHBL: unresolved
+  [62/89] QUET: unresolved
+  [63/89] SSGC: unresolved
+  [64/89] OLPL: unresolved
+  [65/89] KCL: unresolved
+  [66/89] THCCL: unresolved
+  [67/89] ASC: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [68/89] PRL: unresolved
+INFO: 68/89 processed -- 0 via text, 1 via vision
+  [69/89] THALL: unresolved
 Cannot set non-stroke color: /'P0' is an invalid float value
-  [153/172] BWCL: unresolved
-  [154/172] SNGP: unresolved
-  [155/172] PRL: unresolved
-  [156/172] BLUEX: unresolved
-  [157/172] FSWL: unresolved
-  [158/172] FIL: unresolved
-  [159/172] MLCF: unresolved
-  [160/172] HUBC: unresolved
-INFO: 160/172 processed -- 14 via text, 69 via vision
-  [161/172] TPLT: unresolved
-  [162/172] TPL: unresolved
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-  [163/172] COLG: unresolved
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-  [164/172] NRSL: unresolved
-  [165/172] BWHL: unresolved
-  [166/172] ITANZ: unresolved
-  [167/172] ARPL: unresolved
-  [168/172] SAPT: unresolved
-  [169/172] PCAL: unresolved
-  [170/172] PRL: unresolved
-  [171/172] PRL: unresolved
-  [172/172] GCIL: unresolved
+  [70/89] BWCL: unresolved
+  [71/89] SNGP: unresolved
+  [72/89] PRL: unresolved
+  [73/89] BLUEX: unresolved
+  [74/89] FSWL: unresolved
+  [75/89] FIL: unresolved
+  [76/89] MLCF: unresolved
+  [77/89] HUBC: unresolved
+  [78/89] TPLT: unresolved
+  [79/89] TPL: unresolved
+  [80/89] COLG: unresolved
+  [81/89] NRSL: unresolved
+  [82/89] BWHL: unresolved
+  [83/89] ITANZ: unresolved
+  [84/89] ARPL: unresolved
+  [85/89] SAPT: unresolved
+INFO: 85/89 processed -- 0 via text, 1 via vision
+  [86/89] PCAL: unresolved
+  [87/89] PRL: unresolved
+  [88/89] PRL: unresolved
+  [89/89] GCIL: unresolved
 
-DONE: 83/172 resolved this run (14 via text, 69 via vision), 1393 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (2613s)
+DONE: 1/89 resolved this run (0 via text, 1 via vision), 1394 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (2393s)
 
 ============================================================
 RUNNING: Sentiment classification
 ============================================================
-INFO: 3059 already cached, 0 rule-classified, 2667 skipped (no sentiment applicable), 62 need a Gemini call
-INFO: classifying batch 1/5 (15 events)...
-INFO: classifying batch 2/5 (15 events)...
-INFO: classifying batch 3/5 (15 events)...
-INFO: classifying batch 4/5 (15 events)...
-INFO: classifying batch 5/5 (2 events)...
+INFO: 3121 already cached, 0 rule-classified, 2667 skipped (no sentiment applicable), 0 need a Gemini call
 
 DONE: 3121/5788 events now have sentiment, written to events_merged.json
-OK    Sentiment classification (71s)
+OK    Sentiment classification (0s)
 
 ============================================================
 RUNNING: Fetch company domains
@@ -626,139 +540,29 @@ OK    Attach company logos (0s)
 ============================================================
 RUNNING: Fetch EPS data
 ============================================================
-INFO: 544 symbols total, 0 not due, 544 to fetch or retry
-WARNING: ABL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 1s...
-WARNING: ABL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 2s...
-WARNING: ABL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 4s...
-WARNING: giving up on ABL-FUNDS after 3 attempts
-WARNING: AKD-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AKD-FUNDS. Retrying in 1s...
-WARNING: AKD-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AKD-FUNDS. Retrying in 2s...
-WARNING: AKD-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AKD-FUNDS. Retrying in 4s...
-WARNING: giving up on AKD-FUNDS after 3 attempts
-INFO: 25/544 processed, 22 refreshed successfully, 3 unsuccessful
-WARNING: ALFALAH-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 1s...
-WARNING: ALFALAH-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 2s...
-WARNING: ALFALAH-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 4s...
-WARNING: giving up on ALFALAH-FUNDS after 3 attempts
-WARNING: ALHAML-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALHAML-FUNDS. Retrying in 1s...
-WARNING: ALHAML-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALHAML-FUNDS. Retrying in 2s...
-WARNING: ALHAML-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALHAML-FUNDS. Retrying in 4s...
-WARNING: giving up on ALHAML-FUNDS after 3 attempts
-INFO: 50/544 processed, 44 refreshed successfully, 6 unsuccessful
-WARNING: ATLAS-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 1s...
-WARNING: ATLAS-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 2s...
-WARNING: ATLAS-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 4s...
-WARNING: giving up on ATLAS-FUNDS after 3 attempts
-WARNING: AWT-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AWT-FUNDS. Retrying in 1s...
-WARNING: AWT-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AWT-FUNDS. Retrying in 2s...
-WARNING: AWT-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AWT-FUNDS. Retrying in 4s...
-WARNING: giving up on AWT-FUNDS after 3 attempts
-WARNING: BAFLTFC6 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAFLTFC6. Retrying in 1s...
-WARNING: BAFLTFC6 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAFLTFC6. Retrying in 2s...
-WARNING: BAFLTFC6 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAFLTFC6. Retrying in 4s...
-WARNING: giving up on BAFLTFC6 after 3 attempts
-WARNING: BAHLTFC9 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 1s...
-WARNING: BAHLTFC9 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 2s...
-WARNING: BAHLTFC9 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 4s...
-WARNING: giving up on BAHLTFC9 after 3 attempts
-INFO: 75/544 processed, 64 refreshed successfully, 11 unsuccessful
-WARNING: BIPLSC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 1s...
-WARNING: BIPLSC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 2s...
-WARNING: BIPLSC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 4s...
-WARNING: giving up on BIPLSC after 3 attempts
-WARNING: BIPLSC2 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC2. Retrying in 1s...
-WARNING: BIPLSC2 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC2. Retrying in 2s...
-WARNING: BIPLSC2 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC2. Retrying in 4s...
-WARNING: giving up on BIPLSC2 after 3 attempts
-INFO: 100/544 processed, 87 refreshed successfully, 13 unsuccessful
-INFO: 125/544 processed, 112 refreshed successfully, 13 unsuccessful
-INFO: 150/544 processed, 137 refreshed successfully, 13 unsuccessful
-WARNING: FAYSAL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 1s...
-WARNING: FAYSAL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 2s...
-WARNING: FAYSAL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 4s...
-WARNING: giving up on FAYSAL-FUNDS after 3 attempts
-INFO: 175/544 processed, 161 refreshed successfully, 14 unsuccessful
-INFO: 200/544 processed, 186 refreshed successfully, 14 unsuccessful
-WARNING: HBLTFC2 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC2. Retrying in 1s...
-WARNING: HBLTFC2 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC2. Retrying in 2s...
-WARNING: HBLTFC2 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC2. Retrying in 4s...
-WARNING: giving up on HBLTFC2 after 3 attempts
-WARNING: HBLTFC3 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 1s...
-WARNING: HBLTFC3 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 2s...
-WARNING: HBLTFC3 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 4s...
-WARNING: giving up on HBLTFC3 after 3 attempts
-INFO: 225/544 processed, 208 refreshed successfully, 17 unsuccessful
-INFO: 250/544 processed, 233 refreshed successfully, 17 unsuccessful
-WARNING: JSBLTFC4 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 1s...
-WARNING: JSBLTFC4 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 2s...
-WARNING: JSBLTFC4 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 4s...
-WARNING: giving up on JSBLTFC4 after 3 attempts
-INFO: 275/544 processed, 256 refreshed successfully, 19 unsuccessful
-WARNING: JSIL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSIL-FUNDS. Retrying in 1s...
-WARNING: JSIL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSIL-FUNDS. Retrying in 2s...
-WARNING: JSIL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSIL-FUNDS. Retrying in 4s...
-WARNING: giving up on JSIL-FUNDS after 3 attempts
-WARNING: KFGB1 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 1s...
-WARNING: KFGB1 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 2s...
-WARNING: KFGB1 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 4s...
-WARNING: giving up on KFGB1 after 3 attempts
-INFO: 300/544 processed, 277 refreshed successfully, 23 unsuccessful
-WARNING: MCBIM-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 1s...
-WARNING: MCBIM-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 2s...
-WARNING: MCBIM-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 4s...
-WARNING: giving up on MCBIM-FUNDS after 3 attempts
-WARNING: MEEZAN-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MEEZAN-FUNDS. Retrying in 1s...
-WARNING: MEEZAN-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MEEZAN-FUNDS. Retrying in 2s...
-WARNING: MEEZAN-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MEEZAN-FUNDS. Retrying in 4s...
-WARNING: giving up on MEEZAN-FUNDS after 3 attempts
-INFO: 325/544 processed, 299 refreshed successfully, 26 unsuccessful
-WARNING: MMBLTFC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MMBLTFC. Retrying in 1s...
-WARNING: MMBLTFC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MMBLTFC. Retrying in 2s...
-WARNING: MMBLTFC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MMBLTFC. Retrying in 4s...
-WARNING: giving up on MMBLTFC after 3 attempts
-WARNING: NBP-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 1s...
-WARNING: NBP-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 2s...
-WARNING: NBP-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 4s...
-WARNING: giving up on NBP-FUNDS after 3 attempts
-INFO: 350/544 processed, 319 refreshed successfully, 31 unsuccessful
-WARNING: NIT-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NIT-FUNDS. Retrying in 1s...
-WARNING: NIT-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NIT-FUNDS. Retrying in 2s...
-WARNING: NIT-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NIT-FUNDS. Retrying in 4s...
-WARNING: giving up on NIT-FUNDS after 3 attempts
-WARNING: OPENFUND fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 1s...
-WARNING: OPENFUND fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 2s...
-WARNING: OPENFUND fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 4s...
-WARNING: giving up on OPENFUND after 3 attempts
-INFO: 375/544 processed, 341 refreshed successfully, 34 unsuccessful
-WARNING: PFSLTFC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 1s...
-WARNING: PFSLTFC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 2s...
-WARNING: PFSLTFC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 4s...
-WARNING: giving up on PFSLTFC after 3 attempts
-INFO: 400/544 processed, 365 refreshed successfully, 35 unsuccessful
-INFO: 425/544 processed, 390 refreshed successfully, 35 unsuccessful
-INFO: 450/544 processed, 415 refreshed successfully, 35 unsuccessful
-INFO: 475/544 processed, 439 refreshed successfully, 36 unsuccessful
-INFO: 500/544 processed, 463 refreshed successfully, 37 unsuccessful
-WARNING: TPLSC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 1s...
-WARNING: TPLSC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 2s...
-WARNING: TPLSC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 4s...
-WARNING: giving up on TPLSC after 3 attempts
-WARNING: TPLTFC3 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLTFC3. Retrying in 1s...
-WARNING: TPLTFC3 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLTFC3. Retrying in 2s...
-WARNING: TPLTFC3 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLTFC3. Retrying in 4s...
-WARNING: giving up on TPLTFC3 after 3 attempts
-WARNING: UBL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 1s...
-WARNING: UBL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 2s...
-WARNING: UBL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 4s...
-WARNING: giving up on UBL-FUNDS after 3 attempts
-WARNING: UBLTFC5 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBLTFC5. Retrying in 1s...
-WARNING: UBLTFC5 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBLTFC5. Retrying in 2s...
-WARNING: UBLTFC5 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBLTFC5. Retrying in 4s...
-WARNING: giving up on UBLTFC5 after 3 attempts
-INFO: 525/544 processed, 483 refreshed successfully, 42 unsuccessful
+INFO: 544 symbols total, 68 not due, 476 to fetch or retry
+INFO: 25/476 processed, 25 refreshed successfully, 0 unsuccessful
+INFO: 50/476 processed, 50 refreshed successfully, 0 unsuccessful
+INFO: 75/476 processed, 75 refreshed successfully, 0 unsuccessful
+INFO: 100/476 processed, 100 refreshed successfully, 0 unsuccessful
+INFO: 125/476 processed, 125 refreshed successfully, 0 unsuccessful
+INFO: 150/476 processed, 150 refreshed successfully, 0 unsuccessful
+INFO: 175/476 processed, 175 refreshed successfully, 0 unsuccessful
+INFO: 200/476 processed, 200 refreshed successfully, 0 unsuccessful
+INFO: 225/476 processed, 225 refreshed successfully, 0 unsuccessful
+INFO: 250/476 processed, 250 refreshed successfully, 0 unsuccessful
+INFO: 275/476 processed, 275 refreshed successfully, 0 unsuccessful
+INFO: 300/476 processed, 300 refreshed successfully, 0 unsuccessful
+INFO: 325/476 processed, 325 refreshed successfully, 0 unsuccessful
+INFO: 350/476 processed, 350 refreshed successfully, 0 unsuccessful
+INFO: 375/476 processed, 375 refreshed successfully, 0 unsuccessful
+INFO: 400/476 processed, 400 refreshed successfully, 0 unsuccessful
+INFO: 425/476 processed, 425 refreshed successfully, 0 unsuccessful
+INFO: 450/476 processed, 450 refreshed successfully, 0 unsuccessful
+INFO: 475/476 processed, 475 refreshed successfully, 0 unsuccessful
 
-DONE: 505/554 symbols have EPS data. 502 refreshed successfully; 42 unsuccessful. Written to eps_data_cache.json
-OK    Fetch EPS data (1076s)
+DONE: 505/554 symbols have EPS data. 476 refreshed successfully; 0 unsuccessful. Written to eps_data_cache.json
+OK    Fetch EPS data (912s)
 
 ============================================================
 RUNNING: Attach EPS data
@@ -802,9 +606,9 @@ INFO: gemini-3-flash HTTP 404, trying the next model
 INFO: gemini-2.5-flash HTTP 404, trying the next model
 INFO: gemini-3.5-flash-lite HTTP 429, trying the next model
 INFO: gemini-3.1-flash-lite HTTP 429, trying the next model
-INFO: pbs-cpi_monthly-2026-11-02: None (0 sources) -> None
+INFO: sbp-mpc-2026-10-26: None (0 sources) -> None
 DONE: 2 CPI/MPC events in the next 10 days, 0 carry a broker expectation
-OK    Broker expectations for CPI and MPC (5s)
+OK    Broker expectations for CPI and MPC (6s)
 
 ============================================================
 RUNNING: Confirm SBP FX reserves (real values)
@@ -823,7 +627,7 @@ DONE: 949 events (787 company, 162 macro) written to upcoming.json
 OK    Export upcoming.json for the portfolio tracker (0s)
 
 ============================================================
-PIPELINE SUMMARY (65.9 min total)
+PIPELINE SUMMARY (58.4 min total)
 ============================================================
   OK    sbp
   OK    pbs
