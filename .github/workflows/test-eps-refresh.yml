@@ -3,6 +3,12 @@ name: Test EPS Refresh (No Deployment)
 
 on:
   workflow_dispatch:
+    inputs:
+      symbols:
+        description: "Stock symbols to test, comma-separated (e.g. FFC,MEBL,OGDC)"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: read
@@ -42,26 +48,36 @@ jobs:
 
           echo "Existing cache restored for testing."
           python -c "import json; c=json.load(open('eps_data_cache.json')); print(f'Cached symbols: {len(c)}')"
-
-      - name: Force refresh of test symbols
+          
+      - name: Select test symbols
         run: |
           python - <<'PY'
           import json
+          import os
 
           with open("events_merged.json", encoding="utf-8") as f:
               events = json.load(f)
 
-          symbols = sorted({
-              e["symbol"] for e in events if e.get("symbol")
-          })[:5]
+          available = {e["symbol"] for e in events if e.get("symbol")}
+          requested = os.environ.get("REQUESTED_SYMBOLS", "").strip()
+
+          if requested:
+              symbols = sorted({
+                  s.strip().upper()
+                  for s in requested.split(",")
+                  if s.strip()
+              })
+              missing = [s for s in symbols if s not in available]
+              if missing:
+                  raise SystemExit(
+                      f"Symbols not found in events_merged.json: {', '.join(missing)}"
+                  )
+          else:
+              symbols = sorted(available)[:5]
 
           with open("eps_data_cache.json", encoding="utf-8") as f:
               cache = json.load(f)
 
-          print("Symbols selected for testing:", symbols)
-
-          # Remove timestamps only for the five test symbols.
-          # This changes the temporary runner cache, not gh-pages.
           for symbol in symbols:
               if symbol in cache:
                   cache[symbol].pop("fetched_at", None)
@@ -71,7 +87,11 @@ jobs:
 
           with open("test_symbols.txt", "w", encoding="utf-8") as f:
               f.write("\n".join(symbols) + "\n")
+
+          print("Symbols selected for testing:", symbols)
           PY
+        env:
+          REQUESTED_SYMBOLS: ${{ inputs.symbols }}
 
       - name: Run EPS refresh test
         run: |
