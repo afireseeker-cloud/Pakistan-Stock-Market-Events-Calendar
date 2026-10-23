@@ -57,14 +57,20 @@ def main():
 
         eps_actual = entry.get("latest_quarterly_eps")
         eps_prior = entry.get("yoy_quarterly_eps")
+        eps_period = entry.get("latest_quarterly_label")
+
         if eps_actual is None:
             eps_actual = entry.get("latest_annual_eps")
             eps_prior = entry.get("prior_annual_eps")
+            annual_label = entry.get("latest_annual_label")
+            eps_period = (
+                f"FY {annual_label}" if annual_label else None
+            )
 
         if eps_actual is not None:
             e.setdefault("payload", {})["eps_actual"] = eps_actual
             e["payload"]["eps_prior"] = eps_prior
-            e["payload"]["eps_period"] = entry.get("latest_quarterly_label")
+            e["payload"]["eps_period"] = eps_period
             attached += 1
 
     out_path = args.out or args.input
