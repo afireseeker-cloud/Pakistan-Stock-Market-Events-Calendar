@@ -1,0 +1,129 @@
+
+name: Test EPS Refresh (No Deployment)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-eps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download published events
+        run: |
+          curl -fLsS \
+            https://raw.githubusercontent.com/afireseeker-cloud/pakistan-stock-market-events-calendar/gh-pages/events_merged.json \
+            -o events_merged.json
+
+      - name: Restore EPS cache for isolated testing
+        run: |
+          curl -fLsS \
+            https://raw.githubusercontent.com/afireseeker-cloud/pakistan-stock-market-events-calendar/gh-pages/eps_data_cache.json \
+            -o eps_data_cache.json \
+            || printf '{}\n' > eps_data_cache.json
+
+          echo "Existing cache restored for testing."
+          python -c "import json; c=json.load(open('eps_data_cache.json')); print(f'Cached symbols: {len(c)}')"
+
+      - name: Force refresh of test symbols
+        run: |
+          python - <<'PY'
+          import json
+
+          with open("events_merged.json", encoding="utf-8") as f:
+              events = json.load(f)
+
+          symbols = sorted({
+              e["symbol"] for e in events if e.get("symbol")
+          })[:5]
+
+          with open("eps_data_cache.json", encoding="utf-8") as f:
+              cache = json.load(f)
+
+          print("Symbols selected for testing:", symbols)
+
+          # Remove timestamps only for the five test symbols.
+          # This changes the temporary runner cache, not gh-pages.
+          for symbol in symbols:
+              if symbol in cache:
+                  cache[symbol].pop("fetched_at", None)
+
+          with open("eps_data_cache.json", "w", encoding="utf-8") as f:
+              json.dump(cache, f, indent=2)
+
+          with open("test_symbols.txt", "w", encoding="utf-8") as f:
+              f.write("\n".join(symbols) + "\n")
+          PY
+
+      - name: Run EPS refresh test
+        run: |
+          set -o pipefail
+          python fetch_eps_data.py \
+            --from-events events_merged.json \
+            --debug \
+            --limit 5 2>&1 | tee eps_test.log
+
+      - name: Summarize test results
+        if: always()
+        run: |
+          echo "## EPS Refresh Test" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -f test_symbols.txt ]; then
+            echo "### Symbols tested" >> "$GITHUB_STEP_SUMMARY"
+            while IFS= read -r symbol; do
+              echo "- $symbol" >> "$GITHUB_STEP_SUMMARY"
+            done < test_symbols.txt
+          fi
+
+          if [ -f eps_data_cache.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+
+          with open("eps_data_cache.json", encoding="utf-8") as f:
+              cache = json.load(f)
+
+          with open("test_symbols.txt", encoding="utf-8") as f:
+              symbols = [s.strip() for s in f if s.strip()]
+
+          print("### Results")
+          for symbol in symbols:
+              entry = cache.get(symbol, {})
+              print(
+                  f"- **{symbol}**: "
+                  f"resolved={entry.get('resolved', False)}, "
+                  f"latest quarterly EPS={entry.get('latest_quarterly_eps')}, "
+                  f"period={entry.get('latest_quarterly_label')}, "
+                  f"fetched_at={entry.get('fetched_at', 'not recorded')}"
+              )
+          PY
+          fi
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eps-refresh-test
+          path: |
+            eps_data_cache.json
+            eps_test.log
+            test_symbols.txt
+          if-no-files-found: warn
+          retention-days: 7
