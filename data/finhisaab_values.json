@@ -1,12 +1,24 @@
 {
   "_about": "Values pulled from FinHisaab (SBP EasyData + PBS CPI) by a scheduled Claude task. attach_finhisaab_values.py reads this file. Do not edit by hand; the next refresh overwrites it.",
-  "generated_at": "2026-10-16T15:28:00Z",
+  "generated_at": "2026-10-23T13:55:07Z",
   "series": {
     "remittances": {
       "series_key": "TS_GP_BOP_WR_M.WR0340",
       "unit": "USD million",
-      "last_sync": "2026-10-11T23:16:25.745Z",
+      "last_sync": "2026-10-18T22:52:58.882Z",
       "observations": [
+        {
+          "period": "2024-10-31",
+          "value": 3054.550962
+        },
+        {
+          "period": "2024-11-30",
+          "value": 2915.348668
+        },
+        {
+          "period": "2024-12-31",
+          "value": 3080.397524
+        },
         {
           "period": "2025-01-31",
           "value": 3003.375873
@@ -96,8 +108,20 @@
     "current_account": {
       "series_key": "TS_GP_BOP_BPM6SUM_M.P00010",
       "unit": "USD million",
-      "last_sync": "2026-10-11T23:16:59.394Z",
+      "last_sync": "2026-10-18T22:53:30.980Z",
       "observations": [
+        {
+          "period": "2024-10-31",
+          "value": 296
+        },
+        {
+          "period": "2024-11-30",
+          "value": 703
+        },
+        {
+          "period": "2024-12-31",
+          "value": 431
+        },
         {
           "period": "2025-01-31",
           "value": -428
@@ -160,15 +184,15 @@
         },
         {
           "period": "2026-04-30",
-          "value": -276
+          "value": -335
         },
         {
           "period": "2026-05-31",
-          "value": 500
+          "value": 415
         },
         {
           "period": "2026-06-30",
-          "value": -814
+          "value": -836
         },
         {
           "period": "2026-07-31",
@@ -176,15 +200,79 @@
         },
         {
           "period": "2026-08-31",
-          "value": -98
+          "value": -73
+        },
+        {
+          "period": "2026-09-30",
+          "value": -356
         }
       ]
     },
     "policy_rate": {
       "series_key": "TS_GP_IR_SIRPR_AH.SBPOL0030",
       "unit": "percent",
-      "last_sync": "2026-10-11T21:19:33.521Z",
+      "last_sync": "2026-10-18T21:00:49.123Z",
       "observations": [
+        {
+          "period": "2021-11-22",
+          "value": 8.75
+        },
+        {
+          "period": "2021-12-15",
+          "value": 9.75
+        },
+        {
+          "period": "2022-04-08",
+          "value": 12.25
+        },
+        {
+          "period": "2022-05-24",
+          "value": 13.75
+        },
+        {
+          "period": "2022-07-13",
+          "value": 15
+        },
+        {
+          "period": "2022-11-28",
+          "value": 16
+        },
+        {
+          "period": "2023-01-24",
+          "value": 17
+        },
+        {
+          "period": "2023-03-03",
+          "value": 20
+        },
+        {
+          "period": "2023-04-05",
+          "value": 21
+        },
+        {
+          "period": "2023-06-27",
+          "value": 22
+        },
+        {
+          "period": "2024-06-11",
+          "value": 20.5
+        },
+        {
+          "period": "2024-07-30",
+          "value": 19.5
+        },
+        {
+          "period": "2024-09-13",
+          "value": 17.5
+        },
+        {
+          "period": "2024-11-05",
+          "value": 15
+        },
+        {
+          "period": "2024-12-17",
+          "value": 13
+        },
         {
           "period": "2025-01-28",
           "value": 12
@@ -206,8 +294,20 @@
     "cpi_yoy": {
       "series_key": "research_inflation.yoyInflationPercent",
       "unit": "percent",
-      "last_sync": "2026-10-16T15:27:53Z",
+      "last_sync": "2026-10-23T13:51:00.825Z",
       "observations": [
+        {
+          "period": "2024-10",
+          "value": 7.2
+        },
+        {
+          "period": "2024-11",
+          "value": 4.9
+        },
+        {
+          "period": "2024-12",
+          "value": 4.1
+        },
         {
           "period": "2025-01",
           "value": 2.4
@@ -238,7 +338,7 @@
         },
         {
           "period": "2025-08",
-          "value": 3.0
+          "value": 3
         },
         {
           "period": "2025-09",
