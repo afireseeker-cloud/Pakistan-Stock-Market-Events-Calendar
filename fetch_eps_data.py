@@ -67,7 +67,14 @@ def should_fetch(entry: dict, now: datetime) -> bool:
             fetched = fetched.replace(tzinfo=timezone.utc)
     except (TypeError, ValueError):
         return True
-
+    
+    if (
+        entry.get("resolved")
+        and entry.get("latest_annual_eps") is not None
+        and not entry.get("latest_annual_label")
+    ):
+        return True
+        
     age_hours = (now - fetched).total_seconds() / 3600
 
     # Failed and unresolved entries are retried after 24 hours.
