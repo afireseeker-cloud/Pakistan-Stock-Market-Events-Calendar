@@ -86,10 +86,31 @@ def title_period_end(title: str) -> tuple[int, int] | None:
 
 def eps_matches(title: str, eps_period: str | None) -> bool:
     end = title_period_end(title)
-    m = re.fullmatch(r"Q([1-4]) (\d{4})", (eps_period or "").strip())
-    if not end or not m:
+    period = (eps_period or "").strip()
+
+    if not end:
         return False
-    return int(m.group(2)) == end[0] and int(m.group(1)) == (end[1] - 1) // 3 + 1
+
+    # Quarterly EPS must match the quarter and year in the title.
+    m = re.fullmatch(r"Q([1-4]) (\d{4})", period)
+    if m:
+        return (
+            int(m.group(2)) == end[0]
+            and int(m.group(1)) == (end[1] - 1) // 3 + 1
+        )
+
+    # Annual EPS must match the year and have an annual reporting title.
+    m = re.fullmatch(r"FY (\d{4})", period)
+    if m:
+        annual_title = re.search(
+            r"\b(annual|audited|year ended|year ending|"
+            r"12 months ended|twelve months ended)\b",
+            title,
+            re.I,
+        )
+        return int(m.group(1)) == end[0] and annual_title is not None
+
+    return False
 
 
 def main():
