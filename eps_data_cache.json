@@ -56,8 +56,8 @@
   },
   "ABL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:24:46+00:00",
-    "fetched_at": "2026-10-23T16:24:46+00:00"
+    "last_attempt_at": "2026-10-24T20:51:03+00:00",
+    "fetched_at": "2026-10-24T20:51:03+00:00"
   },
   "ABOT": {
     "resolved": true,
@@ -72,8 +72,8 @@
   },
   "ACIETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:24:49+00:00",
-    "last_attempt_at": "2026-10-23T16:24:49+00:00"
+    "fetched_at": "2026-10-24T20:51:05+00:00",
+    "last_attempt_at": "2026-10-24T20:51:05+00:00"
   },
   "ACPL": {
     "resolved": true,
@@ -253,8 +253,8 @@
   },
   "AKD-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:25:24+00:00",
-    "fetched_at": "2026-10-23T16:25:24+00:00"
+    "last_attempt_at": "2026-10-24T20:51:16+00:00",
+    "fetched_at": "2026-10-24T20:51:16+00:00"
   },
   "AKDSL": {
     "resolved": true,
@@ -280,13 +280,13 @@
   },
   "ALFALAH-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:25:39+00:00",
-    "fetched_at": "2026-10-23T16:25:39+00:00"
+    "last_attempt_at": "2026-10-24T20:51:28+00:00",
+    "fetched_at": "2026-10-24T20:51:28+00:00"
   },
   "ALHAML-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:25:50+00:00",
-    "fetched_at": "2026-10-23T16:25:50+00:00"
+    "last_attempt_at": "2026-10-24T20:51:40+00:00",
+    "fetched_at": "2026-10-24T20:51:40+00:00"
   },
   "ALNRS": {
     "resolved": true,
@@ -455,8 +455,8 @@
   },
   "ATLAS-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:26:31+00:00",
-    "fetched_at": "2026-10-23T16:26:31+00:00"
+    "last_attempt_at": "2026-10-24T20:51:54+00:00",
+    "fetched_at": "2026-10-24T20:51:54+00:00"
   },
   "ATLH": {
     "resolved": true,
@@ -493,8 +493,8 @@
   },
   "AWT-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:26:45+00:00",
-    "fetched_at": "2026-10-23T16:26:45+00:00"
+    "last_attempt_at": "2026-10-24T20:52:06+00:00",
+    "fetched_at": "2026-10-24T20:52:06+00:00"
   },
   "AWTX": {
     "resolved": true,
@@ -510,17 +510,18 @@
   "BAFL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:26:49+00:00",
-    "last_attempt_at": "2026-10-23T16:26:49+00:00"
+    "fetched_at": "2026-10-24T20:52:08+00:00",
+    "last_attempt_at": "2026-10-24T20:52:08+00:00"
   },
   "BAFLTFC6": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:26:59+00:00",
-    "fetched_at": "2026-10-23T16:26:59+00:00"
+    "last_attempt_at": "2026-10-24T20:52:19+00:00",
+    "fetched_at": "2026-10-24T20:52:19+00:00"
   },
   "BAFS": {
     "resolved": true,
@@ -648,13 +649,13 @@
   },
   "BIPLSC": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:27:45+00:00",
-    "fetched_at": "2026-10-23T16:27:45+00:00"
+    "last_attempt_at": "2026-10-24T20:52:42+00:00",
+    "fetched_at": "2026-10-24T20:52:42+00:00"
   },
   "BIPLSC2": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:27:56+00:00",
-    "fetched_at": "2026-10-23T16:27:56+00:00"
+    "last_attempt_at": "2026-10-24T20:52:52+00:00",
+    "fetched_at": "2026-10-24T20:52:52+00:00"
   },
   "BLUEX": {
     "resolved": true,
@@ -835,12 +836,13 @@
   "CJPL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:28:25+00:00",
-    "last_attempt_at": "2026-10-23T16:28:25+00:00"
+    "fetched_at": "2026-10-24T20:52:55+00:00",
+    "last_attempt_at": "2026-10-24T20:52:55+00:00"
   },
   "CLOV": {
     "resolved": true,
@@ -1309,8 +1311,8 @@
   },
   "FAYSAL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:29:54+00:00",
-    "fetched_at": "2026-10-23T16:29:54+00:00"
+    "last_attempt_at": "2026-10-24T20:53:07+00:00",
+    "fetched_at": "2026-10-24T20:53:07+00:00"
   },
   "FCCL": {
     "resolved": true,
@@ -1491,12 +1493,13 @@
   "FNEL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:30:28+00:00",
-    "last_attempt_at": "2026-10-23T16:30:28+00:00"
+    "fetched_at": "2026-10-24T20:53:13+00:00",
+    "last_attempt_at": "2026-10-24T20:53:13+00:00"
   },
   "FPJM": {
     "resolved": true,
@@ -1556,12 +1559,13 @@
   "FTSM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:30:38+00:00",
-    "last_attempt_at": "2026-10-23T16:30:38+00:00"
+    "fetched_at": "2026-10-24T20:53:14+00:00",
+    "last_attempt_at": "2026-10-24T20:53:14+00:00"
   },
   "FZCM": {
     "resolved": true,
@@ -1873,18 +1877,18 @@
   },
   "HBLTETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:31:40+00:00",
-    "last_attempt_at": "2026-10-23T16:31:40+00:00"
+    "fetched_at": "2026-10-24T20:53:20+00:00",
+    "last_attempt_at": "2026-10-24T20:53:20+00:00"
   },
   "HBLTFC2": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:31:52+00:00",
-    "fetched_at": "2026-10-23T16:31:52+00:00"
+    "last_attempt_at": "2026-10-24T20:53:30+00:00",
+    "fetched_at": "2026-10-24T20:53:30+00:00"
   },
   "HBLTFC3": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:32:02+00:00",
-    "fetched_at": "2026-10-23T16:32:02+00:00"
+    "last_attempt_at": "2026-10-24T20:53:39+00:00",
+    "fetched_at": "2026-10-24T20:53:39+00:00"
   },
   "HCAR": {
     "resolved": true,
@@ -1900,22 +1904,24 @@
   "HGFA": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2024",
     "prior_annual_eps": null,
     "latest_quarterly_eps": 0.06,
     "latest_quarterly_label": "Q3 2016",
     "yoy_quarterly_eps": -3.82,
-    "fetched_at": "2026-10-23T16:32:06+00:00",
-    "last_attempt_at": "2026-10-23T16:32:06+00:00"
+    "fetched_at": "2026-10-24T20:53:41+00:00",
+    "last_attempt_at": "2026-10-24T20:53:41+00:00"
   },
   "HIFA": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2024",
     "prior_annual_eps": null,
     "latest_quarterly_eps": 0.95,
     "latest_quarterly_label": "Q3 2018",
     "yoy_quarterly_eps": 0.1,
-    "fetched_at": "2026-10-23T16:32:08+00:00",
-    "last_attempt_at": "2026-10-23T16:32:08+00:00"
+    "fetched_at": "2026-10-24T20:53:42+00:00",
+    "last_attempt_at": "2026-10-24T20:53:42+00:00"
   },
   "HINO": {
     "resolved": true,
@@ -2016,12 +2022,13 @@
   "HUSI": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:32:24+00:00",
-    "last_attempt_at": "2026-10-23T16:32:24+00:00"
+    "fetched_at": "2026-10-24T20:53:44+00:00",
+    "last_attempt_at": "2026-10-24T20:53:44+00:00"
   },
   "HWQS": {
     "resolved": true,
@@ -2325,8 +2332,8 @@
   },
   "JSBLTFC4": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:33:22+00:00",
-    "fetched_at": "2026-10-23T16:33:22+00:00"
+    "last_attempt_at": "2026-10-24T20:53:53+00:00",
+    "fetched_at": "2026-10-24T20:53:53+00:00"
   },
   "JSCL": {
     "resolved": true,
@@ -2341,8 +2348,8 @@
   },
   "JSGBETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:33:26+00:00",
-    "last_attempt_at": "2026-10-23T16:33:26+00:00"
+    "fetched_at": "2026-10-24T20:53:54+00:00",
+    "last_attempt_at": "2026-10-24T20:53:54+00:00"
   },
   "JSGCL": {
     "resolved": true,
@@ -2368,13 +2375,13 @@
   },
   "JSIL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:33:38+00:00",
-    "fetched_at": "2026-10-23T16:33:38+00:00"
+    "last_attempt_at": "2026-10-24T20:54:04+00:00",
+    "fetched_at": "2026-10-24T20:54:04+00:00"
   },
   "JSMFETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:33:40+00:00",
-    "last_attempt_at": "2026-10-23T16:33:40+00:00"
+    "fetched_at": "2026-10-24T20:54:07+00:00",
+    "last_attempt_at": "2026-10-24T20:54:07+00:00"
   },
   "JSML": {
     "resolved": true,
@@ -2422,8 +2429,8 @@
   },
   "KFGB1": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:34:00+00:00",
-    "fetched_at": "2026-10-23T16:34:00+00:00"
+    "last_attempt_at": "2026-10-24T20:54:20+00:00",
+    "fetched_at": "2026-10-24T20:54:20+00:00"
   },
   "KHTC": {
     "resolved": true,
@@ -2702,8 +2709,8 @@
   },
   "MCBIM-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:34:53+00:00",
-    "fetched_at": "2026-10-23T16:34:53+00:00"
+    "last_attempt_at": "2026-10-24T20:54:31+00:00",
+    "fetched_at": "2026-10-24T20:54:31+00:00"
   },
   "MDTL": {
     "resolved": true,
@@ -2729,8 +2736,8 @@
   },
   "MEEZAN-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:35:07+00:00",
-    "fetched_at": "2026-10-23T16:35:07+00:00"
+    "last_attempt_at": "2026-10-24T20:54:43+00:00",
+    "fetched_at": "2026-10-24T20:54:43+00:00"
   },
   "MFFL": {
     "resolved": true,
@@ -2745,18 +2752,19 @@
   },
   "MIIETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:35:15+00:00",
-    "last_attempt_at": "2026-10-23T16:35:15+00:00"
+    "fetched_at": "2026-10-24T20:54:46+00:00",
+    "last_attempt_at": "2026-10-24T20:54:46+00:00"
   },
   "MIRKS": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:35:17+00:00",
-    "last_attempt_at": "2026-10-23T16:35:17+00:00"
+    "fetched_at": "2026-10-24T20:54:48+00:00",
+    "last_attempt_at": "2026-10-24T20:54:48+00:00"
   },
   "MLCF": {
     "resolved": true,
@@ -2870,8 +2878,8 @@
   },
   "MZNPETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:35:50+00:00",
-    "last_attempt_at": "2026-10-23T16:35:50+00:00"
+    "fetched_at": "2026-10-24T20:55:00+00:00",
+    "last_attempt_at": "2026-10-24T20:55:00+00:00"
   },
   "NATF": {
     "resolved": true,
@@ -2897,13 +2905,13 @@
   },
   "NBP-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:36:08+00:00",
-    "fetched_at": "2026-10-23T16:36:08+00:00"
+    "last_attempt_at": "2026-10-24T20:55:11+00:00",
+    "fetched_at": "2026-10-24T20:55:11+00:00"
   },
   "NBPGETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:36:10+00:00",
-    "last_attempt_at": "2026-10-23T16:36:10+00:00"
+    "fetched_at": "2026-10-24T20:55:13+00:00",
+    "last_attempt_at": "2026-10-24T20:55:13+00:00"
   },
   "NCL": {
     "resolved": true,
@@ -2984,13 +2992,13 @@
   },
   "NIT-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:36:32+00:00",
-    "fetched_at": "2026-10-23T16:36:32+00:00"
+    "last_attempt_at": "2026-10-24T20:55:23+00:00",
+    "fetched_at": "2026-10-24T20:55:23+00:00"
   },
   "NITGETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:36:35+00:00",
-    "last_attempt_at": "2026-10-23T16:36:35+00:00"
+    "fetched_at": "2026-10-24T20:55:25+00:00",
+    "last_attempt_at": "2026-10-24T20:55:25+00:00"
   },
   "NML": {
     "resolved": true,
@@ -3115,8 +3123,8 @@
   },
   "OPENFUND": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:37:06+00:00",
-    "fetched_at": "2026-10-23T16:37:06+00:00"
+    "last_attempt_at": "2026-10-24T20:55:36+00:00",
+    "fetched_at": "2026-10-24T20:55:36+00:00"
   },
   "ORM": {
     "resolved": true,
@@ -3264,27 +3272,29 @@
   "PECO": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:37:29+00:00",
-    "last_attempt_at": "2026-10-23T16:37:29+00:00"
+    "fetched_at": "2026-10-24T20:55:37+00:00",
+    "last_attempt_at": "2026-10-24T20:55:37+00:00"
   },
   "PFSLTFC": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:37:41+00:00",
-    "fetched_at": "2026-10-23T16:37:41+00:00"
+    "last_attempt_at": "2026-10-24T20:55:47+00:00",
+    "fetched_at": "2026-10-24T20:55:47+00:00"
   },
   "PHDL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2024",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2025",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:37:43+00:00",
-    "last_attempt_at": "2026-10-23T16:37:43+00:00"
+    "fetched_at": "2026-10-24T20:55:50+00:00",
+    "last_attempt_at": "2026-10-24T20:55:50+00:00"
   },
   "PIAHCLA": {
     "resolved": true,
@@ -3399,12 +3409,13 @@
   "PNSC": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:38:01+00:00",
-    "last_attempt_at": "2026-10-23T16:38:01+00:00"
+    "fetched_at": "2026-10-24T20:55:53+00:00",
+    "last_attempt_at": "2026-10-24T20:55:53+00:00"
   },
   "POL": {
     "resolved": true,
@@ -3769,12 +3780,13 @@
   "SEL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:39:05+00:00",
-    "last_attempt_at": "2026-10-23T16:39:05+00:00"
+    "fetched_at": "2026-10-24T20:55:55+00:00",
+    "last_attempt_at": "2026-10-24T20:55:55+00:00"
   },
   "SEPL": {
     "resolved": true,
@@ -3867,12 +3879,13 @@
   "SHFA": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:39:22+00:00",
-    "last_attempt_at": "2026-10-23T16:39:22+00:00"
+    "fetched_at": "2026-10-24T20:55:57+00:00",
+    "last_attempt_at": "2026-10-24T20:55:57+00:00"
   },
   "SHJS": {
     "resolved": true,
@@ -4047,8 +4060,8 @@
   },
   "SPAC2": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:39:52+00:00",
-    "last_attempt_at": "2026-10-23T16:39:52+00:00"
+    "fetched_at": "2026-10-24T20:56:00+00:00",
+    "last_attempt_at": "2026-10-24T20:56:00+00:00"
   },
   "SPCL": {
     "resolved": true,
@@ -4294,8 +4307,8 @@
   },
   "TCORPCPS": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:40:33+00:00",
-    "last_attempt_at": "2026-10-23T16:40:33+00:00"
+    "fetched_at": "2026-10-24T20:56:01+00:00",
+    "last_attempt_at": "2026-10-24T20:56:01+00:00"
   },
   "TELE": {
     "resolved": true,
@@ -4420,8 +4433,8 @@
   },
   "TPLSC": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:41:04+00:00",
-    "fetched_at": "2026-10-23T16:41:04+00:00"
+    "last_attempt_at": "2026-10-24T20:56:14+00:00",
+    "fetched_at": "2026-10-24T20:56:14+00:00"
   },
   "TPLT": {
     "resolved": true,
@@ -4436,8 +4449,8 @@
   },
   "TPLTFC3": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:41:16+00:00",
-    "fetched_at": "2026-10-23T16:41:16+00:00"
+    "last_attempt_at": "2026-10-24T20:56:25+00:00",
+    "fetched_at": "2026-10-24T20:56:25+00:00"
   },
   "TREET": {
     "resolved": true,
@@ -4475,12 +4488,13 @@
   "TRSM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:41:22+00:00",
-    "last_attempt_at": "2026-10-23T16:41:22+00:00"
+    "fetched_at": "2026-10-24T20:56:28+00:00",
+    "last_attempt_at": "2026-10-24T20:56:28+00:00"
   },
   "TSML": {
     "resolved": true,
@@ -4528,18 +4542,18 @@
   },
   "UBL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:41:42+00:00",
-    "fetched_at": "2026-10-23T16:41:42+00:00"
+    "last_attempt_at": "2026-10-24T20:56:39+00:00",
+    "fetched_at": "2026-10-24T20:56:39+00:00"
   },
   "UBLPETF": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:41:45+00:00",
-    "last_attempt_at": "2026-10-23T16:41:45+00:00"
+    "fetched_at": "2026-10-24T20:56:42+00:00",
+    "last_attempt_at": "2026-10-24T20:56:42+00:00"
   },
   "UBLTFC5": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:41:54+00:00",
-    "fetched_at": "2026-10-23T16:41:54+00:00"
+    "last_attempt_at": "2026-10-24T20:56:52+00:00",
+    "fetched_at": "2026-10-24T20:56:52+00:00"
   },
   "UDLI": {
     "resolved": true,
@@ -4569,22 +4583,24 @@
   "UNITY": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q1 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:42:02+00:00",
-    "last_attempt_at": "2026-10-23T16:42:02+00:00"
+    "fetched_at": "2026-10-24T20:56:55+00:00",
+    "last_attempt_at": "2026-10-24T20:56:55+00:00"
   },
   "UPFL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q2 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:42:04+00:00",
-    "last_attempt_at": "2026-10-23T16:42:04+00:00"
+    "fetched_at": "2026-10-24T20:56:58+00:00",
+    "last_attempt_at": "2026-10-24T20:56:58+00:00"
   },
   "WAFI": {
     "resolved": true,
@@ -4611,12 +4627,13 @@
   "WASL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:42:12+00:00",
-    "last_attempt_at": "2026-10-23T16:42:12+00:00"
+    "fetched_at": "2026-10-24T20:56:59+00:00",
+    "last_attempt_at": "2026-10-24T20:56:59+00:00"
   },
   "WAVES": {
     "resolved": true,
@@ -4840,8 +4857,8 @@
   },
   "MMBLTFC": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:35:29+00:00",
-    "fetched_at": "2026-10-23T16:35:29+00:00"
+    "last_attempt_at": "2026-10-24T20:54:57+00:00",
+    "fetched_at": "2026-10-24T20:54:57+00:00"
   },
   "NRSL": {
     "resolved": true,
@@ -4901,12 +4918,13 @@
   "UCAPM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2024",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2025",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:41:56+00:00",
-    "last_attempt_at": "2026-10-23T16:41:56+00:00"
+    "fetched_at": "2026-10-24T20:56:53+00:00",
+    "last_attempt_at": "2026-10-24T20:56:53+00:00"
   },
   "UVIC": {
     "resolved": true,
@@ -4943,13 +4961,13 @@
   },
   "ASLCPS": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:26:17+00:00",
-    "last_attempt_at": "2026-10-23T16:26:17+00:00"
+    "fetched_at": "2026-10-24T20:51:42+00:00",
+    "last_attempt_at": "2026-10-24T20:51:42+00:00"
   },
   "ASLPS": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:26:18+00:00",
-    "last_attempt_at": "2026-10-23T16:26:18+00:00"
+    "fetched_at": "2026-10-24T20:51:43+00:00",
+    "last_attempt_at": "2026-10-24T20:51:43+00:00"
   },
   "ATIL": {
     "resolved": true,
@@ -5097,12 +5115,13 @@
   "PIM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:37:50+00:00",
-    "last_attempt_at": "2026-10-23T16:37:50+00:00"
+    "fetched_at": "2026-10-24T20:55:52+00:00",
+    "last_attempt_at": "2026-10-24T20:55:52+00:00"
   },
   "AKDHL": {
     "resolved": true,
@@ -5217,22 +5236,24 @@
   "GRYL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:31:18+00:00",
-    "last_attempt_at": "2026-10-23T16:31:18+00:00"
+    "fetched_at": "2026-10-24T20:53:17+00:00",
+    "last_attempt_at": "2026-10-24T20:53:17+00:00"
   },
   "SINDM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q1 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:39:31+00:00",
-    "last_attempt_at": "2026-10-23T16:39:31+00:00"
+    "fetched_at": "2026-10-24T20:55:58+00:00",
+    "last_attempt_at": "2026-10-24T20:55:58+00:00"
   },
   "SLYT": {
     "resolved": true,
@@ -5280,8 +5301,8 @@
   },
   "JVDCPS": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:33:47+00:00",
-    "last_attempt_at": "2026-10-23T16:33:47+00:00"
+    "fetched_at": "2026-10-24T20:54:08+00:00",
+    "last_attempt_at": "2026-10-24T20:54:08+00:00"
   },
   "MUGHALC": {
     "resolved": true,
@@ -5418,12 +5439,13 @@
   "FIMM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:30:23+00:00",
-    "last_attempt_at": "2026-10-23T16:30:23+00:00"
+    "fetched_at": "2026-10-24T20:53:11+00:00",
+    "last_attempt_at": "2026-10-24T20:53:11+00:00"
   },
   "KML": {
     "resolved": true,
@@ -5483,12 +5505,13 @@
   "HAFL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:31:32+00:00",
-    "last_attempt_at": "2026-10-23T16:31:32+00:00"
+    "fetched_at": "2026-10-24T20:53:18+00:00",
+    "last_attempt_at": "2026-10-24T20:53:18+00:00"
   },
   "ITTEFAQ": {
     "resolved": true,
@@ -5548,12 +5571,13 @@
   "TISL": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": null,
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:40:42+00:00",
-    "last_attempt_at": "2026-10-23T16:40:42+00:00"
+    "fetched_at": "2026-10-24T20:56:03+00:00",
+    "last_attempt_at": "2026-10-24T20:56:03+00:00"
   },
   "AMTEX": {
     "resolved": true,
@@ -5579,8 +5603,8 @@
   },
   "BAHLTFC9": {
     "resolved": false,
-    "last_attempt_at": "2026-10-23T16:27:13+00:00",
-    "fetched_at": "2026-10-23T16:27:13+00:00"
+    "last_attempt_at": "2026-10-24T20:52:31+00:00",
+    "fetched_at": "2026-10-24T20:52:31+00:00"
   },
   "BELA": {
     "resolved": true,
@@ -5618,12 +5642,13 @@
   "DFML": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2025",
     "prior_annual_eps": -3.43,
     "latest_quarterly_eps": -0.73,
     "latest_quarterly_label": "Q3 2024",
     "yoy_quarterly_eps": -0.36,
-    "fetched_at": "2026-10-23T16:28:52+00:00",
-    "last_attempt_at": "2026-10-23T16:28:52+00:00"
+    "fetched_at": "2026-10-24T20:52:56+00:00",
+    "last_attempt_at": "2026-10-24T20:52:56+00:00"
   },
   "DMC": {
     "resolved": true,
@@ -5650,12 +5675,13 @@
   "FEM": {
     "resolved": true,
     "latest_annual_eps": null,
+    "latest_annual_label": "2026",
     "prior_annual_eps": null,
     "latest_quarterly_eps": null,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": null,
-    "fetched_at": "2026-10-23T16:30:10+00:00",
-    "last_attempt_at": "2026-10-23T16:30:10+00:00"
+    "fetched_at": "2026-10-24T20:53:09+00:00",
+    "last_attempt_at": "2026-10-24T20:53:09+00:00"
   },
   "IMAGE": {
     "resolved": true,
@@ -5670,8 +5696,8 @@
   },
   "MSOTPS": {
     "resolved": false,
-    "fetched_at": "2026-10-23T16:35:38+00:00",
-    "last_attempt_at": "2026-10-23T16:35:38+00:00"
+    "fetched_at": "2026-10-24T20:54:58+00:00",
+    "last_attempt_at": "2026-10-24T20:54:58+00:00"
   },
   "NATM": {
     "resolved": true,
