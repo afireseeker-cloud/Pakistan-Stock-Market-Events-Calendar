@@ -154174,7 +154174,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-10-23",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",
