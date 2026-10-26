@@ -11233,5 +11233,214 @@
     "scheduled_date": null,
     "scheduled_time": null,
     "method": null
+  },
+  "psx-annc-KCL-2026-10-26-1520": {
+    "scheduled_date": "2026-11-16",
+    "scheduled_time": "14:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GIL-2026-10-26-1516": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": "12:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-EMCO-2026-10-26-1515": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-NATF-2026-10-26-1513": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-KAPCO-2026-10-26-1507": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-FECTC-2026-10-26-1430": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-CJPL-2026-10-26-1422": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": "10:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GRYL-2026-10-26-1421": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-THCCL-2026-10-26-1351": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-IPAK-2026-10-26-1315": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-SOYASUP-2026-10-26-1314": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ITANZ-2026-10-26-1242": {
+    "scheduled_date": "2026-10-24",
+    "scheduled_time": "11:00",
+    "method": "text"
+  },
+  "psx-annc-SNGP-2026-10-26-1233": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-GATI-2026-10-26-1229": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": "10:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-MFFL-2026-10-26-1226": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-TISL-2026-10-26-1201": {
+    "scheduled_date": "2026-11-16",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-JUBS-2026-10-26-1115": {
+    "scheduled_date": "2026-10-22",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-MFFL-2026-10-26-1108": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-MSCL-2026-10-26-1049": {
+    "scheduled_date": "2026-10-24",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-BBFL-2026-10-26-0919": {
+    "scheduled_date": "2026-10-24",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-LCI-2026-10-26-1523": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-AGIC-2026-10-26-1515": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-PAKOXY-2026-10-26-1515": {
+    "scheduled_date": "2026-10-26",
+    "scheduled_time": "14:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-ABL-2026-10-26-1332": {
+    "scheduled_date": "2026-10-29",
+    "scheduled_time": "14:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-FRCL-2026-10-26-1044": {
+    "scheduled_date": "2026-10-30",
+    "scheduled_time": "14:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-PAKD-2026-10-26-0814": {
+    "scheduled_date": "2026-11-02",
+    "scheduled_time": "14:30",
+    "method": "text"
+  },
+  "psx-annc-TOMCL-2026-10-26-0801": {
+    "scheduled_date": "2026-10-28",
+    "scheduled_time": "15:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-FCL-2026-10-26-1529": {
+    "scheduled_date": "2026-10-29",
+    "scheduled_time": "16:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-NETSOL-2026-10-26-1433": {
+    "scheduled_date": null,
+    "scheduled_time": null,
+    "method": null
+  },
+  "psx-annc-EPCL-2026-10-26-1426": {
+    "scheduled_date": "2026-10-27",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-INDU-2026-10-26-1359": {
+    "scheduled_date": "2026-10-28",
+    "scheduled_time": "15:45",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-UDLI-2026-10-26-1216": {
+    "scheduled_date": "2026-10-28",
+    "scheduled_time": "10:45",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-TRSM-2026-10-26-1144": {
+    "scheduled_date": "2026-10-22",
+    "scheduled_time": "11:00",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GGL-2026-10-26-0838": {
+    "scheduled_date": "2026-10-29",
+    "scheduled_time": "16:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-GCWL-2026-10-26-0825": {
+    "scheduled_date": "2026-10-29",
+    "scheduled_time": "15:30",
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "psx-annc-FNBM-2026-10-26-0802": {
+    "scheduled_date": "2026-10-27",
+    "scheduled_time": null,
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   }
 }
