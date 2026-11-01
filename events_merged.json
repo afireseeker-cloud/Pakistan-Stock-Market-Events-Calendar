@@ -1,48 +1,5 @@
 [
   {
-    "id": "pbs-cpi_monthly-2026-08-02",
-    "type": "cpi_monthly",
-    "status": "confirmed",
-    "date": "2026-08-02",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Monthly Consumer Price Index (CPI) release",
-    "source_url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-July-2026.pdf",
-    "payload": {
-      "recurrence": "monthly_early",
-      "reference_month": "2026-07",
-      "actual_value": "9.2%",
-      "prior_value": "11.07%",
-      "actual_numeric": 9.2,
-      "prior_numeric": 11.07,
-      "unit": "percent YoY",
-      "value_period": "2026-07",
-      "value_source": "pbs"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
-    "id": "pbs-wpi_monthly-2026-08-02",
-    "type": "wpi_monthly",
-    "status": "confirmed",
-    "date": "2026-08-02",
-    "time": null,
-    "scope": "market",
-    "symbol": null,
-    "sector": null,
-    "title": "Monthly Wholesale Price Index (WPI) release",
-    "source_url": "https://www.pbs.gov.pk/price-statistics/",
-    "payload": {
-      "recurrence": "monthly_early",
-      "reference_month": "2026-07"
-    },
-    "revision_of": null,
-    "source": "pbs_calendar"
-  },
-  {
     "id": "psx-annc-NCML-2026-08-03-1145",
     "type": "agm",
     "status": "confirmed",
@@ -15526,9 +15483,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 1.74,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.15,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -19390,9 +19347,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.06,
-      "eps_prior": 7.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 3.61,
+      "eps_prior": 4.89,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -19483,9 +19440,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.06,
-      "eps_prior": 7.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 3.61,
+      "eps_prior": 4.89,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -19545,9 +19502,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.54,
-      "eps_prior": 0.71,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.64,
+      "eps_prior": 1.27,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -23627,9 +23584,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.14,
-      "eps_prior": 2.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.13,
+      "eps_prior": 2.4,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -29117,9 +29074,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.89,
-      "eps_prior": 0.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": -1.03,
+      "eps_prior": 0.14,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -29241,9 +29198,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.22,
-      "eps_prior": -0.61,
-      "eps_period": "Q2 2026"
+      "eps_actual": -0.11,
+      "eps_prior": -0.35,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -29675,9 +29632,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.17,
-      "eps_prior": 0.62,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.03,
+      "eps_prior": 1.74,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -29706,9 +29663,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.46,
-      "eps_prior": 0.51,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.2,
+      "eps_prior": 0.26,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -29768,9 +29725,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.14,
-      "eps_prior": 2.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.13,
+      "eps_prior": 2.4,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -30444,9 +30401,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.22,
-      "eps_prior": -0.61,
-      "eps_period": "Q2 2026"
+      "eps_actual": -0.11,
+      "eps_prior": -0.35,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -30692,9 +30649,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.89,
-      "eps_prior": 0.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": -1.03,
+      "eps_prior": 0.14,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -31518,9 +31475,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.17,
-      "eps_prior": 0.62,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.03,
+      "eps_prior": 1.74,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -31735,9 +31692,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.79,
-      "eps_prior": 0.03,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.71,
+      "eps_prior": null,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -33620,9 +33577,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.91,
-      "eps_prior": 0.64,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.02,
+      "eps_prior": 0.78,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -33744,9 +33701,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.91,
-      "eps_prior": 0.64,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.02,
+      "eps_prior": 0.78,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -33775,9 +33732,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.79,
-      "eps_prior": 0.03,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.71,
+      "eps_prior": null,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -39495,9 +39452,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 9.82,
-      "eps_prior": 10.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": 13.6,
+      "eps_prior": 8.91,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -41057,9 +41014,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.46,
-      "eps_prior": 0.51,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.2,
+      "eps_prior": 0.26,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -45089,36 +45046,6 @@
     "shariah_compliant": true
   },
   {
-    "id": "psx-annc-KOHC-2026-09-03-1302",
-    "type": "board_meeting",
-    "status": "confirmed",
-    "date": "2026-09-10",
-    "time": "11:00",
-    "scope": "company",
-    "symbol": "KOHC",
-    "sector": null,
-    "title": "Board Meeting",
-    "company_name": "Kohat Cement Company Limited",
-    "source_url": "https://dps.psx.com.pk/download/document/282209.pdf",
-    "payload": {
-      "will_consider_results": null,
-      "pdf_url": "https://dps.psx.com.pk/download/document/282209.pdf",
-      "image_url": "https://dps.psx.com.pk/download/image/282209-1.gif",
-      "filed_time": "13:02",
-      "agenda_in_title": false,
-      "agenda_extracted": false,
-      "announcement_revoked": false,
-      "raw_status_tag": null,
-      "filed_date": "2026-09-03",
-      "date_source": "finhisaab"
-    },
-    "revision_of": null,
-    "source": "psx_announcements",
-    "sentiment": "neutral",
-    "logo_url": "https://img.logo.dev/kohatcement.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
-    "shariah_compliant": true
-  },
-  {
     "id": "psx-annc-IPAK-2026-09-02-1048",
     "type": "board_meeting",
     "status": "confirmed",
@@ -45146,6 +45073,36 @@
     "source": "psx_announcements",
     "sentiment": "neutral",
     "logo_url": "https://img.logo.dev/ipak.com.pk?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
+    "shariah_compliant": true
+  },
+  {
+    "id": "psx-annc-KOHC-2026-09-03-1302",
+    "type": "board_meeting",
+    "status": "confirmed",
+    "date": "2026-09-10",
+    "time": "11:00",
+    "scope": "company",
+    "symbol": "KOHC",
+    "sector": null,
+    "title": "Board Meeting",
+    "company_name": "Kohat Cement Company Limited",
+    "source_url": "https://dps.psx.com.pk/download/document/282209.pdf",
+    "payload": {
+      "will_consider_results": null,
+      "pdf_url": "https://dps.psx.com.pk/download/document/282209.pdf",
+      "image_url": "https://dps.psx.com.pk/download/image/282209-1.gif",
+      "filed_time": "13:02",
+      "agenda_in_title": false,
+      "agenda_extracted": false,
+      "announcement_revoked": false,
+      "raw_status_tag": null,
+      "filed_date": "2026-09-03",
+      "date_source": "finhisaab"
+    },
+    "revision_of": null,
+    "source": "psx_announcements",
+    "sentiment": "neutral",
+    "logo_url": "https://img.logo.dev/kohatcement.com?token=pk_HqHqRLPqThSG7MTmZqI8Cg&size=64",
     "shariah_compliant": true
   },
   {
@@ -46590,9 +46547,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.02,
-      "eps_prior": -0.64,
-      "eps_period": "Q3 2026"
+      "eps_actual": 7.7,
+      "eps_prior": 0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -50841,9 +50798,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.25,
-      "eps_prior": 0.7,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.61,
+      "eps_prior": 2.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -52695,9 +52652,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.03,
-      "eps_prior": -3.32,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.18,
+      "eps_prior": -2.66,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -54364,9 +54321,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 1.74,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.15,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -56681,9 +56638,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.3,
-      "eps_prior": -0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.19,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -56743,9 +56700,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.31,
-      "eps_prior": 0.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.31,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -59377,9 +59334,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.82,
-      "eps_prior": -3.18,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.14,
+      "eps_prior": -3.63,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -63475,9 +63432,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.78,
-      "eps_prior": 2.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.74,
+      "eps_prior": 2.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -63661,9 +63618,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.45,
-      "eps_prior": 0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.62,
+      "eps_prior": -0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -65535,9 +65492,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.06,
-      "eps_prior": 1.36,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.79,
+      "eps_prior": 1.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -67593,9 +67550,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.73,
-      "eps_prior": 0.97,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.44,
+      "eps_prior": -1.02,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -67717,9 +67674,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 9.82,
-      "eps_prior": 10.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": 13.6,
+      "eps_prior": 8.91,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -67929,9 +67886,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.14,
+      "eps_prior": 0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -68019,9 +67976,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.64,
-      "eps_prior": -2.83,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.01,
+      "eps_prior": -1.78,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -71012,9 +70969,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 6.33,
-      "eps_prior": 2.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 15.46,
+      "eps_prior": 1.45,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -71347,9 +71304,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.54,
-      "eps_prior": -1.49,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.71,
+      "eps_prior": -2.46,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -71651,9 +71608,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.2,
-      "eps_prior": -1.93,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.95,
+      "eps_prior": -2.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -74175,9 +74132,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.07,
-      "eps_prior": -0.92,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.09,
+      "eps_prior": -0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -74813,9 +74770,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.02,
-      "eps_prior": -0.64,
-      "eps_period": "Q3 2026"
+      "eps_actual": 7.7,
+      "eps_prior": 0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -74844,9 +74801,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.98,
-      "eps_prior": 2.5,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.86,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -75092,9 +75049,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 16.2,
-      "eps_prior": null,
-      "eps_period": "Q3 2025"
+      "eps_actual": 9.3,
+      "eps_prior": 16.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -75154,9 +75111,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.06,
-      "eps_prior": -0.13,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.04,
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -77534,9 +77491,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.13,
-      "eps_prior": 0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.1,
+      "eps_prior": 2.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -77591,9 +77548,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.47,
-      "eps_prior": -6.8,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.61,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -78496,9 +78453,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.55,
-      "eps_prior": 1.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.48,
+      "eps_prior": 2.2,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -79288,9 +79245,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.99,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.68,
+      "eps_prior": 4.21,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -79736,9 +79693,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.73,
-      "eps_prior": 0.97,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.44,
+      "eps_prior": -1.02,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -79932,9 +79889,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.43,
-      "eps_prior": 0.85,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.04,
+      "eps_prior": 0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -80186,9 +80143,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -80217,9 +80174,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.39,
-      "eps_prior": 0.2,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.38,
+      "eps_prior": 0.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -82761,9 +82718,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.45,
-      "eps_prior": 0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.62,
+      "eps_prior": -0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -83119,9 +83076,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.24,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.31,
+      "eps_prior": 0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -84175,9 +84132,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.72,
-      "eps_prior": 1.26,
-      "eps_period": "Q3 2026"
+      "eps_actual": 51.44,
+      "eps_prior": 5.99,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87229,9 +87186,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.12,
-      "eps_prior": -0.14,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.24,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87260,9 +87217,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.78,
-      "eps_prior": 2.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.74,
+      "eps_prior": 2.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87415,9 +87372,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.97,
-      "eps_prior": 7.81,
-      "eps_period": "Q3 2026"
+      "eps_actual": 27.37,
+      "eps_prior": 9.97,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87446,9 +87403,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.12,
-      "eps_prior": 0.37,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.1,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87477,9 +87434,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 4.72,
-      "eps_period": "Q3 2026"
+      "eps_actual": 18.14,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87902,9 +87859,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.81,
-      "eps_prior": 0.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.01,
+      "eps_prior": 1.08,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87933,9 +87890,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.42,
-      "eps_prior": 0.07,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.01,
+      "eps_prior": -0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87964,9 +87921,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.39,
-      "eps_prior": 0.2,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.38,
+      "eps_prior": 0.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -88023,9 +87980,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.3,
-      "eps_prior": -0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.19,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -88054,9 +88011,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": -0.02,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.1,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -92270,9 +92227,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.28,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.13,
+      "eps_prior": 0.37,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -92425,9 +92382,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.27,
-      "eps_prior": 0.52,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.08,
+      "eps_prior": 0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -92580,9 +92537,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.03,
-      "eps_prior": -3.32,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.18,
+      "eps_prior": -2.66,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -92642,9 +92599,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.54,
-      "eps_prior": -1.49,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.71,
+      "eps_prior": -2.46,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -92766,9 +92723,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.82,
-      "eps_prior": -3.18,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.14,
+      "eps_prior": -3.63,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -93042,9 +92999,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": 0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.33,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -93256,9 +93213,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 16.2,
-      "eps_prior": null,
-      "eps_period": "Q3 2025"
+      "eps_actual": 9.3,
+      "eps_prior": 16.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -93473,9 +93430,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.16,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.04,
+      "eps_prior": 1.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -93535,9 +93492,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.2,
-      "eps_prior": -1.93,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.95,
+      "eps_prior": -2.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -94057,9 +94014,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.25,
-      "eps_prior": 0.65,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.35,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -97953,9 +97910,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.27,
-      "eps_prior": 0.52,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.08,
+      "eps_prior": 0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -97984,9 +97941,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": 4.72,
-      "eps_prior": 1.26,
-      "eps_period": "Q3 2026"
+      "eps_actual": 51.44,
+      "eps_prior": 5.99,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98229,9 +98186,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.15,
-      "eps_prior": -0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.17,
+      "eps_prior": -0.15,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98384,9 +98341,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.23,
-      "eps_prior": -0.24,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": 0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98505,9 +98462,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": 0.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.03,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98567,9 +98524,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.06,
-      "eps_prior": -0.13,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.04,
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98598,9 +98555,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98629,9 +98586,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.88,
-      "eps_prior": -0.44,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.09,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -98877,9 +98834,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": -0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.2,
+      "eps_prior": -0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99059,9 +99016,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.3,
-      "eps_prior": -2.28,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": -0.71,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99211,9 +99168,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.09,
-      "eps_prior": 0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.02,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99242,9 +99199,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.07,
-      "eps_prior": -0.92,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.09,
+      "eps_prior": -0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99301,9 +99258,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.06,
-      "eps_prior": 1.36,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.79,
+      "eps_prior": 1.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99391,9 +99348,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.54,
-      "eps_prior": -2.19,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.31,
+      "eps_prior": -0.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99484,9 +99441,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 13.97,
-      "eps_prior": 22.76,
-      "eps_period": "Q3 2026"
+      "eps_actual": 30.72,
+      "eps_prior": 25.3,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -99977,9 +99934,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.81,
-      "eps_prior": 0.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.01,
+      "eps_prior": 1.08,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -100690,9 +100647,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 68.63,
-      "eps_prior": 79.79,
-      "eps_period": "Q3 2026"
+      "eps_actual": 26.13,
+      "eps_prior": 5.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105380,9 +105337,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.99,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.68,
+      "eps_prior": 4.21,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105472,9 +105429,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.28,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.13,
+      "eps_prior": 0.37,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105503,9 +105460,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": 0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.33,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105565,9 +105522,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.24,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.31,
+      "eps_prior": 0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105627,9 +105584,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.97,
-      "eps_prior": 7.81,
-      "eps_period": "Q3 2026"
+      "eps_actual": 27.37,
+      "eps_prior": 9.97,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105658,9 +105615,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.15,
-      "eps_prior": -6.63,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.43,
+      "eps_prior": -7.76,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105751,9 +105708,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.15,
-      "eps_prior": 2.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.38,
+      "eps_prior": 0.32,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105845,8 +105802,8 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 0.32,
-      "eps_prior": -0.48,
-      "eps_period": "FY 2026"
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105937,9 +105894,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.09,
-      "eps_prior": 0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.02,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105968,9 +105925,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.23,
-      "eps_prior": -0.24,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": 0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -105999,9 +105956,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.36,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.08,
+      "eps_prior": 1.17,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106030,9 +105987,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.51,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.62,
+      "eps_prior": -0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106123,9 +106080,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.51,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.62,
+      "eps_prior": -0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106185,9 +106142,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 6.33,
-      "eps_prior": 2.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 15.46,
+      "eps_prior": 1.45,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106216,9 +106173,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.12,
-      "eps_prior": 0.37,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.1,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106247,9 +106204,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.15,
-      "eps_prior": 2.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.38,
+      "eps_prior": 0.32,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106433,9 +106390,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 4.72,
-      "eps_period": "Q3 2026"
+      "eps_actual": 18.14,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106526,9 +106483,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106557,9 +106514,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.6,
-      "eps_prior": 0.77,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.36,
+      "eps_prior": 1.25,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106709,9 +106666,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.72,
-      "eps_prior": 1.26,
-      "eps_period": "Q3 2026"
+      "eps_actual": 51.44,
+      "eps_prior": 5.99,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106740,9 +106697,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.3,
-      "eps_prior": -2.28,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": -0.71,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106833,9 +106790,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.98,
-      "eps_prior": 2.5,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.86,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106864,9 +106821,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.15,
-      "eps_prior": -6.63,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.43,
+      "eps_prior": -7.76,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -106988,9 +106945,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.55,
-      "eps_prior": 1.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.48,
+      "eps_prior": 2.2,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107019,9 +106976,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.17,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107081,9 +107038,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.08,
-      "eps_prior": -0.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.07,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107112,9 +107069,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": -0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.2,
+      "eps_prior": -0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107236,9 +107193,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.17,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107483,9 +107440,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.43,
-      "eps_prior": 0.85,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.04,
+      "eps_prior": 0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107514,9 +107471,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.64,
-      "eps_prior": -2.83,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.01,
+      "eps_prior": -1.78,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107669,9 +107626,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.25,
-      "eps_prior": 0.7,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.61,
+      "eps_prior": 2.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107793,9 +107750,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.03,
-      "eps_prior": -0.05,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.06,
+      "eps_prior": -0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107855,9 +107812,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.03,
-      "eps_prior": -0.05,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.06,
+      "eps_prior": -0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -107948,9 +107905,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.16,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.04,
+      "eps_prior": 1.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -108222,9 +108179,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.27,
-      "eps_prior": 0.52,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.08,
+      "eps_prior": 0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110212,9 +110169,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": -0.01,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.16,
+      "eps_prior": 0.23,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110243,9 +110200,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.0,
-      "eps_prior": null,
-      "eps_period": "FY 2026"
+      "eps_actual": -0.67,
+      "eps_prior": -0.6,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110273,9 +110230,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110366,9 +110323,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.25,
-      "eps_prior": 0.65,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.35,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110519,9 +110476,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.42,
-      "eps_prior": 0.07,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.01,
+      "eps_prior": -0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110550,9 +110507,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 68.63,
-      "eps_prior": 79.79,
-      "eps_period": "Q3 2026"
+      "eps_actual": 26.13,
+      "eps_prior": 5.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110581,9 +110538,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.14,
+      "eps_prior": 0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110798,9 +110755,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 13.97,
-      "eps_prior": 22.76,
-      "eps_period": "Q3 2026"
+      "eps_actual": 30.72,
+      "eps_prior": 25.3,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110891,9 +110848,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.13,
-      "eps_prior": 0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.1,
+      "eps_prior": 2.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110953,9 +110910,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.54,
-      "eps_prior": -2.19,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.31,
+      "eps_prior": -0.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -110984,9 +110941,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": 68.63,
-      "eps_prior": 79.79,
-      "eps_period": "Q3 2026"
+      "eps_actual": 26.13,
+      "eps_prior": 5.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -112548,9 +112505,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.08,
-      "eps_prior": -0.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.07,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -112610,9 +112567,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": -0.12,
-      "eps_prior": -0.14,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.24,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -112787,9 +112744,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": 0.6,
-      "eps_prior": 0.77,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.36,
+      "eps_prior": 1.25,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -112849,9 +112806,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": -0.02,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.1,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -115012,9 +114969,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.44,
-      "eps_prior": -0.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.78,
+      "eps_prior": -0.9,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -117051,9 +117008,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.6,
-      "eps_prior": 0.77,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.36,
+      "eps_prior": 1.25,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -118989,8 +118946,8 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 0.32,
-      "eps_prior": -0.48,
-      "eps_period": "FY 2026"
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -120949,9 +120906,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -128030,9 +127987,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.44,
-      "eps_prior": -0.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.78,
+      "eps_prior": -0.9,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -137878,9 +137835,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.92,
-      "eps_prior": -14.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -4.16,
+      "eps_prior": -1.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -138033,9 +137990,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.12,
-      "eps_prior": -0.14,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.24,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -156688,9 +156645,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.92,
-      "eps_prior": -14.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -4.16,
+      "eps_prior": -1.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -161975,9 +161932,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.54,
-      "eps_prior": 0.71,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.64,
+      "eps_prior": 1.27,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -163814,9 +163771,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.43,
-      "eps_prior": 0.85,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.04,
+      "eps_prior": 0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -172590,9 +172547,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.0,
-      "eps_prior": null,
-      "eps_period": "FY 2026"
+      "eps_actual": -0.67,
+      "eps_prior": -0.6,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -172651,9 +172608,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": -0.01,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.16,
+      "eps_prior": 0.23,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -176768,9 +176725,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.28,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.13,
+      "eps_prior": 0.37,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -176799,9 +176756,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.89,
-      "eps_prior": 0.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": -1.03,
+      "eps_prior": 0.14,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -176830,9 +176787,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": "REVISED",
-      "eps_actual": -3.89,
-      "eps_prior": 0.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": -1.03,
+      "eps_prior": 0.14,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -176939,9 +176896,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": 0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.33,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -176970,9 +176927,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": -3.89,
-      "eps_prior": 0.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": -1.03,
+      "eps_prior": 0.14,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177063,9 +177020,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.16,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.04,
+      "eps_prior": 1.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177094,9 +177051,9 @@
       "agenda_extracted": false,
       "announcement_revoked": true,
       "raw_status_tag": "REVOKED",
-      "eps_actual": 0.6,
-      "eps_prior": 0.77,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.36,
+      "eps_prior": 1.25,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177125,9 +177082,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 4.72,
-      "eps_period": "Q3 2026"
+      "eps_actual": 18.14,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177156,9 +177113,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -16.44,
-      "eps_prior": -0.55,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.05,
+      "eps_prior": 12.59,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177187,9 +177144,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -16.44,
-      "eps_prior": -0.55,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.05,
+      "eps_prior": 12.59,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177218,9 +177175,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 6.33,
-      "eps_prior": 2.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 15.46,
+      "eps_prior": 1.45,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177308,9 +177265,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.78,
-      "eps_prior": 2.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.74,
+      "eps_prior": 2.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177339,9 +177296,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.13,
-      "eps_prior": 0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.1,
+      "eps_prior": 2.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177427,9 +177384,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.0,
-      "eps_prior": null,
-      "eps_period": "FY 2026"
+      "eps_actual": -0.67,
+      "eps_prior": -0.6,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177549,9 +177506,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.45,
-      "eps_prior": 0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.62,
+      "eps_prior": -0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177580,9 +177537,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.92,
-      "eps_prior": -14.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -4.16,
+      "eps_prior": -1.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177611,9 +177568,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 6.33,
-      "eps_prior": 2.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 15.46,
+      "eps_prior": 1.45,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177642,9 +177599,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": -0.01,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.16,
+      "eps_prior": 0.23,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177704,9 +177661,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": 0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.33,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177735,9 +177692,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.24,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.31,
+      "eps_prior": 0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177766,9 +177723,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 4.72,
-      "eps_period": "Q3 2026"
+      "eps_actual": 18.14,
+      "eps_prior": 0.52,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177854,9 +177811,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.0,
-      "eps_prior": null,
-      "eps_period": "FY 2026"
+      "eps_actual": -0.67,
+      "eps_prior": -0.6,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -177884,9 +177841,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 68.63,
-      "eps_prior": 79.79,
-      "eps_period": "Q3 2026"
+      "eps_actual": 26.13,
+      "eps_prior": 5.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178189,9 +178146,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.16,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.04,
+      "eps_prior": 1.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178220,9 +178177,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.54,
-      "eps_prior": 0.71,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.64,
+      "eps_prior": 1.27,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178375,9 +178332,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.09,
-      "eps_prior": 0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.02,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178406,9 +178363,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": -0.01,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.16,
+      "eps_prior": 0.23,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178437,9 +178394,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.17,
-      "eps_prior": 0.62,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.03,
+      "eps_prior": 1.74,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178525,9 +178482,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.99,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.68,
+      "eps_prior": 4.21,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178614,9 +178571,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.72,
-      "eps_prior": 1.26,
-      "eps_period": "Q3 2026"
+      "eps_actual": 51.44,
+      "eps_prior": 5.99,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178645,9 +178602,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.02,
-      "eps_prior": -0.64,
-      "eps_period": "Q3 2026"
+      "eps_actual": 7.7,
+      "eps_prior": 0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178676,9 +178633,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.25,
-      "eps_prior": 0.65,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.35,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178707,9 +178664,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.46,
-      "eps_prior": 0.51,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.2,
+      "eps_prior": 0.26,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -178924,9 +178881,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.54,
-      "eps_prior": -1.49,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.71,
+      "eps_prior": -2.46,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179199,9 +179156,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.23,
-      "eps_prior": -0.24,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": 0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179261,9 +179218,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.02,
-      "eps_prior": -0.64,
-      "eps_period": "Q3 2026"
+      "eps_actual": 7.7,
+      "eps_prior": 0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179323,9 +179280,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.47,
-      "eps_prior": -6.8,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.61,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179415,9 +179372,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.73,
-      "eps_prior": 0.97,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.44,
+      "eps_prior": -1.02,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179446,9 +179403,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 16.2,
-      "eps_prior": null,
-      "eps_period": "Q3 2025"
+      "eps_actual": 9.3,
+      "eps_prior": 16.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179536,9 +179493,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.23,
-      "eps_prior": -0.24,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": 0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179655,9 +179612,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 48.48,
-      "eps_prior": 38.74,
-      "eps_period": "Q1 2027"
+      "eps_actual": 44.39,
+      "eps_prior": 38.77,
+      "eps_period": "Q2 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179686,9 +179643,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.25,
-      "eps_prior": 0.7,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.61,
+      "eps_prior": 2.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179717,9 +179674,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.07,
-      "eps_prior": -0.92,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.09,
+      "eps_prior": -0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179748,9 +179705,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.24,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.31,
+      "eps_prior": 0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179779,9 +179736,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.91,
-      "eps_prior": 0.64,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.02,
+      "eps_prior": 0.78,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -179996,9 +179953,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.97,
-      "eps_prior": 7.81,
-      "eps_period": "Q3 2026"
+      "eps_actual": 27.37,
+      "eps_prior": 9.97,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180058,9 +180015,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.28,
-      "eps_prior": 0.53,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.13,
+      "eps_prior": 0.37,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180306,9 +180263,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.97,
-      "eps_prior": 7.81,
-      "eps_period": "Q3 2026"
+      "eps_actual": 27.37,
+      "eps_prior": 9.97,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180337,9 +180294,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.22,
-      "eps_prior": -0.61,
-      "eps_period": "Q2 2026"
+      "eps_actual": -0.11,
+      "eps_prior": -0.35,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180399,9 +180356,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.54,
-      "eps_prior": -2.19,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.31,
+      "eps_prior": -0.7,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180461,9 +180418,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.36,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.08,
+      "eps_prior": 1.17,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180492,9 +180449,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.42,
-      "eps_prior": 0.07,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.01,
+      "eps_prior": -0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180523,9 +180480,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.55,
-      "eps_prior": 1.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.48,
+      "eps_prior": 2.2,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180678,9 +180635,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": -0.02,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.1,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180740,9 +180697,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.09,
-      "eps_prior": 0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.02,
+      "eps_prior": 0.24,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180830,9 +180787,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.07,
-      "eps_prior": -0.92,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.09,
+      "eps_prior": -0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180861,9 +180818,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.14,
+      "eps_prior": 0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180923,9 +180880,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 13.97,
-      "eps_prior": 22.76,
-      "eps_period": "Q3 2026"
+      "eps_actual": 30.72,
+      "eps_prior": 25.3,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -180985,9 +180942,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.91,
-      "eps_prior": 0.64,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.02,
+      "eps_prior": 0.78,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181292,9 +181249,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.82,
-      "eps_prior": -3.18,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.14,
+      "eps_prior": -3.63,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181353,9 +181310,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181503,9 +181460,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.36,
-      "eps_prior": 1.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.08,
+      "eps_prior": 1.17,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181534,9 +181491,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.12,
-      "eps_prior": -0.14,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.24,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181627,9 +181584,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.08,
-      "eps_prior": -0.04,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.07,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181689,9 +181646,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.14,
-      "eps_prior": 2.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.13,
+      "eps_prior": 2.4,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181720,9 +181677,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.98,
-      "eps_prior": 2.5,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.86,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181751,9 +181708,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.55,
-      "eps_prior": 1.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.48,
+      "eps_prior": 2.2,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181782,9 +181739,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.6,
-      "eps_prior": 0.77,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.36,
+      "eps_prior": 1.25,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -181844,9 +181801,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.3,
-      "eps_prior": -2.28,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": -0.71,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182076,9 +182033,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 9.82,
-      "eps_prior": 10.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": 13.6,
+      "eps_prior": 8.91,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182283,9 +182240,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.12,
-      "eps_prior": 0.37,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.1,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182402,9 +182359,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 13.97,
-      "eps_prior": 22.76,
-      "eps_period": "Q3 2026"
+      "eps_actual": 30.72,
+      "eps_prior": 25.3,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182459,9 +182416,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.45,
-      "eps_prior": 0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.62,
+      "eps_prior": -0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182606,9 +182563,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.27,
-      "eps_prior": 0.52,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.08,
+      "eps_prior": 0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182637,9 +182594,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.27,
-      "eps_prior": 0.52,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.08,
+      "eps_prior": 0.26,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182668,9 +182625,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.44,
-      "eps_prior": -0.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.78,
+      "eps_prior": -0.9,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182761,9 +182718,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.15,
-      "eps_prior": -6.63,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.43,
+      "eps_prior": -7.76,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182792,9 +182749,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.78,
-      "eps_prior": 2.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.74,
+      "eps_prior": 2.82,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -182972,9 +182929,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -3.54,
-      "eps_prior": -1.49,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.71,
+      "eps_prior": -2.46,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183158,9 +183115,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.47,
-      "eps_prior": -6.8,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.61,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183374,9 +183331,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.98,
-      "eps_prior": 2.5,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.86,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183436,9 +183393,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 48.48,
-      "eps_prior": 38.74,
-      "eps_period": "Q1 2027"
+      "eps_actual": 44.39,
+      "eps_prior": 38.77,
+      "eps_period": "Q2 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183591,9 +183548,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.2,
-      "eps_prior": -1.93,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.95,
+      "eps_prior": -2.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183684,9 +183641,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.12,
-      "eps_prior": 0.37,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.1,
+      "eps_prior": 0.58,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183777,9 +183734,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": -0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.2,
+      "eps_prior": -0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183870,9 +183827,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.81,
-      "eps_prior": 0.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.01,
+      "eps_prior": 1.08,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183901,9 +183858,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.17,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -183963,9 +183920,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": -0.08,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.2,
+      "eps_prior": -0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184025,9 +183982,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.72,
-      "eps_prior": 1.26,
-      "eps_period": "Q3 2026"
+      "eps_actual": 51.44,
+      "eps_prior": 5.99,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184211,9 +184168,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.43,
-      "eps_prior": 0.85,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.04,
+      "eps_prior": 0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184242,9 +184199,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.43,
-      "eps_prior": 0.85,
-      "eps_period": "Q3 2026"
+      "eps_actual": 2.04,
+      "eps_prior": 0.8,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184361,9 +184318,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.31,
-      "eps_prior": 0.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.31,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184480,9 +184437,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.81,
-      "eps_prior": 0.84,
-      "eps_period": "Q3 2026"
+      "eps_actual": -2.01,
+      "eps_prior": 1.08,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184511,9 +184468,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.02,
-      "eps_prior": -0.02,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.1,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184635,9 +184592,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.99,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.68,
+      "eps_prior": 4.21,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184756,9 +184713,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.42,
-      "eps_prior": 0.07,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.01,
+      "eps_prior": -0.06,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184787,9 +184744,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.03,
-      "eps_prior": -0.05,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.06,
+      "eps_prior": -0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184880,9 +184837,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": 0.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.03,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184911,9 +184868,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.88,
-      "eps_prior": -0.44,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.09,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -184942,9 +184899,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.06,
-      "eps_prior": -0.13,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.04,
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185035,9 +184992,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.3,
-      "eps_prior": -2.28,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.12,
+      "eps_prior": -0.71,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185066,9 +185023,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.15,
-      "eps_prior": -6.63,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.43,
+      "eps_prior": -7.76,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185128,9 +185085,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.44,
-      "eps_prior": -0.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.78,
+      "eps_prior": -0.9,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185159,9 +185116,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.03,
-      "eps_prior": -0.05,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.06,
+      "eps_prior": -0.07,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185190,9 +185147,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.15,
-      "eps_prior": -0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.17,
+      "eps_prior": -0.15,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185404,9 +185361,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.09,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.14,
+      "eps_prior": 0.13,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185559,9 +185516,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.17,
-      "eps_prior": 0.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185621,9 +185578,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -2.51,
-      "eps_prior": 0.73,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.62,
+      "eps_prior": -0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185683,9 +185640,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 3.15,
-      "eps_prior": 2.98,
-      "eps_period": "Q3 2026"
+      "eps_actual": 1.38,
+      "eps_prior": 0.32,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185835,9 +185792,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.39,
-      "eps_prior": 0.2,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.38,
+      "eps_prior": 0.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -185928,9 +185885,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.39,
-      "eps_prior": 0.2,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.38,
+      "eps_prior": 0.34,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -186204,9 +186161,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.3,
-      "eps_prior": -0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.19,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -186266,9 +186223,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 1.74,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.15,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -186328,9 +186285,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.3,
-      "eps_prior": -0.06,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.19,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -186483,9 +186440,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 9.82,
-      "eps_prior": 10.96,
-      "eps_period": "Q3 2026"
+      "eps_actual": 13.6,
+      "eps_prior": 8.91,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187335,9 +187292,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 16.2,
-      "eps_prior": null,
-      "eps_period": "Q3 2025"
+      "eps_actual": 9.3,
+      "eps_prior": 16.29,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187631,9 +187588,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.64,
-      "eps_prior": -2.83,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.01,
+      "eps_prior": -1.78,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187662,9 +187619,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.24,
-      "eps_prior": -0.51,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.21,
+      "eps_prior": 2.36,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187693,9 +187650,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.64,
-      "eps_prior": -2.83,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.01,
+      "eps_prior": -1.78,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187724,9 +187681,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.03,
-      "eps_prior": -0.13,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.17,
+      "eps_prior": -0.01,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187782,9 +187739,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.06,
-      "eps_prior": 7.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 3.61,
+      "eps_prior": 4.89,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187813,9 +187770,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 4.06,
-      "eps_prior": 7.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 3.61,
+      "eps_prior": 4.89,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187844,9 +187801,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.31,
-      "eps_prior": 0.35,
-      "eps_period": "Q3 2026"
+      "eps_actual": 0.04,
+      "eps_prior": 0.31,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187875,9 +187832,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.12,
-      "eps_prior": -0.14,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.24,
+      "eps_prior": -0.03,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -187963,9 +187920,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.06,
-      "eps_prior": 1.36,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.79,
+      "eps_prior": 1.16,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188053,9 +188010,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -16.44,
-      "eps_prior": -0.55,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.05,
+      "eps_prior": 12.59,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188084,9 +188041,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.56,
-      "eps_prior": 1.74,
-      "eps_period": "Q3 2026"
+      "eps_actual": 3.15,
+      "eps_prior": 0.33,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188115,9 +188072,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -16.44,
-      "eps_prior": -0.55,
-      "eps_period": "Q3 2026"
+      "eps_actual": 5.05,
+      "eps_prior": 12.59,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188146,9 +188103,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.82,
-      "eps_prior": -3.18,
-      "eps_period": "Q3 2026"
+      "eps_actual": -1.14,
+      "eps_prior": -3.63,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188177,9 +188134,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.22,
-      "eps_prior": -0.61,
-      "eps_period": "Q2 2026"
+      "eps_actual": -0.11,
+      "eps_prior": -0.35,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188270,9 +188227,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.06,
-      "eps_prior": -0.13,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.04,
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188302,8 +188259,8 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 0.32,
-      "eps_prior": -0.48,
-      "eps_period": "FY 2026"
+      "eps_prior": -0.04,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188332,9 +188289,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.88,
-      "eps_prior": -0.44,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.09,
+      "eps_prior": 0.57,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188363,9 +188320,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 1.14,
-      "eps_prior": 2.24,
-      "eps_period": "Q2 2026"
+      "eps_actual": 1.13,
+      "eps_prior": 2.4,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188394,9 +188351,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.05,
-      "eps_prior": 0.95,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.03,
+      "eps_prior": -0.11,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188425,9 +188382,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.15,
-      "eps_prior": -0.21,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.17,
+      "eps_prior": -0.15,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188487,9 +188444,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -1.03,
-      "eps_prior": -3.32,
-      "eps_period": "Q3 2026"
+      "eps_actual": -0.18,
+      "eps_prior": -2.66,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188518,9 +188475,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 10.17,
-      "eps_prior": 0.62,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.03,
+      "eps_prior": 1.74,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -188549,9 +188506,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 0.79,
-      "eps_prior": 0.03,
-      "eps_period": "Q2 2026"
+      "eps_actual": 0.71,
+      "eps_prior": null,
+      "eps_period": "Q3 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",

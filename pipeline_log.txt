@@ -12,7 +12,7 @@ RUNNING: PBS calendar
 ============================================================
 
 
--- 95 estimated events generated (2026-08-02 to 2027-10-31) --
+-- 93 estimated events generated (2026-08-03 to 2027-11-01) --
 OK    PBS calendar (0s)
 
 ============================================================
@@ -20,7 +20,7 @@ RUNNING: PAMA calendar
 ============================================================
 
 
--- 15 events generated (2026-08-02 to 2027-10-31) --
+-- 15 events generated (2026-08-03 to 2027-11-01) --
 OK    PAMA calendar (0s)
 
 ============================================================
@@ -64,7 +64,7 @@ OK    FinHisaab company announcements (fallback) (0s)
 ============================================================
 RUNNING: PSX announcements
 ============================================================
-INFO: fetching 2026-08-02 to 2026-09-01...
+INFO: fetching 2026-08-03 to 2026-09-02...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -88,37 +88,38 @@ INFO: page 20 (offset=950): 51 rows
 INFO: page 21 (offset=1000): 51 rows
 INFO: page 22 (offset=1050): 51 rows
 INFO: page 23 (offset=1100): 51 rows
-INFO: page 24 (offset=1150): 21 rows
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE OF MATERIAL INFORMATION - GHANI CHEMICA', 'Change of Director', 'Election of Directors of Pakgen Limited (formerly ']
-INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reply-Unusual movement in volume of Shares', 'Material Information', 'DISCLOSURE OF MATERIAL INFORMATION']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Notice of Extra Ordinary General Meeting', 'WAVESAPP | Waves Home Appliances Limited - NCCPL N']
-INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['HICL - Transmission of Half Yearly Accounts for th', 'Placement of Half Yearly Accounts for the period e', 'UNUSUAL MOVEMENT IN THE VOLUME OF THE SHARES OF BE']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Executive Director', 'Unusual Movement in the Price of the Shares of Arc', 'Material Information']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Profit payment of BAFL TFC6 17th Coupon Payment', 'General Meetings / Briefing Sessions', 'Annual Environment Excellence Award 2026 by the Na']
+INFO: page 24 (offset=1150): 51 rows
+INFO: page 25 (offset=1200): 8 rows
+INFO: 21/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Response to PSX Letter regarding Unusual Movement ', 'MLCF-Material Information', 'Material Information']
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chairman Chief Executive Officer an', 'Disclosure of Material Information', 'Material Information regarding Approval of Competi']
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Company Secretary', 'Appointment of Company Secretary', 'Transmission of Quartely report for the period End']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['UNUSUAL MOVEMENT IN PRICE OF THE CERTIFICATES OF P', 'Notice Under Section 159(4) of the Companies Act, ', 'Transmission of Quarterly Statement30/06/2026']
+INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Company Secretary', 'Material Information', 'Transmission of Half Year Report for the Period En']
+INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of the Shares of Arc', 'Material Information', 'UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF RUPALI']
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Certified Copy of Resolution(s) passed in Extraodi', 'Unusual Movement in Price of Shares']
 INFO: 1 cancelled/revoked events detected: [('SPAC2', 'Notice of Annual General Meeting of LSE ')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Financial Officer Ghani Glass', 'Change of Head of Internal Audit', 'Financials for the Period Ended June 30, 2026']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CHANGE OF DIRECTOR', 'MANDATORY SHARIAH DISCLOSURES FOR THE YEAR ENDED J', 'Newspaper Cuttings - Publication of Notices regard']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Financial Officer Ghani Value', 'Proposed Stock Split of Ordinary Shares of ITANZ', 'Appointment of Chief Executive']
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NBP | National Bank of Pakistan Appointment of Pre', 'Declaration of Right Issue', 'Transmission of Annual Financials of AL Habib Fund']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Head of Internal Audit', 'Financials for the Period Ended June 30, 2026', 'WAVESAPP | Waves Home Appliances Limited (Formerly']
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Transmission of 2nd Quarter for the Period Ended 3', 'CHANGE OF TELEPHONE NUMBERS', 'Appointment of Chief Executive Officer']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Executive', 'Appointment of Chairman', 'Change of Management']
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['General Meetings / Briefing Sessions', 'NOTICE U/S 159(4) OF THE COMPANIES ACT 2017 (ELECT', 'General Meetings / Briefing Sessions']
 INFO: 1 cancelled/revoked events detected: [('WTL', 'Board Meeting Notice')]
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Expiry of Tenure of Mr. Rehmat Ali Hasnie As Presi', '300% RIGHT ISSUE OF RS.10/- PER SHARE (AT PAR).', 'FINAL PROGRESS REPORT ON UTILIZATION OF PROCEEDS O']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['POSTPONEMENT OF ELECTION OF DIRECTORS UNDER SECTIO', 'Unusual Movement in the Price of the Shares of D S', 'Dispatch of Physical Letter of Rights and Credit o']
-INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['MATERIAL INFORMATION', 'Disclosure of Material Information', 'Material Information']
-INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Sukuk - VII - Redemption', 'Intimation for extension in timeline for Public An']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Misc', 'DISCLOSURE UNDER REGULATION 5.6.6A OF THE PSX REGU']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Credit of Withheld Interim Bonus Shares', 'Update on Pending Matters', 'Material Information']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Declaration of LOR of FPRM as a CDS Elig', 'Resignation of Company Secretary and Chief Legal O', 'Notice of Declaration of Letter of Rights of STL a']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Update on Pending Matters', 'Material Information', 'MATERIAL INFORMATION']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of the Shares of D S', 'Dispatch of Physical Letter of Rights and Credit o', 'SGPL | S.G. Power Limited Right Issue 300% at Par ']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'TEXT OF NOTICE OF PLACEMENT OF HALF YEARLY ACCOUNT', 'Credit of unpaid rights into CDS']
+INFO: 4/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sukuk - VII - Redemption', 'Intimation for extension in timeline for Public An', 'Material Information']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Misc', 'DISCLOSURE UNDER REGULATION 5.6.6A OF THE PSX REGU']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'FPRM | First Paramount Modaraba Right Issue 50% at', 'STL | Supernet Technologies Limited Right Issue 85']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Declaration of Letter of Rights of STL a', 'CERTIFIED TRUE COPY OF RESOLUTIONS PASSED BY THE S', 'Material Information - VIS Reaffirms Entity Rating']
 INFO: 1 cancelled/revoked events detected: [('PPL', 'Presentation of Trades in the Board of D')]
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Assumption of charge of office by new CEO/Director', 'Notice to Shareholders under Section 244 of the Co', 'Fund Manager Report of JS Momentum Factor ETF for ']
-INFO: 1 cancelled/revoked events detected: [('PICT', 'Board Meeting')]
-INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of Certificates of T', 'DISCLOSURE OF PRICE SENSITIVE INFORMATION', 'Production and Sales data regarding Four Wheelers ']
-INFO: 2 cancelled/revoked events detected: [('PPL', 'Calling off the Extraordinary General Me'), ('JLICL', 'Board Meeting')]
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['NOTICE OF BOD MEETING OF UBL FUND MANAGERS LIMITED', 'CHANGE OF DIRECTOR', 'DISCLOSURE OF MATERIAL INFORMATION']
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sukuk - VIII - Issuance', 'Material Information -', 'Material Information']
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['UNUSUAL MOVEMENT IN THE PRICE OF THE SHARES - MS. ', 'STL - Final Draft Offer Document for 85% Right Iss', 'Third Corporate Briefing - FFC']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['General Meetings / Briefing Sessions', 'Disclosure of Material Information', 'Disclosure of Material Information']
-INFO: 10/20 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Publication of Extension Period Notice - Public An', 'Material Information', 'Change of Registered Office - Engro Polymer & Chem']
-INFO: fetching 2026-09-02 to 2026-10-02...
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Director Report', 'Material Information']
+INFO: 3 cancelled/revoked events detected: [('PICT', 'Board Meeting'), ('PPL', 'Calling off the Extraordinary General Me'), ('JLICL', 'Board Meeting')]
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure under Regulation 5.6.6A of the PSX Regu', 'Dissemination of Information - Completion of Court', 'RESOLUTIONS PASSED IN EXTRAORDINARY (SPECIAL) GENE']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['FMR of JS Global Banking Sector Exchange Traded Fu', 'Miscellaneous - Annual Free Float - June 2026', 'NBPGETF | NBP Pakistan Growth ETF Reconstitution o']
+INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Material Information', 'MATERIAL INFORMATION']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Election of Directors', 'Miscellaneous Information', 'Material Information']
+INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Intimation for E-voting and inviting Zoom Meeting ', 'Unusual movement in the volume of the shares of Cr', 'RE-BALANCING OF UBL PAKISTAN ENTERPRISE EXCHANGE T']
+INFO: 4/7 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Appointment of Company Secretary', 'Disclosure of Material/Price Sensitive Information']
+INFO: fetching 2026-09-03 to 2026-10-03...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -152,8 +153,7 @@ INFO: page 30 (offset=1450): 51 rows
 INFO: page 31 (offset=1500): 51 rows
 INFO: page 32 (offset=1550): 51 rows
 INFO: page 33 (offset=1600): 51 rows
-INFO: page 34 (offset=1650): 51 rows
-INFO: page 35 (offset=1700): 6 rows
+INFO: page 34 (offset=1650): 19 rows
 INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of New Independent Director', 'Quarterly Progress Report - Q1 2027, Ended Septemb', 'Clarification Regarding Fake News Circulating on S']
 INFO: 1 cancelled/revoked events detected: [('ICL', 'Notice of Annual General Meeting')]
 INFO: 2/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['RESIGNATION AND APPOINTMENT OF CHIEF FINANCIAL OFF', 'Grant of Shariah Compliance Certificate']
@@ -203,9 +203,8 @@ INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure
 INFO: 1 cancelled/revoked events detected: [('INDU', 'Notice of 37th Annual General Meeting')]
 INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of the Shares', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
 INFO: 1 cancelled/revoked events detected: [('ECOP', 'Intimation of the 153rd Meeting of the B')]
-INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of President/CEO- National Bank of Pak', 'Book Building Results of the Offer for Sale of Nay', 'Resignation of Member Board of Management']
-INFO: 3/5 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['UNUSUAL MOVEMENT IN PRICE OR VOLUME IN THE CERTIFI', 'Material Information', 'Material Information']
-INFO: fetching 2026-10-03 to 2026-10-31...
+INFO: 6/18 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of President/CEO- National Bank of Pak', 'Book Building Results of the Offer for Sale of Nay', 'Resignation of Member Board of Management']
+INFO: fetching 2026-10-04 to 2026-11-01...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -359,30 +358,30 @@ INFO: 3/39 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 3 cancelled/revoked events detected: [('PIOC', 'Notice of Extraordinary General Meeting'), ('FZCM', 'Submission of Notice of Annual General M'), ('GATI', 'Notice of 46th Annual General Meeting')]
 
 DONE: 6085 unique events written to events_psx_announcements.jsonl (79 duplicates dropped)
-OK    PSX announcements (173s)
+OK    PSX announcements (152s)
 
 ============================================================
 RUNNING: PSX notices
 ============================================================
-INFO: fetching 2026-08-02 to 2026-09-01...
+INFO: fetching 2026-08-03 to 2026-09-02...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 6 rows
-INFO: 2 IPO-related notices found: [('2026-08-31', 'ipo_subscription', 'K-Trade Securities Limited Strike Price- Book Buil'), ('2026-08-25', 'ipo_book_building', 'BOOK BUILDING OF NAYA NAZIMABAD APARTMENT REIT')]
-INFO: 5 IPO-related notices found: [('2026-08-21', 'ipo_subscription', 'Topline Securites Limited -Revised Allocation of I'), ('2026-08-21', 'ipo_listing', 'LISTING OF PARTIALLY REDEEMABLE SHARES OF GHANI CH'), ('2026-08-20', 'ipo_listing', 'LISTING OF TASDEEQ INFORMATION SERVICES LIMITED'), ('2026-08-19', 'ipo_book_building', 'BOOK BUILDING OF AGRO PROCESSORS & ATMOSPHERIC GAS'), ('2026-08-18', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
-INFO: 3 IPO-related notices found: [('2026-08-13', 'ipo_subscription', 'Topline Securities Limited Public Subscription Res'), ('2026-08-07', 'ipo_subscription', 'Topline Securities Limited - Break up of Book Buil'), ('2026-08-05', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF SE FRUITS AND VEG')]
-INFO: 1 IPO-related notices found: [('2026-08-03', 'ipo_prospectus', 'Placement of Notice & Draft Prospectus of Abhi Mic')]
-INFO: fetching 2026-09-02 to 2026-10-02...
+INFO: page 4 (offset=150): 12 rows
+INFO: 1 IPO-related notices found: [('2026-08-31', 'ipo_subscription', 'K-Trade Securities Limited Strike Price- Book Buil')]
+INFO: 5 IPO-related notices found: [('2026-08-25', 'ipo_book_building', 'BOOK BUILDING OF NAYA NAZIMABAD APARTMENT REIT'), ('2026-08-21', 'ipo_subscription', 'Topline Securites Limited -Revised Allocation of I'), ('2026-08-21', 'ipo_listing', 'LISTING OF PARTIALLY REDEEMABLE SHARES OF GHANI CH'), ('2026-08-20', 'ipo_listing', 'LISTING OF TASDEEQ INFORMATION SERVICES LIMITED'), ('2026-08-19', 'ipo_book_building', 'BOOK BUILDING OF AGRO PROCESSORS & ATMOSPHERIC GAS')]
+INFO: 3 IPO-related notices found: [('2026-08-18', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-08-13', 'ipo_subscription', 'Topline Securities Limited Public Subscription Res'), ('2026-08-07', 'ipo_subscription', 'Topline Securities Limited - Break up of Book Buil')]
+INFO: 2 IPO-related notices found: [('2026-08-05', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF SE FRUITS AND VEG'), ('2026-08-03', 'ipo_prospectus', 'Placement of Notice & Draft Prospectus of Abhi Mic')]
+INFO: fetching 2026-09-03 to 2026-10-03...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 41 rows
+INFO: page 4 (offset=150): 35 rows
 INFO: 3 IPO-related notices found: [('2026-10-01', 'ipo_prospectus', 'Revised-FOR ALL CONCERNED PLACEMENT OF REVISED DRA'), ('2026-09-29', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
 INFO: 3 IPO-related notices found: [('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
 INFO: 3 IPO-related notices found: [('2026-09-16', 'ipo_listing', 'LISTING OF NAYA NAZIMABAD APARTMENT REIT (NNAR)'), ('2026-09-15', 'ipo_book_building', 'BOOK BUILDING OF SE FRUITS AND VEGETABLE LIMITED'), ('2026-09-14', 'ipo_listing', 'LISTING OF AGRO PROCESSORS & ATMOSPHERIC GASES LIM')]
 INFO: 1 IPO-related notices found: [('2026-09-08', 'ipo_subscription', 'KTrade Securities Limited Public Subscription Resu')]
-INFO: fetching 2026-10-03 to 2026-10-31...
+INFO: fetching 2026-10-04 to 2026-11-01...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -392,13 +391,14 @@ INFO: 2 IPO-related notices found: [('2026-10-22', 'ipo_subscription', 'COMPLETI
 INFO: 1 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
 
 DONE: 495 unique events written to events_psx_notices.jsonl (4 duplicates dropped)
-OK    PSX notices (14s)
+OK    PSX notices (15s)
 
 ============================================================
 RUNNING: PSX payouts
 ============================================================
 INFO: page 1 (offset=0): 26 rows
 INFO: page 21 (offset=500): 26 rows
+WARNING: fetch failed (attempt 1/3): 502 Server Error: Bad Gateway for url: https://pkdata.afireseeker.workers.dev/payouts. Retrying in 1s...
 INFO: reached last page at offset=750 (8 rows)
 WARNING: skipped malformed payout row: unexpected token count (1) in book closure cell: '08/09/2026  - 0/09//2026 '
 INFO: 1/25 rows skipped as malformed
@@ -408,13 +408,13 @@ WARNING: skipped malformed payout row: time data '13/13/2025' does not match for
 INFO: 1/25 rows skipped as malformed
 
 DONE: 750 unique payout events written to events_psx_payouts.jsonl (4 duplicates dropped)
-OK    PSX payouts (37s)
+OK    PSX payouts (32s)
 
 ============================================================
 RUNNING: Merge all sources
 ============================================================
 INFO: loaded 30 events from sbp_mpc (events_sbp.json)
-INFO: loaded 95 events from pbs_calendar (events_pbs.json)
+INFO: loaded 93 events from pbs_calendar (events_pbs.json)
 INFO: loaded 15 events from pama_auto_sales (events_pama.json)
 INFO: loaded 16 events from psx_holidays (events_holidays.json)
 INFO: loaded 14 events from sbp_remittances (events_remittances.json)
@@ -426,12 +426,12 @@ INFO: loaded 750 events from psx_payouts (events_psx_payouts.jsonl)
 INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
 INFO: 97 FinHisaab events dropped -- the same PSX document is already in the PSX feed
 INFO: 122 duplicate ids dropped on merge
-INFO: 575 events trimmed outside [2026-08-02, 2027-10-31]
+INFO: 575 events trimmed outside [2026-08-03, 2027-11-01]
 
-DONE: 6882 total events written to events_merged.json
-  window: 2026-08-02 to 2027-10-31
+DONE: 6880 total events written to events_merged.json
+  window: 2026-08-03 to 2027-11-01
   pama_auto_sales         15
-  pbs_calendar            95
+  pbs_calendar            93
   psx_announcements     6014
   psx_holidays             4
   psx_notices            444
@@ -441,143 +441,277 @@ DONE: 6882 total events written to events_merged.json
   sbp_mpc                 27
   sbp_remittances         14
 
-Date range: 2026-08-02 to 2027-10-29
+Date range: 2026-08-03 to 2027-10-29
 OK    Merge all sources (0s)
 
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-[0;93m2026-10-31 21:11:58.522657074 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-INFO: 101 events eligible (6781 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/101] ZTL: unresolved
-  [2/101] TELE: vision
-  [3/101] GGL: vision
-  [4/101] GGGL: unresolved
-  [5/101] LUCK: vision
-  [6/101] IBLHL: unresolved
-  [7/101] DNCC: unresolved
-  [8/101] FLYNG: unresolved
-  [9/101] UDLI: unresolved
-  [10/101] ATRL: unresolved
-  [11/101] FCL: unresolved
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
-  [12/101] FCL: unresolved
+[0;93m2026-11-01 21:50:52.002153485 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+INFO: 96 events eligible (6784 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
 WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
 WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
-  [13/101] SHEZ: unresolved
-WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
-WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
-  [14/101] SSGC: unresolved
+  [1/96] ZTL: unresolved
 WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
 WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
-  [15/101] INIL: unresolved
-  [16/101] HUMNL: unresolved
-  [17/101] GGGL: unresolved
-  [18/101] ZAL: unresolved
-  [19/101] HRPL: unresolved
-  [20/101] GTYR: unresolved
-INFO: 20/101 processed -- 0 via text, 3 via vision
-  [21/101] SNGP: unresolved
-  [22/101] AGIC: unresolved
-  [23/101] NETSOL: unresolved
-  [24/101] ALAC: unresolved
-  [25/101] AHL: unresolved
-WARNING: https://dps.psx.com.pk/download/document/286540.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/286540.pdf. Retrying in 1s...
-  [26/101] STCL: unresolved
-  [27/101] LSEFSL: unresolved
-  [28/101] LSECL: unresolved
-  [29/101] LSEVL: unresolved
-  [30/101] AHL: unresolved
-  [31/101] MUREB: unresolved
-  [32/101] PRL: unresolved
-  [33/101] GADT: unresolved
-  [34/101] NRL: vision
-  [35/101] DKTM: unresolved
-  [36/101] PIM: unresolved
-  [37/101] SLM: unresolved
-  [38/101] POML: unresolved
-  [39/101] FRCL: unresolved
-  [40/101] OBOY: unresolved
-INFO: 40/101 processed -- 0 via text, 4 via vision
-  [41/101] CLVL: unresolved
-  [42/101] KEL: unresolved
-  [43/101] JKSM: unresolved
-  [44/101] HUMNL: unresolved
-  [45/101] TSPL: unresolved
-  [46/101] MFFL: unresolved
-  [47/101] IML: unresolved
-  [48/101] CFL: unresolved
-  [49/101] CTM: unresolved
-  [50/101] DADX: unresolved
-  [51/101] BAPL: unresolved
-  [52/101] STJT: unresolved
-  [53/101] KHTC: unresolved
-  [54/101] GVGL: unresolved
-  [55/101] BFAGRO: unresolved
-  [56/101] GHGL: unresolved
-  [57/101] FZCM: unresolved
-  [58/101] MUBT: unresolved
-  [59/101] HTL: unresolved
-  [60/101] SFL: unresolved
-INFO: 60/101 processed -- 0 via text, 4 via vision
-  [61/101] ARMG: unresolved
-  [62/101] AKGL: unresolved
-  [63/101] ALTN: unresolved
-  [64/101] NATF: unresolved
-  [65/101] JUBS: unresolved
-  [66/101] GTYR: unresolved
-  [67/101] PAKD: unresolved
-  [68/101] KHTC: unresolved
-  [69/101] MARI: unresolved
-  [70/101] PCAL: unresolved
-  [71/101] PAKD: unresolved
-  [72/101] GTYR: unresolved
-  [73/101] PECO: unresolved
-  [74/101] TELE: unresolved
-  [75/101] LCI: unresolved
-  [76/101] SANE: unresolved
-  [77/101] CHBL: unresolved
-  [78/101] QUET: unresolved
-  [79/101] SSGC: unresolved
-  [80/101] OLPL: unresolved
-INFO: 80/101 processed -- 0 via text, 4 via vision
-  [81/101] KCL: unresolved
-  [82/101] THCCL: unresolved
-  [83/101] ASC: unresolved
-  [84/101] PRL: unresolved
-  [85/101] THALL: unresolved
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [2/96] GGGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [3/96] IBLHL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [4/96] DNCC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [5/96] FLYNG: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [6/96] UDLI: unresolved
+WARNING: Gemini call failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [7/96] ATRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [8/96] FCL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [9/96] FCL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [10/96] SHEZ: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [11/96] SSGC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [12/96] INIL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [13/96] HUMNL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [14/96] GGGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [15/96] ZAL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [16/96] HRPL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [17/96] GTYR: unresolved
+  [18/96] SNGP: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [19/96] AGIC: unresolved
+INFO: 19/96 processed -- 0 via text, 0 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [20/96] NETSOL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [21/96] ALAC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [22/96] AHL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [23/96] STCL: unresolved
+  [24/96] LSEFSL: unresolved
+  [25/96] LSECL: unresolved
+  [26/96] LSEVL: unresolved
+  [27/96] AHL: unresolved
+  [28/96] MUREB: unresolved
+  [29/96] PRL: unresolved
+  [30/96] GADT: unresolved
+  [31/96] DKTM: unresolved
+  [32/96] PIM: unresolved
+  [33/96] SLM: unresolved
+  [34/96] POML: unresolved
+  [35/96] FRCL: unresolved
+  [36/96] OBOY: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [37/96] CLVL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [38/96] KEL: unresolved
+INFO: 38/96 processed -- 0 via text, 0 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [39/96] JKSM: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [40/96] HUMNL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [41/96] TSPL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [42/96] MFFL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [43/96] IML: unresolved
+  [44/96] CFL: unresolved
+  [45/96] CTM: unresolved
+  [46/96] DADX: unresolved
+  [47/96] BAPL: unresolved
+  [48/96] STJT: unresolved
+  [49/96] KHTC: unresolved
+  [50/96] GVGL: unresolved
+  [51/96] BFAGRO: unresolved
+  [52/96] GHGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [53/96] FZCM: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [54/96] MUBT: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [55/96] HTL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [56/96] SFL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [57/96] ARMG: unresolved
+INFO: 57/96 processed -- 0 via text, 0 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [58/96] AKGL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [59/96] ALTN: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [60/96] NATF: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [61/96] JUBS: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [62/96] GTYR: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [63/96] PAKD: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [64/96] KHTC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [65/96] MARI: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [66/96] PCAL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [67/96] PAKD: unresolved
+  [68/96] GTYR: unresolved
+  [69/96] PECO: unresolved
+  [70/96] TELE: unresolved
+  [71/96] LCI: unresolved
+  [72/96] SANE: unresolved
+  [73/96] CHBL: unresolved
+  [74/96] QUET: unresolved
+  [75/96] SSGC: unresolved
+  [76/96] OLPL: unresolved
+INFO: 76/96 processed -- 0 via text, 0 via vision
+  [77/96] KCL: unresolved
+  [78/96] THCCL: unresolved
+  [79/96] ASC: unresolved
+  [80/96] PRL: unresolved
+  [81/96] THALL: unresolved
 Cannot set non-stroke color: /'P0' is an invalid float value
-  [86/101] BWCL: unresolved
-  [87/101] SNGP: unresolved
-  [88/101] PRL: unresolved
-  [89/101] BLUEX: unresolved
-  [90/101] FSWL: unresolved
-  [91/101] FIL: unresolved
-  [92/101] MLCF: unresolved
-  [93/101] HUBC: unresolved
-  [94/101] TPLT: unresolved
-  [95/101] TPL: unresolved
-  [96/101] COLG: unresolved
-  [97/101] NRSL: unresolved
-  [98/101] BWHL: unresolved
-  [99/101] ITANZ: unresolved
-  [100/101] ARPL: unresolved
-INFO: 100/101 processed -- 0 via text, 4 via vision
-  [101/101] SAPT: unresolved
+  [82/96] BWCL: unresolved
+  [83/96] SNGP: unresolved
+  [84/96] PRL: unresolved
+  [85/96] BLUEX: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [86/96] FSWL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [87/96] FIL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 2s...
+  [88/96] MLCF: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [89/96] HUBC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [90/96] TPLT: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [91/96] TPL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [92/96] COLG: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [93/96] NRSL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [94/96] BWHL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [95/96] ITANZ: unresolved
+INFO: 95/96 processed -- 0 via text, 0 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [96/96] ARPL: unresolved
 
-DONE: 4/101 resolved this run (0 via text, 4 via vision), 1623 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (1551s)
+DONE: 0/96 resolved this run (0 via text, 0 via vision), 1623 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (2370s)
 
 ============================================================
 RUNNING: Sentiment classification
 ============================================================
-INFO: 3889 already cached, 0 rule-classified, 2993 skipped (no sentiment applicable), 0 need a Gemini call
+INFO: 3889 already cached, 0 rule-classified, 2991 skipped (no sentiment applicable), 0 need a Gemini call
 
-DONE: 3889/6882 events now have sentiment, written to events_merged.json
+DONE: 3889/6880 events now have sentiment, written to events_merged.json
 OK    Sentiment classification (0s)
 
 ============================================================
@@ -729,7 +863,7 @@ WARNING: giving up on UBLTFC5 after 3 attempts
 INFO: 525/535 processed, 483 refreshed successfully, 42 unsuccessful
 
 DONE: 506/555 symbols have EPS data. 493 refreshed successfully; 42 unsuccessful. Written to eps_data_cache.json
-OK    Fetch EPS data (1033s)
+OK    Fetch EPS data (945s)
 
 ============================================================
 RUNNING: Attach EPS data
@@ -753,7 +887,7 @@ INFO: BPM6 {'current_account': {'2025-09-30': 133.0, '2026-08-31': -73.0, '2026-
   cpi_yoy          3 values, latest ('2026-09', 10.26)
   policy_rate      3 values, latest ('2026-10-26', 12.0)
 DONE: 0 values added or revised
-OK    Fetch macro values from SBP and PBS (4s)
+OK    Fetch macro values from SBP and PBS (2s)
 
 ============================================================
 RUNNING: Attach macro values (SBP/PBS first, FinHisaab fallback)
@@ -761,7 +895,7 @@ RUNNING: Attach macro values (SBP/PBS first, FinHisaab fallback)
   remittances      2/2 past events filled (2 from sbp)
   current_account  2/2 past events filled (2 from sbp)
   mpc              2/2 past events filled (2 from sbp)
-  cpi_monthly      3/3 past events filled (3 from pbs)
+  cpi_monthly      2/2 past events filled (2 from pbs)
 OK    Attach macro values (SBP/PBS first, FinHisaab fallback) (0s)
 
 ============================================================
@@ -790,11 +924,11 @@ OK    Confirm SBP FX reserves (real values) (4s)
 ============================================================
 RUNNING: Export upcoming.json for the portfolio tracker
 ============================================================
-DONE: 583 events (424 company, 159 macro) written to upcoming.json
+DONE: 534 events (375 company, 159 macro) written to upcoming.json
 OK    Export upcoming.json for the portfolio tracker (0s)
 
 ============================================================
-PIPELINE SUMMARY (47.1 min total)
+PIPELINE SUMMARY (58.8 min total)
 ============================================================
   OK    sbp
   OK    pbs
