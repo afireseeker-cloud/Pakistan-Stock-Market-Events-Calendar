@@ -2778,5 +2778,10 @@
     "website": null,
     "domain": null,
     "resolved": false
+  },
+  "NGLEL": {
+    "website": "http://www.ngle.pk",
+    "domain": "ngle.pk",
+    "resolved": true
   }
 }
