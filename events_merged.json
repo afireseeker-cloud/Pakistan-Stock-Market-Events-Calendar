@@ -19989,7 +19989,7 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 2.34,
-      "eps_prior": 0.2,
+      "eps_prior": 0.52,
       "eps_period": "Q3 2026"
     },
     "revision_of": null,
@@ -24401,7 +24401,7 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 2.34,
-      "eps_prior": 0.2,
+      "eps_prior": 0.52,
       "eps_period": "Q3 2026"
     },
     "revision_of": null,
@@ -146098,7 +146098,7 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 2.34,
-      "eps_prior": 0.2,
+      "eps_prior": 0.52,
       "eps_period": "Q3 2026"
     },
     "revision_of": null,
@@ -178073,7 +178073,7 @@
       "announcement_revoked": false,
       "raw_status_tag": null,
       "eps_actual": 2.34,
-      "eps_prior": 0.2,
+      "eps_prior": 0.52,
       "eps_period": "Q3 2026"
     },
     "revision_of": null,
@@ -195838,9 +195838,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.92,
-      "eps_prior": -0.41,
-      "eps_period": "Q3 2026"
+      "eps_actual": -3.63,
+      "eps_prior": -4.0,
+      "eps_period": "FY 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -195869,9 +195869,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": -0.92,
-      "eps_prior": -0.41,
-      "eps_period": "Q3 2026"
+      "eps_actual": -3.63,
+      "eps_prior": -4.0,
+      "eps_period": "FY 2026"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -199733,5 +199733,24 @@
     },
     "revision_of": null,
     "source": "pbs_calendar"
+  },
+  {
+    "id": "sbp-remit-2027-10",
+    "type": "remittances",
+    "status": "estimated",
+    "date": "2027-11-08",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "title": "Workers' Remittances for October 2027",
+    "source_url": null,
+    "payload": {
+      "period": "October 2027",
+      "actual_value": null,
+      "prior_value": null
+    },
+    "revision_of": null,
+    "source": "sbp_remittances"
   }
 ]
