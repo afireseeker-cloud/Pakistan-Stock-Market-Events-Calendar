@@ -198727,6 +198727,27 @@
     "shariah_compliant": false
   },
   {
+    "id": "psx-notice-2026-11-13-2049",
+    "type": "other_psx_notice",
+    "status": "confirmed",
+    "date": "2026-11-13",
+    "time": null,
+    "scope": "market",
+    "symbol": null,
+    "sector": null,
+    "company_name": null,
+    "title": "RECOMPOSITION OF PSX KMI ALL SHARE ISLAMIC INDEX",
+    "source_url": "https://dps.psx.com.pk/download/attachment/289209-1.pdf",
+    "payload": {
+      "pdf_url": "https://dps.psx.com.pk/download/attachment/289209-1.pdf",
+      "image_url": null,
+      "filed_time": "20:49"
+    },
+    "revision_of": null,
+    "source": "psx_notices",
+    "sentiment": "neutral"
+  },
+  {
     "id": "psx-notice-2026-11-13-1752",
     "type": "other_psx_notice",
     "status": "confirmed",
