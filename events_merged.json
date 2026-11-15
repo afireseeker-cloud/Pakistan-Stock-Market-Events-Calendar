@@ -58715,9 +58715,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.05,
-      "eps_prior": 1.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.45,
+      "eps_prior": 3.84,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -87714,9 +87714,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.05,
-      "eps_prior": 1.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.45,
+      "eps_prior": 3.84,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -198915,9 +198915,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.05,
-      "eps_prior": 1.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.45,
+      "eps_prior": 3.84,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -199006,9 +199006,9 @@
       "agenda_extracted": false,
       "announcement_revoked": false,
       "raw_status_tag": null,
-      "eps_actual": 2.05,
-      "eps_prior": 1.23,
-      "eps_period": "Q3 2026"
+      "eps_actual": 4.45,
+      "eps_prior": 3.84,
+      "eps_period": "Q1 2027"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -202466,5 +202466,24 @@
     },
     "revision_of": null,
     "source": "pbs_calendar"
+  },
+  {
+    "id": "pama-auto-sales-2027-11-15",
+    "type": "auto_sales_monthly",
+    "status": "estimated",
+    "date": "2027-11-15",
+    "time": null,
+    "scope": "sector",
+    "symbol": null,
+    "sector": "AUTOMOBILE",
+    "title": "Monthly automobile production and sales data (PAMA)",
+    "source_url": "https://pama.org.pk/monthly-production-sales-of-vehicles/",
+    "payload": {
+      "recurrence": "monthly_following_monday_10_to_14",
+      "reference_month": "2027-10",
+      "date_confidence": "fallback_monday_outside_10_14_window"
+    },
+    "revision_of": null,
+    "source": "pama_auto_sales"
   }
 ]
