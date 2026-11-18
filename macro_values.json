@@ -11,6 +11,12 @@
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         },
         {
+          "period": "2025-10-31",
+          "value": 3420.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
           "period": "2026-08-31",
           "value": 3657.0,
           "source": "sbp",
@@ -21,9 +27,15 @@
           "value": 3588.0,
           "source": "sbp",
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-10-31",
+          "value": 3892.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         }
       ],
-      "last_sync": "2026-11-17T02:32:07Z"
+      "last_sync": "2026-11-18T01:29:45Z"
     },
     "current_account": {
       "unit": "USD million",
@@ -36,6 +48,12 @@
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         },
         {
+          "period": "2025-10-31",
+          "value": -307.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
           "period": "2026-08-31",
           "value": -73.0,
           "source": "sbp",
@@ -43,12 +61,18 @@
         },
         {
           "period": "2026-09-30",
-          "value": -356.0,
+          "value": -371.0,
+          "source": "sbp",
+          "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
+        },
+        {
+          "period": "2026-10-31",
+          "value": 39.0,
           "source": "sbp",
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         }
       ],
-      "last_sync": "2026-11-17T02:32:07Z"
+      "last_sync": "2026-11-18T01:29:45Z"
     },
     "cpi_yoy": {
       "unit": "percent",
@@ -102,7 +126,7 @@
     }
   },
   "_about": "Macro values fetched directly from SBP and PBS by fetch_macro_values.py. attach_finhisaab_values.py prefers these over data/finhisaab_values.json.",
-  "generated_at": "2026-11-17T02:32:15Z",
+  "generated_at": "2026-11-18T01:29:51Z",
   "failures": [
     "CPI 2026-10: press release not found"
   ]
