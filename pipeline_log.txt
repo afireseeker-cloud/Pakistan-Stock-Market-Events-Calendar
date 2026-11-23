@@ -12,7 +12,7 @@ RUNNING: PBS calendar
 ============================================================
 
 
--- 95 estimated events generated (2026-08-23 to 2027-11-21) --
+-- 95 estimated events generated (2026-08-24 to 2027-11-22) --
 OK    PBS calendar (0s)
 
 ============================================================
@@ -20,7 +20,7 @@ RUNNING: PAMA calendar
 ============================================================
 
 
--- 15 events generated (2026-08-23 to 2027-11-21) --
+-- 15 events generated (2026-08-24 to 2027-11-22) --
 OK    PAMA calendar (0s)
 
 ============================================================
@@ -64,7 +64,7 @@ OK    FinHisaab company announcements (fallback) (0s)
 ============================================================
 RUNNING: PSX announcements
 ============================================================
-INFO: fetching 2026-08-23 to 2026-09-22...
+INFO: fetching 2026-08-24 to 2026-09-23...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -90,40 +90,45 @@ INFO: page 22 (offset=1050): 51 rows
 INFO: page 23 (offset=1100): 51 rows
 INFO: page 24 (offset=1150): 51 rows
 INFO: page 25 (offset=1200): 51 rows
-INFO: page 26 (offset=1250): 7 rows
-INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'APPOINTMENT OF CHIEF EXECUTIVE OFFICER OF FRIESLAN', 'Material Information']
-INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information - Approval for Installation o', '29th Board Meeeting', 'NOTIFICATION OF CHANGE OF REGISTERED OFFICE ADDRES']
+INFO: page 26 (offset=1250): 51 rows
+INFO: page 27 (offset=1300): 25 rows
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Annual BOD Meeting', 'Disclosure of material Information', 'Material Information']
+INFO: 1 cancelled/revoked events detected: [('SAZEW', 'CORPORATE BRIEFING SESSION (CBS)')]
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CREDIT RATING ASSIGNED TO ITANZ TECHNOLOGIES LIMIT', 'Postal Ballot Paper (English and Urdu)', 'Material Information']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Submission of Mandatory Shariah Disclosures', 'Miscellaneous', 'Material Information - Approval for Installation o']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chairman of the Board and Chief Exe', 'DISCLOSURE OF MATERIAL INFORMATION', '188th BOD Meeting']
 INFO: 1 cancelled/revoked events detected: [('CHCC', 'otice of Annual General Meeting')]
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE OF MATERIAL INFORMATION', '188th BOD Meeting', 'Material Information']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['RESIGNATION OF CHIEF EXECUTIVE OFFICER AND DIRECTO', 'President and Chief Executive Officer Designate of', 'Material information']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Publication of Ballot Paper in Newspapers', 'Notice to Shareholders', 'RESIGNATION OF CHIEF EXECUTIVE OFFICER AND DIRECTO']
 INFO: 2 cancelled/revoked events detected: [('MLCF', 'MLCF | Maple Leaf Cement Factory Limited'), ('MLCF', 'MLCF-Notice of Extraordinary General Mee')]
-INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['PUBLIC NOTICE - Intimation Regarding Circulation o', 'Withdrawal of Notices of Intention to Offer for El', 'MANDATORY SHARIAH DISCLOSURE FOR THE HALF YEAR END']
+INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Appointment of Company Secretary', 'NOTICE OF EXTRA ORDINARY GENERAL MEETING - GHANI C']
 INFO: 1 cancelled/revoked events detected: [('ITANZ', 'Notice of Annual General Meeting for the')]
-INFO: 22/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Mandatory Shariah Disclosure for Half Year Ended 3', 'Shariah Disclosures for the Half Year ended June 3', 'Resignation of Chief Financial Officer']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Resignation of Company Secretary', 'Unusual movement in Volume of the Shares of First ', 'Unusual movement in Volume of the Shares of Media ']
-INFO: 2 cancelled/revoked events detected: [('SAPT', 'Board Meeting'), ('PIOC', 'Certified Copy of Resolutions passed in ')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Names of Directors Elected at the Election of Dire', 'Notice of 189th BOD Meeting', 'Appointment of Head of Internal Audit']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'FNEL | First National Equities Limited UNUSUAL MOV', 'Material Information']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['PUBLIC NOTICE - Intimation Regarding Circulation o', 'Decision of the Board – Declaration of Right Share', 'Right Shares Subscription Status - STL']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Material Information', 'SUBMISSION OF SHARIAH DISCLOSURE FOR THE HALF YEAR']
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in Volume of the Shares', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 1 cancelled/revoked events detected: [('SAPT', 'Board Meeting')]
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE PURSUANT TO SECTION 110 OF THE SECURITI', 'Draft Offer Document Bawany Air Products Limited', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 1 cancelled/revoked events detected: [('PIOC', 'Certified Copy of Resolutions passed in ')]
+INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Notice of Annual Review Meeting 2026', 'Shariah Disclosures for Financial Statement 30 Jun', 'Reporting of shares purchased (buy-back) by Engro ']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Change of Director', 'Material Information and Disclosure Form', 'Change of Director']
 INFO: 1 cancelled/revoked events detected: [('PRL', 'Notice of AGM - (Pre-Publication)')]
-INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Fixation of Number of Directors to be elected in t', 'PUBLICATION OF POSTAL BALLOT PAPER AND PROVISION O', 'FMR of Meezan Pakistan Exchange Traded Fund for th']
-INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Reporting of shares purchased (buy-back) by Engro ', 'Disclosure of Material Information', '209th BOD meeting of Millat Tractors Limited']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF M/S. T', 'Miscellaneous Information', 'INFORMATION IN RESPECT OF VOLUNTARILY WINDING-UP O']
-INFO: 11/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['ELECTION OF DIRECTORS - RESULTS', 'Unusual movement in volume of shares of Bolan Cast', 'Notice of Names of the Candidates and Postal Ballo']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DECLARATION OF RIGHT ISSUE', 'Resignation of Chief Financial Officer', 'Material Information']
+INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['FMR of JS Global Banking Sector Exchange Traded Fu', 'Fund Manager Report of JS Momentum Factor ETF for ', 'Credit Of Bonus Share Certificates']
+INFO: 17/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Election of Directors', 'Material Information', 'Material Information']
+INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Transmission of Annual Accounts for the Year Ended', 'DISCLOSURE OF MATERIAL INFORMATION', 'UNUSUAL MOVEMENT IN PRICE & VOLUME OF THE CERTIFIC']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Compliance with Clause 5.6.4 (b', 'Unusual Movement in the Price of the Shares', 'Material Information']
 INFO: 2 cancelled/revoked events detected: [('INDU', 'Notice of 37th Annual General Meeting'), ('ECOP', 'Intimation of the 153rd Meeting of the B')]
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Unusual Movement in the Price of the Shares', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
-INFO: 23/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of President/CEO- National Bank of Pak', 'Book Building Results of the Offer for Sale of Nay', 'Resignation of Member Board of Management']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DISCLOSURE OF MATERIAL INFORMATION - GHANI CHEMICA', 'Change of Director', 'Election of Directors of Pakgen Limited (formerly ']
-INFO: 21/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'Material Information - Engro Polymer & Chemicals L', 'Reply-Unusual movement in volume of Shares']
-INFO: 14/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'Notice of Extra Ordinary General Meeting', 'WAVESAPP | Waves Home Appliances Limited - NCCPL N']
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'HICL - Transmission of Half Yearly Accounts for th', 'Placement of Half Yearly Accounts for the period e']
-INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Executive Director', 'Unusual Movement in the Price of the Shares of Arc', 'Material Information']
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Profit payment of BAFL TFC6 17th Coupon Payment', 'General Meetings / Briefing Sessions', 'Annual Environment Excellence Award 2026 by the Na']
+INFO: 18/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CONSTITUTION OF THE BOARD OF DIRECTORS AND ITS COM', 'Appointment of Chief Financial Officer', 'Appointment of President/CEO- National Bank of Pak']
+INFO: 16/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['DBCI | Dadabhoy Cement Industries Limited', 'Change of Auditor and email address of the company', 'Appointment of Chairman']
+INFO: 20/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information - Transfer of 51% Shares', 'Disclosure under Section 130 of the Companies Act,', 'DNCC | Dandot Cement Company Limited Approval of S']
+INFO: 19/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['WAVESAPP | Waves Home Appliances Limited -CDC', 'WAVESAPP | Waves Home Appliances Limited CREDIT OF', 'Result of Election of Directors']
+INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Subscription of Right Shares by Directors and Subs', 'Disclosure of Material Information', 'Material Information']
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Transmission of Half Year Report for the Period En', 'Election of Directors', 'Appointment of Executive Director']
+INFO: 10/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Sad Demise of Mrs. Goshi M. Bhandara, Director', 'Unusual Movement in the Price of the Shares of Baw', 'UNUSUAL MOVEMENT IN THE PRICE OF SHARES OF RUBY TE']
 INFO: 1 cancelled/revoked events detected: [('SPAC2', 'Notice of Annual General Meeting of LSE ')]
-INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Financial Officer Ghani Glass', 'Change of Head of Internal Audit', 'Financials for the Period Ended June 30, 2026']
-INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['CHANGE OF DIRECTOR', 'MANDATORY SHARIAH DISCLOSURES FOR THE YEAR ENDED J', 'Newspaper Cuttings - Publication of Notices regard']
-INFO: 15/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Financial Officer Ghani Value', 'Proposed Stock Split of Ordinary Shares of ITANZ', 'Appointment of Chief Executive']
-INFO: fetching 2026-09-23 to 2026-10-23...
+INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Certified Copy of Resolution(s) passed in Extraodi', 'Unusual Movement in Price of Shares', 'Appointment of Chief Financial Officer Ghani Glass']
+INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Draft Offer Document - Right Issue', 'Notice of Declaration of Letter of Rights of WAVES', 'CHANGE OF DIRECTOR']
+INFO: 13/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Appointment of Chief Executive Officer', 'Appointment of Chairman and Chief Executive Office', 'CHANGES IN BOARD - GHANI CHEMWORLD LIMITED']
+INFO: 9/24 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Dispatch of Letters of Right', 'Credit of Unpaid Rights into CDS', 'Unusual Movement in Price of the Certificates']
+INFO: fetching 2026-09-24 to 2026-10-24...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -179,9 +184,7 @@ INFO: page 52 (offset=2550): 51 rows
 INFO: page 53 (offset=2600): 51 rows
 INFO: page 54 (offset=2650): 51 rows
 INFO: page 55 (offset=2700): 51 rows
-INFO: page 56 (offset=2750): 51 rows
-INFO: page 57 (offset=2800): 51 rows
-INFO: page 58 (offset=2850): 10 rows
+INFO: page 56 (offset=2750): 42 rows
 INFO: 5/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['TISL | Tasdeeq Information Services Limited', 'Resuming of Rebalancing of NIT Pakistan Gateway Ex', 'Declaration of Right Shares']
 INFO: 9/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Filing of Certified Copy of Resolutions Passed by ', 'Filing of Certified Copy of Resolutions Passed by ', 'Material Information']
 INFO: 6/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['POWER | Power Cement Limited Auditors Certificate', 'Declaration of Right Shares', 'Board Meerting']
@@ -259,11 +262,8 @@ INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure 
 INFO: 1 cancelled/revoked events detected: [('AKGL', 'Board Meeting Annual Financial Results 3')]
 INFO: 12/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'EXTRACT OF THE RESOLUTIONS PASSED BY THE MEMBERS', 'Election of Directors']
 INFO: 2 cancelled/revoked events detected: [('PAKD', 'Notice of Board Meeting to Approve Annua'), ('KEL', 'Board Meeting Other Than Financial Resul')]
-INFO: 7/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'MATERIAL INFORMATION CHANGE OF LEGAL ADVISOR', 'Credit/Allotment of Modaraba Certificates - Right ']
-INFO: 8/50 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Annual BOD Meeting', 'Disclosure of material Information', 'Material Information']
-INFO: 1 cancelled/revoked events detected: [('SAZEW', 'CORPORATE BRIEFING SESSION (CBS)')]
-INFO: 3/9 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Postal Ballot Paper (English and Urdu)', 'Material Information', 'Reporting of shares purchased (buy-back) by Engro ']
-INFO: fetching 2026-10-24 to 2026-11-21...
+INFO: 7/41 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Material Information', 'MATERIAL INFORMATION CHANGE OF LEGAL ADVISOR', 'Credit/Allotment of Modaraba Certificates - Right ']
+INFO: fetching 2026-10-25 to 2026-11-22...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
@@ -382,30 +382,30 @@ INFO: 1 cancelled/revoked events detected: [('MFFL', 'resolutions passed at the 
 INFO: 2/17 rows unclassified (expected -- most PSX announcements are disclosure noise, not calendar events): ['Disclosure of Material Information', 'MATERIAL INFORMATION']
 
 DONE: 6506 unique events written to events_psx_announcements.jsonl (76 duplicates dropped)
-OK    PSX announcements (195s)
+OK    PSX announcements (173s)
 
 ============================================================
 RUNNING: PSX notices
 ============================================================
-INFO: fetching 2026-08-23 to 2026-09-22...
+INFO: fetching 2026-08-24 to 2026-09-23...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 31 rows
-INFO: 1 IPO-related notices found: [('2026-09-16', 'ipo_listing', 'LISTING OF NAYA NAZIMABAD APARTMENT REIT (NNAR)')]
-INFO: 3 IPO-related notices found: [('2026-09-15', 'ipo_book_building', 'BOOK BUILDING OF SE FRUITS AND VEGETABLE LIMITED'), ('2026-09-14', 'ipo_listing', 'LISTING OF AGRO PROCESSORS & ATMOSPHERIC GASES LIM'), ('2026-09-08', 'ipo_subscription', 'KTrade Securities Limited Public Subscription Resu')]
-INFO: 1 IPO-related notices found: [('2026-08-31', 'ipo_subscription', 'K-Trade Securities Limited Strike Price- Book Buil')]
+INFO: page 4 (offset=150): 39 rows
+INFO: 4 IPO-related notices found: [('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-16', 'ipo_listing', 'LISTING OF NAYA NAZIMABAD APARTMENT REIT (NNAR)')]
+INFO: 2 IPO-related notices found: [('2026-09-15', 'ipo_book_building', 'BOOK BUILDING OF SE FRUITS AND VEGETABLE LIMITED'), ('2026-09-14', 'ipo_listing', 'LISTING OF AGRO PROCESSORS & ATMOSPHERIC GASES LIM')]
+INFO: 2 IPO-related notices found: [('2026-09-08', 'ipo_subscription', 'KTrade Securities Limited Public Subscription Resu'), ('2026-08-31', 'ipo_subscription', 'K-Trade Securities Limited Strike Price- Book Buil')]
 INFO: 1 IPO-related notices found: [('2026-08-25', 'ipo_book_building', 'BOOK BUILDING OF NAYA NAZIMABAD APARTMENT REIT')]
-INFO: fetching 2026-09-23 to 2026-10-23...
+INFO: fetching 2026-09-24 to 2026-10-24...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 51 rows
-INFO: page 4 (offset=150): 30 rows
+INFO: page 4 (offset=150): 22 rows
 INFO: 2 IPO-related notices found: [('2026-10-22', 'ipo_subscription', 'COMPLETION OF IPO REFUND PROCESS FOR SE FRUITS AND'), ('2026-10-16', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
 INFO: 1 IPO-related notices found: [('2026-10-08', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
 INFO: 2 IPO-related notices found: [('2026-10-01', 'ipo_prospectus', 'Revised-FOR ALL CONCERNED PLACEMENT OF REVISED DRA'), ('2026-09-29', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
-INFO: 4 IPO-related notices found: [('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF'), ('2026-09-23', 'ipo_listing', 'LISTING OF RATED, UNSECURED, SUBORDINATED, PRIVATE'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim'), ('2026-09-23', 'ipo_subscription', 'Topline Securities Limited & Growth Securities Lim')]
-INFO: fetching 2026-10-24 to 2026-11-21...
+INFO: 1 IPO-related notices found: [('2026-09-28', 'ipo_prospectus', 'FOR ALL CONCERNED PLACEMENT OF DRAFT PROSPECTUS OF')]
+INFO: fetching 2026-10-25 to 2026-11-22...
 INFO: page 1 (offset=0): 51 rows
 INFO: page 2 (offset=50): 51 rows
 INFO: page 3 (offset=100): 42 rows
@@ -414,7 +414,7 @@ INFO: 3 IPO-related notices found: [('2026-11-10', 'ipo_subscription', 'TOpline 
 INFO: 3 IPO-related notices found: [('2026-10-30', 'ipo_prospectus', 'PLACEMENT OF DRAFT PROSPECTUS OF “ADAL FINTECH LIM'), ('2026-10-30', 'ipo_book_building', 'BOOK BUILDING OF ABHI MICROFINANCE BANK LIMITED'), ('2026-10-28', 'ipo_listing', 'LISTING OF NINGBO GREEN LIGHT ENERGY LIMITED (NGLE')]
 
 DONE: 494 unique events written to events_psx_notices.jsonl (6 duplicates dropped)
-OK    PSX notices (13s)
+OK    PSX notices (12s)
 
 ============================================================
 RUNNING: PSX payouts
@@ -430,7 +430,7 @@ WARNING: skipped malformed payout row: time data '13/13/2025' does not match for
 INFO: 1/25 rows skipped as malformed
 
 DONE: 757 unique payout events written to events_psx_payouts.jsonl (4 duplicates dropped)
-OK    PSX payouts (32s)
+OK    PSX payouts (31s)
 
 ============================================================
 RUNNING: Merge all sources
@@ -448,10 +448,10 @@ INFO: loaded 757 events from psx_payouts (events_psx_payouts.jsonl)
 INFO: loaded 97 events from finhisaab_announcements (events_finhisaab_company.json)
 INFO: 95 FinHisaab events dropped -- the same PSX document is already in the PSX feed
 INFO: 122 duplicate ids dropped on merge
-INFO: 592 events trimmed outside [2026-08-23, 2027-11-21]
+INFO: 592 events trimmed outside [2026-08-24, 2027-11-22]
 
 DONE: 7296 total events written to events_merged.json
-  window: 2026-08-23 to 2027-11-21
+  window: 2026-08-24 to 2027-11-22
   finhisaab_announcements     2
   pama_auto_sales         15
   pbs_calendar            95
@@ -470,144 +470,118 @@ OK    Merge all sources (0s)
 ============================================================
 RUNNING: Meeting date extraction (text + vision OCR)
 ============================================================
-INFO: 101 events eligible (7195 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
-  [1/101] IDRT: unresolved
-  [2/101] FFL: unresolved
-  [3/101] BBFL: unresolved
-  [4/101] HAFL: unresolved
-  [5/101] BTL: unresolved
-  [6/101] FASM: unresolved
-  [7/101] KOHC: unresolved
-WARNING: https://dps.psx.com.pk/download/document/289643.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289643.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/289643.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289643.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/289643.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289643.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/289643.pdf after 3 fetch attempts
-  [8/101] BHAT: unresolved
-  [9/101] ELCM: unresolved
-  [10/101] ADMM: unresolved
-  [11/101] GIL: unresolved
-  [12/101] MUGHAL: unresolved
-  [13/101] PRWM: unresolved
-  [14/101] ORM: unresolved
-  [15/101] PGLC: unresolved
-  [16/101] STML: unresolved
-  [17/101] HAFL: unresolved
-  [18/101] IMS: unresolved
-  [19/101] SOYASUP: unresolved
-  [20/101] DINT: unresolved
-INFO: 20/101 processed -- 0 via text, 0 via vision
-  [21/101] MUGHAL: unresolved
-  [22/101] CSAP: unresolved
-  [23/101] NCL: unresolved
-  [24/101] GEMMEL: unresolved
-  [25/101] KOHC: unresolved
-  [26/101] PTL: unresolved
-  [27/101] SARC: unresolved
-  [28/101] MFFL: unresolved
-  [29/101] LOADS: unresolved
-  [30/101] JVDC: unresolved
-  [31/101] APL: unresolved
-  [32/101] 786: unresolved
-  [33/101] ITANZ: unresolved
-  [34/101] THCCL: unresolved
-  [35/101] MACTER: unresolved
-WARNING: https://dps.psx.com.pk/download/document/289186.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289186.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/289186.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289186.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/289186.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289186.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/289186.pdf after 3 fetch attempts
-  [36/101] PREMA: unresolved
-WARNING: https://dps.psx.com.pk/download/document/289179.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289179.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/289179.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289179.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/289179.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289179.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/289179.pdf after 3 fetch attempts
-  [37/101] BIFO: unresolved
-  [38/101] JVDC: unresolved
-  [39/101] OML: unresolved
-  [40/101] FANM: unresolved
-INFO: 40/101 processed -- 0 via text, 0 via vision
-WARNING: https://dps.psx.com.pk/download/document/289024.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289024.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/289024.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289024.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/289024.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/289024.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/289024.pdf after 3 fetch attempts
-  [41/101] AGIL: unresolved
-  [42/101] DEL: unresolved
-  [43/101] JDMT: unresolved
-  [44/101] EMCO: unresolved
-  [45/101] ALTN: unresolved
-  [46/101] ECOP: unresolved
-  [47/101] NICL: unresolved
-  [48/101] PPL: unresolved
-  [49/101] ZAHID: unresolved
-  [50/101] GHNI: unresolved
-  [51/101] FFC: unresolved
-  [52/101] ENGROH: unresolved
-  [53/101] HUBC: unresolved
-  [54/101] ZTL: unresolved
-  [55/101] GGGL: unresolved
-  [56/101] IBLHL: unresolved
-  [57/101] DNCC: unresolved
-WARNING: https://dps.psx.com.pk/download/document/287658.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287658.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/287658.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287658.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/287658.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287658.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/287658.pdf after 3 fetch attempts
-  [58/101] FLYNG: unresolved
-  [59/101] UDLI: unresolved
-  [60/101] ATRL: unresolved
-INFO: 60/101 processed -- 0 via text, 0 via vision
-  [61/101] FCL: unresolved
-  [62/101] FCL: unresolved
-  [63/101] SHEZ: unresolved
-  [64/101] SSGC: unresolved
-  [65/101] INIL: unresolved
-  [66/101] HUMNL: unresolved
-WARNING: https://dps.psx.com.pk/download/document/287092.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287092.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/287092.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287092.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/287092.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/287092.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/287092.pdf after 3 fetch attempts
-  [67/101] GGGL: unresolved
-  [68/101] ZAL: unresolved
-  [69/101] HRPL: unresolved
-  [70/101] GTYR: unresolved
-  [71/101] AGIC: unresolved
-  [72/101] NETSOL: unresolved
-  [73/101] ALAC: unresolved
-  [74/101] AHL: unresolved
-  [75/101] STCL: unresolved
-  [76/101] LSEFSL: unresolved
-  [77/101] LSECL: unresolved
-  [78/101] LSEVL: unresolved
-  [79/101] AHL: unresolved
-  [80/101] MUREB: unresolved
-INFO: 80/101 processed -- 0 via text, 0 via vision
-  [81/101] PRL: unresolved
-  [82/101] GADT: unresolved
-  [83/101] DKTM: unresolved
-  [84/101] PIM: unresolved
-  [85/101] SLM: unresolved
-  [86/101] POML: unresolved
-  [87/101] FRCL: unresolved
-  [88/101] OBOY: unresolved
-  [89/101] CLVL: unresolved
-WARNING: https://dps.psx.com.pk/download/document/285247.pdf fetch failed (attempt 1/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/285247.pdf. Retrying in 1s...
-WARNING: https://dps.psx.com.pk/download/document/285247.pdf fetch failed (attempt 2/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/285247.pdf. Retrying in 2s...
-WARNING: https://dps.psx.com.pk/download/document/285247.pdf fetch failed (attempt 3/3): 520 Server Error: <none> for url: https://pkdata.afireseeker.workers.dev/download/document/285247.pdf. Retrying in 4s...
-WARNING: giving up on https://dps.psx.com.pk/download/document/285247.pdf after 3 fetch attempts
-  [90/101] KEL: unresolved
-  [91/101] JKSM: unresolved
-  [92/101] HUMNL: unresolved
-  [93/101] TSPL: unresolved
-  [94/101] MFFL: unresolved
-  [95/101] IML: unresolved
-  [96/101] CFL: unresolved
-  [97/101] CTM: unresolved
-  [98/101] DADX: unresolved
-  [99/101] BAPL: unresolved
-  [100/101] STJT: unresolved
-INFO: 100/101 processed -- 0 via text, 0 via vision
-  [101/101] KHTC: unresolved
+INFO: 91 events eligible (7205 already cached, wrong type, or no PDF). Vision fallback: ON (Gemini)
+  [1/91] IDRT: unresolved
+  [2/91] FFL: unresolved
+  [3/91] BBFL: unresolved
+  [4/91] HAFL: unresolved
+  [5/91] BTL: unresolved
+  [6/91] FASM: unresolved
+  [7/91] KOHC: vision
+  [8/91] BHAT: unresolved
+  [9/91] ELCM: unresolved
+  [10/91] ADMM: unresolved
+  [11/91] GIL: unresolved
+  [12/91] MUGHAL: unresolved
+  [13/91] PRWM: unresolved
+  [14/91] ORM: unresolved
+  [15/91] PGLC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [16/91] STML: unresolved
+  [17/91] HAFL: unresolved
+  [18/91] IMS: unresolved
+INFO: 18/91 processed -- 0 via text, 1 via vision
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [19/91] SOYASUP: unresolved
+  [20/91] DINT: unresolved
+  [21/91] MUGHAL: unresolved
+  [22/91] CSAP: unresolved
+  [23/91] NCL: unresolved
+  [24/91] GEMMEL: unresolved
+  [25/91] KOHC: unresolved
+  [26/91] PTL: unresolved
+  [27/91] SARC: unresolved
+  [28/91] MFFL: unresolved
+  [29/91] LOADS: unresolved
+  [30/91] JVDC: vision
+  [31/91] APL: unresolved
+  [32/91] 786: unresolved
+  [33/91] ITANZ: unresolved
+  [34/91] THCCL: unresolved
+  [35/91] MACTER: unresolved
+  [36/91] PREMA: unresolved
+INFO: 36/91 processed -- 0 via text, 2 via vision
+  [37/91] BIFO: unresolved
+  [38/91] JVDC: unresolved
+  [39/91] OML: unresolved
+  [40/91] FANM: unresolved
+  [41/91] AGIL: unresolved
+  [42/91] DEL: unresolved
+  [43/91] JDMT: unresolved
+  [44/91] EMCO: unresolved
+  [45/91] ALTN: unresolved
+  [46/91] ECOP: unresolved
+  [47/91] NICL: unresolved
+  [48/91] PPL: unresolved
+  [49/91] ZAHID: unresolved
+  [50/91] GHNI: unresolved
+  [51/91] FFC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [52/91] ENGROH: unresolved
+  [53/91] HUBC: unresolved
+  [54/91] ZTL: unresolved
+INFO: 54/91 processed -- 0 via text, 2 via vision
+  [55/91] GGGL: unresolved
+  [56/91] IBLHL: unresolved
+  [57/91] DNCC: unresolved
+  [58/91] FLYNG: unresolved
+  [59/91] UDLI: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+WARNING: Gemini call failed (attempt 3/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 4s...
+  [60/91] ATRL: unresolved
+  [61/91] FCL: unresolved
+  [62/91] FCL: unresolved
+  [63/91] SHEZ: unresolved
+  [64/91] SSGC: unresolved
+  [65/91] INIL: unresolved
+  [66/91] HUMNL: unresolved
+WARNING: Gemini call failed (attempt 1/3): HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60). Retrying in 1s...
+  [67/91] GGGL: unresolved
+  [68/91] ZAL: unresolved
+  [69/91] HRPL: unresolved
+  [70/91] GTYR: unresolved
+  [71/91] AGIC: unresolved
+  [72/91] NETSOL: unresolved
+INFO: 72/91 processed -- 0 via text, 2 via vision
+  [73/91] ALAC: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [74/91] AHL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+WARNING: Gemini call failed (attempt 2/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 2s...
+  [75/91] STCL: unresolved
+  [76/91] LSEFSL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [77/91] LSECL: unresolved
+  [78/91] LSEVL: unresolved
+  [79/91] AHL: unresolved
+  [80/91] MUREB: unresolved
+  [81/91] PRL: unresolved
+WARNING: Gemini call failed (attempt 1/3): 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent. Retrying in 1s...
+  [82/91] GADT: unresolved
+  [83/91] DKTM: unresolved
+  [84/91] PIM: unresolved
+  [85/91] SLM: unresolved
+  [86/91] POML: unresolved
+  [87/91] FRCL: unresolved
+  [88/91] OBOY: unresolved
+  [89/91] CLVL: unresolved
+  [90/91] KEL: unresolved
+INFO: 90/91 processed -- 0 via text, 2 via vision
+  [91/91] JKSM: unresolved
 
-DONE: 0/101 resolved this run (0 via text, 0 via vision), 1776 total events now show real scheduled dates, written to events_merged.json
-OK    Meeting date extraction (text + vision OCR) (984s)
+DONE: 2/91 resolved this run (0 via text, 2 via vision), 1778 total events now show real scheduled dates, written to events_merged.json
+OK    Meeting date extraction (text + vision OCR) (1208s)
 
 ============================================================
 RUNNING: Sentiment classification
@@ -634,7 +608,7 @@ OK    Attach company logos (0s)
 ============================================================
 RUNNING: Fetch EPS data
 ============================================================
-INFO: 537 symbols total, 57 not due, 480 to fetch or retry
+INFO: 537 symbols total, 0 not due, 537 to fetch or retry
 WARNING: ABL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 1s...
 WARNING: ABL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 2s...
 WARNING: ABL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ABL-FUNDS. Retrying in 4s...
@@ -643,6 +617,7 @@ WARNING: AKD-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server
 WARNING: AKD-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AKD-FUNDS. Retrying in 2s...
 WARNING: AKD-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/AKD-FUNDS. Retrying in 4s...
 WARNING: giving up on AKD-FUNDS after 3 attempts
+INFO: 25/537 processed, 22 refreshed successfully, 3 unsuccessful
 WARNING: ALFALAH-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 1s...
 WARNING: ALFALAH-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 2s...
 WARNING: ALFALAH-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALFALAH-FUNDS. Retrying in 4s...
@@ -651,6 +626,7 @@ WARNING: ALHAML-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Ser
 WARNING: ALHAML-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALHAML-FUNDS. Retrying in 2s...
 WARNING: ALHAML-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ALHAML-FUNDS. Retrying in 4s...
 WARNING: giving up on ALHAML-FUNDS after 3 attempts
+INFO: 50/537 processed, 43 refreshed successfully, 7 unsuccessful
 WARNING: ATLAS-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 1s...
 WARNING: ATLAS-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 2s...
 WARNING: ATLAS-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/ATLAS-FUNDS. Retrying in 4s...
@@ -667,7 +643,7 @@ WARNING: BAHLTFC9 fetch failed (attempt 1/3): 500 Server Error: Internal Server 
 WARNING: BAHLTFC9 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 2s...
 WARNING: BAHLTFC9 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BAHLTFC9. Retrying in 4s...
 WARNING: giving up on BAHLTFC9 after 3 attempts
-INFO: 25/480 processed, 14 refreshed successfully, 11 unsuccessful
+INFO: 75/537 processed, 64 refreshed successfully, 11 unsuccessful
 WARNING: BIPLSC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 1s...
 WARNING: BIPLSC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 2s...
 WARNING: BIPLSC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC. Retrying in 4s...
@@ -676,15 +652,15 @@ WARNING: BIPLSC2 fetch failed (attempt 1/3): 500 Server Error: Internal Server E
 WARNING: BIPLSC2 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC2. Retrying in 2s...
 WARNING: BIPLSC2 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/BIPLSC2. Retrying in 4s...
 WARNING: giving up on BIPLSC2 after 3 attempts
-INFO: 50/480 processed, 37 refreshed successfully, 13 unsuccessful
-INFO: 75/480 processed, 62 refreshed successfully, 13 unsuccessful
-INFO: 100/480 processed, 87 refreshed successfully, 13 unsuccessful
+INFO: 100/537 processed, 87 refreshed successfully, 13 unsuccessful
+INFO: 125/537 processed, 112 refreshed successfully, 13 unsuccessful
+INFO: 150/537 processed, 137 refreshed successfully, 13 unsuccessful
 WARNING: FAYSAL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 1s...
 WARNING: FAYSAL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 2s...
 WARNING: FAYSAL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/FAYSAL-FUNDS. Retrying in 4s...
 WARNING: giving up on FAYSAL-FUNDS after 3 attempts
-INFO: 125/480 processed, 111 refreshed successfully, 14 unsuccessful
-INFO: 150/480 processed, 136 refreshed successfully, 14 unsuccessful
+INFO: 175/537 processed, 161 refreshed successfully, 14 unsuccessful
+INFO: 200/537 processed, 186 refreshed successfully, 14 unsuccessful
 WARNING: HBL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBL-FUNDS. Retrying in 1s...
 WARNING: HBL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBL-FUNDS. Retrying in 2s...
 WARNING: HBL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBL-FUNDS. Retrying in 4s...
@@ -693,12 +669,12 @@ WARNING: HBLTFC2 fetch failed (attempt 1/3): 500 Server Error: Internal Server E
 WARNING: HBLTFC2 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC2. Retrying in 2s...
 WARNING: HBLTFC2 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC2. Retrying in 4s...
 WARNING: giving up on HBLTFC2 after 3 attempts
-INFO: 175/480 processed, 158 refreshed successfully, 17 unsuccessful
 WARNING: HBLTFC3 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 1s...
 WARNING: HBLTFC3 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 2s...
 WARNING: HBLTFC3 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/HBLTFC3. Retrying in 4s...
 WARNING: giving up on HBLTFC3 after 3 attempts
-INFO: 200/480 processed, 182 refreshed successfully, 18 unsuccessful
+INFO: 225/537 processed, 207 refreshed successfully, 18 unsuccessful
+INFO: 250/537 processed, 232 refreshed successfully, 18 unsuccessful
 WARNING: JSBLTFC4 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 1s...
 WARNING: JSBLTFC4 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 2s...
 WARNING: JSBLTFC4 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSBLTFC4. Retrying in 4s...
@@ -707,12 +683,12 @@ WARNING: JSIL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Serve
 WARNING: JSIL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSIL-FUNDS. Retrying in 2s...
 WARNING: JSIL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/JSIL-FUNDS. Retrying in 4s...
 WARNING: giving up on JSIL-FUNDS after 3 attempts
-INFO: 225/480 processed, 202 refreshed successfully, 23 unsuccessful
+INFO: 275/537 processed, 252 refreshed successfully, 23 unsuccessful
 WARNING: KFGB1 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 1s...
 WARNING: KFGB1 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 2s...
 WARNING: KFGB1 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/KFGB1. Retrying in 4s...
 WARNING: giving up on KFGB1 after 3 attempts
-INFO: 250/480 processed, 226 refreshed successfully, 24 unsuccessful
+INFO: 300/537 processed, 276 refreshed successfully, 24 unsuccessful
 WARNING: MCBIM-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 1s...
 WARNING: MCBIM-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 2s...
 WARNING: MCBIM-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MCBIM-FUNDS. Retrying in 4s...
@@ -725,7 +701,7 @@ WARNING: MMBLTFC fetch failed (attempt 1/3): 500 Server Error: Internal Server E
 WARNING: MMBLTFC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MMBLTFC. Retrying in 2s...
 WARNING: MMBLTFC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/MMBLTFC. Retrying in 4s...
 WARNING: giving up on MMBLTFC after 3 attempts
-INFO: 275/480 processed, 246 refreshed successfully, 29 unsuccessful
+INFO: 325/537 processed, 296 refreshed successfully, 29 unsuccessful
 WARNING: NBP-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 1s...
 WARNING: NBP-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 2s...
 WARNING: NBP-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NBP-FUNDS. Retrying in 4s...
@@ -734,28 +710,29 @@ WARNING: NIT-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server
 WARNING: NIT-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NIT-FUNDS. Retrying in 2s...
 WARNING: NIT-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/NIT-FUNDS. Retrying in 4s...
 WARNING: giving up on NIT-FUNDS after 3 attempts
-INFO: 300/480 processed, 266 refreshed successfully, 34 unsuccessful
+INFO: 350/537 processed, 316 refreshed successfully, 34 unsuccessful
 WARNING: OPENFUND fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 1s...
 WARNING: OPENFUND fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 2s...
 WARNING: OPENFUND fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/OPENFUND. Retrying in 4s...
 WARNING: giving up on OPENFUND after 3 attempts
-INFO: 325/480 processed, 290 refreshed successfully, 35 unsuccessful
+INFO: 375/537 processed, 340 refreshed successfully, 35 unsuccessful
 WARNING: PFSLTFC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 1s...
 WARNING: PFSLTFC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 2s...
 WARNING: PFSLTFC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/PFSLTFC. Retrying in 4s...
 WARNING: giving up on PFSLTFC after 3 attempts
-INFO: 350/480 processed, 314 refreshed successfully, 36 unsuccessful
-INFO: 375/480 processed, 339 refreshed successfully, 36 unsuccessful
+INFO: 400/537 processed, 364 refreshed successfully, 36 unsuccessful
+INFO: 425/537 processed, 389 refreshed successfully, 36 unsuccessful
+INFO: 450/537 processed, 414 refreshed successfully, 36 unsuccessful
 WARNING: SNBLTFC3 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC3. Retrying in 1s...
 WARNING: SNBLTFC3 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC3. Retrying in 2s...
 WARNING: SNBLTFC3 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC3. Retrying in 4s...
 WARNING: giving up on SNBLTFC3 after 3 attempts
-INFO: 400/480 processed, 363 refreshed successfully, 37 unsuccessful
 WARNING: SNBLTFC4 fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC4. Retrying in 1s...
 WARNING: SNBLTFC4 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC4. Retrying in 2s...
 WARNING: SNBLTFC4 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/SNBLTFC4. Retrying in 4s...
 WARNING: giving up on SNBLTFC4 after 3 attempts
-INFO: 425/480 processed, 386 refreshed successfully, 39 unsuccessful
+INFO: 475/537 processed, 436 refreshed successfully, 39 unsuccessful
+INFO: 500/537 processed, 460 refreshed successfully, 40 unsuccessful
 WARNING: TPLSC fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 1s...
 WARNING: TPLSC fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 2s...
 WARNING: TPLSC fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLSC. Retrying in 4s...
@@ -764,7 +741,6 @@ WARNING: TPLTFC3 fetch failed (attempt 1/3): 500 Server Error: Internal Server E
 WARNING: TPLTFC3 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLTFC3. Retrying in 2s...
 WARNING: TPLTFC3 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/TPLTFC3. Retrying in 4s...
 WARNING: giving up on TPLTFC3 after 3 attempts
-INFO: 450/480 processed, 408 refreshed successfully, 42 unsuccessful
 WARNING: UBL-FUNDS fetch failed (attempt 1/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 1s...
 WARNING: UBL-FUNDS fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 2s...
 WARNING: UBL-FUNDS fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBL-FUNDS. Retrying in 4s...
@@ -773,10 +749,10 @@ WARNING: UBLTFC5 fetch failed (attempt 1/3): 500 Server Error: Internal Server E
 WARNING: UBLTFC5 fetch failed (attempt 2/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBLTFC5. Retrying in 2s...
 WARNING: UBLTFC5 fetch failed (attempt 3/3): 500 Server Error: Internal Server Error for url: https://pkdata.afireseeker.workers.dev/company/UBLTFC5. Retrying in 4s...
 WARNING: giving up on UBLTFC5 after 3 attempts
-INFO: 475/480 processed, 430 refreshed successfully, 45 unsuccessful
+INFO: 525/537 processed, 480 refreshed successfully, 45 unsuccessful
 
-DONE: 507/557 symbols have EPS data. 435 refreshed successfully; 45 unsuccessful. Written to eps_data_cache.json
-OK    Fetch EPS data (1037s)
+DONE: 507/557 symbols have EPS data. 492 refreshed successfully; 45 unsuccessful. Written to eps_data_cache.json
+OK    Fetch EPS data (1084s)
 
 ============================================================
 RUNNING: Attach EPS data
@@ -801,7 +777,7 @@ INFO: BPM6 {'current_account': {'2025-10-31': -307.0, '2026-09-30': -371.0, '202
   policy_rate      3 values, latest ('2026-10-26', 12.0)
 DONE: 0 values added or revised
 WARNING: CPI 2026-10: press release not found
-OK    Fetch macro values from SBP and PBS (9s)
+OK    Fetch macro values from SBP and PBS (11s)
 
 ============================================================
 RUNNING: Attach macro values (SBP/PBS first, FinHisaab fallback)
@@ -815,8 +791,15 @@ OK    Attach macro values (SBP/PBS first, FinHisaab fallback) (0s)
 ============================================================
 RUNNING: Broker expectations for CPI and MPC
 ============================================================
-DONE: 0 CPI/MPC events in the next 10 days, 0 carry a broker expectation
-OK    Broker expectations for CPI and MPC (0s)
+INFO: gemini-3.5-flash HTTP 429, trying the next model
+INFO: gemini-3.6-flash HTTP 429, trying the next model
+INFO: gemini-3-flash HTTP 404, trying the next model
+INFO: gemini-2.5-flash HTTP 404, trying the next model
+INFO: gemini-3.5-flash-lite HTTP 429, trying the next model
+INFO: gemini-3.1-flash-lite HTTP 429, trying the next model
+INFO: pbs-cpi_monthly-2026-12-02: None (0 sources) -> None
+DONE: 1 CPI/MPC events in the next 10 days, 0 carry a broker expectation
+OK    Broker expectations for CPI and MPC (6s)
 
 ============================================================
 RUNNING: Confirm SBP FX reserves (real values)
@@ -831,11 +814,11 @@ OK    Confirm SBP FX reserves (real values) (4s)
 ============================================================
 RUNNING: Export upcoming.json for the portfolio tracker
 ============================================================
-DONE: 315 events (157 company, 158 macro) written to upcoming.json
+DONE: 311 events (153 company, 158 macro) written to upcoming.json
 OK    Export upcoming.json for the portfolio tracker (0s)
 
 ============================================================
-PIPELINE SUMMARY (37.9 min total)
+PIPELINE SUMMARY (42.2 min total)
 ============================================================
   OK    sbp
   OK    pbs

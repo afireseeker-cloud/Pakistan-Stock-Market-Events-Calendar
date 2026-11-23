@@ -13912,9 +13912,10 @@
     "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-JVDC-2026-11-16-1209": {
-    "scheduled_date": null,
+    "scheduled_date": "2026-11-14",
     "scheduled_time": null,
-    "method": null
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-DYNO-2026-11-16-1158": {
     "scheduled_date": "2026-06-30",
@@ -14575,9 +14576,10 @@
     "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-KOHC-2026-11-20-1546": {
-    "scheduled_date": null,
+    "scheduled_date": "2026-11-19",
     "scheduled_time": null,
-    "method": null
+    "method": "vision",
+    "model": "gemini-3.1-flash-lite"
   },
   "psx-annc-BHAT-2026-11-20-1546": {
     "scheduled_date": null,

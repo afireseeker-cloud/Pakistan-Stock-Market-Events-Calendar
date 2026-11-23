@@ -190290,7 +190290,7 @@
     "id": "psx-annc-JVDC-2026-11-16-1209",
     "type": "corporate_briefing",
     "status": "confirmed",
-    "date": "2026-11-16",
+    "date": "2026-11-14",
     "time": null,
     "scope": "company",
     "symbol": "JVDC",
@@ -190306,7 +190306,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-11-16",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",
@@ -198669,7 +198671,7 @@
     "id": "psx-annc-KOHC-2026-11-20-1546",
     "type": "corporate_briefing",
     "status": "confirmed",
-    "date": "2026-11-20",
+    "date": "2026-11-19",
     "time": null,
     "scope": "company",
     "symbol": "KOHC",
@@ -198685,7 +198687,9 @@
       "agenda_in_title": false,
       "agenda_extracted": false,
       "announcement_revoked": false,
-      "raw_status_tag": null
+      "raw_status_tag": null,
+      "filed_date": "2026-11-20",
+      "date_source": "vision"
     },
     "revision_of": null,
     "source": "psx_announcements",
