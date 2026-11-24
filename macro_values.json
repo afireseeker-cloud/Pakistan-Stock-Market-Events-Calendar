@@ -35,7 +35,7 @@
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         }
       ],
-      "last_sync": "2026-11-23T00:03:12Z"
+      "last_sync": "2026-11-24T04:48:28Z"
     },
     "current_account": {
       "unit": "USD million",
@@ -72,7 +72,7 @@
           "url": "https://www.sbp.org.pk/ecodata/Balancepayment_BPM6.xls"
         }
       ],
-      "last_sync": "2026-11-23T00:03:12Z"
+      "last_sync": "2026-11-24T04:48:28Z"
     },
     "cpi_yoy": {
       "unit": "percent",
@@ -126,7 +126,7 @@
     }
   },
   "_about": "Macro values fetched directly from SBP and PBS by fetch_macro_values.py. attach_finhisaab_values.py prefers these over data/finhisaab_values.json.",
-  "generated_at": "2026-11-23T00:03:19Z",
+  "generated_at": "2026-11-24T04:48:38Z",
   "failures": [
     "CPI 2026-10: press release not found"
   ]
