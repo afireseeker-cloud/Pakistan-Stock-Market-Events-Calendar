@@ -7,8 +7,8 @@
     "latest_quarterly_eps": 0.02,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.64,
-    "fetched_at": "2026-11-26T02:15:49+00:00",
-    "last_attempt_at": "2026-11-26T02:15:49+00:00"
+    "fetched_at": "2026-11-27T02:17:26+00:00",
+    "last_attempt_at": "2026-11-27T02:17:26+00:00"
   },
   "AABS": {
     "resolved": true,
@@ -18,8 +18,8 @@
     "latest_quarterly_eps": 10.44,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 27.67,
-    "fetched_at": "2026-11-26T02:15:50+00:00",
-    "last_attempt_at": "2026-11-26T02:15:50+00:00"
+    "fetched_at": "2026-11-27T02:17:28+00:00",
+    "last_attempt_at": "2026-11-27T02:17:28+00:00"
   },
   "AASM": {
     "resolved": true,
@@ -29,8 +29,8 @@
     "latest_quarterly_eps": -2.69,
     "latest_quarterly_label": "Q3 2025",
     "yoy_quarterly_eps": -1.94,
-    "fetched_at": "2026-11-26T02:15:51+00:00",
-    "last_attempt_at": "2026-11-26T02:15:51+00:00"
+    "fetched_at": "2026-11-27T02:17:29+00:00",
+    "last_attempt_at": "2026-11-27T02:17:29+00:00"
   },
   "AATM": {
     "resolved": true,
@@ -40,8 +40,8 @@
     "latest_quarterly_eps": 0.36,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 1.25,
-    "fetched_at": "2026-11-26T02:15:52+00:00",
-    "last_attempt_at": "2026-11-26T02:15:52+00:00"
+    "fetched_at": "2026-11-27T02:17:30+00:00",
+    "last_attempt_at": "2026-11-27T02:17:30+00:00"
   },
   "ABL": {
     "resolved": true,
@@ -51,13 +51,13 @@
     "latest_quarterly_eps": 6.41,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 7.35,
-    "fetched_at": "2026-11-26T02:15:54+00:00",
-    "last_attempt_at": "2026-11-26T02:15:54+00:00"
+    "fetched_at": "2026-11-27T02:17:31+00:00",
+    "last_attempt_at": "2026-11-27T02:17:31+00:00"
   },
   "ABL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:16:03+00:00",
-    "fetched_at": "2026-11-26T02:16:03+00:00"
+    "last_attempt_at": "2026-11-27T02:17:42+00:00",
+    "fetched_at": "2026-11-27T02:17:42+00:00"
   },
   "ABOT": {
     "resolved": true,
@@ -67,13 +67,13 @@
     "latest_quarterly_eps": 25.99,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 18.62,
-    "fetched_at": "2026-11-26T02:16:04+00:00",
-    "last_attempt_at": "2026-11-26T02:16:04+00:00"
+    "fetched_at": "2026-11-27T02:17:43+00:00",
+    "last_attempt_at": "2026-11-27T02:17:43+00:00"
   },
   "ACIETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:16:05+00:00",
-    "last_attempt_at": "2026-11-26T02:16:05+00:00"
+    "fetched_at": "2026-11-27T02:17:44+00:00",
+    "last_attempt_at": "2026-11-27T02:17:44+00:00"
   },
   "ACPL": {
     "resolved": true,
@@ -83,8 +83,8 @@
     "latest_quarterly_eps": 7.85,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 6.07,
-    "fetched_at": "2026-11-26T02:16:06+00:00",
-    "last_attempt_at": "2026-11-26T02:16:06+00:00"
+    "fetched_at": "2026-11-27T02:17:45+00:00",
+    "last_attempt_at": "2026-11-27T02:17:45+00:00"
   },
   "ADAMS": {
     "resolved": true,
@@ -105,8 +105,8 @@
     "latest_quarterly_eps": 0.01,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -1.78,
-    "fetched_at": "2026-11-26T02:16:07+00:00",
-    "last_attempt_at": "2026-11-26T02:16:07+00:00"
+    "fetched_at": "2026-11-27T02:17:46+00:00",
+    "last_attempt_at": "2026-11-27T02:17:46+00:00"
   },
   "AGHA": {
     "resolved": true,
@@ -116,8 +116,8 @@
     "latest_quarterly_eps": -1.34,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -1.93,
-    "fetched_at": "2026-11-26T02:16:09+00:00",
-    "last_attempt_at": "2026-11-26T02:16:09+00:00"
+    "fetched_at": "2026-11-27T02:17:47+00:00",
+    "last_attempt_at": "2026-11-27T02:17:47+00:00"
   },
   "AGIC": {
     "resolved": true,
@@ -127,8 +127,8 @@
     "latest_quarterly_eps": 2.55,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 2.16,
-    "fetched_at": "2026-11-26T02:16:10+00:00",
-    "last_attempt_at": "2026-11-26T02:16:10+00:00"
+    "fetched_at": "2026-11-27T02:17:49+00:00",
+    "last_attempt_at": "2026-11-27T02:17:49+00:00"
   },
   "AGIL": {
     "resolved": true,
@@ -138,8 +138,8 @@
     "latest_quarterly_eps": 1.37,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 5.4,
-    "fetched_at": "2026-11-26T02:16:11+00:00",
-    "last_attempt_at": "2026-11-26T02:16:11+00:00"
+    "fetched_at": "2026-11-27T02:17:50+00:00",
+    "last_attempt_at": "2026-11-27T02:17:50+00:00"
   },
   "AGL": {
     "resolved": true,
@@ -149,8 +149,8 @@
     "latest_quarterly_eps": -3.39,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.07,
-    "fetched_at": "2026-11-26T02:16:12+00:00",
-    "last_attempt_at": "2026-11-26T02:16:12+00:00"
+    "fetched_at": "2026-11-27T02:17:51+00:00",
+    "last_attempt_at": "2026-11-27T02:17:51+00:00"
   },
   "AGP": {
     "resolved": true,
@@ -160,8 +160,8 @@
     "latest_quarterly_eps": 1.13,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 2.4,
-    "fetched_at": "2026-11-26T02:16:13+00:00",
-    "last_attempt_at": "2026-11-26T02:16:13+00:00"
+    "fetched_at": "2026-11-27T02:17:53+00:00",
+    "last_attempt_at": "2026-11-27T02:17:53+00:00"
   },
   "AGSML": {
     "resolved": true,
@@ -182,8 +182,8 @@
     "latest_quarterly_eps": 3.62,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -3.89,
-    "fetched_at": "2026-11-26T02:16:14+00:00",
-    "last_attempt_at": "2026-11-26T02:16:14+00:00"
+    "fetched_at": "2026-11-27T02:17:54+00:00",
+    "last_attempt_at": "2026-11-27T02:17:54+00:00"
   },
   "AHCL": {
     "resolved": true,
@@ -193,8 +193,8 @@
     "latest_quarterly_eps": -0.68,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 4.21,
-    "fetched_at": "2026-11-26T02:16:16+00:00",
-    "last_attempt_at": "2026-11-26T02:16:16+00:00"
+    "fetched_at": "2026-11-27T02:17:55+00:00",
+    "last_attempt_at": "2026-11-27T02:17:55+00:00"
   },
   "AHL": {
     "resolved": true,
@@ -204,8 +204,8 @@
     "latest_quarterly_eps": 4.18,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 3.77,
-    "fetched_at": "2026-11-26T02:16:17+00:00",
-    "last_attempt_at": "2026-11-26T02:16:17+00:00"
+    "fetched_at": "2026-11-27T02:17:56+00:00",
+    "last_attempt_at": "2026-11-27T02:17:56+00:00"
   },
   "AHTM": {
     "resolved": true,
@@ -215,8 +215,8 @@
     "latest_quarterly_eps": 1.2,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 2.49,
-    "fetched_at": "2026-11-26T02:16:18+00:00",
-    "last_attempt_at": "2026-11-26T02:16:18+00:00"
+    "fetched_at": "2026-11-27T02:17:58+00:00",
+    "last_attempt_at": "2026-11-27T02:17:58+00:00"
   },
   "AICL": {
     "resolved": true,
@@ -226,8 +226,8 @@
     "latest_quarterly_eps": 4.96,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 4.42,
-    "fetched_at": "2026-11-26T02:16:19+00:00",
-    "last_attempt_at": "2026-11-26T02:16:19+00:00"
+    "fetched_at": "2026-11-27T02:17:59+00:00",
+    "last_attempt_at": "2026-11-27T02:17:59+00:00"
   },
   "AIRLINK": {
     "resolved": true,
@@ -237,8 +237,8 @@
     "latest_quarterly_eps": 5.03,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 1.54,
-    "fetched_at": "2026-11-26T02:16:20+00:00",
-    "last_attempt_at": "2026-11-26T02:16:20+00:00"
+    "fetched_at": "2026-11-27T02:18:00+00:00",
+    "last_attempt_at": "2026-11-27T02:18:00+00:00"
   },
   "AKBL": {
     "resolved": true,
@@ -248,13 +248,13 @@
     "latest_quarterly_eps": 4.95,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 5.13,
-    "fetched_at": "2026-11-26T02:16:21+00:00",
-    "last_attempt_at": "2026-11-26T02:16:21+00:00"
+    "fetched_at": "2026-11-27T02:18:01+00:00",
+    "last_attempt_at": "2026-11-27T02:18:01+00:00"
   },
   "AKD-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:16:30+00:00",
-    "fetched_at": "2026-11-26T02:16:30+00:00"
+    "last_attempt_at": "2026-11-27T02:18:11+00:00",
+    "fetched_at": "2026-11-27T02:18:11+00:00"
   },
   "AKDSL": {
     "resolved": true,
@@ -264,8 +264,8 @@
     "latest_quarterly_eps": 2.01,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 4.57,
-    "fetched_at": "2026-11-26T02:16:32+00:00",
-    "last_attempt_at": "2026-11-26T02:16:32+00:00"
+    "fetched_at": "2026-11-27T02:18:14+00:00",
+    "last_attempt_at": "2026-11-27T02:18:14+00:00"
   },
   "ALAC": {
     "resolved": true,
@@ -275,18 +275,18 @@
     "latest_quarterly_eps": 0.29,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 0.09,
-    "fetched_at": "2026-11-26T02:16:34+00:00",
-    "last_attempt_at": "2026-11-26T02:16:34+00:00"
+    "fetched_at": "2026-11-27T02:18:17+00:00",
+    "last_attempt_at": "2026-11-27T02:18:17+00:00"
   },
   "ALFALAH-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:16:43+00:00",
-    "fetched_at": "2026-11-26T02:16:43+00:00"
+    "last_attempt_at": "2026-11-27T02:18:27+00:00",
+    "fetched_at": "2026-11-27T02:18:27+00:00"
   },
   "ALHAML-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:16:53+00:00",
-    "fetched_at": "2026-11-26T02:16:53+00:00"
+    "last_attempt_at": "2026-11-27T02:18:37+00:00",
+    "fetched_at": "2026-11-27T02:18:37+00:00"
   },
   "ALNRS": {
     "resolved": true,
@@ -307,8 +307,8 @@
     "latest_quarterly_eps": -0.71,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.94,
-    "fetched_at": "2026-11-26T02:16:56+00:00",
-    "last_attempt_at": "2026-11-26T02:16:56+00:00"
+    "fetched_at": "2026-11-27T02:18:42+00:00",
+    "last_attempt_at": "2026-11-27T02:18:42+00:00"
   },
   "ANL": {
     "resolved": true,
@@ -318,8 +318,8 @@
     "latest_quarterly_eps": 0.2,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.23,
-    "fetched_at": "2026-11-26T02:16:58+00:00",
-    "last_attempt_at": "2026-11-26T02:16:58+00:00"
+    "fetched_at": "2026-11-27T02:18:44+00:00",
+    "last_attempt_at": "2026-11-27T02:18:44+00:00"
   },
   "ANSM": {
     "resolved": true,
@@ -329,8 +329,8 @@
     "latest_quarterly_eps": -2.3,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -1.19,
-    "fetched_at": "2026-11-26T02:17:00+00:00",
-    "last_attempt_at": "2026-11-26T02:17:00+00:00"
+    "fetched_at": "2026-11-27T02:18:46+00:00",
+    "last_attempt_at": "2026-11-27T02:18:46+00:00"
   },
   "ANTM": {
     "resolved": true,
@@ -340,8 +340,8 @@
     "latest_quarterly_eps": 0.71,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -2.46,
-    "fetched_at": "2026-11-26T02:17:01+00:00",
-    "last_attempt_at": "2026-11-26T02:17:01+00:00"
+    "fetched_at": "2026-11-27T02:18:48+00:00",
+    "last_attempt_at": "2026-11-27T02:18:48+00:00"
   },
   "APL": {
     "resolved": true,
@@ -351,8 +351,8 @@
     "latest_quarterly_eps": 53.36,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 30.63,
-    "fetched_at": "2026-11-26T02:17:02+00:00",
-    "last_attempt_at": "2026-11-26T02:17:02+00:00"
+    "fetched_at": "2026-11-27T02:18:49+00:00",
+    "last_attempt_at": "2026-11-27T02:18:49+00:00"
   },
   "ARCTM": {
     "resolved": true,
@@ -362,8 +362,8 @@
     "latest_quarterly_eps": 3.1,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 1.27,
-    "fetched_at": "2026-11-26T02:17:03+00:00",
-    "last_attempt_at": "2026-11-26T02:17:03+00:00"
+    "fetched_at": "2026-11-27T02:18:50+00:00",
+    "last_attempt_at": "2026-11-27T02:18:50+00:00"
   },
   "ARMG": {
     "resolved": true,
@@ -373,8 +373,8 @@
     "latest_quarterly_eps": 0.52,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -0.1,
-    "fetched_at": "2026-11-26T02:17:04+00:00",
-    "last_attempt_at": "2026-11-26T02:17:04+00:00"
+    "fetched_at": "2026-11-27T02:18:51+00:00",
+    "last_attempt_at": "2026-11-27T02:18:51+00:00"
   },
   "ARPAK": {
     "resolved": true,
@@ -384,8 +384,8 @@
     "latest_quarterly_eps": -47.5,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -21.98,
-    "fetched_at": "2026-11-26T02:17:06+00:00",
-    "last_attempt_at": "2026-11-26T02:17:06+00:00"
+    "fetched_at": "2026-11-27T02:18:53+00:00",
+    "last_attempt_at": "2026-11-27T02:18:53+00:00"
   },
   "ARPL": {
     "resolved": true,
@@ -395,8 +395,8 @@
     "latest_quarterly_eps": 16.36,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 8.09,
-    "fetched_at": "2026-11-26T02:17:07+00:00",
-    "last_attempt_at": "2026-11-26T02:17:07+00:00"
+    "fetched_at": "2026-11-27T02:18:54+00:00",
+    "last_attempt_at": "2026-11-27T02:18:54+00:00"
   },
   "ASC": {
     "resolved": true,
@@ -406,8 +406,8 @@
     "latest_quarterly_eps": -0.18,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": -0.22,
-    "fetched_at": "2026-11-26T02:17:09+00:00",
-    "last_attempt_at": "2026-11-26T02:17:09+00:00"
+    "fetched_at": "2026-11-27T02:18:56+00:00",
+    "last_attempt_at": "2026-11-27T02:18:56+00:00"
   },
   "ASL": {
     "resolved": true,
@@ -417,8 +417,8 @@
     "latest_quarterly_eps": 0.34,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.07,
-    "fetched_at": "2026-11-26T02:17:12+00:00",
-    "last_attempt_at": "2026-11-26T02:17:12+00:00"
+    "fetched_at": "2026-11-27T02:19:00+00:00",
+    "last_attempt_at": "2026-11-27T02:19:00+00:00"
   },
   "ASTL": {
     "resolved": true,
@@ -428,8 +428,8 @@
     "latest_quarterly_eps": -0.18,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -2.66,
-    "fetched_at": "2026-11-26T02:17:16+00:00",
-    "last_attempt_at": "2026-11-26T02:17:16+00:00"
+    "fetched_at": "2026-11-27T02:19:03+00:00",
+    "last_attempt_at": "2026-11-27T02:19:03+00:00"
   },
   "ASTM": {
     "resolved": true,
@@ -439,8 +439,8 @@
     "latest_quarterly_eps": 1.38,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.32,
-    "fetched_at": "2026-11-26T02:17:17+00:00",
-    "last_attempt_at": "2026-11-26T02:17:17+00:00"
+    "fetched_at": "2026-11-27T02:19:04+00:00",
+    "last_attempt_at": "2026-11-27T02:19:04+00:00"
   },
   "ATBA": {
     "resolved": true,
@@ -450,13 +450,13 @@
     "latest_quarterly_eps": -9.6,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 1.44,
-    "fetched_at": "2026-11-26T02:17:18+00:00",
-    "last_attempt_at": "2026-11-26T02:17:18+00:00"
+    "fetched_at": "2026-11-27T02:19:06+00:00",
+    "last_attempt_at": "2026-11-27T02:19:06+00:00"
   },
   "ATLAS-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:17:28+00:00",
-    "fetched_at": "2026-11-26T02:17:28+00:00"
+    "last_attempt_at": "2026-11-27T02:19:18+00:00",
+    "fetched_at": "2026-11-27T02:19:18+00:00"
   },
   "ATLH": {
     "resolved": true,
@@ -493,8 +493,8 @@
   },
   "AWT-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:17:40+00:00",
-    "fetched_at": "2026-11-26T02:17:40+00:00"
+    "last_attempt_at": "2026-11-27T02:19:28+00:00",
+    "fetched_at": "2026-11-27T02:19:28+00:00"
   },
   "AWTX": {
     "resolved": true,
@@ -520,8 +520,8 @@
   },
   "BAFLTFC6": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:17:51+00:00",
-    "fetched_at": "2026-11-26T02:17:51+00:00"
+    "last_attempt_at": "2026-11-27T02:19:39+00:00",
+    "fetched_at": "2026-11-27T02:19:39+00:00"
   },
   "BAFS": {
     "resolved": true,
@@ -649,13 +649,13 @@
   },
   "BIPLSC": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:18:29+00:00",
-    "fetched_at": "2026-11-26T02:18:29+00:00"
+    "last_attempt_at": "2026-11-27T02:20:00+00:00",
+    "fetched_at": "2026-11-27T02:20:00+00:00"
   },
   "BIPLSC2": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:18:38+00:00",
-    "fetched_at": "2026-11-26T02:18:38+00:00"
+    "last_attempt_at": "2026-11-27T02:20:10+00:00",
+    "fetched_at": "2026-11-27T02:20:10+00:00"
   },
   "BLUEX": {
     "resolved": true,
@@ -1311,8 +1311,8 @@
   },
   "FAYSAL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:20:13+00:00",
-    "fetched_at": "2026-11-26T02:20:13+00:00"
+    "last_attempt_at": "2026-11-27T02:20:20+00:00",
+    "fetched_at": "2026-11-27T02:20:20+00:00"
   },
   "FCCL": {
     "resolved": true,
@@ -1882,13 +1882,13 @@
   },
   "HBLTFC2": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:21:47+00:00",
-    "fetched_at": "2026-11-26T02:21:47+00:00"
+    "last_attempt_at": "2026-11-27T02:20:42+00:00",
+    "fetched_at": "2026-11-27T02:20:42+00:00"
   },
   "HBLTFC3": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:21:56+00:00",
-    "fetched_at": "2026-11-26T02:21:56+00:00"
+    "last_attempt_at": "2026-11-27T02:20:53+00:00",
+    "fetched_at": "2026-11-27T02:20:53+00:00"
   },
   "HCAR": {
     "resolved": true,
@@ -2332,8 +2332,8 @@
   },
   "JSBLTFC4": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:22:53+00:00",
-    "fetched_at": "2026-11-26T02:22:53+00:00"
+    "last_attempt_at": "2026-11-27T02:21:05+00:00",
+    "fetched_at": "2026-11-27T02:21:05+00:00"
   },
   "JSCL": {
     "resolved": true,
@@ -2348,8 +2348,8 @@
   },
   "JSGBETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:22:56+00:00",
-    "last_attempt_at": "2026-11-26T02:22:56+00:00"
+    "fetched_at": "2026-11-27T02:21:07+00:00",
+    "last_attempt_at": "2026-11-27T02:21:07+00:00"
   },
   "JSGCL": {
     "resolved": true,
@@ -2375,13 +2375,13 @@
   },
   "JSIL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:23:07+00:00",
-    "fetched_at": "2026-11-26T02:23:07+00:00"
+    "last_attempt_at": "2026-11-27T02:21:17+00:00",
+    "fetched_at": "2026-11-27T02:21:17+00:00"
   },
   "JSMFETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:23:08+00:00",
-    "last_attempt_at": "2026-11-26T02:23:08+00:00"
+    "fetched_at": "2026-11-27T02:21:19+00:00",
+    "last_attempt_at": "2026-11-27T02:21:19+00:00"
   },
   "JSML": {
     "resolved": true,
@@ -2429,8 +2429,8 @@
   },
   "KFGB1": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:23:26+00:00",
-    "fetched_at": "2026-11-26T02:23:26+00:00"
+    "last_attempt_at": "2026-11-27T02:21:29+00:00",
+    "fetched_at": "2026-11-27T02:21:29+00:00"
   },
   "KHTC": {
     "resolved": true,
@@ -2709,8 +2709,8 @@
   },
   "MCBIM-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:24:09+00:00",
-    "fetched_at": "2026-11-26T02:24:09+00:00"
+    "last_attempt_at": "2026-11-27T02:21:39+00:00",
+    "fetched_at": "2026-11-27T02:21:39+00:00"
   },
   "MDTL": {
     "resolved": true,
@@ -2736,8 +2736,8 @@
   },
   "MEEZAN-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:24:20+00:00",
-    "fetched_at": "2026-11-26T02:24:20+00:00"
+    "last_attempt_at": "2026-11-27T02:21:50+00:00",
+    "fetched_at": "2026-11-27T02:21:50+00:00"
   },
   "MFFL": {
     "resolved": true,
@@ -2752,8 +2752,8 @@
   },
   "MIIETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:24:26+00:00",
-    "last_attempt_at": "2026-11-26T02:24:26+00:00"
+    "fetched_at": "2026-11-27T02:21:51+00:00",
+    "last_attempt_at": "2026-11-27T02:21:51+00:00"
   },
   "MIRKS": {
     "resolved": true,
@@ -2878,8 +2878,8 @@
   },
   "MZNPETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:24:50+00:00",
-    "last_attempt_at": "2026-11-26T02:24:50+00:00"
+    "fetched_at": "2026-11-27T02:22:05+00:00",
+    "last_attempt_at": "2026-11-27T02:22:05+00:00"
   },
   "NATF": {
     "resolved": true,
@@ -2905,13 +2905,13 @@
   },
   "NBP-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:25:03+00:00",
-    "fetched_at": "2026-11-26T02:25:03+00:00"
+    "last_attempt_at": "2026-11-27T02:22:15+00:00",
+    "fetched_at": "2026-11-27T02:22:15+00:00"
   },
   "NBPGETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:25:05+00:00",
-    "last_attempt_at": "2026-11-26T02:25:05+00:00"
+    "fetched_at": "2026-11-27T02:22:17+00:00",
+    "last_attempt_at": "2026-11-27T02:22:17+00:00"
   },
   "NCL": {
     "resolved": true,
@@ -2992,13 +2992,13 @@
   },
   "NIT-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:25:24+00:00",
-    "fetched_at": "2026-11-26T02:25:24+00:00"
+    "last_attempt_at": "2026-11-27T02:22:28+00:00",
+    "fetched_at": "2026-11-27T02:22:28+00:00"
   },
   "NITGETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:25:25+00:00",
-    "last_attempt_at": "2026-11-26T02:25:25+00:00"
+    "fetched_at": "2026-11-27T02:22:30+00:00",
+    "last_attempt_at": "2026-11-27T02:22:30+00:00"
   },
   "NML": {
     "resolved": true,
@@ -3123,8 +3123,8 @@
   },
   "OPENFUND": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:25:49+00:00",
-    "fetched_at": "2026-11-26T02:25:49+00:00"
+    "last_attempt_at": "2026-11-27T02:22:40+00:00",
+    "fetched_at": "2026-11-27T02:22:40+00:00"
   },
   "ORM": {
     "resolved": true,
@@ -3282,8 +3282,8 @@
   },
   "PFSLTFC": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:26:15+00:00",
-    "fetched_at": "2026-11-26T02:26:15+00:00"
+    "last_attempt_at": "2026-11-27T02:22:51+00:00",
+    "fetched_at": "2026-11-27T02:22:51+00:00"
   },
   "PHDL": {
     "resolved": true,
@@ -4032,13 +4032,13 @@
   },
   "SNBLTFC3": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:27:56+00:00",
-    "fetched_at": "2026-11-26T02:27:56+00:00"
+    "last_attempt_at": "2026-11-27T02:23:01+00:00",
+    "fetched_at": "2026-11-27T02:23:01+00:00"
   },
   "SNBLTFC4": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:28:05+00:00",
-    "fetched_at": "2026-11-26T02:28:05+00:00"
+    "last_attempt_at": "2026-11-27T02:23:12+00:00",
+    "fetched_at": "2026-11-27T02:23:12+00:00"
   },
   "SNGP": {
     "resolved": true,
@@ -4064,8 +4064,8 @@
   },
   "SPAC2": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:28:10+00:00",
-    "last_attempt_at": "2026-11-26T02:28:10+00:00"
+    "fetched_at": "2026-11-27T02:23:14+00:00",
+    "last_attempt_at": "2026-11-27T02:23:14+00:00"
   },
   "SPCL": {
     "resolved": true,
@@ -4311,8 +4311,8 @@
   },
   "TCORPCPS": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:28:41+00:00",
-    "last_attempt_at": "2026-11-26T02:28:41+00:00"
+    "fetched_at": "2026-11-27T02:23:15+00:00",
+    "last_attempt_at": "2026-11-27T02:23:15+00:00"
   },
   "TELE": {
     "resolved": true,
@@ -4437,8 +4437,8 @@
   },
   "TPLSC": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:29:04+00:00",
-    "fetched_at": "2026-11-26T02:29:04+00:00"
+    "last_attempt_at": "2026-11-27T02:23:26+00:00",
+    "fetched_at": "2026-11-27T02:23:26+00:00"
   },
   "TPLT": {
     "resolved": true,
@@ -4453,8 +4453,8 @@
   },
   "TPLTFC3": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:29:14+00:00",
-    "fetched_at": "2026-11-26T02:29:14+00:00"
+    "last_attempt_at": "2026-11-27T02:23:36+00:00",
+    "fetched_at": "2026-11-27T02:23:36+00:00"
   },
   "TREET": {
     "resolved": true,
@@ -4546,18 +4546,18 @@
   },
   "UBL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:29:34+00:00",
-    "fetched_at": "2026-11-26T02:29:34+00:00"
+    "last_attempt_at": "2026-11-27T02:23:47+00:00",
+    "fetched_at": "2026-11-27T02:23:47+00:00"
   },
   "UBLPETF": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:29:36+00:00",
-    "last_attempt_at": "2026-11-26T02:29:36+00:00"
+    "fetched_at": "2026-11-27T02:23:49+00:00",
+    "last_attempt_at": "2026-11-27T02:23:49+00:00"
   },
   "UBLTFC5": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:29:45+00:00",
-    "fetched_at": "2026-11-26T02:29:45+00:00"
+    "last_attempt_at": "2026-11-27T02:24:00+00:00",
+    "fetched_at": "2026-11-27T02:24:00+00:00"
   },
   "UDLI": {
     "resolved": true,
@@ -4735,8 +4735,8 @@
     "latest_quarterly_eps": 0.47,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 1.52,
-    "fetched_at": "2026-11-26T02:16:54+00:00",
-    "last_attempt_at": "2026-11-26T02:16:54+00:00"
+    "fetched_at": "2026-11-27T02:18:39+00:00",
+    "last_attempt_at": "2026-11-27T02:18:39+00:00"
   },
   "ASIC": {
     "resolved": true,
@@ -4746,8 +4746,8 @@
     "latest_quarterly_eps": 0.26,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 1.11,
-    "fetched_at": "2026-11-26T02:17:11+00:00",
-    "last_attempt_at": "2026-11-26T02:17:11+00:00"
+    "fetched_at": "2026-11-27T02:18:59+00:00",
+    "last_attempt_at": "2026-11-27T02:18:59+00:00"
   },
   "BTL": {
     "resolved": true,
@@ -4861,8 +4861,8 @@
   },
   "MMBLTFC": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:24:37+00:00",
-    "fetched_at": "2026-11-26T02:24:37+00:00"
+    "last_attempt_at": "2026-11-27T02:22:01+00:00",
+    "fetched_at": "2026-11-27T02:22:01+00:00"
   },
   "NRSL": {
     "resolved": true,
@@ -4965,13 +4965,13 @@
   },
   "ASLCPS": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:17:13+00:00",
-    "last_attempt_at": "2026-11-26T02:17:13+00:00"
+    "fetched_at": "2026-11-27T02:19:01+00:00",
+    "last_attempt_at": "2026-11-27T02:19:01+00:00"
   },
   "ASLPS": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:17:14+00:00",
-    "last_attempt_at": "2026-11-26T02:17:14+00:00"
+    "fetched_at": "2026-11-27T02:19:02+00:00",
+    "last_attempt_at": "2026-11-27T02:19:02+00:00"
   },
   "ATIL": {
     "resolved": true,
@@ -4981,8 +4981,8 @@
     "latest_quarterly_eps": 2.66,
     "latest_quarterly_label": "Q3 2026",
     "yoy_quarterly_eps": 3.34,
-    "fetched_at": "2026-11-26T02:17:19+00:00",
-    "last_attempt_at": "2026-11-26T02:17:19+00:00"
+    "fetched_at": "2026-11-27T02:19:07+00:00",
+    "last_attempt_at": "2026-11-27T02:19:07+00:00"
   },
   "PQGTL": {
     "resolved": true,
@@ -5047,8 +5047,8 @@
     "latest_quarterly_eps": -0.09,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -0.11,
-    "fetched_at": "2026-11-26T02:16:55+00:00",
-    "last_attempt_at": "2026-11-26T02:16:55+00:00"
+    "fetched_at": "2026-11-27T02:18:40+00:00",
+    "last_attempt_at": "2026-11-27T02:18:40+00:00"
   },
   "DOL": {
     "resolved": true,
@@ -5091,8 +5091,8 @@
     "latest_quarterly_eps": 0.44,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -1.02,
-    "fetched_at": "2026-11-26T02:16:33+00:00",
-    "last_attempt_at": "2026-11-26T02:16:33+00:00"
+    "fetched_at": "2026-11-27T02:18:16+00:00",
+    "last_attempt_at": "2026-11-27T02:18:16+00:00"
   },
   "IREIT": {
     "resolved": true,
@@ -5135,8 +5135,8 @@
     "latest_quarterly_eps": 1.75,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.17,
-    "fetched_at": "2026-11-26T02:16:31+00:00",
-    "last_attempt_at": "2026-11-26T02:16:31+00:00"
+    "fetched_at": "2026-11-27T02:18:13+00:00",
+    "last_attempt_at": "2026-11-27T02:18:13+00:00"
   },
   "CHBL": {
     "resolved": true,
@@ -5305,8 +5305,8 @@
   },
   "JVDCPS": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:23:13+00:00",
-    "last_attempt_at": "2026-11-26T02:23:13+00:00"
+    "fetched_at": "2026-11-27T02:21:20+00:00",
+    "last_attempt_at": "2026-11-27T02:21:20+00:00"
   },
   "MUGHALC": {
     "resolved": true,
@@ -5360,8 +5360,8 @@
     "latest_quarterly_eps": -0.03,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.01,
-    "fetched_at": "2026-11-26T02:17:10+00:00",
-    "last_attempt_at": "2026-11-26T02:17:10+00:00"
+    "fetched_at": "2026-11-27T02:18:57+00:00",
+    "last_attempt_at": "2026-11-27T02:18:57+00:00"
   },
   "GATM": {
     "resolved": true,
@@ -5591,8 +5591,8 @@
     "latest_quarterly_eps": -0.12,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": 0.04,
-    "fetched_at": "2026-11-26T02:16:57+00:00",
-    "last_attempt_at": "2026-11-26T02:16:57+00:00"
+    "fetched_at": "2026-11-27T02:18:43+00:00",
+    "last_attempt_at": "2026-11-27T02:18:43+00:00"
   },
   "ARUJ": {
     "resolved": true,
@@ -5602,13 +5602,13 @@
     "latest_quarterly_eps": -1.31,
     "latest_quarterly_label": "Q1 2027",
     "yoy_quarterly_eps": -0.7,
-    "fetched_at": "2026-11-26T02:17:08+00:00",
-    "last_attempt_at": "2026-11-26T02:17:08+00:00"
+    "fetched_at": "2026-11-27T02:18:55+00:00",
+    "last_attempt_at": "2026-11-27T02:18:55+00:00"
   },
   "BAHLTFC9": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:18:02+00:00",
-    "fetched_at": "2026-11-26T02:18:02+00:00"
+    "last_attempt_at": "2026-11-27T02:19:50+00:00",
+    "fetched_at": "2026-11-27T02:19:50+00:00"
   },
   "BELA": {
     "resolved": true,
@@ -5700,8 +5700,8 @@
   },
   "MSOTPS": {
     "resolved": false,
-    "fetched_at": "2026-11-26T02:24:42+00:00",
-    "last_attempt_at": "2026-11-26T02:24:42+00:00"
+    "fetched_at": "2026-11-27T02:22:03+00:00",
+    "last_attempt_at": "2026-11-27T02:22:03+00:00"
   },
   "NATM": {
     "resolved": true,
@@ -5793,8 +5793,8 @@
   },
   "HBL-FUNDS": {
     "resolved": false,
-    "last_attempt_at": "2026-11-26T02:21:38+00:00",
-    "fetched_at": "2026-11-26T02:21:38+00:00"
+    "last_attempt_at": "2026-11-27T02:20:31+00:00",
+    "fetched_at": "2026-11-27T02:20:31+00:00"
   },
   "NGLEL": {
     "resolved": true,
